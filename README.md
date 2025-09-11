@@ -2,29 +2,29 @@
 
 A Node.js/Express application that automatically syncs online orders from GloriaFood to Loyverse POS, eliminating the need for manual order entry.
 
-## Features
+## 🚀 Features
 
 - **Real-time Order Sync**: Automatically processes incoming orders from GloriaFood webhooks
 - **Customer Management**: Creates or finds customers in Loyverse automatically
 - **Order Processing**: Converts GloriaFood orders to Loyverse receipts with full details
-- **Error Handling**: Comprehensive error handling with retry mechanisms
-- **Monitoring Dashboard**: Built-in dashboard for monitoring integration status
-- **Logging**: Detailed logging for debugging and monitoring
+- **Item Mapping**: Finds existing items in Loyverse by name (no new item creation)
+- **Automatic Printing**: Prints receipts automatically after creation
+- **Error Handling**: Comprehensive error handling with detailed logging
 - **Security**: Webhook signature verification and rate limiting
 
-## Prerequisites
+## 📋 Prerequisites
 
 - Node.js 16.0.0 or higher
 - GloriaFood account with API access
 - Loyverse account with API access
 - Valid API keys and credentials
 
-## Installation
+## 🛠️ Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd gloriafood-loyverse-integration
+   git clone https://github.com/ShujaXCode/Gloria-Food-Integration.git
+   cd Gloria-Food-Integration
    ```
 
 2. **Install dependencies**
@@ -39,25 +39,20 @@ A Node.js/Express application that automatically syncs online orders from Gloria
    
    Edit `.env` file with your actual API credentials:
    ```env
-   # Server Configuration
-   PORT=3000
-   NODE_ENV=development
-   
    # GloriaFood API Configuration
-   GLORIAFOOD_API_URL=https://api.gloriafood.com
-   GLORIAFOOD_API_KEY=your_actual_api_key
-   GLORIAFOOD_WEBHOOK_SECRET=your_webhook_secret
-   
+   GLORIAFOOD_RESTAURANT_TOKEN=your_restaurant_token_here
+   GLORIAFOOD_AUTHENTICATE_KEY=your_authenticate_key_here
+   GLORIAFOOD_WEBHOOK_SECRET=your_webhook_secret_here
+   GLORIAFOOD_MASTER_KEY=your_master_key_here
+   GLORIAFOOD_RESTAURANT_ID=your_restaurant_id_here
+
    # Loyverse API Configuration
-   LOYVERSE_API_URL=https://api.loyverse.com
-   LOYVERSE_ACCESS_TOKEN=your_actual_access_token
-   LOYVERSE_LOCATION_ID=your_location_id
-   
-   # Integration Settings
-   AUTO_CREATE_CUSTOMERS=true
-   SYNC_MENU_ITEMS=false
-   RETRY_ATTEMPTS=3
-   RETRY_DELAY=5000
+   LOYVERSE_ACCESS_TOKEN=your_loyverse_access_token_here
+   LOYVERSE_LOCATION_ID=your_location_id_here
+
+   # Server Configuration
+   NODE_ENV=production
+   PORT=3000
    ```
 
 4. **Start the application**
@@ -69,11 +64,11 @@ A Node.js/Express application that automatically syncs online orders from Gloria
    npm start
    ```
 
-## Configuration
+## 🔧 Configuration
 
 ### GloriaFood Setup
 
-1. **Get API Key**: Obtain your API key from GloriaFood dashboard
+1. **Get API Credentials**: Obtain your credentials from GloriaFood dashboard
 2. **Configure Webhook**: Set up webhook URL in GloriaFood to point to:
    ```
    https://your-domain.com/api/gloriafood/webhook
@@ -84,9 +79,9 @@ A Node.js/Express application that automatically syncs online orders from Gloria
 
 1. **Get Access Token**: Generate an access token from Loyverse dashboard
 2. **Get Location ID**: Note your location ID where orders should be created
-3. **Test Connection**: Use the test endpoint to verify connectivity
+3. **Create Menu Items**: Ensure your menu items exist in Loyverse (items are matched by name)
 
-## API Endpoints
+## 📡 API Endpoints
 
 ### Health Check
 - `GET /health` - Server health status
@@ -97,79 +92,42 @@ A Node.js/Express application that automatically syncs online orders from Gloria
 - `GET /api/gloriafood/menu` - Get menu items from GloriaFood
 - `POST /api/gloriafood/test-webhook` - Send test webhook data
 
-### Loyverse Integration
-- `POST /api/loyverse/receipts` - Create receipt in Loyverse
-- `GET /api/loyverse/products` - Get products from Loyverse
-- `GET /api/loyverse/locations` - Get locations from Loyverse
-- `POST /api/loyverse/customers` - Create customer in Loyverse
-- `GET /api/loyverse/customers/search` - Find customer by phone
-- `PATCH /api/loyverse/receipts/:receiptId/status` - Update receipt status
-- `GET /api/loyverse/test-connection` - Test Loyverse connectivity
+### Integration
+- `POST /api/integration/create-loyverse-receipt` - Create receipt from GloriaFood payload
+- `GET /api/integration/status` - Get integration status
 
-### Order Processing
-- `POST /api/integration/process-order` - Process order from GloriaFood to Loyverse
-- `GET /api/integration/order-status/:orderId` - Get order processing status
-- `POST /api/integration/retry-order/:orderId` - Retry failed order
-- `POST /api/integration/manual-sync` - Manual order synchronization
-- `GET /api/integration/all-orders-status` - Get all order statuses
-- `DELETE /api/integration/clear-completed-orders` - Clean up completed orders
+## 🧪 Testing
 
-### Dashboard & Monitoring
-- `GET /api/dashboard/status` - System status and health
-- `GET /api/dashboard/logs` - Recent application logs
-- `GET /api/dashboard/logs/errors` - Error logs only
-- `GET /api/dashboard/endpoints` - API endpoint documentation
-- `GET /api/dashboard/config` - Current configuration status
-
-## Usage Examples
-
-### Testing the Integration
-
-1. **Test Webhook**
-   ```bash
-   curl -X POST http://localhost:3000/api/gloriafood/test-webhook
-   ```
-
-2. **Test Loyverse Connection**
-   ```bash
-   curl http://localhost:3000/api/loyverse/test-connection
-   ```
-
-3. **Check System Status**
-   ```bash
-   curl http://localhost:3000/api/dashboard/status
-   ```
-
-### Manual Order Processing
-
+### Test Webhook
 ```bash
-curl -X POST http://localhost:3000/api/integration/process-order \
+curl -X POST http://localhost:3000/api/gloriafood/test-webhook
+```
+
+### Test Receipt Creation
+```bash
+curl -X POST http://localhost:3000/api/integration/create-loyverse-receipt \
   -H "Content-Type: application/json" \
   -d '{
     "id": "ORDER-123",
     "customer": {
       "name": "John Doe",
       "phone": "+1234567890",
-      "email": "john@example.com",
-      "address": "123 Main St"
+      "email": "john@example.com"
     },
     "items": [
       {
-        "name": "Pizza Margherita",
+        "name": "Coffee",
         "quantity": 1,
-        "unit_price": 15.00,
-        "total_price": 15.00
+        "price": 15.00,
+        "total_item_price": 15.00
       }
     ],
-    "subtotal": 15.00,
-    "tax": 1.50,
-    "total": 16.50,
-    "order_type": "delivery",
-    "notes": "Extra cheese please"
+    "total_price": 15.00,
+    "type": "pickup"
   }'
 ```
 
-## Webhook Configuration
+## 🌐 Webhook Configuration
 
 ### GloriaFood Webhook Setup
 
@@ -184,77 +142,81 @@ curl -X POST http://localhost:3000/api/integration/process-order \
 The webhook expects data in this format:
 ```json
 {
-  "order_id": "12345",
-  "customer": {
-    "name": "Customer Name",
-    "phone": "+1234567890",
-    "email": "customer@email.com",
-    "address": "Delivery Address"
-  },
-  "items": [
+  "count": 1,
+  "orders": [
     {
-      "name": "Item Name",
-      "quantity": 1,
-      "unit_price": 10.00,
-      "total_price": 10.00,
-      "modifiers": ["Extra", "Sauce"]
+      "id": 12345,
+      "client_first_name": "Customer Name",
+      "client_last_name": "Last Name",
+      "client_phone": "+1234567890",
+      "client_email": "customer@email.com",
+      "total_price": 25.00,
+      "type": "pickup",
+      "items": [
+        {
+          "name": "Coffee",
+          "quantity": 1,
+          "price": 15.00,
+          "total_item_price": 15.00,
+          "instructions": "Extra hot"
+        }
+      ]
     }
-  ],
-  "subtotal": 10.00,
-  "tax": 1.00,
-  "total": 11.00,
-  "order_type": "delivery",
-  "notes": "Customer notes"
+  ]
 }
 ```
 
-## Error Handling
+## 🚀 Deployment
 
-The application includes comprehensive error handling:
+### Vercel (Recommended)
 
-- **Retry Mechanism**: Failed orders are automatically retried with exponential backoff
-- **Logging**: All errors are logged with detailed information
-- **Status Tracking**: Order processing status is tracked and can be monitored
-- **Manual Retry**: Failed orders can be manually retried via API
+1. **Connect GitHub**: Link your repository to Vercel
+2. **Set Environment Variables**: Add all your API credentials in Vercel dashboard
+3. **Deploy**: Automatic deployment on git push
+4. **Update Webhook**: Point GloriaFood webhook to your Vercel URL
 
-## Monitoring & Logs
+### Environment Variables for Production
+```env
+GLORIAFOOD_RESTAURANT_TOKEN=your_actual_token
+GLORIAFOOD_AUTHENTICATE_KEY=your_actual_key
+GLORIAFOOD_WEBHOOK_SECRET=your_actual_secret
+GLORIAFOOD_MASTER_KEY=your_actual_master_key
+GLORIAFOOD_RESTAURANT_ID=your_actual_restaurant_id
+LOYVERSE_ACCESS_TOKEN=your_actual_access_token
+LOYVERSE_LOCATION_ID=your_actual_location_id
+NODE_ENV=production
+PORT=3000
+```
 
-### Log Files
-- `logs/combined.log` - All application logs
-- `logs/error.log` - Error logs only
+## 🔍 How It Works
 
-### Dashboard Features
-- Real-time system status
-- Order processing queue status
-- API connectivity status
-- Configuration validation
-- Recent logs and errors
+1. **Order Received**: GloriaFood sends webhook to your server
+2. **Customer Handling**: System finds existing customer or creates new one in Loyverse
+3. **Item Mapping**: Finds existing items in Loyverse by name (exact match)
+4. **Receipt Creation**: Creates receipt in Loyverse with all order details
+5. **Automatic Printing**: Prints receipt automatically
+6. **Logging**: All actions are logged for monitoring
 
-## Security Features
+## 📊 Monitoring
+
+### Logs
+- All operations are logged to console and files
+- Error logs are separated for easy debugging
+- Webhook requests are logged with full details
+
+### Health Check
+```bash
+curl https://your-domain.com/health
+```
+
+## 🔒 Security Features
 
 - **Rate Limiting**: API endpoints are rate-limited to prevent abuse
 - **Webhook Verification**: Webhook signatures are verified when configured
 - **CORS Protection**: Cross-origin requests are controlled
 - **Helmet Security**: Security headers are automatically applied
 
-## Production Deployment
-
-### Environment Variables
-- Set `NODE_ENV=production`
-- Use strong, unique secrets for webhook verification
-- Configure proper logging levels
-
-### Process Management
-- Use PM2 or similar process manager
-- Set up proper monitoring and alerting
-- Configure log rotation
-
-### SSL/TLS
-- Use HTTPS in production
-- Configure proper SSL certificates
-- Update webhook URLs to use HTTPS
-
-## Troubleshooting
+## 🐛 Troubleshooting
 
 ### Common Issues
 
@@ -266,10 +228,9 @@ The application includes comprehensive error handling:
 2. **Orders Not Creating in Loyverse**
    - Verify Loyverse API credentials
    - Check location ID configuration
-   - Review order data format
+   - Ensure items exist in Loyverse (matched by name)
 
 3. **Customer Creation Fails**
-   - Ensure `AUTO_CREATE_CUSTOMERS=true`
    - Check customer data completeness
    - Verify Loyverse customer API permissions
 
@@ -279,25 +240,46 @@ Enable debug logging by setting:
 LOG_LEVEL=debug
 ```
 
-## Support
+## 📁 Project Structure
 
-For issues and questions:
-1. Check the logs at `/api/dashboard/logs`
-2. Verify configuration at `/api/dashboard/config`
-3. Test API connectivity at `/api/dashboard/status`
+```
+├── server.js                 # Main application entry point
+├── routes/
+│   ├── gloriaFood.js        # GloriaFood webhook and API routes
+│   └── integration.js       # Integration testing routes
+├── services/
+│   ├── gloriaFoodService.js # GloriaFood API service
+│   └── enhancedIntegrationService.js # Core integration logic
+├── utils/
+│   ├── loyverseApi.js       # Loyverse API client
+│   └── logger.js            # Logging configuration
+├── config/
+│   └── apiConfig.js         # API configuration
+└── logs/                    # Application logs
+```
 
-## License
+## 🎯 Key Features
+
+- ✅ **No New Item Creation**: Only uses existing items in Loyverse
+- ✅ **Automatic Customer Management**: Creates/finds customers automatically
+- ✅ **Real-time Processing**: Processes orders as they come in
+- ✅ **Automatic Printing**: Prints receipts immediately after creation
+- ✅ **Comprehensive Logging**: Full audit trail of all operations
+- ✅ **Error Handling**: Robust error handling with detailed messages
+- ✅ **Production Ready**: Deployed and tested on Vercel
+
+## 📄 License
 
 MIT License - see LICENSE file for details.
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
 
 ---
 
 **Note**: This integration is designed for restaurant use cases. Test thoroughly in a development environment before deploying to production.
+
+## 🆘 Support
+
+For issues and questions:
+1. Check the logs for detailed error messages
+2. Verify all environment variables are set correctly
+3. Test individual API endpoints
+4. Check GloriaFood and Loyverse API connectivity

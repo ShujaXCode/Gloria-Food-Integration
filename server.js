@@ -8,10 +8,7 @@ require('dotenv').config();
 
 const logger = require('./utils/logger');
 const gloriaFoodRoutes = require('./routes/gloriaFood');
-const loyverseRoutes = require('./routes/loyverse');
 const integrationRoutes = require('./routes/integration');
-const dashboardRoutes = require('./routes/dashboard');
-const IntegrationService = require('./services/integrationService');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -50,62 +47,10 @@ app.get('/health', (req, res) => {
   });
 });
 
-// Initialize integration service
-const integrationService = new IntegrationService();
-
 // API routes
 app.use('/api/gloriafood', gloriaFoodRoutes);
-app.use('/api/loyverse', loyverseRoutes);
 app.use('/api/integration', integrationRoutes);
-app.use('/api/dashboard', dashboardRoutes);
 
-// Set up event listeners for order processing
-app.on('new_order', async (orderData) => {
-  try {
-    logger.info(`Processing new order from webhook: ${orderData.id}`);
-    const result = await integrationService.processOrder(orderData);
-    
-    if (result.success) {
-      logger.info(`Order ${orderData.id} processed successfully`);
-    } else {
-      logger.error(`Order ${orderData.id} processing failed:`, result.error);
-    }
-  } catch (error) {
-    logger.error(`Error processing order ${orderData.id}:`, error.message);
-  }
-});
-
-// Handle order updates
-app.on('order_updated', async (orderData) => {
-  try {
-    logger.info(`Processing order update from webhook: ${orderData.id}`);
-    const result = await integrationService.updateOrder(orderData);
-    
-    if (result.success) {
-      logger.info(`Order ${orderData.id} updated successfully`);
-    } else {
-      logger.error(`Order ${orderData.id} update failed:`, result.error);
-    }
-  } catch (error) {
-    logger.error(`Error updating order ${orderData.id}:`, error.message);
-  }
-});
-
-// Handle order cancellations
-app.on('order_cancelled', async (orderData) => {
-  try {
-    logger.info(`Processing order cancellation from webhook: ${orderData.id}`);
-    const result = await integrationService.cancelOrder(orderData);
-    
-    if (result.success) {
-      logger.info(`Order ${orderData.id} cancelled successfully`);
-    } else {
-      logger.error(`Order ${orderData.id} cancellation failed:`, result.error);
-    }
-  } catch (error) {
-    logger.error(`Error cancelling order ${orderData.id}:`, error.message);
-  }
-});
 
 // Root endpoint
 app.get('/', (req, res) => {
@@ -115,9 +60,7 @@ app.get('/', (req, res) => {
     endpoints: {
       health: '/health',
       gloriafood: '/api/gloriafood',
-      loyverse: '/api/loyverse',
-      integration: '/api/integration',
-      dashboard: '/api/dashboard'
+      integration: '/api/integration'
     }
   });
 });
