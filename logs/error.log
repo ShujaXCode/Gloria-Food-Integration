@@ -1,0 +1,366 @@
+{"level":"error","message":"Failed to retrieve locations from Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-02 22:52:42"}
+{"level":"error","message":"Loyverse connection test failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-02 22:52:42"}
+{"level":"error","message":"Failed to retrieve locations from Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:27:38"}
+{"level":"error","message":"Loyverse connection test failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:27:38"}
+{"level":"error","message":"Failed to retrieve menu items from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:37:16"}
+{"level":"error","message":"Error retrieving menu items:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:37:16"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:38:13"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:38:13"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order manual-test-123:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:38:13"}
+{"level":"error","message":"Failed to process order manual-test-123:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:38:13"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:48:48"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:48:55"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:48:55"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order TEST-123:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:48:56"}
+{"level":"error","message":"Error processing order TEST-123 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:48:56"}
+{"level":"error","message":"Failed to process order TEST-123:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:48:56"}
+{"level":"error","message":"Order TEST-123 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:48:56"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:49:00"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:50:00"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:51:00"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:51:26"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:52:00"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:54:09"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:55:01"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:55:01"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:55:01"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:56:00"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:57:00"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:57:00"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:57:01"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:58:00"}
+{"level":"error","message":"Order 1081497874 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:00"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081497874:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Error processing order 1081497874 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Failed to process order 1081497874:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Order 1081497874 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081497485:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Error processing order 1081497485 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Failed to process order 1081497485:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Order 1081497485 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 01:59:03"}
+{"level":"error","message":"Order 1081497485 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:00:00"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:12:34"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:13:34"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:13:34"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order TEST-999:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:13:34"}
+{"level":"error","message":"Error processing order TEST-999 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:13:34"}
+{"level":"error","message":"Failed to process order TEST-999:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:13:34"}
+{"level":"error","message":"Order TEST-999 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:13:34"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:19:03"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:19:24"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:21:01"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:21:01"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:21:53"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:21:53"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081502934:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:21:53"}
+{"level":"error","message":"Error processing order 1081502934 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:21:53"}
+{"level":"error","message":"Failed to process order 1081502934:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:21:53"}
+{"level":"error","message":"Order 1081502934 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:21:53"}
+{"level":"error","message":"Order 1081502934 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:23:01"}
+{"level":"error","message":"Order 1081502934 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:23:01"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:23:40"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:23:40"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081508938:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:23:40"}
+{"level":"error","message":"Error processing order 1081508938 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:23:40"}
+{"level":"error","message":"Failed to process order 1081508938:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:23:40"}
+{"level":"error","message":"Order 1081508938 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:23:40"}
+{"level":"error","message":"Order 1081508938 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:24:02"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:32:43"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:32:43"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081509999:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:32:43"}
+{"level":"error","message":"Error processing order 1081509999 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:32:43"}
+{"level":"error","message":"Failed to process order 1081509999:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:32:43"}
+{"level":"error","message":"Order 1081509999 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:32:43"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:34:58"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:34:58"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081512597:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:34:58"}
+{"level":"error","message":"Error processing order 1081512597 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:34:58"}
+{"level":"error","message":"Failed to process order 1081512597:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:34:58"}
+{"level":"error","message":"Order 1081512597 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:34:58"}
+{"level":"error","message":"Order 1081512597 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:35:31"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:47:45"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:47:45"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order TEST-123:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:47:45"}
+{"level":"error","message":"Failed to process order TEST-123:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:47:45"}
+{"level":"error","message":"Error in test endpoint:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:51:31"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:52:00"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:52:00"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081512597:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:52:01"}
+{"level":"error","message":"Error in Loyverse operations:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:52:01"}
+{"level":"error","message":"Error in test endpoint:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:52:01"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:52:38"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:52:38"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081512597:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:52:39"}
+{"level":"error","message":"Error in Loyverse operations:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:52:39"}
+{"level":"error","message":"Error in test endpoint:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:52:39"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:51"}
+{"level":"error","message":"Loyverse Customer API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:51"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:51"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:51"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:51"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:51"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081512597:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:52"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:52"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:52"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:52"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:52"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:52"}
+{"level":"error","message":"Error in Loyverse operations:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:52"}
+{"level":"error","message":"Error in test endpoint:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:53:52"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:23"}
+{"level":"error","message":"Loyverse Customer API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:23"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:23"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:23"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:23"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:23"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:52"}
+{"level":"error","message":"Loyverse Customer API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:52"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:52"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:52"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:52"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:54:52"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:55:34"}
+{"level":"error","message":"Loyverse Customer API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:55:34"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:55:34"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:55:34"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:55:34"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:55:34"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:56:56"}
+{"level":"error","message":"Loyverse Customer API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:56:56"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:56:56"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:56:56"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:56:56"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:56:56"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:57:09"}
+{"level":"error","message":"Loyverse Customer API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:57:09"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:57:09"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:57:09"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:57:09"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:57:09"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:58:35"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:58:35"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:58:47"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 02:58:47"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 03:00:30"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 03:00:30"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 03:00:55"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-03 03:00:55"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:06:44"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:06:44"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081862889:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:06:44"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:06:44"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:06:44"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:06:44"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:06:44"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:06:44"}
+{"level":"error","message":"Error processing order 1081862889 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:06:44"}
+{"level":"error","message":"Failed to process order 1081862889:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:06:44"}
+{"level":"error","message":"Order 1081862889 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:06:44"}
+{"level":"error","message":"Order 1081862889 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:07:12"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:14:21"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:14:21"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:26:48"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:26:48"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081869615:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:26:48"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:26:48"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:26:48"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:26:48"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:26:48"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:26:48"}
+{"level":"error","message":"Error processing order 1081869615 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:26:48"}
+{"level":"error","message":"Failed to process order 1081869615:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:26:48"}
+{"level":"error","message":"Order 1081869615 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 01:26:48"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:03:48"}
+{"level":"error","message":"Failed to create item Coffee:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:03:48"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:03:48"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:03:48"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:34"}
+{"level":"error","message":"Failed to create item Coffee:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:34"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:34"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:34"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081512597:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:35"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:35"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:35"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:35"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:35"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:35"}
+{"level":"error","message":"Error processing order 1081512597 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:35"}
+{"level":"error","message":"Failed to process order 1081512597:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:35"}
+{"level":"error","message":"Order 1081512597 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:06:35"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:07:09"}
+{"level":"error","message":"Error in item creation test:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:07:09"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:58"}
+{"level":"error","message":"Failed to create item Coffee:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:58"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Failed to create item Lemonade:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Failed to create item Lemonade:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081883944:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Error processing order 1081883944 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Failed to process order 1081883944:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Order 1081883944 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:09:59"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:13:51"}
+{"level":"error","message":"Failed to create item Coffee:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:13:51"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:13:51"}
+{"level":"error","message":"Failed to create item Lemonade:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:13:51"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:13:52"}
+{"level":"error","message":"Failed to create item Lemonade:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:13:52"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:14:00"}
+{"level":"error","message":"Error in item creation test:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:14:00"}
+{"level":"error","message":"Error in item creation test:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:25:10"}
+{"data":{"errors":[{"code":"INVALID_VALUE_TYPE","details":"The value type must be a number","field":"object.variants[0].cost (line: 1, column: 320)"}]},"level":"error","message":"Loyverse API Error:","service":"gloriafood-loyverse-integration","status":400,"statusText":"","timestamp":"2025-09-04 02:25:10"}
+{"body":"curl -X POST \"http://localhost:8080/api/integration/create-loyverse-items\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"count\": 1,\n    \"orders\": [\n      {\n        \"instructions\": \"\",\n        \"coupons\": [],\n        \"tax_list\": [],\n        \"missed_reason\": null,\n        \"billing_details\": null,\n        \"fulfillment_option\": null,\n        \"table_number\": null,\n        \"ready\": false,\n        \"dine_in_subtype\": null,\n        \"dine_in_subtype_custom_name\": null,\n        \"dine_in_subtype_custom_text\": null,\n        \"charge_to_room_surname\": null,\n        \"charge_to_room_number\": null,\n        \"delivery_by_distance\": null,\n        \"updated_at\": \"2025-09-03T21:09:56.000Z\",\n        \"id\": 1081883944,\n        \"total_price\": 7.5,\n        \"sub_total_price\": 7.5,\n        \"tax_value\": 0,\n        \"persons\": 0,\n        \"latitude\": null,\n        \"longitude\": null,\n        \"client_first_name\": \"Fuck\",\n        \"client_last_name\": \"Iff\",\n        \"client_email\": \"Writeshuja46@gmail.com\",\n        \"client_phone\": \"+923127378945\",\n        \"restaurant_name\": \"Rest Demo\",\n        \"currency\": \"PKR\",\n        \"type\": \"pickup\",\n        \"status\": \"pending\",\n        \"source\": \"android\",\n        \"pin_skipped\": false,\n        \"accepted_at\": null,\n        \"tax_type\": \"GROSS\",\n        \"tax_name\": \"Sales Tax\",\n        \"fulfill_at\": \"2025-09-04T05:00:00.000Z\",\n        \"client_language\": \"en\",\n        \"integration_payment_provider\": null,\n        \"integration_payment_amount\": 0,\n        \"client_ip_address\": \"14.1.106.57\",\n        \"reference\": null,\n        \"restaurant_id\": 640180,\n        \"client_id\": 79610781,\n        \"restaurant_phone\": \"+92 312 7378945\",\n        \"restaurant_timezone\": \"Asia/Karachi\",\n        \"delivery_zone_name\": null,\n        \"outside_delivery_area\": null,\n        \"card_type\": null,\n        \"used_payment_methods\": [\"CASH\"],\n        \"company_account_id\": 1816084,\n        \"pos_system_id\": 72559,\n        \"restaurant_key\": \"bjzWPcgd9FjEEWjP3G\",\n        \"restaurant_country\": \"Pakistan\",\n        \"restaurant_city\": \"lahore\",\n        \"restaurant_zipcode\": \"50800\",\n        \"restaurant_street\": \"D 697, f town , lahore\",\n        \"restaurant_latitude\": \"31.413428986335678\",\n        \"restaurant_longitude\": \"74.3565016276474\",\n        \"client_marketing_consent\": true,\n        \"restaurant_token\": \"eg5TSe7QPAr8X5h9PXPK4jA59EAzfhlsK\",\n        \"gateway_transaction_id\": null,\n        \"gateway_type\": null,\n        \"client_order_count\": 6,\n        \"api_version\": 2,\n        \"payment\": \"CASH\",\n        \"for_later\": true,\n        \"client_address\": null,\n        \"client_address_parts\": null,\n        \"items\": [\n          {\n            \"kitchen_internal_name\": null,\n            \"id\": 1429455896,\n            \"name\": \"Coffee\",\n            \"total_item_price\": 1.5,\n            \"price\": 1.5,\n            \"quantity\": 1,\n            \"instructions\": \"New\",\n            \"type\": \"item\",\n            \"type_id\": 22793986,\n            \"tax_rate\": 0,\n            \"tax_value\": 0,\n            \"parent_id\": null,\n            \"item_discount\": 0,\n            \"cart_discount_rate\": 0,\n            \"cart_discount\": 0,\n            \"tax_type\": \"GROSS\",\n            \"options\": []\n          },\n          {\n            \"kitchen_internal_name\": null,\n            \"id\": 1429455939,\n            \"name\": \"Lemonade\",\n            \"total_item_price\": 3,\n            \"price\": 3,\n            \"quantity\": 1,\n            \"instructions\": \"Www\",\n            \"type\": \"item\",\n            \"type_id\": 22793988,\n            \"tax_rate\": 0,\n            \"tax_value\": 0,\n            \"parent_id\": null,\n            \"item_discount\": 0,\n            \"cart_discount_rate\": 0,\n            \"cart_discount\": 0,\n            \"tax_type\": \"GROSS\",\n            \"options\": []\n          },\n          {\n            \"kitchen_internal_name\": null,\n            \"id\": 1429455959,\n            \"name\": \"Lemonade\",\n            \"total_item_price\": 3,\n            \"price\": 3,\n            \"quantity\": 1,\n            \"instructions\": \"Jeje\",\n            \"type\": \"item\",\n            \"type_id\": 22793988,\n            \"tax_rate\": 0,\n            \"tax_value\": 0,\n            \"parent_id\": null,\n            \"item_discount\": 0,\n            \"cart_discount_rate\": 0,\n            \"cart_discount\": 0,\n            \"tax_type\": \"GROSS\",\n            \"options\": []\n          }\n        ]\n      }\n    ]\n  }'","expose":true,"level":"error","message":"Unhandled error: Unexpected token 'c', \"curl -X PO\"... is not valid JSON","service":"gloriafood-loyverse-integration","stack":"SyntaxError: Unexpected token 'c', \"curl -X PO\"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at createStrictSyntaxError (/Users/macos/Desktop/Upwork lead/node_modules/body-parser/lib/types/json.js:169:10)\n    at parse (/Users/macos/Desktop/Upwork lead/node_modules/body-parser/lib/types/json.js:86:15)\n    at /Users/macos/Desktop/Upwork lead/node_modules/body-parser/lib/read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)\n    at invokeCallback (/Users/macos/Desktop/Upwork lead/node_modules/raw-body/index.js:238:16)\n    at done (/Users/macos/Desktop/Upwork lead/node_modules/raw-body/index.js:227:7)\n    at IncomingMessage.onEnd (/Users/macos/Desktop/Upwork lead/node_modules/raw-body/index.js:287:7)\n    at IncomingMessage.emit (node:events:524:28)\n    at endReadableNT (node:internal/streams/readable:1698:12)","status":400,"statusCode":400,"timestamp":"2025-09-04 02:28:50","type":"entity.parse.failed"}
+{"level":"error","message":"Failed to search for item Coffee:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:34:36"}
+{"level":"error","message":"Failed to create item in Loyverse: getaddrinfo ENOTFOUND api.loyverse.com","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:34:36"}
+{"level":"error","message":"Failed to create item Coffee:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:34:36"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:48"}
+{"level":"error","message":"Failed to create item Pizza Margherita:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:48"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Failed to create item Coffee:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081893185:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Error processing order 1081893185 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Failed to process order 1081893185:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Order 1081893185 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:36:49"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:14"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:19"}
+{"level":"error","message":"Failed to update item in Loyverse: Request failed with status code 405","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:27"}
+{"level":"error","message":"Failed to process item Coffee:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:27"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:27"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:27"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081883944:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:28"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:28"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:28"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:28"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:28"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:28"}
+{"level":"error","message":"Error processing order 1081883944 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:28"}
+{"level":"error","message":"Failed to process order 1081883944:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:28"}
+{"level":"error","message":"Order 1081883944 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:48:28"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:02"}
+{"level":"error","message":"Failed to process item Spaghetti Bolognese:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:02"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:02"}
+{"level":"error","message":"Failed to process item Spaghetti Carbonara:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:02"}
+{"level":"error","message":"Failed to update item in Loyverse: Request failed with status code 405","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:03"}
+{"level":"error","message":"Failed to process item Coffee:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:03"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:03"}
+{"level":"error","message":"Failed to process item Pepsi:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:03"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:04"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:04"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081899196:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:04"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:04"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:04"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:04"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:04"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:04"}
+{"level":"error","message":"Error processing order 1081899196 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:04"}
+{"level":"error","message":"Failed to process order 1081899196:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:04"}
+{"level":"error","message":"Order 1081899196 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:54:04"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Failed to process item Spaghetti Bolognese:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Failed to find or create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081899196:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Error processing order 1081899196 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Failed to process order 1081899196:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Order 1081899196 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 02:59:30"}
+{"level":"error","message":"Error creating Loyverse items:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:03:32"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081899196:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:04:11"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:04:11"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:04:11"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:04:11"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:04:11"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:04:11"}
+{"level":"error","message":"Error processing order 1081899196 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:04:11"}
+{"level":"error","message":"Failed to process order 1081899196:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:04:11"}
+{"level":"error","message":"Order 1081899196 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:04:11"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081899196:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:05:43"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:05:43"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:05:43"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:05:43"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:05:43"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:05:43"}
+{"level":"error","message":"Error processing order 1081899196 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:05:43"}
+{"level":"error","message":"Failed to process order 1081899196:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:05:43"}
+{"level":"error","message":"Order 1081899196 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:05:43"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1081903890:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:06:36"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:06:36"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:06:36"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:06:36"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:06:36"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:06:36"}
+{"level":"error","message":"Error processing order 1081903890 to Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:06:36"}
+{"level":"error","message":"Failed to process order 1081903890:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:06:36"}
+{"level":"error","message":"Order 1081903890 processing failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-04 03:06:36"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1082270477:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-05 23:01:48"}
+{"level":"error","message":"Loyverse API Error Response:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-05 23:01:48"}
+{"level":"error","message":"Status:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-05 23:01:48"}
+{"level":"error","message":"Status Text:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-05 23:01:48"}
+{"level":"error","message":"Response Data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-05 23:01:48"}
+{"level":"error","message":"Response Headers:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-05 23:01:48"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-05 23:01:48"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1082270477:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-05 23:03:21"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-05 23:03:21"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1082270477:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-05 23:06:51"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-05 23:06:51"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1082270477:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:02:42"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:02:42"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1082270477:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:05:11"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:05:11"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1082270477:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:06:29"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:06:29"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:38:22"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089999999:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:38:22"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:38:22"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:38:40"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089999999:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:38:40"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:38:40"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:38:52"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089999999:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:38:52"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:38:52"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:39:47"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089999999:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:39:47"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:39:47"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:40:22"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089999999:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:40:22"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:40:22"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:41:06"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089999999:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:41:06"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-06 00:41:06"}
+{"level":"error","message":"Failed to search for item Pizza Margherita:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-09 00:18:03"}
+{"level":"error","message":"Failed to create item in Loyverse: getaddrinfo ENOTFOUND api.loyverse.com","service":"gloriafood-loyverse-integration","timestamp":"2025-09-09 00:18:03"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1082757516:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-09 00:18:03"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-09 00:18:03"}
+{"level":"error","message":"Failed to search and create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-09 00:19:14"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-09 00:43:48"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-09 00:44:03"}
+{"level":"error","message":"Failed to search for item Test Item:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-09 00:45:22"}
+{"level":"error","message":"Failed to create item in Loyverse: getaddrinfo ENOTFOUND api.loyverse.com","service":"gloriafood-loyverse-integration","timestamp":"2025-09-09 00:45:22"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 123:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-09 00:45:22"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-09 00:45:22"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 999988:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-12 01:37:08"}
+{"level":"error","message":"Error creating Loyverse receipt:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-12 01:37:08"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089999998:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-12 01:38:41"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-12 01:38:41"}
