@@ -124,69 +124,69 @@ class LoyverseAPI {
     }
   }
 
-  // Print receipt automatically
-  async printReceipt(receiptId) {
-    try {
-      console.log(`Sending receipt ${receiptId} to printer...`);
-      
-      // Method 1: Use Loyverse Print API (if available)
-      try {
-        const printResponse = await axios.post(`${this.baseURL}/receipts/${receiptId}/print`, {}, {
-          headers: this.getHeaders()
-        });
-        console.log(`Receipt ${receiptId} sent to printer via Loyverse API`);
-        return printResponse.data;
-      } catch (loyversePrintError) {
-        console.log('Loyverse print API not available, trying alternative method...');
-        
-        // Method 2: Use POS Device Print API
-        try {
-          const posPrintResponse = await axios.post(`${this.baseURL}/pos_devices/print`, {
-            receipt_id: receiptId,
-            store_id: this.locationId
-          }, {
-            headers: this.getHeaders()
-          });
-          console.log(`Receipt ${receiptId} sent to POS printer`);
-          return posPrintResponse.data;
-        } catch (posPrintError) {
-          console.log('POS print API not available, using webhook notification...');
-          
-          // Method 3: Send print notification via webhook
-          await this.sendPrintNotification(receiptId);
-          return { message: 'Print notification sent' };
-        }
-      }
-      
-    } catch (error) {
-      console.error(`Error printing receipt ${receiptId}:`, error.response?.data || error.message);
-      throw error;
-    }
-  }
+  // Print receipt automatically - COMMENTED OUT FOR NOW
+  // async printReceipt(receiptId) {
+  //   try {
+  //     console.log(`Sending receipt ${receiptId} to printer...`);
+  //     
+  //     // Method 1: Use Loyverse Print API (if available)
+  //     try {
+  //       const printResponse = await axios.post(`${this.baseURL}/receipts/${receiptId}/print`, {}, {
+  //         headers: this.getHeaders()
+  //       });
+  //       console.log(`Receipt ${receiptId} sent to printer via Loyverse API`);
+  //       return printResponse.data;
+  //     } catch (loyversePrintError) {
+  //       console.log('Loyverse print API not available, trying alternative method...');
+  //       
+  //       // Method 2: Use POS Device Print API
+  //       try {
+  //         const posPrintResponse = await axios.post(`${this.baseURL}/pos_devices/print`, {
+  //           receipt_id: receiptId,
+  //           store_id: this.locationId
+  //         }, {
+  //           headers: this.getHeaders()
+  //         });
+  //         console.log(`Receipt ${receiptId} sent to POS printer`);
+  //         return posPrintResponse.data;
+  //       } catch (posPrintError) {
+  //         console.log('POS print API not available, using webhook notification...');
+  //         
+  //         // Method 3: Send print notification via webhook
+  //         await this.sendPrintNotification(receiptId);
+  //         return { message: 'Print notification sent' };
+  //       }
+  //     }
+  //     
+  //   } catch (error) {
+  //     console.error(`Error printing receipt ${receiptId}:`, error.response?.data || error.message);
+  //     throw error;
+  //   }
+  // }
 
-  // Send print notification (fallback method)
-  async sendPrintNotification(receiptId) {
-    try {
-      console.log(`Sending print notification for receipt ${receiptId}...`);
-      
-      // This could be a webhook to your POS system or a print service
-      const notificationData = {
-        receipt_id: receiptId,
-        store_id: this.locationId,
-        action: 'print_receipt',
-        timestamp: new Date().toISOString()
-      };
-      
-      // You can implement this to send to your POS system
-      console.log('Print notification data:', JSON.stringify(notificationData, null, 2));
-      
-      return { success: true, message: 'Print notification sent' };
-      
-    } catch (error) {
-      console.error('Error sending print notification:', error.message);
-      throw error;
-    }
-  }
+  // Send print notification (fallback method) - COMMENTED OUT FOR NOW
+  // async sendPrintNotification(receiptId) {
+  //   try {
+  //     console.log(`Sending print notification for receipt ${receiptId}...`);
+  //     
+  //     // This could be a webhook to your POS system or a print service
+  //     const notificationData = {
+  //       receipt_id: receiptId,
+  //       store_id: this.locationId,
+  //       action: 'print_receipt',
+  //       timestamp: new Date().toISOString()
+  //     };
+  //     
+  //     // You can implement this to send to your POS system
+  //     console.log('Print notification data:', JSON.stringify(notificationData, null, 2));
+  //     
+  //     return { success: true, message: 'Print notification sent' };
+  //     
+  //   } catch (error) {
+  //     console.error('Error sending print notification:', error.message);
+  //     throw error;
+  //   }
+  // }
 
   // Create a new item in Loyverse
   async createItem(itemData) {
@@ -257,6 +257,13 @@ class LoyverseAPI {
       for (const item of orderData.items) {
         console.log(`Processing item: ${item.name} (GloriaFood ID: ${item.id})`);
         console.log(`Item data:`, JSON.stringify(item, null, 2));
+        
+        // Handle delivery fees as special case - skip from line items
+        if (item.sku === 'DELIVERY_FEE' || item.name === 'DELIVERY_FEE' || item.type === 'delivery_fee') {
+          console.log(`Found delivery fee: ${item.name} (${item.price} PKR) - skipping from line items`);
+          // Skip delivery fee from line items
+          continue;
+        }
         
         // Find or create the item
         const existingItem = await this.findItemByName(item.name, item.id);
@@ -363,6 +370,18 @@ class LoyverseAPI {
         receiptNotes += `Order Instructions: ${orderData.notes.trim()}\n`;
       }
       
+      // Calculate delivery fee surcharge
+      let deliveryFeeSurcharge = 0;
+      if (orderData.items && orderData.items.length > 0) {
+        const deliveryFeeItems = orderData.items.filter(item => 
+          item.sku === 'DELIVERY_FEE' || item.name === 'DELIVERY_FEE' || item.type === 'delivery_fee'
+        );
+        if (deliveryFeeItems.length > 0) {
+          deliveryFeeSurcharge = deliveryFeeItems.reduce((total, item) => total + (item.total_price || item.price || 0), 0);
+          console.log(`Calculated delivery fee surcharge: ${deliveryFeeSurcharge} PKR`);
+        }
+      }
+      
       // Now create the receipt with proper variant IDs, payment type ID, and customer
       const receiptData = {
         store_id: this.locationId,
@@ -378,6 +397,14 @@ class LoyverseAPI {
         note: receiptNotes.trim(),
         status: 'open'
       };
+      
+      // Add surcharge as number
+      if (deliveryFeeSurcharge > 0) {
+        receiptData.surcharge = deliveryFeeSurcharge;
+        console.log(`Added surcharge: ${deliveryFeeSurcharge}`);
+      }
+      
+      // Delivery fees are handled as surcharge
       
       console.log('=== RECEIPT CREATION DEBUG ===');
       console.log('Receipt data being sent to Loyverse:', JSON.stringify(receiptData, null, 2));
@@ -399,14 +426,14 @@ class LoyverseAPI {
       
       logger.info(`Created receipt in Loyverse: ${receiptId}`);
       
-      // Automatically print the receipt
-      try {
-        await this.printReceipt(receiptId);
-        logger.info(`Receipt ${receiptId} sent to printer`);
-      } catch (printError) {
-        logger.warn(`Failed to print receipt ${receiptId}:`, printError.message);
-        // Don't fail the whole process if printing fails
-      }
+      // Automatically print the receipt - COMMENTED OUT FOR NOW
+      // try {
+      //   await this.printReceipt(receiptId);
+      //   logger.info(`Receipt ${receiptId} sent to printer`);
+      // } catch (printError) {
+      //   logger.warn(`Failed to print receipt ${receiptId}:`, printError.message);
+      //   // Don't fail the whole process if printing fails
+      // }
       
       return response.data;
     } catch (error) {

@@ -97,6 +97,23 @@ class ItemMappingService {
 
     for (const item of gloriaFoodItems) {
       try {
+        // Handle special items like delivery fees
+        if (item.name === 'DELIVERY_FEE' || item.type === 'delivery_fee') {
+          logger.info(`Processing delivery fee: ${item.name} (${item.price} PKR)`);
+          processedItems.push({
+            originalGloriaFoodItem: item,
+            sku: 'DELIVERY_FEE',
+            loyverseName: 'Delivery Fee',
+            category: 'Delivery',
+            price: item.price,
+            matchType: 'delivery_fee',
+            size: null,
+            gloriaFoodItemName: item.name,
+            status: 'mapped'
+          });
+          continue;
+        }
+
         // Extract size from item options or name
         let size = null;
         let gloriaFoodItemName = item.name;

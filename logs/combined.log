@@ -3280,3 +3280,510 @@
 {"level":"info","message":"Created receipt in Loyverse: 0062","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:43"}
 {"level":"info","message":"Receipt 0062 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:44"}
 {"level":"info","message":"::1 - - [12/Sep/2025:21:26:44 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 3178 \"-\" \"GF Accepted Orders, Order Id: 1085882729, Try Number: 1/10, Server Time: 2025-09-12T21:26:41.562Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:44"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"info","message":"Processing order 1086343819 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"DELIVERY_FEE\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"warn","message":"No SKU found for GloriaFood item: \"DELIVERY_FEE\" (size: \"null\")","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"info","message":"Item mapping results: 1 mapped, 1 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343819","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:22"}
+{"level":"info","message":"Created receipt in Loyverse: 0063","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:25"}
+{"level":"info","message":"Receipt 0063 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:25"}
+{"level":"info","message":"::1 - - [13/Sep/2025:18:34:25 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1685 \"-\" \"GF Accepted Orders, Order Id: 1086343819, Try Number: 1/10, Server Time: 2025-09-13T18:34:21.824Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:34:25"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:24"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:24"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:24"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:24"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:24"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:24"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:42"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:42"}
+{"level":"info","message":"Processing order 1086343819 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:42"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:42"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:42"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:42"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:42"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:42"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:42"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:42"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343819","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:42"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1086343819:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:44"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:44"}
+{"level":"info","message":"::1 - - [13/Sep/2025:18:37:44 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 500 85 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:44"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:06"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:06"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:06"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:06"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:06"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:06"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:27"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:27"}
+{"level":"info","message":"Processing order 1086343819 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:27"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:27"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:27"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:27"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:27"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:27"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:27"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:27"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343819","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:27"}
+{"level":"info","message":"Item not found by ID DELIVERY_FEE, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:29"}
+{"level":"info","message":"Created receipt in Loyverse: 0064","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:30"}
+{"level":"info","message":"Receipt 0064 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:30"}
+{"level":"info","message":"::1 - - [13/Sep/2025:18:38:30 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1600 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:38:30"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:41:49"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:41:49"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:41:49"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:41:49"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:41:49"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:41:49"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:09"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:09"}
+{"level":"info","message":"Processing order 1086343820 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:09"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:09"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:09"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:09"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:09"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:09"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343820","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:09"}
+{"level":"info","message":"Created receipt in Loyverse: 0065","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:11"}
+{"level":"info","message":"::1 - - [13/Sep/2025:18:42:11 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1559 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:11"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Processing order 1086348350 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086348350","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:22"}
+{"level":"info","message":"Item not found by ID DELIVERY_FEE, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:23"}
+{"level":"info","message":"Created receipt in Loyverse: 0066","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:24"}
+{"level":"info","message":"::1 - - [13/Sep/2025:18:42:24 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 2007 \"-\" \"GF Accepted Orders, Order Id: 1086348350, Try Number: 1/10, Server Time: 2025-09-13T18:42:21.759Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:42:24"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:56:56"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:56:56"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:56:56"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:56:56"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:56:56"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:56:56"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:13"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:13"}
+{"level":"info","message":"Processing order 1086343821 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:13"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:13"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:13"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:13"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:13"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:13"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:13"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:13"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343821","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:13"}
+{"level":"info","message":"Created receipt in Loyverse: 0067","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:16"}
+{"level":"info","message":"::1 - - [13/Sep/2025:18:57:16 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1618 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:16"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:29"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:29"}
+{"level":"info","message":"Processing order 1086343822 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:29"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:29"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:29"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:29"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:29"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:29"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:29"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343822","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:29"}
+{"level":"info","message":"Created receipt in Loyverse: 0068","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:30"}
+{"level":"info","message":"::1 - - [13/Sep/2025:18:57:30 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1543 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:30"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:41"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:41"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:41"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:41"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:41"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:57:41"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:10"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:10"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:10"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:10"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:10"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:10"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:17"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:17"}
+{"level":"info","message":"Processing order 1086343823 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:17"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:17"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:17"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:17"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:17"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:17"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:17"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343823","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:17"}
+{"level":"info","message":"Created receipt in Loyverse: 0069","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:19"}
+{"level":"info","message":"::1 - - [13/Sep/2025:18:58:19 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1552 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:19"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:35"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:35"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:35"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:35"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:35"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:35"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:44"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:44"}
+{"level":"info","message":"Processing order 1086343824 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:44"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:44"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:44"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:44"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:44"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:44"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:44"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343824","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:44"}
+{"level":"info","message":"Created receipt in Loyverse: 0070","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:46"}
+{"level":"info","message":"::1 - - [13/Sep/2025:18:58:46 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1543 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:58:46"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:06"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:06"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:06"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:06"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:06"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:06"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:24"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:24"}
+{"level":"info","message":"Processing order 1086343819 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:24"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:24"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:24"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:24"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:24"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:24"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:24"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:24"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343819","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:24"}
+{"level":"info","message":"Created receipt in Loyverse: 0071","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:27"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:01:27 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1600 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:27"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:57"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:57"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:57"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:57"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:57"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:01:57"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:08"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:08"}
+{"level":"info","message":"Processing order 1086343825 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:08"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:08"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:08"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:08"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:08"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:08"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:08"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343825","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:08"}
+{"level":"info","message":"Item not found by ID DELIVERY_FEE, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:10"}
+{"level":"info","message":"Creating item in Loyverse: undefined","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:10"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:10"}
+{"level":"info","message":"Created receipt in Loyverse: 0072","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:11"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:02:11 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1555 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:11"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:39"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:39"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:39"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:39"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:39"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:39"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:46"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:46"}
+{"level":"info","message":"Processing order 1086343826 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:46"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:46"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:46"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:46"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:46"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:46"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:46"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343826","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:46"}
+{"level":"info","message":"Item not found by ID DELIVERY_FEE, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:48"}
+{"level":"info","message":"Creating item in Loyverse: Delivery Fee","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:48"}
+{"level":"info","message":"Item created successfully: af80fefe-eaa7-4719-802d-92e0efa56a58","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:48"}
+{"level":"info","message":"Created receipt in Loyverse: 0073","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:49"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:02:49 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1943 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:49"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:07"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:07"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:07"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:07"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:07"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:07"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:17"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:17"}
+{"level":"info","message":"Processing order 1086343827 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:17"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:17"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:17"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:17"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:17"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:17"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:17"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343827","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:17"}
+{"level":"info","message":"Created receipt in Loyverse: 0074","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:19"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:05:19 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1555 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:19"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:31"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:31"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:31"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:31"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:31"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:31"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:42"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:42"}
+{"level":"info","message":"Processing order 1086343828 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:42"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:42"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:42"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:42"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:42"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:42"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:42"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343828","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:42"}
+{"level":"info","message":"Created receipt in Loyverse: 0075","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:44"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:05:44 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1540 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:05:44"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:19"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:19"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:19"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:19"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:19"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:19"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:31"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:31"}
+{"level":"info","message":"Processing order 1086343829 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:31"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:31"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:31"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:31"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:31"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:31"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:31"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343829","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:31"}
+{"level":"info","message":"Item not found by ID DELIVERY_FEE, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:32"}
+{"level":"info","message":"Created receipt in Loyverse: 0076","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:33"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:06:33 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1951 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:06:33"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:14"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:14"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:14"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:14"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:14"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:14"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:23"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:23"}
+{"level":"info","message":"Processing order 1086343830 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:23"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:23"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:23"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:23"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:23"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:23"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:23"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343830","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:23"}
+{"level":"info","message":"Created receipt in Loyverse: 0077","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:25"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:10:25 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1555 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:25"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:44"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:44"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:44"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:44"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:44"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:44"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:55"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:55"}
+{"level":"info","message":"Processing order 1086343831 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:55"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:55"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:55"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:55"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:55"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:55"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:55"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343831","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:55"}
+{"level":"info","message":"Created receipt in Loyverse: 0078","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:57"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:10:57 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1545 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:10:57"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:22"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:22"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:22"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:22"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:22"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:22"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:33"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:33"}
+{"level":"info","message":"Processing order 1086343832 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:33"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:33"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:33"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:33"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:33"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:33"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:33"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343832","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:33"}
+{"level":"info","message":"Created receipt in Loyverse: 0079","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:34"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:11:34 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1548 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:11:34"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:04"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:04"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:04"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:04"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:04"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:04"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:13"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:13"}
+{"level":"info","message":"Processing order 1086343833 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:13"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:13"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:13"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:13"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:13"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:13"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:13"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343833","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:13"}
+{"level":"info","message":"Item not found by ID DELIVERY_FEE, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:15"}
+{"level":"info","message":"Created receipt in Loyverse: 0080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:16"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:12:16 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1570 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:16"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:57"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:57"}
+{"level":"info","message":"Processing order 1086343834 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:57"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:57"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:57"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:57"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:57"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:57"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:57"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343834","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:57"}
+{"level":"info","message":"Item not found by ID DELIVERY_FEE, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:58"}
+{"level":"info","message":"Created receipt in Loyverse: 0081","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:59"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:12:59 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1961 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:12:59"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:03"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:03"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:03"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:03"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:03"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:03"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:15"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:15"}
+{"level":"info","message":"Processing order 1086343835 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:15"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:15"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:15"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:15"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:15"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:15"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:15"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343835","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:15"}
+{"level":"info","message":"Created receipt in Loyverse: 0082","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:17"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:17:17 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1562 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:17"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:29"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:29"}
+{"level":"info","message":"Processing order 1086343836 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:29"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:29"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:29"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (10 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:29"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:29"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:29"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:29"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343836","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:29"}
+{"level":"info","message":"Created receipt in Loyverse: 0083","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:31"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:17:31 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1552 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:17:31"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:12"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:12"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:12"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:12"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:12"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:12"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:26"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:26"}
+{"level":"info","message":"Processing order 1086343837 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:26"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:26"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:26"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:26"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:26"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:26"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:26"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086343837","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:26"}
+{"level":"info","message":"Created receipt in Loyverse: 0085","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:27"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:22:27 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1563 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:22:27"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Processing order 1086374164 with 4 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Item mapping results: 4 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086374164","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:29:58"}
+{"level":"info","message":"Created receipt in Loyverse: 0086","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:30:01"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:30:01 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 2824 \"-\" \"GF Accepted Orders, Order Id: 1086374164, Try Number: 1/10, Server Time: 2025-09-13T19:29:57.842Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:30:01"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:35:59"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:35:59"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:35:59"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:35:59"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:35:59"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:35:59"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:06"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:06"}
+{"level":"info","message":"Processing order 1086380213 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:06"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:06"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:06"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:06"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:06"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:06"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:06"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:06"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086380213","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:06"}
+{"level":"info","message":"Created receipt in Loyverse: 0087","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:08"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:39:08 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1617 \"-\" \"GF Accepted Orders, Order Id: 1086380213, Try Number: 1/10, Server Time: 2025-09-13T19:39:05.916Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:39:08"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:50:10"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:50:10"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:50:10"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:50:10"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:50:10"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:50:10"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Processing order 1086308283 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"نودلز سبايسي مع الصوصات\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"نودلز سبايسي مع الصوصات\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Found exact match: SKU 10002 for \"نودلز سبايسي مع الصوصات\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086308283","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:06"}
+{"level":"info","message":"Creating new customer in Loyverse","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:08"}
+{"level":"info","message":"Created new customer: 6b099ff1-91ae-4aa6-8380-a6255778f503","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:08"}
+{"level":"info","message":"Created receipt in Loyverse: 0088","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:08"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:53:08 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1943 \"-\" \"GF Accepted Orders, Order Id: 1086308283, Try Number: 1/10, Server Time: 2025-09-13T19:53:05.694Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:53:08"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Processing order 1086387913 with 4 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (2000 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"نودلز ابتاون\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"نودلز ابتاون\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Found exact match: SKU 10033 for \"نودلز ابتاون\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"شبس ابتاون\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"شبس ابتاون\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Found exact match: SKU 10034 for \"شبس ابتاون\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"شبس اسبيشل - جبن مالح\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"شبس اسبيشل - جبن مالح\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Found exact match: SKU 10041 for \"شبس اسبيشل - جبن مالح\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Item mapping results: 4 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086387913","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:48"}
+{"level":"info","message":"Created receipt in Loyverse: 0089","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:51"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:55:51 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 2424 \"-\" \"GF Accepted Orders, Order Id: 1086387913, Try Number: 1/10, Server Time: 2025-09-13T19:55:48.100Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:55:51"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:35"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:35"}
+{"level":"info","message":"Processing order 1086399564 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:35"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:35"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:35"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:35"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:35"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:35"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:35"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:35"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1086399564","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:35"}
+{"level":"info","message":"Created receipt in Loyverse: 0090","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:37"}
+{"level":"info","message":"::1 - - [13/Sep/2025:20:21:37 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1587 \"-\" \"GF Accepted Orders, Order Id: 1086399564, Try Number: 1/10, Server Time: 2025-09-13T20:21:37.232Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 01:21:37"}
