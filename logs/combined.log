@@ -2446,3 +2446,837 @@
 {"level":"error","message":"Failed to create receipt in Loyverse for order 1089999998:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-12 01:38:41"}
 {"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-12 01:38:41"}
 {"level":"info","message":"::1 - - [11/Sep/2025:20:38:41 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 500 85 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-12 01:38:41"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:32"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:32"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:32"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:32"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:32"}
+{"level":"info","message":"Starting bulk creation of 46 menu items in Loyverse","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:37"}
+{"level":"info","message":"Creating item in Loyverse: كبسة ابتاون دجاج كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:39"}
+{"level":"info","message":"Item created successfully: 669223a3-4b72-469f-8948-d20fb8b4ed97","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:39"}
+{"level":"info","message":"Created new item: كبسة ابتاون دجاج كبير (ID: 669223a3-4b72-469f-8948-d20fb8b4ed97)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:39"}
+{"level":"info","message":"Creating item in Loyverse: كبسة ابتاون دجاج وسط","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:39"}
+{"level":"info","message":"Item created successfully: 613e9aff-a87f-444b-a535-9b38a266a796","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:39"}
+{"level":"info","message":"Created new item: كبسة ابتاون دجاج وسط (ID: 613e9aff-a87f-444b-a535-9b38a266a796)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:39"}
+{"level":"info","message":"Creating item in Loyverse: كبسة ابتاون دجاج صغبر","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:40"}
+{"level":"info","message":"Item created successfully: 1dcb2005-2826-4750-a598-17e00c7799ce","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:40"}
+{"level":"info","message":"Created new item: كبسة ابتاون دجاج صغبر (ID: 1dcb2005-2826-4750-a598-17e00c7799ce)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:40"}
+{"level":"info","message":"Creating item in Loyverse: نودلز كبسة ابتاون كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:40"}
+{"level":"info","message":"Item created successfully: 892665e6-a780-49af-8cdb-994415c5f17a","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:40"}
+{"level":"info","message":"Created new item: نودلز كبسة ابتاون كبير (ID: 892665e6-a780-49af-8cdb-994415c5f17a)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:40"}
+{"level":"info","message":"Creating item in Loyverse: نودلز كبسة ابتاون وسط","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:41"}
+{"level":"info","message":"Item created successfully: 7142f1e2-1f6d-426d-90bf-f593048d51f3","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:41"}
+{"level":"info","message":"Created new item: نودلز كبسة ابتاون وسط (ID: 7142f1e2-1f6d-426d-90bf-f593048d51f3)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:41"}
+{"level":"info","message":"Creating item in Loyverse: نودلز كبسة ابتاون صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:41"}
+{"level":"info","message":"Item created successfully: 59b8e089-340c-4581-8e90-06dc02bb0815","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:41"}
+{"level":"info","message":"Created new item: نودلز كبسة ابتاون صغير (ID: 59b8e089-340c-4581-8e90-06dc02bb0815)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:41"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ابتاون مع الشبس","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:41"}
+{"level":"info","message":"Item created successfully: babb57c1-f346-4925-bad9-258071cd2893","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:42"}
+{"level":"info","message":"Created new item: نودلز ابتاون مع الشبس (ID: babb57c1-f346-4925-bad9-258071cd2893)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:42"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ابتاون كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:42"}
+{"level":"info","message":"Item created successfully: 4b99d7e2-1c7a-4e82-82a8-085507df6c54","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:42"}
+{"level":"info","message":"Created new item: نودلز ابتاون كبير (ID: 4b99d7e2-1c7a-4e82-82a8-085507df6c54)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:42"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ابتاون صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:42"}
+{"level":"info","message":"Item created successfully: 74fc0b67-7809-42c2-b03f-6b3c653bd543","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:43"}
+{"level":"info","message":"Created new item: نودلز ابتاون صغير (ID: 74fc0b67-7809-42c2-b03f-6b3c653bd543)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:43"}
+{"level":"info","message":"Creating item in Loyverse: نودلز مع الشبس","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:43"}
+{"level":"info","message":"Item created successfully: ebec430a-ebe5-456b-af87-201ae8dfb145","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:43"}
+{"level":"info","message":"Created new item: نودلز مع الشبس (ID: ebec430a-ebe5-456b-af87-201ae8dfb145)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:43"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالخلطة الكورية - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:43"}
+{"level":"info","message":"Item created successfully: 1af1eced-9054-4719-9ec6-57d8c3a7ef00","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:43"}
+{"level":"info","message":"Created new item: نودلز بالخلطة الكورية - كبير (ID: 1af1eced-9054-4719-9ec6-57d8c3a7ef00)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:43"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالخلطة الكورية صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:44"}
+{"level":"info","message":"Item created successfully: 500bfff2-5fd2-4cfb-8604-94a9dd639d73","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:44"}
+{"level":"info","message":"Created new item: نودلز بالخلطة الكورية صغير (ID: 500bfff2-5fd2-4cfb-8604-94a9dd639d73)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:44"}
+{"level":"info","message":"Creating item in Loyverse: نودلز خلطة خاصة - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:44"}
+{"level":"info","message":"Item created successfully: 5e27ac79-d0bc-4172-b302-e72d969db3a5","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:44"}
+{"level":"info","message":"Created new item: نودلز خلطة خاصة - كبير (ID: 5e27ac79-d0bc-4172-b302-e72d969db3a5)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:44"}
+{"level":"info","message":"Creating item in Loyverse: نودلز خلطة خاصة صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:45"}
+{"level":"info","message":"Item created successfully: 6fd4a942-1ba9-4a7c-9f47-5508fe1c0744","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:45"}
+{"level":"info","message":"Created new item: نودلز خلطة خاصة صغير (ID: 6fd4a942-1ba9-4a7c-9f47-5508fe1c0744)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:45"}
+{"level":"info","message":"Creating item in Loyverse: نودلز دبس رمان - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:45"}
+{"level":"info","message":"Item created successfully: 151d734f-f79a-444d-b702-c5a129e31c98","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:45"}
+{"level":"info","message":"Created new item: نودلز دبس رمان - كبير (ID: 151d734f-f79a-444d-b702-c5a129e31c98)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:45"}
+{"level":"info","message":"Creating item in Loyverse: نودلز دبس رمان صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:46"}
+{"level":"info","message":"Item created successfully: f7245992-ba25-40a0-99a6-3bf375bc1356","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:46"}
+{"level":"info","message":"Created new item: نودلز دبس رمان صغير (ID: f7245992-ba25-40a0-99a6-3bf375bc1356)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:46"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالجبن - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:46"}
+{"level":"info","message":"Item created successfully: 34a71a53-eae1-4473-912f-35c837bbe707","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:46"}
+{"level":"info","message":"Created new item: نودلز بالجبن - كبير (ID: 34a71a53-eae1-4473-912f-35c837bbe707)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:46"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالجبن صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:47"}
+{"level":"info","message":"Item created successfully: 44d07034-49a6-4eb9-a707-cc8cebf09985","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:47"}
+{"level":"info","message":"Created new item: نودلز بالجبن صغير (ID: 44d07034-49a6-4eb9-a707-cc8cebf09985)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:47"}
+{"level":"info","message":"Creating item in Loyverse: نودلز - صوصات سبايسي صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:47"}
+{"level":"info","message":"Item created successfully: 611f266e-1c5d-4815-90ca-5ca8edb00f58","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:47"}
+{"level":"info","message":"Created new item: نودلز - صوصات سبايسي صغير (ID: 611f266e-1c5d-4815-90ca-5ca8edb00f58)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:47"}
+{"level":"info","message":"Creating item in Loyverse: نودلز - صوصات سبايسي كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:48"}
+{"level":"info","message":"Item created successfully: 49cc4e04-3003-41d1-9149-7ff22278336e","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:48"}
+{"level":"info","message":"Created new item: نودلز - صوصات سبايسي كبير (ID: 49cc4e04-3003-41d1-9149-7ff22278336e)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:48"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ساده - بدون صوصات كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:48"}
+{"level":"info","message":"Item created successfully: 725d3cf8-19ee-4ae6-9d3d-777913338f81","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:48"}
+{"level":"info","message":"Created new item: نودلز ساده - بدون صوصات كبير (ID: 725d3cf8-19ee-4ae6-9d3d-777913338f81)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:48"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ساده - بدون صوصات","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:49"}
+{"level":"info","message":"Item created successfully: 9d8bd3ea-6e49-4642-b0a3-d28d3f7cd841","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:49"}
+{"level":"info","message":"Created new item: نودلز ساده - بدون صوصات (ID: 9d8bd3ea-6e49-4642-b0a3-d28d3f7cd841)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:49"}
+{"level":"info","message":"Creating item in Loyverse: شبس ابتاون كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:49"}
+{"level":"info","message":"Item created successfully: df6b7455-89a2-4d02-bd41-ed9c26e37156","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:49"}
+{"level":"info","message":"Created new item: شبس ابتاون كبير (ID: df6b7455-89a2-4d02-bd41-ed9c26e37156)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:49"}
+{"level":"info","message":"Creating item in Loyverse: شبس ابتاون صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:50"}
+{"level":"info","message":"Item created successfully: d9af9826-9e14-4827-84d5-8f2cf16a0a12","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:50"}
+{"level":"info","message":"Created new item: شبس ابتاون صغير (ID: d9af9826-9e14-4827-84d5-8f2cf16a0a12)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:50"}
+{"level":"info","message":"Creating item in Loyverse: شبس اسبيشل جبن سائل كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:50"}
+{"level":"info","message":"Item created successfully: 6e7ee091-9c2c-4f34-bb04-502fc0c99881","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:50"}
+{"level":"info","message":"Created new item: شبس اسبيشل جبن سائل كبير (ID: 6e7ee091-9c2c-4f34-bb04-502fc0c99881)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:50"}
+{"level":"info","message":"Creating item in Loyverse: شبس اسبيشل جبن سائل صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:51"}
+{"level":"info","message":"Item created successfully: ce7a7ff0-1e3f-407f-b107-9c0332d608bf","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:51"}
+{"level":"info","message":"Created new item: شبس اسبيشل جبن سائل صغير (ID: ce7a7ff0-1e3f-407f-b107-9c0332d608bf)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:51"}
+{"level":"info","message":"Creating item in Loyverse: شبس جبن مالح كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:51"}
+{"level":"info","message":"Item created successfully: ac027903-171d-4f3e-96ac-a6f54ff44803","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:51"}
+{"level":"info","message":"Created new item: شبس جبن مالح كبير (ID: ac027903-171d-4f3e-96ac-a6f54ff44803)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:51"}
+{"level":"info","message":"Creating item in Loyverse: شبس اسبيشل-جبن مالح صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:52"}
+{"level":"info","message":"Item created successfully: 2bd23c83-ddb4-4498-8834-16054a773bc3","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:52"}
+{"level":"info","message":"Created new item: شبس اسبيشل-جبن مالح صغير (ID: 2bd23c83-ddb4-4498-8834-16054a773bc3)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:52"}
+{"level":"info","message":"Creating item in Loyverse: شبس سبايسي كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:52"}
+{"level":"info","message":"Item created successfully: 8415384f-9848-4db1-867f-4ff9767252bd","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:52"}
+{"level":"info","message":"Created new item: شبس سبايسي كبير (ID: 8415384f-9848-4db1-867f-4ff9767252bd)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:52"}
+{"level":"info","message":"Creating item in Loyverse: شبس صوصات - صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:53"}
+{"level":"info","message":"Item created successfully: a066a591-a3be-48ae-80a4-c0fc0ae34754","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:53"}
+{"level":"info","message":"Created new item: شبس صوصات - صغير (ID: a066a591-a3be-48ae-80a4-c0fc0ae34754)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:53"}
+{"level":"info","message":"Creating item in Loyverse: شبس ساده بدون صوصات - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:53"}
+{"level":"info","message":"Item created successfully: c92e7902-19bd-4916-ba74-8e0f5bfc8edf","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:53"}
+{"level":"info","message":"Created new item: شبس ساده بدون صوصات - كبير (ID: c92e7902-19bd-4916-ba74-8e0f5bfc8edf)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:53"}
+{"level":"info","message":"Creating item in Loyverse: شبس ساده بدون  صوصات","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:54"}
+{"level":"info","message":"Item created successfully: 1e6247b3-bf65-4482-bbe7-d55fbb90f22c","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:54"}
+{"level":"info","message":"Created new item: شبس ساده بدون  صوصات (ID: 1e6247b3-bf65-4482-bbe7-d55fbb90f22c)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:54"}
+{"level":"info","message":"Creating item in Loyverse: ايس تي بالخوخ","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:54"}
+{"level":"info","message":"Item created successfully: 85d2ebda-7713-4666-9ac9-7d5e97be63b7","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:54"}
+{"level":"info","message":"Created new item: ايس تي بالخوخ (ID: 85d2ebda-7713-4666-9ac9-7d5e97be63b7)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:54"}
+{"level":"info","message":"Creating item in Loyverse: ايس تي بلاك بري","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:55"}
+{"level":"info","message":"Item created successfully: 58cb41f2-6b18-4e86-979f-295ef359475f","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:55"}
+{"level":"info","message":"Created new item: ايس تي بلاك بري (ID: 58cb41f2-6b18-4e86-979f-295ef359475f)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:55"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو رمان","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:55"}
+{"level":"info","message":"Item created successfully: a2036370-a25a-44c3-8519-95d3a1bf91ad","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:56"}
+{"level":"info","message":"Created new item: موهيتو رمان (ID: a2036370-a25a-44c3-8519-95d3a1bf91ad)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:56"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو بلو بري (توت ازرق)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:56"}
+{"level":"info","message":"Item created successfully: 63f718e7-d1d4-4ca1-82c2-98ef24f268af","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:56"}
+{"level":"info","message":"Created new item: موهيتو بلو بري (توت ازرق) (ID: 63f718e7-d1d4-4ca1-82c2-98ef24f268af)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:56"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو روز بري (توت)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:56"}
+{"level":"info","message":"Item created successfully: 2d50e193-320d-421c-bb59-062e0379e249","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:56"}
+{"level":"info","message":"Created new item: موهيتو روز بري (توت) (ID: 2d50e193-320d-421c-bb59-062e0379e249)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:56"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو كيوي","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:57"}
+{"level":"info","message":"Item created successfully: f465c6e6-6b43-4b57-a518-b6f87baae51a","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:57"}
+{"level":"info","message":"Created new item: موهيتو كيوي (ID: f465c6e6-6b43-4b57-a518-b6f87baae51a)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:57"}
+{"level":"info","message":"Creating item in Loyverse: مشروب غازي علبه","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:57"}
+{"level":"info","message":"Item created successfully: ef432a5d-56b3-45b9-9d83-13527ebba079","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:58"}
+{"level":"info","message":"Created new item: مشروب غازي علبه (ID: ef432a5d-56b3-45b9-9d83-13527ebba079)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:58"}
+{"level":"info","message":"Creating item in Loyverse: مشروب غازي مع الثلج","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:58"}
+{"level":"info","message":"Item created successfully: a166562a-0845-409e-a0f9-604d09966985","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:58"}
+{"level":"info","message":"Created new item: مشروب غازي مع الثلج (ID: a166562a-0845-409e-a0f9-604d09966985)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:58"}
+{"level":"info","message":"Creating item in Loyverse: مشروب طاقة علبه","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:58"}
+{"level":"info","message":"Item created successfully: 92b2983d-2308-4e84-b082-3aeb54c8ff2f","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:59"}
+{"level":"info","message":"Created new item: مشروب طاقة علبه (ID: 92b2983d-2308-4e84-b082-3aeb54c8ff2f)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:59"}
+{"level":"info","message":"Creating item in Loyverse: مشروب طاقه مع الثلج لفت اب","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:59"}
+{"level":"info","message":"Item created successfully: da4bdeb5-cd3e-49ad-8837-318a98a1e69d","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:59"}
+{"level":"info","message":"Created new item: مشروب طاقه مع الثلج لفت اب (ID: da4bdeb5-cd3e-49ad-8837-318a98a1e69d)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:30:59"}
+{"level":"info","message":"Creating item in Loyverse: مشروب كود ريد - علبه","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:00"}
+{"level":"info","message":"Item created successfully: daa2e6d2-91ee-4b81-845b-fd6afc1c1bdd","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:00"}
+{"level":"info","message":"Created new item: مشروب كود ريد - علبه (ID: daa2e6d2-91ee-4b81-845b-fd6afc1c1bdd)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:00"}
+{"level":"info","message":"Creating item in Loyverse: مشروب كود رد مع الثلج","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:00"}
+{"level":"info","message":"Item created successfully: 58837c35-0731-4e68-ab1a-4197dfe8d728","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:00"}
+{"level":"info","message":"Created new item: مشروب كود رد مع الثلج (ID: 58837c35-0731-4e68-ab1a-4197dfe8d728)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:00"}
+{"level":"info","message":"Creating item in Loyverse: ماء","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:01"}
+{"level":"info","message":"Item created successfully: 8adee7f2-6d87-4151-84dd-d3f0d561f124","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:01"}
+{"level":"info","message":"Created new item: ماء (ID: 8adee7f2-6d87-4151-84dd-d3f0d561f124)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:01"}
+{"level":"info","message":"Creating item in Loyverse: ماء مع الثلج","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:01"}
+{"level":"info","message":"Item created successfully: 9e7115a3-059c-447f-8585-dd974da2826b","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:01"}
+{"level":"info","message":"Created new item: ماء مع الثلج (ID: 9e7115a3-059c-447f-8585-dd974da2826b)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:01"}
+{"level":"info","message":"Menu creation completed: 46 created, 0 existing, 0 failed","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:01"}
+{"level":"info","message":"::1 - - [12/Sep/2025:19:31:01 +0000] \"POST /api/integration/create-menu-items HTTP/1.1\" 200 8221 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 00:31:01"}
+{"level":"info","message":"Starting bulk creation of 46 menu items in Loyverse","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:26"}
+{"level":"info","message":"Creating item in Loyverse: كبسة ابتاون دجاج كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:27"}
+{"level":"info","message":"Item created successfully: 136c068d-402c-4901-904e-39329009253d","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:27"}
+{"level":"info","message":"Created new item: كبسة ابتاون دجاج كبير (ID: 136c068d-402c-4901-904e-39329009253d)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:27"}
+{"level":"info","message":"Creating item in Loyverse: كبسة ابتاون دجاج وسط","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:27"}
+{"level":"info","message":"Item created successfully: abafcf95-f6a2-4d2a-b03d-a3f89bdecb7d","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:27"}
+{"level":"info","message":"Created new item: كبسة ابتاون دجاج وسط (ID: abafcf95-f6a2-4d2a-b03d-a3f89bdecb7d)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:27"}
+{"level":"info","message":"Creating item in Loyverse: كبسة ابتاون دجاج صغبر","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:28"}
+{"level":"info","message":"Item created successfully: fdd55aa8-a1ae-4479-bf84-aff258e3533d","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:28"}
+{"level":"info","message":"Created new item: كبسة ابتاون دجاج صغبر (ID: fdd55aa8-a1ae-4479-bf84-aff258e3533d)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:28"}
+{"level":"info","message":"Creating item in Loyverse: نودلز كبسة ابتاون كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:28"}
+{"level":"info","message":"Item created successfully: ec1e3d7b-2c60-484d-9fa2-60d0168302f4","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:28"}
+{"level":"info","message":"Created new item: نودلز كبسة ابتاون كبير (ID: ec1e3d7b-2c60-484d-9fa2-60d0168302f4)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:28"}
+{"level":"info","message":"Creating item in Loyverse: نودلز كبسة ابتاون وسط","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:28"}
+{"level":"info","message":"Item created successfully: 024dff35-5c06-4afd-9783-5b02276f9b7e","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:29"}
+{"level":"info","message":"Created new item: نودلز كبسة ابتاون وسط (ID: 024dff35-5c06-4afd-9783-5b02276f9b7e)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:29"}
+{"level":"info","message":"Creating item in Loyverse: نودلز كبسة ابتاون صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:29"}
+{"level":"info","message":"Item created successfully: b2072c5c-77c4-4e61-9d59-4eb66c111584","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:29"}
+{"level":"info","message":"Created new item: نودلز كبسة ابتاون صغير (ID: b2072c5c-77c4-4e61-9d59-4eb66c111584)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:29"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ابتاون مع الشبس","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:29"}
+{"level":"info","message":"Item created successfully: a94ca80f-e4a2-4be1-b01a-c21a88c47f54","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:29"}
+{"level":"info","message":"Created new item: نودلز ابتاون مع الشبس (ID: a94ca80f-e4a2-4be1-b01a-c21a88c47f54)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:29"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ابتاون كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:30"}
+{"level":"info","message":"Item created successfully: 5421a262-5da3-4314-9ab1-e8bd7847af02","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:30"}
+{"level":"info","message":"Created new item: نودلز ابتاون كبير (ID: 5421a262-5da3-4314-9ab1-e8bd7847af02)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:30"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ابتاون صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:30"}
+{"level":"info","message":"Item created successfully: 842390f4-3fa9-4718-bbb8-561336827e22","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:30"}
+{"level":"info","message":"Created new item: نودلز ابتاون صغير (ID: 842390f4-3fa9-4718-bbb8-561336827e22)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:30"}
+{"level":"info","message":"Creating item in Loyverse: نودلز مع الشبس","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:31"}
+{"level":"info","message":"Item created successfully: 56aa1cbb-5c27-4a19-8f92-e537f1b2aa0c","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:31"}
+{"level":"info","message":"Created new item: نودلز مع الشبس (ID: 56aa1cbb-5c27-4a19-8f92-e537f1b2aa0c)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:31"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالخلطة الكورية - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:31"}
+{"level":"info","message":"Item created successfully: 339f41b7-9257-428e-9d2e-01c3247f1f85","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:31"}
+{"level":"info","message":"Created new item: نودلز بالخلطة الكورية - كبير (ID: 339f41b7-9257-428e-9d2e-01c3247f1f85)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:31"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالخلطة الكورية صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:32"}
+{"level":"info","message":"Item created successfully: 6b7c7c3d-5c56-42df-befe-70e635b1df70","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:32"}
+{"level":"info","message":"Created new item: نودلز بالخلطة الكورية صغير (ID: 6b7c7c3d-5c56-42df-befe-70e635b1df70)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:32"}
+{"level":"info","message":"Creating item in Loyverse: نودلز خلطة خاصة - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:32"}
+{"level":"info","message":"Item created successfully: c05cfb82-9099-4da5-aa35-0f12ba69b9dd","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:32"}
+{"level":"info","message":"Created new item: نودلز خلطة خاصة - كبير (ID: c05cfb82-9099-4da5-aa35-0f12ba69b9dd)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:32"}
+{"level":"info","message":"Creating item in Loyverse: نودلز خلطة خاصة صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:33"}
+{"level":"info","message":"Item created successfully: fb990b1b-fce7-4139-a6e6-ff9017a6d8b7","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:33"}
+{"level":"info","message":"Created new item: نودلز خلطة خاصة صغير (ID: fb990b1b-fce7-4139-a6e6-ff9017a6d8b7)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:33"}
+{"level":"info","message":"Creating item in Loyverse: نودلز دبس رمان - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:33"}
+{"level":"info","message":"Item created successfully: 99401578-1053-4d7f-9c3b-fcd9fe84e93e","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:33"}
+{"level":"info","message":"Created new item: نودلز دبس رمان - كبير (ID: 99401578-1053-4d7f-9c3b-fcd9fe84e93e)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:33"}
+{"level":"info","message":"Creating item in Loyverse: نودلز دبس رمان صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:33"}
+{"level":"info","message":"Item created successfully: cdca5968-85b4-479a-b107-461b745c04f8","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:34"}
+{"level":"info","message":"Created new item: نودلز دبس رمان صغير (ID: cdca5968-85b4-479a-b107-461b745c04f8)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:34"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالجبن - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:34"}
+{"level":"info","message":"Item created successfully: 44ba06ee-a454-438d-a811-7e1a9d6bf222","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:34"}
+{"level":"info","message":"Created new item: نودلز بالجبن - كبير (ID: 44ba06ee-a454-438d-a811-7e1a9d6bf222)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:34"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالجبن صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:34"}
+{"level":"info","message":"Item created successfully: 636614ba-f763-44e0-b2ca-b376cd770fcc","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:35"}
+{"level":"info","message":"Created new item: نودلز بالجبن صغير (ID: 636614ba-f763-44e0-b2ca-b376cd770fcc)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:35"}
+{"level":"info","message":"Creating item in Loyverse: نودلز - صوصات سبايسي صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:35"}
+{"level":"info","message":"Item created successfully: 6ee9809e-9ea3-48d2-9ed5-9abc22696165","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:35"}
+{"level":"info","message":"Created new item: نودلز - صوصات سبايسي صغير (ID: 6ee9809e-9ea3-48d2-9ed5-9abc22696165)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:35"}
+{"level":"info","message":"Creating item in Loyverse: نودلز - صوصات سبايسي كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:35"}
+{"level":"info","message":"Item created successfully: da6f2784-3bb6-4ea7-88be-0705fbf81197","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:36"}
+{"level":"info","message":"Created new item: نودلز - صوصات سبايسي كبير (ID: da6f2784-3bb6-4ea7-88be-0705fbf81197)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:36"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ساده - بدون صوصات كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:36"}
+{"level":"info","message":"Item created successfully: cdfd4540-b17b-48c8-81ce-52ac0038bfcc","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:36"}
+{"level":"info","message":"Created new item: نودلز ساده - بدون صوصات كبير (ID: cdfd4540-b17b-48c8-81ce-52ac0038bfcc)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:36"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ساده - بدون صوصات","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:36"}
+{"level":"info","message":"Item created successfully: 4c70dd24-223e-4b56-ae4f-2b10c7b9ab54","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:36"}
+{"level":"info","message":"Created new item: نودلز ساده - بدون صوصات (ID: 4c70dd24-223e-4b56-ae4f-2b10c7b9ab54)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:36"}
+{"level":"info","message":"Creating item in Loyverse: شبس ابتاون كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:37"}
+{"level":"info","message":"Item created successfully: 1cf38a9f-4c62-4075-95a9-2aea6ad37e51","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:37"}
+{"level":"info","message":"Created new item: شبس ابتاون كبير (ID: 1cf38a9f-4c62-4075-95a9-2aea6ad37e51)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:37"}
+{"level":"info","message":"Creating item in Loyverse: شبس ابتاون صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:37"}
+{"level":"info","message":"Item created successfully: c4b0bb68-ac2f-46b3-a16c-a65a55df0487","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:38"}
+{"level":"info","message":"Created new item: شبس ابتاون صغير (ID: c4b0bb68-ac2f-46b3-a16c-a65a55df0487)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:38"}
+{"level":"info","message":"Creating item in Loyverse: شبس اسبيشل جبن سائل كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:38"}
+{"level":"info","message":"Item created successfully: f00559b2-75d5-40c3-bfeb-62ce59b49cfd","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:38"}
+{"level":"info","message":"Created new item: شبس اسبيشل جبن سائل كبير (ID: f00559b2-75d5-40c3-bfeb-62ce59b49cfd)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:38"}
+{"level":"info","message":"Creating item in Loyverse: شبس اسبيشل جبن سائل صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:38"}
+{"level":"info","message":"Item created successfully: 4eeddcf0-3eaf-49cc-a0c4-ba2db8479d98","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:39"}
+{"level":"info","message":"Created new item: شبس اسبيشل جبن سائل صغير (ID: 4eeddcf0-3eaf-49cc-a0c4-ba2db8479d98)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:39"}
+{"level":"info","message":"Creating item in Loyverse: شبس جبن مالح كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:39"}
+{"level":"info","message":"Item created successfully: 0f5ddced-4435-4676-a8dd-9b99e1c78268","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:39"}
+{"level":"info","message":"Created new item: شبس جبن مالح كبير (ID: 0f5ddced-4435-4676-a8dd-9b99e1c78268)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:39"}
+{"level":"info","message":"Creating item in Loyverse: شبس اسبيشل-جبن مالح صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:39"}
+{"level":"info","message":"Item created successfully: 8224c695-8fd0-43fb-b25b-a8d4c9e21b4a","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:40"}
+{"level":"info","message":"Created new item: شبس اسبيشل-جبن مالح صغير (ID: 8224c695-8fd0-43fb-b25b-a8d4c9e21b4a)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:40"}
+{"level":"info","message":"Creating item in Loyverse: شبس سبايسي كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:40"}
+{"level":"info","message":"Item created successfully: 7cb36b0c-4881-4789-ab77-9f3c6e90f667","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:40"}
+{"level":"info","message":"Created new item: شبس سبايسي كبير (ID: 7cb36b0c-4881-4789-ab77-9f3c6e90f667)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:40"}
+{"level":"info","message":"Creating item in Loyverse: شبس صوصات - صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:40"}
+{"level":"info","message":"Item created successfully: 06a5f753-424f-4a7c-ae0e-a525456882cc","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:40"}
+{"level":"info","message":"Created new item: شبس صوصات - صغير (ID: 06a5f753-424f-4a7c-ae0e-a525456882cc)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:40"}
+{"level":"info","message":"Creating item in Loyverse: شبس ساده بدون صوصات - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:41"}
+{"level":"info","message":"Item created successfully: 93bdfd17-14f4-48dc-92e0-5bac2c8cbf17","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:41"}
+{"level":"info","message":"Created new item: شبس ساده بدون صوصات - كبير (ID: 93bdfd17-14f4-48dc-92e0-5bac2c8cbf17)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:41"}
+{"level":"info","message":"Creating item in Loyverse: شبس ساده بدون  صوصات","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:41"}
+{"level":"info","message":"Item created successfully: de8e2c43-d1c2-450f-aeb5-136a1c468a54","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:41"}
+{"level":"info","message":"Created new item: شبس ساده بدون  صوصات (ID: de8e2c43-d1c2-450f-aeb5-136a1c468a54)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:41"}
+{"level":"info","message":"Creating item in Loyverse: ايس تي بالخوخ","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:42"}
+{"level":"info","message":"Item created successfully: 73c9849b-e578-4685-9879-4c760b3c07e5","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:42"}
+{"level":"info","message":"Created new item: ايس تي بالخوخ (ID: 73c9849b-e578-4685-9879-4c760b3c07e5)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:42"}
+{"level":"info","message":"Creating item in Loyverse: ايس تي بلاك بري","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:42"}
+{"level":"info","message":"Item created successfully: 949b7845-9230-4e04-85f6-317fd41a4072","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:42"}
+{"level":"info","message":"Created new item: ايس تي بلاك بري (ID: 949b7845-9230-4e04-85f6-317fd41a4072)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:42"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو رمان","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:43"}
+{"level":"info","message":"Item created successfully: f91ace7e-f9ca-4f44-83de-e7a8e2aae211","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:43"}
+{"level":"info","message":"Created new item: موهيتو رمان (ID: f91ace7e-f9ca-4f44-83de-e7a8e2aae211)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:43"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو بلو بري (توت ازرق)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:43"}
+{"level":"info","message":"Item created successfully: b8011688-282e-4ced-b00c-102baaed71a4","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:44"}
+{"level":"info","message":"Created new item: موهيتو بلو بري (توت ازرق) (ID: b8011688-282e-4ced-b00c-102baaed71a4)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:44"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو روز بري (توت)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:44"}
+{"level":"info","message":"Item created successfully: c0b530ad-43f7-48b2-8f68-9fb422b4f14f","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:44"}
+{"level":"info","message":"Created new item: موهيتو روز بري (توت) (ID: c0b530ad-43f7-48b2-8f68-9fb422b4f14f)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:44"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو كيوي","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:44"}
+{"level":"info","message":"Item created successfully: 0b38de5b-e60c-420c-a9d2-02cad55812f0","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:45"}
+{"level":"info","message":"Created new item: موهيتو كيوي (ID: 0b38de5b-e60c-420c-a9d2-02cad55812f0)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:45"}
+{"level":"info","message":"Creating item in Loyverse: مشروب غازي علبه","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:45"}
+{"level":"info","message":"Item created successfully: b43b67ae-ad38-48f2-8d46-e93b6fde47d9","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:45"}
+{"level":"info","message":"Created new item: مشروب غازي علبه (ID: b43b67ae-ad38-48f2-8d46-e93b6fde47d9)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:45"}
+{"level":"info","message":"Creating item in Loyverse: مشروب غازي مع الثلج","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:45"}
+{"level":"info","message":"Item created successfully: 35e6870e-0669-4b73-86fc-e0f02d7101b9","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:46"}
+{"level":"info","message":"Created new item: مشروب غازي مع الثلج (ID: 35e6870e-0669-4b73-86fc-e0f02d7101b9)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:46"}
+{"level":"info","message":"Creating item in Loyverse: مشروب طاقة علبه","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:46"}
+{"level":"info","message":"Item created successfully: aa9ab210-e715-4489-be03-3c004943a901","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:46"}
+{"level":"info","message":"Created new item: مشروب طاقة علبه (ID: aa9ab210-e715-4489-be03-3c004943a901)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:46"}
+{"level":"info","message":"Creating item in Loyverse: مشروب طاقه مع الثلج لفت اب","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:46"}
+{"level":"info","message":"Item created successfully: 0558c87c-6e93-4e06-b332-dc7b0bc247d0","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:47"}
+{"level":"info","message":"Created new item: مشروب طاقه مع الثلج لفت اب (ID: 0558c87c-6e93-4e06-b332-dc7b0bc247d0)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:47"}
+{"level":"info","message":"Creating item in Loyverse: مشروب كود ريد - علبه","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:47"}
+{"level":"info","message":"Item created successfully: 03414ec9-3b33-4c90-9f1c-b2e992d81492","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:47"}
+{"level":"info","message":"Created new item: مشروب كود ريد - علبه (ID: 03414ec9-3b33-4c90-9f1c-b2e992d81492)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:47"}
+{"level":"info","message":"Creating item in Loyverse: مشروب كود رد مع الثلج","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:48"}
+{"level":"info","message":"Item created successfully: 2e2c5b18-42b7-4eb9-80a2-fb9c393daaf9","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:48"}
+{"level":"info","message":"Created new item: مشروب كود رد مع الثلج (ID: 2e2c5b18-42b7-4eb9-80a2-fb9c393daaf9)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:48"}
+{"level":"info","message":"Creating item in Loyverse: ماء","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:48"}
+{"level":"info","message":"Item created successfully: b17eecc8-ac16-4c27-9f3e-ecfc01fbd5dc","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:49"}
+{"level":"info","message":"Created new item: ماء (ID: b17eecc8-ac16-4c27-9f3e-ecfc01fbd5dc)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:49"}
+{"level":"info","message":"Creating item in Loyverse: ماء مع الثلج","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:49"}
+{"level":"info","message":"Item created successfully: 2b943ffe-bfc7-4a3e-a035-c6fc5e2ef5d1","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:49"}
+{"level":"info","message":"Created new item: ماء مع الثلج (ID: 2b943ffe-bfc7-4a3e-a035-c6fc5e2ef5d1)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:49"}
+{"level":"info","message":"Menu creation completed: 46 created, 0 existing, 0 failed","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:49"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:02:49 +0000] \"POST /api/integration/create-menu-items HTTP/1.1\" 200 8221 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:02:49"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:05:54"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:05:54"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:05:54"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:05:54"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:05:54"}
+{"level":"info","message":"Starting bulk creation of 46 menu items in Loyverse","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:18"}
+{"level":"info","message":"Creating item in Loyverse: كبسة ابتاون دجاج كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:19"}
+{"level":"info","message":"Item created successfully: 29303bed-8170-46e0-a601-a8819b4e682e","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:19"}
+{"level":"info","message":"Created new item: كبسة ابتاون دجاج كبير (ID: 29303bed-8170-46e0-a601-a8819b4e682e)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:19"}
+{"level":"info","message":"Creating item in Loyverse: كبسة ابتاون دجاج وسط","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:19"}
+{"level":"info","message":"Item created successfully: 11495cb8-669c-451c-90f9-b25840e99a01","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:19"}
+{"level":"info","message":"Created new item: كبسة ابتاون دجاج وسط (ID: 11495cb8-669c-451c-90f9-b25840e99a01)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:19"}
+{"level":"info","message":"Creating item in Loyverse: كبسة ابتاون دجاج صغبر","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:20"}
+{"level":"info","message":"Item created successfully: dfe5332c-d219-400b-bcc8-b89cca455b47","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:20"}
+{"level":"info","message":"Created new item: كبسة ابتاون دجاج صغبر (ID: dfe5332c-d219-400b-bcc8-b89cca455b47)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:20"}
+{"level":"info","message":"Creating item in Loyverse: نودلز كبسة ابتاون كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:21"}
+{"level":"info","message":"Item created successfully: 03683cb6-7de6-47e1-9b63-e34e3a41ce28","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:22"}
+{"level":"info","message":"Created new item: نودلز كبسة ابتاون كبير (ID: 03683cb6-7de6-47e1-9b63-e34e3a41ce28)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:22"}
+{"level":"info","message":"Creating item in Loyverse: نودلز كبسة ابتاون وسط","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:22"}
+{"level":"info","message":"Item created successfully: 6365e510-1b7e-4eec-987b-98a72d42bc8b","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:22"}
+{"level":"info","message":"Created new item: نودلز كبسة ابتاون وسط (ID: 6365e510-1b7e-4eec-987b-98a72d42bc8b)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:22"}
+{"level":"info","message":"Creating item in Loyverse: نودلز كبسة ابتاون صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:23"}
+{"level":"info","message":"Item created successfully: 597f3c9c-1c68-44a6-8b65-457011b8f4db","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:24"}
+{"level":"info","message":"Created new item: نودلز كبسة ابتاون صغير (ID: 597f3c9c-1c68-44a6-8b65-457011b8f4db)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:24"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ابتاون مع الشبس","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:25"}
+{"level":"info","message":"Item created successfully: 5fa0f0e0-7133-4c2d-86ca-e7b301ed1cc2","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:26"}
+{"level":"info","message":"Created new item: نودلز ابتاون مع الشبس (ID: 5fa0f0e0-7133-4c2d-86ca-e7b301ed1cc2)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:26"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ابتاون كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:26"}
+{"level":"info","message":"Item created successfully: 994b8395-48cb-429c-9702-3aa3d9693b0f","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:27"}
+{"level":"info","message":"Created new item: نودلز ابتاون كبير (ID: 994b8395-48cb-429c-9702-3aa3d9693b0f)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:27"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ابتاون صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:28"}
+{"level":"info","message":"Item created successfully: a033ec24-a2b7-47a7-89af-6a3cbabd7118","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:28"}
+{"level":"info","message":"Created new item: نودلز ابتاون صغير (ID: a033ec24-a2b7-47a7-89af-6a3cbabd7118)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:28"}
+{"level":"info","message":"Creating item in Loyverse: نودلز مع الشبس","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:30"}
+{"level":"info","message":"Item created successfully: cc0dbf6e-23cc-4621-85ea-0123bfa628e9","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:30"}
+{"level":"info","message":"Created new item: نودلز مع الشبس (ID: cc0dbf6e-23cc-4621-85ea-0123bfa628e9)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:30"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالخلطة الكورية - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:31"}
+{"level":"info","message":"Item created successfully: 29f928a4-8433-4bfe-86d3-c7ca6bad1490","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:32"}
+{"level":"info","message":"Created new item: نودلز بالخلطة الكورية - كبير (ID: 29f928a4-8433-4bfe-86d3-c7ca6bad1490)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:32"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالخلطة الكورية صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:33"}
+{"level":"info","message":"Item created successfully: 26f40fe0-9b00-41a4-a202-813194c2af25","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:33"}
+{"level":"info","message":"Created new item: نودلز بالخلطة الكورية صغير (ID: 26f40fe0-9b00-41a4-a202-813194c2af25)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:33"}
+{"level":"info","message":"Creating item in Loyverse: نودلز خلطة خاصة - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:34"}
+{"level":"info","message":"Item created successfully: ad980df4-9138-4213-a0fa-cf118ece6d7a","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:34"}
+{"level":"info","message":"Created new item: نودلز خلطة خاصة - كبير (ID: ad980df4-9138-4213-a0fa-cf118ece6d7a)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:34"}
+{"level":"info","message":"Creating item in Loyverse: نودلز خلطة خاصة صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:36"}
+{"level":"info","message":"Item created successfully: 118e8c02-5b7e-4ba4-823b-1fb2c2f9d2a4","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:36"}
+{"level":"info","message":"Created new item: نودلز خلطة خاصة صغير (ID: 118e8c02-5b7e-4ba4-823b-1fb2c2f9d2a4)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:36"}
+{"level":"info","message":"Creating item in Loyverse: نودلز دبس رمان - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:37"}
+{"level":"info","message":"Item created successfully: d069cc8a-0d70-4bf5-b5f6-3b08736f4db7","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:37"}
+{"level":"info","message":"Created new item: نودلز دبس رمان - كبير (ID: d069cc8a-0d70-4bf5-b5f6-3b08736f4db7)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:37"}
+{"level":"info","message":"Creating item in Loyverse: نودلز دبس رمان صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:38"}
+{"level":"info","message":"Item created successfully: 108cd5a1-b33f-407a-ac34-a21de48a2cea","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:38"}
+{"level":"info","message":"Created new item: نودلز دبس رمان صغير (ID: 108cd5a1-b33f-407a-ac34-a21de48a2cea)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:38"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالجبن - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:39"}
+{"level":"info","message":"Item created successfully: 44fa7485-486b-4b5f-9a3d-1ba44119071c","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:39"}
+{"level":"info","message":"Created new item: نودلز بالجبن - كبير (ID: 44fa7485-486b-4b5f-9a3d-1ba44119071c)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:39"}
+{"level":"info","message":"Creating item in Loyverse: نودلز بالجبن صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:40"}
+{"level":"info","message":"Item created successfully: 439bdc0d-dc25-4409-b7f3-31ea3d1512c5","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:40"}
+{"level":"info","message":"Created new item: نودلز بالجبن صغير (ID: 439bdc0d-dc25-4409-b7f3-31ea3d1512c5)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:40"}
+{"level":"info","message":"Creating item in Loyverse: نودلز - صوصات سبايسي صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:41"}
+{"level":"info","message":"Item created successfully: 3542d8bb-128d-42a0-aaee-92867a85fe0a","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:41"}
+{"level":"info","message":"Created new item: نودلز - صوصات سبايسي صغير (ID: 3542d8bb-128d-42a0-aaee-92867a85fe0a)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:41"}
+{"level":"info","message":"Creating item in Loyverse: نودلز - صوصات سبايسي كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:43"}
+{"level":"info","message":"Item created successfully: 655558b9-3587-4d90-8077-3da29a728560","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:44"}
+{"level":"info","message":"Created new item: نودلز - صوصات سبايسي كبير (ID: 655558b9-3587-4d90-8077-3da29a728560)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:44"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ساده - بدون صوصات كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:45"}
+{"level":"info","message":"Item created successfully: b160ec06-bce4-4a1f-a40a-dc195299fb1a","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:45"}
+{"level":"info","message":"Created new item: نودلز ساده - بدون صوصات كبير (ID: b160ec06-bce4-4a1f-a40a-dc195299fb1a)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:45"}
+{"level":"info","message":"Creating item in Loyverse: نودلز ساده - بدون صوصات","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:47"}
+{"level":"info","message":"Item created successfully: 671f100a-2ad4-4779-be09-fc909ae3a789","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:47"}
+{"level":"info","message":"Created new item: نودلز ساده - بدون صوصات (ID: 671f100a-2ad4-4779-be09-fc909ae3a789)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:47"}
+{"level":"info","message":"Creating item in Loyverse: شبس ابتاون كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:48"}
+{"level":"info","message":"Item created successfully: 3c44ca6c-826c-4e56-8b84-e6627bc8b610","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:49"}
+{"level":"info","message":"Created new item: شبس ابتاون كبير (ID: 3c44ca6c-826c-4e56-8b84-e6627bc8b610)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:49"}
+{"level":"info","message":"Creating item in Loyverse: شبس ابتاون صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:50"}
+{"level":"info","message":"Item created successfully: aff0f2d5-316c-40fa-b223-ce84950b72d0","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:51"}
+{"level":"info","message":"Created new item: شبس ابتاون صغير (ID: aff0f2d5-316c-40fa-b223-ce84950b72d0)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:51"}
+{"level":"info","message":"Creating item in Loyverse: شبس اسبيشل جبن سائل كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:52"}
+{"level":"info","message":"Item created successfully: a6eb9087-6e79-4831-90e7-8c8947b35d92","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:52"}
+{"level":"info","message":"Created new item: شبس اسبيشل جبن سائل كبير (ID: a6eb9087-6e79-4831-90e7-8c8947b35d92)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:52"}
+{"level":"info","message":"Creating item in Loyverse: شبس اسبيشل جبن سائل صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:53"}
+{"level":"info","message":"Item created successfully: f5302872-7e1d-41e8-9d23-18fa99a221bc","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:53"}
+{"level":"info","message":"Created new item: شبس اسبيشل جبن سائل صغير (ID: f5302872-7e1d-41e8-9d23-18fa99a221bc)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:53"}
+{"level":"info","message":"Creating item in Loyverse: شبس جبن مالح كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:54"}
+{"level":"info","message":"Item created successfully: b19c20fd-c3db-406d-a372-a7a37b5ac324","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:54"}
+{"level":"info","message":"Created new item: شبس جبن مالح كبير (ID: b19c20fd-c3db-406d-a372-a7a37b5ac324)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:54"}
+{"level":"info","message":"Creating item in Loyverse: شبس اسبيشل-جبن مالح صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:54"}
+{"level":"info","message":"Item created successfully: 1f1d72f1-ab8b-421f-b4f4-b490f1b3e329","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:55"}
+{"level":"info","message":"Created new item: شبس اسبيشل-جبن مالح صغير (ID: 1f1d72f1-ab8b-421f-b4f4-b490f1b3e329)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:55"}
+{"level":"info","message":"Creating item in Loyverse: شبس سبايسي كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:55"}
+{"level":"info","message":"Item created successfully: 6026a0d4-fd18-4e7a-8efb-aedc51bdbb19","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:55"}
+{"level":"info","message":"Created new item: شبس سبايسي كبير (ID: 6026a0d4-fd18-4e7a-8efb-aedc51bdbb19)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:06:55"}
+{"level":"info","message":"Creating item in Loyverse: شبس صوصات - صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:00"}
+{"level":"info","message":"Item created successfully: 77041f1b-eb5e-45c3-895d-39754be68411","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:00"}
+{"level":"info","message":"Created new item: شبس صوصات - صغير (ID: 77041f1b-eb5e-45c3-895d-39754be68411)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:00"}
+{"level":"info","message":"Creating item in Loyverse: شبس ساده بدون صوصات - كبير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:03"}
+{"level":"info","message":"Item created successfully: a36ca4ee-d3e9-48e5-80aa-bd1c04b2a948","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:03"}
+{"level":"info","message":"Created new item: شبس ساده بدون صوصات - كبير (ID: a36ca4ee-d3e9-48e5-80aa-bd1c04b2a948)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:03"}
+{"level":"info","message":"Creating item in Loyverse: شبس ساده بدون  صوصات","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:09"}
+{"level":"info","message":"Item created successfully: ea621400-04e3-4d56-8f91-6b77889c670f","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:10"}
+{"level":"info","message":"Created new item: شبس ساده بدون  صوصات (ID: ea621400-04e3-4d56-8f91-6b77889c670f)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:10"}
+{"level":"info","message":"Creating item in Loyverse: ايس تي بالخوخ","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:13"}
+{"level":"info","message":"Item created successfully: c08fd056-6060-4602-946b-ecc95c4995ce","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:13"}
+{"level":"info","message":"Created new item: ايس تي بالخوخ (ID: c08fd056-6060-4602-946b-ecc95c4995ce)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:13"}
+{"level":"info","message":"Creating item in Loyverse: ايس تي بلاك بري","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:15"}
+{"level":"info","message":"Item created successfully: fd1a4988-0292-4ff7-b8f4-98574716cb7b","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:15"}
+{"level":"info","message":"Created new item: ايس تي بلاك بري (ID: fd1a4988-0292-4ff7-b8f4-98574716cb7b)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:15"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو رمان","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:18"}
+{"level":"info","message":"Item created successfully: 0dce1775-3bba-4143-913a-5ae21556da4e","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:18"}
+{"level":"info","message":"Created new item: موهيتو رمان (ID: 0dce1775-3bba-4143-913a-5ae21556da4e)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:18"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو بلو بري (توت ازرق)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:20"}
+{"level":"info","message":"Item created successfully: 0a27d532-3ba7-45b5-b495-aff0477a1785","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:20"}
+{"level":"info","message":"Created new item: موهيتو بلو بري (توت ازرق) (ID: 0a27d532-3ba7-45b5-b495-aff0477a1785)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:20"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو روز بري (توت)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:23"}
+{"level":"info","message":"Item created successfully: 23ff756a-fd96-461d-a5a8-897675b3633d","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:24"}
+{"level":"info","message":"Created new item: موهيتو روز بري (توت) (ID: 23ff756a-fd96-461d-a5a8-897675b3633d)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:24"}
+{"level":"info","message":"Creating item in Loyverse: موهيتو كيوي","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:27"}
+{"level":"info","message":"Item created successfully: 2ee7aaa4-a867-4d67-bf28-483e171f8e45","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:28"}
+{"level":"info","message":"Created new item: موهيتو كيوي (ID: 2ee7aaa4-a867-4d67-bf28-483e171f8e45)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:28"}
+{"level":"info","message":"Creating item in Loyverse: مشروب غازي علبه","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:32"}
+{"level":"info","message":"Item created successfully: 885ca917-a158-4f60-bc04-ff3d0d13e81a","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:32"}
+{"level":"info","message":"Created new item: مشروب غازي علبه (ID: 885ca917-a158-4f60-bc04-ff3d0d13e81a)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:32"}
+{"level":"info","message":"Creating item in Loyverse: مشروب غازي مع الثلج","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:34"}
+{"level":"info","message":"Item created successfully: f1f8ca8c-fba9-4257-9287-41991dc8326c","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:34"}
+{"level":"info","message":"Created new item: مشروب غازي مع الثلج (ID: f1f8ca8c-fba9-4257-9287-41991dc8326c)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:34"}
+{"level":"info","message":"Creating item in Loyverse: مشروب طاقة علبه","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:36"}
+{"level":"info","message":"Item created successfully: b1250da0-5ac8-483e-81a7-b6157aebf612","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:36"}
+{"level":"info","message":"Created new item: مشروب طاقة علبه (ID: b1250da0-5ac8-483e-81a7-b6157aebf612)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:36"}
+{"level":"info","message":"Creating item in Loyverse: مشروب طاقه مع الثلج لفت اب","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:37"}
+{"level":"info","message":"Item created successfully: 94984f82-2ff9-4854-965e-d4e9fd4b8683","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:37"}
+{"level":"info","message":"Created new item: مشروب طاقه مع الثلج لفت اب (ID: 94984f82-2ff9-4854-965e-d4e9fd4b8683)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:37"}
+{"level":"info","message":"Creating item in Loyverse: مشروب كود ريد - علبه","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:38"}
+{"level":"info","message":"Item created successfully: 5ff7321b-8e60-4119-b336-13d3d51d0dd6","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:38"}
+{"level":"info","message":"Created new item: مشروب كود ريد - علبه (ID: 5ff7321b-8e60-4119-b336-13d3d51d0dd6)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:38"}
+{"level":"info","message":"Creating item in Loyverse: مشروب كود رد مع الثلج","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:38"}
+{"level":"info","message":"Item created successfully: 0f260f6c-b3b0-45ea-ae1d-34828ef6568f","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:39"}
+{"level":"info","message":"Created new item: مشروب كود رد مع الثلج (ID: 0f260f6c-b3b0-45ea-ae1d-34828ef6568f)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:39"}
+{"level":"info","message":"Creating item in Loyverse: ماء","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:39"}
+{"level":"info","message":"Item created successfully: 945dc0ce-4597-4113-9f71-042c46ee4466","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:39"}
+{"level":"info","message":"Created new item: ماء (ID: 945dc0ce-4597-4113-9f71-042c46ee4466)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:39"}
+{"level":"info","message":"Creating item in Loyverse: ماء مع الثلج","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:41"}
+{"level":"info","message":"Item created successfully: 119f0af0-24f4-49bc-9a6c-d81db1c2f5cc","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:41"}
+{"level":"info","message":"Created new item: ماء مع الثلج (ID: 119f0af0-24f4-49bc-9a6c-d81db1c2f5cc)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:41"}
+{"level":"info","message":"Menu creation completed: 46 created, 0 existing, 0 failed","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:42"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:07:42 +0000] \"POST /api/integration/create-menu-items HTTP/1.1\" 200 8221 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:07:42"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:11"}
+{"level":"error","message":"Failed to load item mapping data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:11"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:11"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:11"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:11"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:11"}
+{"level":"warn","message":"No mapping data available","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:14"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:43:14 +0000] \"POST /api/gloriafood/test-item-mapping HTTP/1.1\" 200 194 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:14"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:29"}
+{"level":"error","message":"Failed to load item mapping data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:29"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:29"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:29"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:29"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:43:29"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:47:49"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:47:49"}
+{"level":"error","message":"Webhook validation failed:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:47:49"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:47:49 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 400 63 \"-\" \"GF Accepted Orders, Order Id: 1085862621, Try Number: 1/10, Server Time: 2025-09-12T20:47:50.927Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:47:49"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:56"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:56"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:56"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:56"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:56"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:56"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:58"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:58"}
+{"level":"info","message":"Processing order 1085862621 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:58"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:58"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:58"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:58"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:58"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085862621","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:48:58"}
+{"level":"info","message":"Creating new customer in Loyverse","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:00"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:00"}
+{"level":"info","message":"Created receipt in Loyverse: 0047","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:00"}
+{"level":"info","message":"Receipt 0047 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:00"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:49:00 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1463 \"-\" \"GF Accepted Orders, Order Id: 1085862621, Try Number: 2/10, Server Time: 2025-09-12T20:49:00.078Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:00"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:23"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:23"}
+{"level":"info","message":"Processing order 1085862621 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:23"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:23"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:23"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:23"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:23"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:23"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085862621","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:23"}
+{"level":"info","message":"Creating new customer in Loyverse","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:24"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:24"}
+{"level":"info","message":"Created receipt in Loyverse: 0048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:24"}
+{"level":"info","message":"Receipt 0048 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:25"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:49:25 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1463 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:25"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:33"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:33"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:49:33 +0000] \"POST /api/gloriafood/test-item-mapping HTTP/1.1\" 200 276 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:33"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:37"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:37"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:49:37 +0000] \"POST /api/gloriafood/test-item-mapping HTTP/1.1\" 200 319 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:49:37"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Processing order 1085864513 with 8 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Found name match: SKU 10027 for \"مشروب غازي\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Item mapping results: 8 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085864513","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:52"}
+{"level":"info","message":"Creating new customer in Loyverse","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:58"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:58"}
+{"level":"info","message":"Created receipt in Loyverse: 0049","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:58"}
+{"level":"info","message":"Receipt 0049 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:59"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:51:59 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 4388 \"-\" \"GF Accepted Orders, Order Id: 1085864513, Try Number: 1/10, Server Time: 2025-09-12T20:51:53.053Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:51:59"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:47"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:47"}
+{"level":"info","message":"Processing order 1085866033 with 0 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:47"}
+{"level":"info","message":"Item mapping results: 0 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:47"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:47"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:47"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085866033","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:47"}
+{"level":"info","message":"Creating new customer in Loyverse","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:49"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:49"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1085866033:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:50"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:50"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:55:50 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 500 85 \"-\" \"GF Accepted Orders, Order Id: 1085866033, Try Number: 1/10, Server Time: 2025-09-12T20:55:48.727Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:55:50"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Processing order 1085867305 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085867305","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:45"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:56:54 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" - - \"-\" \"GF Accepted Orders, Order Id: 1085867305, Try Number: 1/10, Server Time: 2025-09-12T20:56:46.556Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:54"}
+{"level":"info","message":"Creating new customer in Loyverse","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:57"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:58"}
+{"level":"info","message":"Created receipt in Loyverse: 0050","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:58"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:58"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:58"}
+{"level":"info","message":"Processing order 1085866033 with 0 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:58"}
+{"level":"info","message":"Item mapping results: 0 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:58"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:58"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:58"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085866033","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:58"}
+{"level":"info","message":"Receipt 0050 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:56:58"}
+{"level":"info","message":"Creating new customer in Loyverse","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:01"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:01"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1085866033:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:01"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:01"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:57:01 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 500 85 \"-\" \"GF Accepted Orders, Order Id: 1085866033, Try Number: 2/10, Server Time: 2025-09-12T20:57:00.056Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:01"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Processing order 1085867305 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085867305","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:57:58"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:58:07 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" - - \"-\" \"GF Accepted Orders, Order Id: 1085867305, Try Number: 2/10, Server Time: 2025-09-12T20:58:00.062Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:07"}
+{"level":"info","message":"Creating new customer in Loyverse","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:10"}
+{"level":"error","message":"Failed to create customer:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:10"}
+{"level":"info","message":"Created receipt in Loyverse: 0051","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:10"}
+{"level":"info","message":"Receipt 0051 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:11"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:37"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:37"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:37"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:37"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:37"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:37"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:51"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:51"}
+{"level":"info","message":"Processing order 1085866033 with 0 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:51"}
+{"level":"info","message":"Processing table reservation or empty order: 1085866033","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:51"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:51"}
+{"level":"info","message":"Customer processed for table reservation: 43aed6ca-aee5-4150-9a0d-96f77f2ac7c9","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:52"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:58:52 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 757 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:52"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:58"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:58"}
+{"level":"info","message":"Processing order 1085866033 with 0 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:58"}
+{"level":"info","message":"Processing table reservation or empty order: 1085866033","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:58"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:58:58"}
+{"level":"info","message":"Customer processed for table reservation: 43aed6ca-aee5-4150-9a0d-96f77f2ac7c9","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:00"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:59:00 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 757 \"-\" \"GF Accepted Orders, Order Id: 1085866033, Try Number: 3/10, Server Time: 2025-09-12T20:59:00.072Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:00"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:11"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:11"}
+{"level":"info","message":"Processing order 1085862621 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:11"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:11"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:11"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:11"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:11"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:11"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085862621","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:11"}
+{"level":"info","message":"Created receipt in Loyverse: 0052","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:13"}
+{"level":"info","message":"Receipt 0052 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:13"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:59:13 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 1497 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:13"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Processing order 1085867305 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085867305","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"error","message":"Failed to search for item كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"error","message":"Failed to search for item كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"error","message":"Failed to search for item كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1085867305:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"level":"info","message":"::1 - - [12/Sep/2025:20:59:58 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 500 98 \"-\" \"GF Accepted Orders, Order Id: 1085867305, Try Number: 3/10, Server Time: 2025-09-12T21:00:00.076Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 01:59:58"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Processing order 1085867305 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085867305","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:01:58"}
+{"level":"info","message":"Created receipt in Loyverse: 0053","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:02:07"}
+{"level":"info","message":"::1 - - [12/Sep/2025:21:02:07 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" - - \"-\" \"GF Accepted Orders, Order Id: 1085867305, Try Number: 4/10, Server Time: 2025-09-12T21:02:00.062Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:02:07"}
+{"level":"info","message":"Receipt 0053 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:02:08"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:55"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:55"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:55"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:55"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:55"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:55"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Processing order 1085867305 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085867305","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:03:58"}
+{"level":"info","message":"Created receipt in Loyverse: 0054","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:01"}
+{"level":"info","message":"Receipt 0054 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:01"}
+{"level":"info","message":"::1 - - [12/Sep/2025:21:04:01 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 2372 \"-\" \"GF Accepted Orders, Order Id: 1085867305, Try Number: 5/10, Server Time: 2025-09-12T21:04:00.057Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:01"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Processing order 1085867305 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085867305","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:19"}
+{"level":"info","message":"Created receipt in Loyverse: 0055","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:22"}
+{"level":"info","message":"Receipt 0055 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:22"}
+{"level":"info","message":"::1 - - [12/Sep/2025:21:04:22 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 2372 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:04:22"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Processing order 1085873080 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Found name match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085873080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:05"}
+{"level":"info","message":"Created receipt in Loyverse: 0056","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:08"}
+{"level":"info","message":"Receipt 0056 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:09"}
+{"level":"info","message":"::1 - - [12/Sep/2025:21:08:09 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 2372 \"-\" \"GF Accepted Orders, Order Id: 1085873080, Try Number: 1/10, Server Time: 2025-09-12T21:08:07.610Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:08:09"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:27"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:27"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:27"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:27"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:27"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:27"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Processing order 1085873080 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085873080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:53"}
+{"level":"info","message":"Created receipt in Loyverse: 0057","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:56"}
+{"level":"info","message":"Receipt 0057 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:57"}
+{"level":"info","message":"::1 - - [12/Sep/2025:21:10:57 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 2368 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:10:57"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Processing order 1085875218 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085875218","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:13"}
+{"level":"info","message":"Created receipt in Loyverse: 0058","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:19"}
+{"level":"info","message":"Receipt 0058 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:19"}
+{"level":"info","message":"::1 - - [12/Sep/2025:21:12:19 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 2368 \"-\" \"GF Accepted Orders, Order Id: 1085875218, Try Number: 1/10, Server Time: 2025-09-12T21:12:14.959Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:12:19"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Processing order 1085876336 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085876336","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:29"}
+{"level":"info","message":"Created receipt in Loyverse: 0059","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:32"}
+{"level":"info","message":"Receipt 0059 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:32"}
+{"level":"info","message":"::1 - - [12/Sep/2025:21:14:32 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 2326 \"-\" \"GF Accepted Orders, Order Id: 1085876336, Try Number: 1/10, Server Time: 2025-09-12T21:14:31.275Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:14:32"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:00"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:01"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:01"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:01"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:01"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:01"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Processing order 1085876336 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085876336","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:24"}
+{"level":"info","message":"Created receipt in Loyverse: 0060","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:27"}
+{"level":"info","message":"Receipt 0060 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:27"}
+{"level":"info","message":"::1 - - [12/Sep/2025:21:21:27 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 2364 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:27"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:55"}
+{"level":"info","message":"Loaded 46 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:55"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:55"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:55"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:55"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:21:55"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Processing order 1085876336 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085876336","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:20"}
+{"level":"info","message":"Created receipt in Loyverse: 0061","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:22"}
+{"level":"info","message":"Receipt 0061 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:23"}
+{"level":"info","message":"::1 - - [12/Sep/2025:21:22:23 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 2365 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:22:23"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Processing order 1085882729 with 5 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Looking for SKU: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Found name match: SKU 10028 for \"موهيتو رمان\" (fallback, no size match)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Item mapping results: 5 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1085882729","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:40"}
+{"level":"info","message":"Created receipt in Loyverse: 0062","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:43"}
+{"level":"info","message":"Receipt 0062 sent to printer","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:44"}
+{"level":"info","message":"::1 - - [12/Sep/2025:21:26:44 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 3178 \"-\" \"GF Accepted Orders, Order Id: 1085882729, Try Number: 1/10, Server Time: 2025-09-12T21:26:41.562Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 02:26:44"}

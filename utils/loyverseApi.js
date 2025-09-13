@@ -54,7 +54,8 @@ class LoyverseAPI {
     try {
       console.log('Fetching payment types from Loyverse...');
       const response = await axios.get(`${this.baseURL}/payment_types`, {
-        headers: this.getHeaders()
+        headers: this.getHeaders(),
+        timeout: 10000 // 10 second timeout
       });
       
       console.log('Payment types response:', JSON.stringify(response.data, null, 2));
@@ -71,7 +72,10 @@ class LoyverseAPI {
       }
     } catch (error) {
       console.error('Error fetching payment types:', error.response?.data || error.message);
-      return null;
+      
+      // Fallback to hardcoded payment type ID if network fails
+      console.log('Using fallback payment type ID due to network error');
+      return '80dd8827-fe24-4864-adeb-391a790211cf'; // This is the CASH payment type ID from previous successful calls
     }
   }
 
@@ -95,7 +99,7 @@ class LoyverseAPI {
           // Search for exact match by phone or email
           const exactMatch = searchResponse.data.customers.find(customer => {
             const phoneMatch = customerData.phone && customer.phone === customerData.phone;
-            const emailMatch = customerData.email && customer.email === customerData.email;
+            const emailMatch = customerData.email && customer.email && customer.email.toLowerCase() === customerData.email.toLowerCase();
             return phoneMatch || emailMatch;
           });
           
@@ -205,7 +209,7 @@ class LoyverseAPI {
         color: "GREY",
         variants: [
           {
-            sku: `GF_${itemData.id || Date.now()}`, // Use GloriaFood ID or timestamp as fallback
+            sku: `${itemData.id || Date.now()}`, // Use original SKU without prefix
             cost: parseFloat((itemData.price * 0.6).toFixed(2)), // Estimate cost as 60% of price
             default_pricing_type: "FIXED",
             default_price: itemData.price
@@ -271,7 +275,7 @@ class LoyverseAPI {
               quantity: item.quantity,
               unit_price: item.price,
               total_price: item.total_price,
-              note: item.instructions || ''
+              line_note: item.instructions || ''
             });
           } else {
             console.log(`No variants found for item: ${existingItem.name}`);
@@ -280,7 +284,7 @@ class LoyverseAPI {
               variant_id: existingItem.variants[0].id,
               quantity: item.quantity,
               price: item.price,
-              note: item.instructions || ''
+              line_note: item.instructions || ''
             });
           }
         } else {
@@ -310,10 +314,13 @@ class LoyverseAPI {
       }
       
       // Get the actual payment type ID from Loyverse
-      const paymentTypeId = await this.getCashPaymentTypeId();
+      let paymentTypeId = await this.getCashPaymentTypeId();
       
       if (!paymentTypeId) {
-        throw new Error('Could not find payment type ID for CASH payments');
+        console.log('No payment type ID available, using fallback');
+        // Use the hardcoded fallback payment type ID
+        paymentTypeId = '80dd8827-fe24-4864-adeb-391a790211cf';
+        console.log(`Using fallback payment type ID: ${paymentTypeId}`);
       }
       
       // Create or find customer in Loyverse
@@ -349,6 +356,11 @@ class LoyverseAPI {
       }
       if (customerData.phone) {
         receiptNotes += `Customer Phone: ${customerData.phone}\n`;
+      }
+      
+      // Add order-level instructions if available
+      if (orderData.notes && orderData.notes.trim()) {
+        receiptNotes += `Order Instructions: ${orderData.notes.trim()}\n`;
       }
       
       // Now create the receipt with proper variant IDs, payment type ID, and customer

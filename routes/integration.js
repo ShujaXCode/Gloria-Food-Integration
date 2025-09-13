@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const LoyverseAPI = require('../utils/loyverseApi');
 const logger = require('../utils/logger');
-const integrationService = require('../services/integrationService'); // Added this import
+const integrationService = require('../services/enhancedIntegrationService'); // Added this import
 
 const loyverseAPI = new LoyverseAPI();
 
@@ -610,6 +610,119 @@ router.delete('/clear-completed-orders', (req, res) => {
     message: `Cleared ${clearedCount} completed orders from memory`,
     clearedCount
   });
+});
+
+// Bulk create menu items in Loyverse from JSON data
+router.post('/create-menu-items', async (req, res) => {
+  try {
+    const menuItems = req.body;
+    
+    if (!Array.isArray(menuItems)) {
+      return res.status(400).json({ 
+        error: 'Request body must be an array of menu items' 
+      });
+    }
+    
+    if (menuItems.length === 0) {
+      return res.status(400).json({ 
+        error: 'No menu items provided' 
+      });
+    }
+    
+    logger.info(`Starting bulk creation of ${menuItems.length} menu items in Loyverse`);
+    
+    const results = {
+      total: menuItems.length,
+      created: 0,
+      existing: 0,
+      failed: 0,
+      items: []
+    };
+    
+    // Process each menu item
+    for (const item of menuItems) {
+      try {
+        // Validate required fields
+        if (!item.name || !item.price || !item.sku) {
+          results.failed++;
+          results.items.push({
+            name: item.name || 'Unknown',
+            sku: item.sku || 'N/A',
+            status: 'failed',
+            error: 'Missing required fields (name, price, sku)'
+          });
+          continue;
+        }
+        
+        // Check if item already exists by name
+        const existingItem = await loyverseAPI.findItemByName(item.name);
+        
+        if (existingItem) {
+          results.existing++;
+          results.items.push({
+            name: item.name,
+            sku: item.sku,
+            loyverseId: existingItem.id,
+            status: 'existing',
+            message: 'Item already exists in Loyverse'
+          });
+          logger.info(`Item already exists: ${item.name} (ID: ${existingItem.id})`);
+        } else {
+          // Create new item
+          const itemData = {
+            name: item.name,
+            price: parseFloat(item.price),
+            id: item.sku, // Use SKU as ID for tracking
+            instructions: item.category || '', // Use category as description
+            category: item.category || 'General'
+          };
+          
+          const newItem = await loyverseAPI.createItem(itemData);
+          
+          results.created++;
+          results.items.push({
+            name: item.name,
+            sku: item.sku,
+            loyverseId: newItem.id,
+            status: 'created',
+            message: 'Successfully created in Loyverse'
+          });
+          
+          logger.info(`Created new item: ${item.name} (ID: ${newItem.id})`);
+        }
+        
+        // Add small delay to avoid rate limiting
+        await new Promise(resolve => setTimeout(resolve, 100));
+        
+      } catch (error) {
+        results.failed++;
+        results.items.push({
+          name: item.name || 'Unknown',
+          sku: item.sku || 'N/A',
+          status: 'failed',
+          error: error.message
+        });
+        
+        logger.error(`Failed to process item ${item.name}:`, error.message);
+      }
+    }
+    
+    logger.info(`Menu creation completed: ${results.created} created, ${results.existing} existing, ${results.failed} failed`);
+    
+    res.json({
+      success: true,
+      message: `Menu creation completed: ${results.created} created, ${results.existing} existing, ${results.failed} failed`,
+      data: results
+    });
+    
+  } catch (error) {
+    logger.error('Error in bulk menu creation:', error.message);
+    
+    res.status(500).json({
+      error: 'Menu creation failed',
+      message: error.message
+    });
+  }
 });
 
 // Helper function to process order to Loyverse

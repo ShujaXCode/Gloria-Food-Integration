@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const GloriaFoodAPI = require('../utils/gloriaFoodApi');
+const ItemMappingService = require('../services/itemMappingService');
 const logger = require('../utils/logger');
 
 const gloriaFoodAPI = new GloriaFoodAPI();
+const itemMappingService = new ItemMappingService();
 
 // Webhook endpoint for incoming orders from GloriaFood
 router.post('/webhook', async (req, res) => {
@@ -29,17 +31,127 @@ router.post('/webhook', async (req, res) => {
     }
     */
 
-    // Validate webhook data
-    try {
-      gloriaFoodAPI.validateWebhookData(webhookData);
-    } catch (validationError) {
-      logger.error('Webhook validation failed:', validationError.message);
-      return res.status(400).json({ error: validationError.message });
+    // Basic webhook data validation
+    if (!webhookData || (!webhookData.orders && !webhookData.id)) {
+      logger.error('Invalid webhook data: missing orders or id');
+      return res.status(400).json({ error: 'Invalid webhook data: missing orders or id' });
     }
 
-    // Create receipt in Loyverse using the same logic as the API endpoint
+    // Process webhook data with item mapping
     try {
-      const processedOrder = gloriaFoodAPI.processWebhookData(webhookData);
+      const orderData = webhookData.orders ? webhookData.orders[0] : webhookData;
+      
+      if (!orderData || !orderData.items) {
+        throw new Error('Invalid order data: missing items');
+      }
+
+      logger.info(`Processing order ${orderData.id} with ${orderData.items.length} items`);
+
+      // Check if this is a table reservation or order with no items
+      const isTableReservation = orderData.type === 'table_reservation' || !orderData.items || orderData.items.length === 0;
+      
+      if (isTableReservation) {
+        logger.info(`Processing table reservation or empty order: ${orderData.id}`);
+        
+        // For table reservations, we'll just log the customer info and skip receipt creation
+        const customer = {
+          name: `${orderData.client_first_name || ''} ${orderData.client_last_name || ''}`.trim() || 'Unknown Customer',
+          phone: orderData.client_phone,
+          email: orderData.client_email,
+          address: orderData.client_address
+        };
+        
+        // Try to find or create customer for tracking purposes
+        const LoyverseAPI = require('../utils/loyverseApi');
+        const loyverseAPI = new LoyverseAPI();
+        let customerResult = null;
+        
+        try {
+          customerResult = await loyverseAPI.findOrCreateCustomer(customer);
+          logger.info(`Customer processed for table reservation: ${customerResult ? customerResult.id : 'failed'}`);
+        } catch (customerError) {
+          logger.warn(`Customer processing failed for table reservation: ${customerError.message}`);
+        }
+        
+        return res.status(200).json({
+          success: true,
+          message: 'Table reservation received and customer processed',
+          orderId: orderData.id,
+          eventType: 'table_reservation',
+          orderType: orderData.type,
+          customer: customerResult,
+          note: 'No receipt created for table reservation',
+          timestamp: new Date().toISOString()
+        });
+      }
+
+      // Map GloriaFood items to Loyverse SKUs
+      const mappedItems = itemMappingService.processGloriaFoodOrderItems(orderData.items);
+      
+      // Log mapping results
+      const mappedCount = mappedItems.filter(item => item.status === 'mapped').length;
+      const unmappedCount = mappedItems.filter(item => item.status === 'unmapped').length;
+      
+      logger.info(`Item mapping results: ${mappedCount} mapped, ${unmappedCount} unmapped`);
+
+      // Check if we have any mapped items to process
+      if (mappedCount === 0) {
+        logger.warn(`No items could be mapped for order ${orderData.id}`);
+        return res.status(200).json({
+          success: false,
+          message: 'No items could be mapped to Loyverse SKUs',
+          orderId: orderData.id,
+          mappingResults: {
+            totalItems: mappedItems.length,
+            mappedItems: 0,
+            unmappedItems: unmappedCount,
+            unmappedItemsList: mappedItems.filter(item => item.status === 'unmapped').map(item => ({
+              gloriaFoodName: item.originalGloriaFoodItem.name,
+              error: item.error
+            }))
+          },
+          timestamp: new Date().toISOString()
+        });
+      }
+
+      // Create processed order with mapped items
+      const processedOrder = {
+        id: orderData.id,
+        customer: {
+          name: `${orderData.client_first_name || ''} ${orderData.client_last_name || ''}`.trim() || 'Unknown Customer',
+          phone: orderData.client_phone,
+          email: orderData.client_email,
+          address: orderData.client_address
+        },
+        items: mappedItems.filter(item => item.status === 'mapped').map(item => ({
+          name: item.loyverseName,
+          price: item.price,
+          quantity: item.originalGloriaFoodItem.quantity,
+          instructions: item.originalGloriaFoodItem.instructions || '',
+          total_price: item.price * item.originalGloriaFoodItem.quantity,
+          sku: item.sku,
+          category: item.category,
+          matchType: item.matchType
+        })),
+        total: orderData.total_price,
+        subtotal: orderData.sub_total_price,
+        tax: orderData.tax_value,
+        orderType: orderData.type,
+        notes: orderData.instructions || '',
+        paymentMethod: orderData.payment || 'CASH',
+        timestamp: orderData.accepted_at || orderData.updated_at,
+        mappingResults: {
+          totalItems: mappedItems.length,
+          mappedItems: mappedCount,
+          unmappedItems: unmappedCount,
+          unmappedItemsList: mappedItems.filter(item => item.status === 'unmapped').map(item => ({
+            gloriaFoodName: item.originalGloriaFoodItem.name,
+            error: item.error
+          }))
+        }
+      };
+
+      logger.info('Processed order with mapping:', JSON.stringify(processedOrder, null, 2));
       
       // Create receipt in Loyverse
       const LoyverseAPI = require('../utils/loyverseApi');
@@ -54,6 +166,7 @@ router.post('/webhook', async (req, res) => {
         receiptId: receipt.id,
         total: processedOrder.total,
         items: processedOrder.items.length,
+        mappingResults: processedOrder.mappingResults,
         receipt: receipt
       });
       
@@ -260,6 +373,66 @@ router.post('/customers/search-and-create', async (req, res) => {
     logger.error('Failed to search and create customer:', error.message);
     res.status(500).json({
       error: 'Failed to search and create customer',
+      message: error.message
+    });
+  }
+});
+
+// Test endpoint for item mapping
+router.post('/test-item-mapping', async (req, res) => {
+  try {
+    const { gloriaFoodItemName, size } = req.body;
+    
+    if (!gloriaFoodItemName) {
+      return res.status(400).json({ error: 'gloriaFoodItemName is required' });
+    }
+
+    const mapping = itemMappingService.findSKUByGloriaFoodItem(gloriaFoodItemName, size);
+    
+    res.json({
+      success: true,
+      gloriaFoodItemName,
+      size,
+      mapping,
+      stats: itemMappingService.getMappingStats()
+    });
+    
+  } catch (error) {
+    logger.error('Error in item mapping test:', error.message);
+    res.status(500).json({
+      error: 'Item mapping test failed',
+      message: error.message
+    });
+  }
+});
+
+// Test endpoint for processing GloriaFood order items
+router.post('/test-order-mapping', async (req, res) => {
+  try {
+    const { items } = req.body;
+    
+    if (!items || !Array.isArray(items)) {
+      return res.status(400).json({ error: 'items array is required' });
+    }
+
+    const mappedItems = itemMappingService.processGloriaFoodOrderItems(items);
+    
+    res.json({
+      success: true,
+      originalItems: items,
+      mappedItems,
+      stats: {
+        total: mappedItems.length,
+        mapped: mappedItems.filter(item => item.status === 'mapped').length,
+        unmapped: mappedItems.filter(item => item.status === 'unmapped').length,
+        errors: mappedItems.filter(item => item.status === 'error').length
+      }
+    });
+    
+  } catch (error) {
+    logger.error('Error in order mapping test:', error.message);
+    res.status(500).json({
+      error: 'Order mapping test failed',
       message: error.message
     });
   }
