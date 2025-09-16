@@ -386,3 +386,4 @@
 {"level":"error","message":"Failed to create receipt in Loyverse for order 1086343819:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:44"}
 {"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-13 23:37:44"}
 {"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-14 00:02:10"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 02:45:08"}

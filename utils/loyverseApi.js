@@ -79,6 +79,58 @@ class LoyverseAPI {
     }
   }
 
+  // Smart payment method detection based on customer name and order type
+  async getSmartPaymentTypeId(orderData) {
+    try {
+      console.log('=== SMART PAYMENT DETECTION CALLED ===');
+      console.log('Determining smart payment method for order:', orderData.id);
+      console.log('Order type:', orderData.orderType || orderData.type);
+      console.log('Customer first name:', orderData.customer?.name || orderData.client_first_name);
+      
+      // Only apply smart detection for pickup orders
+      const orderType = orderData.orderType || orderData.type;
+      if (orderType !== 'pickup') {
+        console.log('Order is not pickup, using default CASH payment method');
+        return await this.getCashPaymentTypeId();
+      }
+      
+      // Extract first name from original GloriaFood payload (not processed customer name)
+      const firstName = orderData.client_first_name || '';
+      console.log('Fetching payment types from Loyverse for pickup order...');
+      
+      // Get all payment types from Loyverse
+      const response = await axios.get(`${this.baseURL}/payment_types`, {
+        headers: this.getHeaders(),
+        timeout: 10000
+      });
+      
+      console.log('Payment types response:', JSON.stringify(response.data, null, 2));
+      
+      if (response.data.payment_types && response.data.payment_types.length > 0) {
+        // Look for payment method with exact name match
+        const matchingPaymentType = response.data.payment_types.find(pt => 
+          pt.name === firstName
+        );
+        
+        if (matchingPaymentType) {
+          console.log(`Found matching payment method "${firstName}" in Loyverse with ID: ${matchingPaymentType.id}`);
+          return matchingPaymentType.id;
+        } else {
+          console.log(`Payment method "${firstName}" not found in Loyverse - defaulting to CASH`);
+          return await this.getCashPaymentTypeId();
+        }
+      } else {
+        console.log('No payment types found in Loyverse - defaulting to CASH');
+        return await this.getCashPaymentTypeId();
+      }
+      
+    } catch (error) {
+      console.error('Error in smart payment detection:', error);
+      console.log('Falling back to default CASH payment method');
+      return await this.getCashPaymentTypeId();
+    }
+  }
+
   // Find or create customer in Loyverse
   async findOrCreateCustomer(customerData) {
     try {
@@ -209,7 +261,7 @@ class LoyverseAPI {
         color: "GREY",
         variants: [
           {
-            sku: `${itemData.id || Date.now()}`, // Use original SKU without prefix
+            sku: itemData.id, // Use the provided SKU
             cost: parseFloat((itemData.price * 0.6).toFixed(2)), // Estimate cost as 60% of price
             default_pricing_type: "FIXED",
             default_price: itemData.price
@@ -274,14 +326,18 @@ class LoyverseAPI {
           
           // Get the first variant ID (Loyverse items have variants)
           if (existingItem.variants && existingItem.variants.length > 0) {
-            const variantId = existingItem.variants[0].variant_id;
+            const variant = existingItem.variants[0];
+            const variantId = variant.variant_id;
+            const realTimePrice = variant.default_price || variant.stores?.[0]?.price || item.price;
+            
             console.log(`Using variant ID: ${variantId}`);
+            console.log(`Real-time price from Loyverse: ${realTimePrice} (GloriaFood price: ${item.price})`);
             
             lineItemsWithVariants.push({
               variant_id: variantId,
               quantity: item.quantity,
-              unit_price: item.price,
-              total_price: item.total_price,
+              unit_price: realTimePrice,
+              total_price: realTimePrice * item.quantity,
               line_note: item.instructions || ''
             });
           } else {
@@ -290,7 +346,8 @@ class LoyverseAPI {
             lineItemsWithVariants.push({
               variant_id: existingItem.variants[0].id,
               quantity: item.quantity,
-              price: item.price,
+              unit_price: item.price,
+              total_price: item.total_price,
               line_note: item.instructions || ''
             });
           }
@@ -320,8 +377,10 @@ class LoyverseAPI {
         }
       }
       
-      // Get the actual payment type ID from Loyverse
-      let paymentTypeId = await this.getCashPaymentTypeId();
+      // Get the smart payment type ID based on customer name and order type
+      console.log('=== ABOUT TO CALL SMART PAYMENT DETECTION ===');
+      console.log('Order data being passed:', JSON.stringify(orderData, null, 2));
+      let paymentTypeId = await this.getSmartPaymentTypeId(orderData);
       
       if (!paymentTypeId) {
         console.log('No payment type ID available, using fallback');
@@ -334,23 +393,37 @@ class LoyverseAPI {
       let customerId = null;
       
       // Map GloriaFood customer data to our expected format
+      // If first name is used for payment detection, use last name for customer name
+      let customerName;
+      if (orderData.customer?.name) {
+        customerName = orderData.customer.name;
+      } else {
+        const firstName = orderData.client_first_name || '';
+        const lastName = orderData.client_last_name || '';
+        
+        // Check if first name matches a payment method (indicating it's used for payment detection)
+        const orderType = orderData.orderType || orderData.type;
+        if (orderType === 'pickup' && firstName) {
+          // For pickup orders, if first name exists, use last name as customer name
+          // This handles cases where first name is used for payment method detection
+          customerName = lastName || firstName; // Fallback to first name if no last name
+        } else {
+          // For delivery orders or when first name is not used for payment detection
+          customerName = `${firstName} ${lastName}`.trim();
+        }
+      }
+      
       const customerData = {
-        name: orderData.customer?.name || `${orderData.client_first_name || ''} ${orderData.client_last_name || ''}`.trim(),
+        name: customerName,
         phone: orderData.customer?.phone || orderData.client_phone,
         email: orderData.customer?.email || orderData.client_email,
         address: orderData.customer?.address || orderData.client_address
       };
       
-      if (customerData.name || customerData.phone || customerData.email) {
-        console.log('Creating/finding customer in Loyverse...');
-        const customer = await this.findOrCreateCustomer(customerData);
-        if (customer) {
-          customerId = customer.id;
-          console.log(`Customer ID: ${customerId}`);
-        }
-      }
+      // Skip customer creation - include customer info in receipt notes instead
+      console.log('Skipping customer creation - will include customer info in receipt notes');
       
-      // Build receipt notes with order details
+      // Build receipt notes with order details and customer info
       let receiptNotes = '';
       if (orderData.instructions) {
         receiptNotes += `Order Notes: ${orderData.instructions}\n`;
@@ -358,11 +431,27 @@ class LoyverseAPI {
       if (orderData.orderType || orderData.type) {
         receiptNotes += `Order Type: ${(orderData.orderType || orderData.type).toUpperCase()}\n`;
       }
-      if (customerData.address) {
-        receiptNotes += `Delivery Address: ${customerData.address}\n`;
+      
+      // Add customer information to receipt notes
+      if (customerData.name) {
+        receiptNotes += `Customer Name: ${customerData.name}\n`;
       }
       if (customerData.phone) {
         receiptNotes += `Customer Phone: ${customerData.phone}\n`;
+      }
+      if (customerData.email) {
+        receiptNotes += `Customer Email: ${customerData.email}\n`;
+      }
+      if (customerData.address) {
+        receiptNotes += `Delivery Address: ${customerData.address}\n`;
+      }
+      
+      // Add original first/last names for reference
+      if (orderData.client_first_name) {
+        receiptNotes += `First Name: ${orderData.client_first_name}\n`;
+      }
+      if (orderData.client_last_name) {
+        receiptNotes += `Last Name: ${orderData.client_last_name}\n`;
       }
       
       // Add order-level instructions if available
@@ -393,7 +482,7 @@ class LoyverseAPI {
           payment_type_id: paymentTypeId,
           money: orderData.total
         }],
-        customer_id: customerId,
+        // customer_id: customerId, // Removed - no customer creation
         note: receiptNotes.trim(),
         status: 'open'
       };
@@ -633,6 +722,32 @@ class LoyverseAPI {
     }
   }
 
+  // Find item by SKU in Loyverse
+  async findItemBySKU(sku) {
+    try {
+      logger.info(`Searching for item in Loyverse by SKU: ${sku}`);
+      
+      const response = await axios.get(`${this.baseURL}/items`, {
+        headers: this.getHeaders(),
+        params: {
+          sku: sku
+        }
+      });
+
+      if (response.data && response.data.items && response.data.items.length > 0) {
+        // Return the first matching item
+        const item = response.data.items[0];
+        logger.info(`Found item in Loyverse by SKU: ${item.name} (SKU: ${sku})`);
+        return item;
+      }
+
+      logger.info(`No item found in Loyverse with SKU: ${sku}`);
+      return null;
+    } catch (error) {
+      logger.error(`Error searching for item by SKU in Loyverse:`, error.response?.data || error.message);
+      return null;
+    }
+  }
 
   // Find customer by phone number
   async findCustomerByPhone(phone) {
@@ -667,8 +782,8 @@ class LoyverseAPI {
     try {
       const customerPayload = {
         name: customerData.name || `${customerData.first_name || ''} ${customerData.last_name || ''}`.trim() || 'Unknown Customer',
-        first_name: customerData.name.split(' ')[0] || customerData.name,
-        last_name: customerData.name.split(' ').slice(1).join(' ') || '',
+        first_name: customerData.first_name || customerData.name.split(' ')[0] || '',
+        last_name: customerData.last_name || customerData.name.split(' ').slice(1).join(' ') || '',
         phone: customerData.phone,
         email: customerData.email,
         address: customerData.address || '',

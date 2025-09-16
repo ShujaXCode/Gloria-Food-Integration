@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const logger = require('../utils/logger');
+const LoyverseAPI = require('../utils/loyverseApi');
 
 class ItemMappingService {
   constructor() {
@@ -42,7 +43,92 @@ class ItemMappingService {
     }
   }
 
-  // Find SKU by GloriaFood item name and size
+  // Find SKU by GloriaFood item name and size (exact match only)
+  async findExactSKUByGloriaFoodItem(gloriaFoodItemName, size = null, loyverseAPI = null) {
+    if (!this.mappingData || this.mappingData.length === 0) {
+      logger.warn('No mapping data available');
+      return null;
+    }
+
+    logger.info(`Looking for exact SKU match: GloriaFood item="${gloriaFoodItemName}", size="${size}"`);
+
+    // Only exact match with both name and size
+    if (size) {
+      const exactMatch = this.mappingData.find(item => 
+        item["Gloria food item name"] === gloriaFoodItemName && 
+        item["Size"] === size
+      );
+      
+      if (exactMatch) {
+        logger.info(`Found exact match: SKU ${exactMatch.SKU} for "${gloriaFoodItemName}" (${size})`);
+        
+        let realTimePrice = exactMatch.Price || exactMatch["Default price"];
+        
+        // Try to fetch real-time price from Loyverse if API is available
+        if (loyverseAPI && exactMatch.SKU) {
+          try {
+            const loyverseItem = await loyverseAPI.findItemBySKU(exactMatch.SKU);
+            if (loyverseItem && loyverseItem.variants && loyverseItem.variants.length > 0) {
+              const variant = loyverseItem.variants[0];
+              realTimePrice = variant.default_price || variant.stores?.[0]?.price || realTimePrice;
+              logger.info(`Fetched real-time price from Loyverse: ${realTimePrice} for SKU ${exactMatch.SKU}`);
+            }
+          } catch (error) {
+            logger.warn(`Failed to fetch real-time price for SKU ${exactMatch.SKU}:`, error.message);
+          }
+        }
+        
+        return {
+          sku: exactMatch.SKU,
+          loyverseName: exactMatch.Name,
+          category: exactMatch.Category,
+          price: realTimePrice,
+          realTimePrice: realTimePrice,
+          matchType: 'exact'
+        };
+      }
+    } else {
+      // For items without size, match by name only (ignore size field completely)
+      const exactMatch = this.mappingData.find(item => 
+        item["Gloria food item name"] === gloriaFoodItemName
+      );
+      
+      if (exactMatch) {
+        logger.info(`Found exact match: SKU ${exactMatch.SKU} for "${gloriaFoodItemName}" (no size)`);
+        
+        let realTimePrice = exactMatch.Price || exactMatch["Default price"];
+        
+        // Try to fetch real-time price from Loyverse if API is available
+        if (loyverseAPI && exactMatch.SKU) {
+          try {
+            const loyverseItem = await loyverseAPI.findItemBySKU(exactMatch.SKU);
+            if (loyverseItem && loyverseItem.variants && loyverseItem.variants.length > 0) {
+              const variant = loyverseItem.variants[0];
+              realTimePrice = variant.default_price || variant.stores?.[0]?.price || realTimePrice;
+              logger.info(`Fetched real-time price from Loyverse: ${realTimePrice} for SKU ${exactMatch.SKU}`);
+            }
+          } catch (error) {
+            logger.warn(`Failed to fetch real-time price for SKU ${exactMatch.SKU}:`, error.message);
+          }
+        }
+        
+        return {
+          sku: exactMatch.SKU,
+          loyverseName: exactMatch.Name,
+          category: exactMatch.Category,
+          price: realTimePrice,
+          realTimePrice: realTimePrice,
+          matchType: 'exact'
+        };
+      }
+    }
+
+    // No exact match found
+    logger.warn(`No exact SKU match found for GloriaFood item: "${gloriaFoodItemName}" (size: "${size}")`);
+    return null;
+  }
+
+  // Find SKU by GloriaFood item name and size (with fallback)
   findSKUByGloriaFoodItem(gloriaFoodItemName, size = null) {
     if (!this.mappingData || this.mappingData.length === 0) {
       logger.warn('No mapping data available');
@@ -210,6 +296,216 @@ class ItemMappingService {
   reloadMappingData() {
     this.loadMappingData();
     logger.info('Item mapping data reloaded');
+  }
+
+  // Generate unique SKU for new items
+  generateUniqueSKU() {
+    const usedSKUs = new Set(this.mappingData.map(item => item.SKU));
+    let sku;
+    do {
+      sku = `GF_${Math.floor(1000 + Math.random() * 9000)}`;
+    } while (usedSKUs.has(sku));
+    return sku;
+  }
+
+  // Create new item in Loyverse and add to mapping
+  async createNewItem(gloriaFoodItem, loyverseAPI) {
+    try {
+      logger.info(`Creating new item for unmapped GloriaFood item: ${gloriaFoodItem.name}`);
+      
+      // Extract size from options and calculate correct price
+      let size = null;
+      let itemName = gloriaFoodItem.name;
+      let calculatedPrice = gloriaFoodItem.price; // Start with base price
+      
+      if (gloriaFoodItem.options && Array.isArray(gloriaFoodItem.options) && gloriaFoodItem.options.length > 0) {
+        const sizeOption = gloriaFoodItem.options.find(option => 
+          option.group_name === 'Size' || 
+          option.type === 'size'
+        );
+        
+        if (sizeOption) {
+          size = sizeOption.name;
+          itemName = `${gloriaFoodItem.name} ${size}`;
+          // Add size price to base price
+          calculatedPrice = gloriaFoodItem.price + (sizeOption.price || 0);
+        }
+      }
+
+      // Generate unique SKU
+      const sku = this.generateUniqueSKU();
+      
+      // Create item data for Loyverse
+      const itemData = {
+        name: itemName,
+        price: calculatedPrice, // Use calculated price (base + size)
+        instructions: gloriaFoodItem.instructions || '',
+        id: sku // Use SKU as ID for consistency
+      };
+
+      // Create item in Loyverse
+      const createdItem = await loyverseAPI.createItem(itemData);
+      
+      // Create mapping entry
+      const mappingEntry = {
+        Handle: itemName.toLowerCase().replace(/\s+/g, '-'),
+        SKU: sku,
+        Name: itemName,
+        Category: "مشروبات", // Default category
+        "Default price": calculatedPrice,
+        Cat: "مشروبات",
+        "Gloria food item name": gloriaFoodItem.name,
+        Size: size || "",
+        Price: calculatedPrice
+      };
+
+      // Add to mapping data
+      this.mappingData.push(mappingEntry);
+      
+      // Save updated mapping data to file
+      await this.saveMappingData();
+      
+      logger.info(`Successfully created new item: ${itemName} with SKU: ${sku}`);
+      
+      return {
+        sku: sku,
+        loyverseName: itemName,
+        category: "مشروبات",
+        price: calculatedPrice,
+        matchType: 'auto_created',
+        loyverseItemId: createdItem.id,
+        variantId: createdItem.variants[0].variant_id
+      };
+      
+    } catch (error) {
+      logger.error(`Failed to create new item for ${gloriaFoodItem.name}:`, error.message);
+      throw error;
+    }
+  }
+
+  // Save mapping data to file
+  async saveMappingData() {
+    try {
+      const possiblePaths = [
+        path.join(__dirname, '../../export_items_menu.json'),
+        path.join(process.cwd(), 'export_items_menu.json'),
+        './export_items_menu.json'
+      ];
+      
+      let mappingFilePath = null;
+      for (const testPath of possiblePaths) {
+        if (fs.existsSync(testPath)) {
+          mappingFilePath = testPath;
+          break;
+        }
+      }
+      
+      if (!mappingFilePath) {
+        throw new Error(`Mapping file not found. Tried paths: ${possiblePaths.join(', ')}`);
+      }
+      
+      fs.writeFileSync(mappingFilePath, JSON.stringify(this.mappingData, null, 2), 'utf8');
+      logger.info(`Updated mapping file: ${mappingFilePath}`);
+      console.log(`Updated mapping file with ${this.mappingData.length} items`);
+    } catch (error) {
+      logger.error('Failed to save mapping data:', error.message);
+      throw error;
+    }
+  }
+
+  // Process GloriaFood order items with automatic item creation
+  async processGloriaFoodOrderItemsWithAutoCreation(gloriaFoodItems, loyverseAPI) {
+    const processedItems = [];
+
+    for (const item of gloriaFoodItems) {
+      try {
+        // Handle special items like delivery fees
+        if (item.name === 'DELIVERY_FEE' || item.type === 'delivery_fee') {
+          logger.info(`Processing delivery fee: ${item.name} (${item.price} PKR)`);
+          processedItems.push({
+            originalGloriaFoodItem: item,
+            sku: 'DELIVERY_FEE',
+            loyverseName: 'Delivery Fee',
+            category: 'Delivery',
+            price: item.price,
+            matchType: 'delivery_fee',
+            size: null,
+            gloriaFoodItemName: item.name,
+            status: 'mapped'
+          });
+          continue;
+        }
+
+        // Extract size from item options or name
+        let size = null;
+        let gloriaFoodItemName = item.name;
+
+        // First, try to extract size from options array
+        if (item.options && Array.isArray(item.options)) {
+          const sizeOption = item.options.find(option => 
+            option.group_name === 'Size' || 
+            option.type === 'size' ||
+            ['كبير', 'وسط', 'صغير', 'large', 'medium', 'small'].includes(option.name)
+          );
+          
+          if (sizeOption) {
+            size = sizeOption.name;
+            logger.info(`Found size in options: "${size}" for item "${item.name}"`);
+          }
+        }
+
+        // If no size found in options, try to extract from item name
+        if (!size) {
+          const sizePatterns = ['كبير', 'وسط', 'صغير', 'large', 'medium', 'small'];
+          for (const pattern of sizePatterns) {
+            if (item.name.includes(pattern)) {
+              size = pattern;
+              // Remove size from the name for matching
+              gloriaFoodItemName = item.name.replace(pattern, '').trim();
+              break;
+            }
+          }
+        }
+
+        // Find the SKU mapping (exact match only for auto-creation)
+        let mapping = await this.findExactSKUByGloriaFoodItem(gloriaFoodItemName, size, loyverseAPI);
+
+        // If no exact mapping found, create new item
+        if (!mapping) {
+          logger.info(`No exact mapping found for "${gloriaFoodItemName}" (${size}), creating new item...`);
+          mapping = await this.createNewItem(item, loyverseAPI);
+        }
+
+        processedItems.push({
+          originalGloriaFoodItem: item,
+          sku: mapping.sku,
+          loyverseName: mapping.loyverseName,
+          category: mapping.category,
+          price: mapping.realTimePrice || item.price, // Use real-time Loyverse price if available, fallback to GloriaFood price
+          matchType: mapping.matchType,
+          size: size,
+          gloriaFoodItemName: gloriaFoodItemName,
+          status: 'mapped',
+          loyverseItemId: mapping.loyverseItemId,
+          variantId: mapping.variantId
+        });
+
+      } catch (error) {
+        logger.error(`Error processing GloriaFood item "${item.name}":`, error.message);
+        processedItems.push({
+          originalGloriaFoodItem: item,
+          sku: null,
+          loyverseName: null,
+          category: null,
+          price: null,
+          matchType: 'error',
+          status: 'error',
+          error: error.message
+        });
+      }
+    }
+
+    return processedItems;
   }
 }
 

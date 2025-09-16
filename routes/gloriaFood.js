@@ -10,6 +10,10 @@ const itemMappingService = new ItemMappingService();
 // Webhook endpoint for incoming orders from GloriaFood
 router.post('/webhook', async (req, res) => {
   try {
+    console.log('=== WEBHOOK RECEIVED ===');
+    console.log('Headers:', req.headers);
+    console.log('Body received:', JSON.stringify(req.body, null, 2));
+    
     const webhookData = req.body;
     const signature = req.headers['x-gloriafood-signature'] || req.headers['authorization'];
     
@@ -48,22 +52,22 @@ router.post('/webhook', async (req, res) => {
       logger.info(`Processing order ${orderData.id} with ${orderData.items.length} items`);
 
       // Check if this is a table reservation or order with no items
+      // Initialize Loyverse API
+      const LoyverseAPI = require('../utils/loyverseApi');
+      const loyverseAPI = new LoyverseAPI();
+
       const isTableReservation = orderData.type === 'table_reservation' || !orderData.items || orderData.items.length === 0;
       
       if (isTableReservation) {
         logger.info(`Processing table reservation or empty order: ${orderData.id}`);
-        
-        // For table reservations, we'll just log the customer info and skip receipt creation
-        const customer = {
-          name: `${orderData.client_first_name || ''} ${orderData.client_last_name || ''}`.trim() || 'Unknown Customer',
-          phone: orderData.client_phone,
-          email: orderData.client_email,
-          address: orderData.client_address
-        };
-        
-        // Try to find or create customer for tracking purposes
-        const LoyverseAPI = require('../utils/loyverseApi');
-        const loyverseAPI = new LoyverseAPI();
+
+      // For table reservations, we'll just log the customer info and skip receipt creation
+      const customer = {
+        name: `${orderData.client_first_name || ''} ${orderData.client_last_name || ''}`.trim() || 'Unknown Customer',
+        phone: orderData.client_phone,
+        email: orderData.client_email,
+        address: orderData.client_address
+      };
         let customerResult = null;
         
         try {
@@ -86,7 +90,7 @@ router.post('/webhook', async (req, res) => {
       }
 
       // Map GloriaFood items to Loyverse SKUs
-      const mappedItems = itemMappingService.processGloriaFoodOrderItems(orderData.items);
+      const mappedItems = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI);
       
       // Log mapping results
       const mappedCount = mappedItems.filter(item => item.status === 'mapped').length;
@@ -115,15 +119,32 @@ router.post('/webhook', async (req, res) => {
       }
 
       // Create processed order with mapped items
+      // For pickup orders, if first name is used for payment detection, use last name for customer name
+      let customerName;
+      if (orderData.type === 'pickup' && orderData.client_first_name) {
+        // For pickup orders, use last name as customer name when first name is used for payment detection
+        customerName = orderData.client_last_name || orderData.client_first_name;
+      } else {
+        // For delivery orders or when first name is not used for payment detection
+        customerName = `${orderData.client_first_name || ''} ${orderData.client_last_name || ''}`.trim() || 'Unknown Customer';
+      }
+      
       const processedOrder = {
         id: orderData.id,
+        // Include original GloriaFood fields for smart payment detection
+        client_first_name: orderData.client_first_name,
+        client_last_name: orderData.client_last_name,
+        type: orderData.type,
         customer: {
-          name: `${orderData.client_first_name || ''} ${orderData.client_last_name || ''}`.trim() || 'Unknown Customer',
+          name: customerName,
+          first_name: orderData.client_first_name,
+          last_name: orderData.client_last_name,
           phone: orderData.client_phone,
           email: orderData.client_email,
           address: orderData.client_address
         },
         items: mappedItems.filter(item => item.status === 'mapped').map(item => ({
+          id: item.originalGloriaFoodItem.id,
           name: item.loyverseName,
           price: item.price,
           quantity: item.originalGloriaFoodItem.quantity,
@@ -153,22 +174,27 @@ router.post('/webhook', async (req, res) => {
 
       logger.info('Processed order with mapping:', JSON.stringify(processedOrder, null, 2));
       
-      // Create receipt in Loyverse
-      const LoyverseAPI = require('../utils/loyverseApi');
-      const loyverseAPI = new LoyverseAPI();
-      const receipt = await loyverseAPI.createReceipt(processedOrder);
-      
+      // Send immediate response to GloriaFood
+      console.log('Sending immediate response to GloriaFood...');
       res.status(200).json({
         success: true,
-        message: 'Order received and receipt created in Loyverse',
+        message: 'Order received and processing receipt in Loyverse',
         orderId: processedOrder.id,
         eventType: 'new_order',
-        receiptId: receipt.id,
         total: processedOrder.total,
         items: processedOrder.items.length,
-        mappingResults: processedOrder.mappingResults,
-        receipt: receipt
+        mappingResults: processedOrder.mappingResults
       });
+      console.log('Response sent successfully');
+      
+      // Process receipt in background
+      console.log('Creating receipt in Loyverse (background)...');
+      try {
+        const receipt = await loyverseAPI.createReceipt(processedOrder);
+        console.log('Receipt created successfully in background:', receipt.id);
+      } catch (receiptError) {
+        console.error('Background receipt creation failed:', receiptError.message);
+      }
       
     } catch (error) {
       logger.error('Error processing webhook:', error.message);
@@ -238,6 +264,9 @@ router.get('/menu', async (req, res) => {
 
 // Test webhook endpoint
 router.post('/test-webhook', (req, res) => {
+  console.log('=== TEST WEBHOOK CALLED ===');
+  console.log('Test webhook body:', req.body);
+  
   const testData = {
     order_id: 'TEST-123',
     customer: {
@@ -268,6 +297,22 @@ router.post('/test-webhook', (req, res) => {
     success: true,
     message: 'Test webhook sent',
     data: testData
+  });
+});
+
+// Simple webhook test endpoint
+router.post('/webhook-test', (req, res) => {
+  console.log('=== SIMPLE WEBHOOK TEST ===');
+  console.log('Headers:', req.headers);
+  console.log('Body:', req.body);
+  
+  res.json({
+    success: true,
+    message: 'Webhook test successful',
+    received: {
+      headers: req.headers,
+      body: req.body
+    }
   });
 });
 
@@ -433,6 +478,39 @@ router.post('/test-order-mapping', async (req, res) => {
     logger.error('Error in order mapping test:', error.message);
     res.status(500).json({
       error: 'Order mapping test failed',
+      message: error.message
+    });
+  }
+});
+
+// Test endpoint for smart payment detection
+router.post('/test-payment-detection', async (req, res) => {
+  try {
+    const { orderData } = req.body;
+    
+    if (!orderData) {
+      return res.status(400).json({ error: 'orderData is required' });
+    }
+
+    const LoyverseAPI = require('../utils/loyverseApi');
+    const loyverseAPI = new LoyverseAPI();
+    
+    console.log('=== TESTING SMART PAYMENT DETECTION ===');
+    console.log('Order data:', JSON.stringify(orderData, null, 2));
+    
+    const paymentTypeId = await loyverseAPI.getSmartPaymentTypeId(orderData);
+    
+    res.json({
+      success: true,
+      orderData,
+      paymentTypeId,
+      message: 'Smart payment detection test completed'
+    });
+    
+  } catch (error) {
+    logger.error('Error in payment detection test:', error.message);
+    res.status(500).json({
+      error: 'Payment detection test failed',
       message: error.message
     });
   }
