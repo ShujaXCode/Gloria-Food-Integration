@@ -184,9 +184,12 @@ router.post('/webhook', async (req, res) => {
       console.log('Creating receipt in Loyverse (background)...');
       try {
         const receipt = await loyverseAPI.createReceipt(processedOrder);
-        console.log('Receipt created successfully in background:', receipt.id);
+        console.log('Receipt created successfully in background:', receipt.receipt_number || receipt.id);
+        logger.info(`Receipt created successfully: ${receipt.receipt_number || receipt.id}`);
       } catch (receiptError) {
         console.error('Background receipt creation failed:', receiptError.message);
+        console.error('Full error:', receiptError);
+        logger.error(`Background receipt creation failed: ${receiptError.message}`, receiptError);
       }
       
     } catch (error) {

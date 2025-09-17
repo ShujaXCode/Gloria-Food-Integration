@@ -5993,3 +5993,35 @@
 {"level":"info","message":"Item not found by ID 1437021031, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:24"}
 {"level":"info","message":"Item not found by ID 1437021045, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:25"}
 {"level":"info","message":"Created receipt in Loyverse: 0214","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:26"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:16"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:16"}
+{"level":"info","message":"Processing order 1087721938 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:16"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:16"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:16"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"سمك\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:16"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"سمك\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:16"}
+{"level":"warn","message":"No exact SKU match found for GloriaFood item: \"سمك\" (size: \"صغير\")","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:16"}
+{"level":"info","message":"No exact mapping found for \"سمك\" (صغير), creating new item...","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:16"}
+{"level":"info","message":"Creating new item for unmapped GloriaFood item: سمك","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:16"}
+{"level":"info","message":"Creating item in Loyverse: سمك صغير","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:16"}
+{"level":"info","message":"Item created successfully: 2102d623-2ad2-4158-b02b-d835f0a604cb","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:17"}
+{"level":"info","message":"Updated mapping file: /Users/macos/Desktop/Upwork lead/export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:17"}
+{"level":"info","message":"Successfully created new item: سمك صغير with SKU: GF_2016","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:17"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:17"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:17"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087721938","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:17"}
+{"level":"info","message":"::1 - - [17/Sep/2025:01:25:17 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"GF Accepted Orders, Order Id: 1087721938, Try Number: 1/10, Server Time: 2025-09-17T01:25:15.466Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:17"}
+{"level":"info","message":"Item not found by ID 1437024183, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:17"}
+{"level":"info","message":"Created receipt in Loyverse: 0219","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:25:19"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:34:47"}
+{"level":"info","message":"Loaded 56 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:34:47"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:34:47"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:34:47"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:34:47"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:34:47"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 16:18:23"}
+{"level":"info","message":"Loaded 56 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 16:18:23"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 16:18:23"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 16:18:23"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 16:18:23"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 16:18:23"}

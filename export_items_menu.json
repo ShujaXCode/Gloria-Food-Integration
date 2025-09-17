@@ -591,5 +591,16 @@
     "Gloria food item name": "فاكهة 1",
     "Size": "",
     "Price": 200
+  },
+  {
+    "Handle": "سمك-صغير",
+    "SKU": "GF_2016",
+    "Name": "سمك صغير",
+    "Category": "مشروبات",
+    "Default price": 400,
+    "Cat": "مشروبات",
+    "Gloria food item name": "سمك",
+    "Size": "صغير",
+    "Price": 400
   }
 ]
