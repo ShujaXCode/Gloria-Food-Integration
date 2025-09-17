@@ -62,28 +62,16 @@ class ItemMappingService {
       if (exactMatch) {
         logger.info(`Found exact match: SKU ${exactMatch.SKU} for "${gloriaFoodItemName}" (${size})`);
         
-        let realTimePrice = exactMatch.Price || exactMatch["Default price"];
-        
-        // Try to fetch real-time price from Loyverse if API is available
-        if (loyverseAPI && exactMatch.SKU) {
-          try {
-            const loyverseItem = await loyverseAPI.findItemBySKU(exactMatch.SKU);
-            if (loyverseItem && loyverseItem.variants && loyverseItem.variants.length > 0) {
-              const variant = loyverseItem.variants[0];
-              realTimePrice = variant.default_price || variant.stores?.[0]?.price || realTimePrice;
-              logger.info(`Fetched real-time price from Loyverse: ${realTimePrice} for SKU ${exactMatch.SKU}`);
-            }
-          } catch (error) {
-            logger.warn(`Failed to fetch real-time price for SKU ${exactMatch.SKU}:`, error.message);
-          }
-        }
+        // Use GloriaFood price instead of mapping file price for accuracy
+        // The customer paid the GloriaFood price, so we should use that
+        logger.info(`Using GloriaFood price for SKU ${exactMatch.SKU} (not mapping file price)`);
         
         return {
           sku: exactMatch.SKU,
           loyverseName: exactMatch.Name,
           category: exactMatch.Category,
-          price: realTimePrice,
-          realTimePrice: realTimePrice,
+          price: null, // Will be set to GloriaFood price in the calling function
+          realTimePrice: null,
           matchType: 'exact'
         };
       }
@@ -96,28 +84,16 @@ class ItemMappingService {
       if (exactMatch) {
         logger.info(`Found exact match: SKU ${exactMatch.SKU} for "${gloriaFoodItemName}" (no size)`);
         
-        let realTimePrice = exactMatch.Price || exactMatch["Default price"];
-        
-        // Try to fetch real-time price from Loyverse if API is available
-        if (loyverseAPI && exactMatch.SKU) {
-          try {
-            const loyverseItem = await loyverseAPI.findItemBySKU(exactMatch.SKU);
-            if (loyverseItem && loyverseItem.variants && loyverseItem.variants.length > 0) {
-              const variant = loyverseItem.variants[0];
-              realTimePrice = variant.default_price || variant.stores?.[0]?.price || realTimePrice;
-              logger.info(`Fetched real-time price from Loyverse: ${realTimePrice} for SKU ${exactMatch.SKU}`);
-            }
-          } catch (error) {
-            logger.warn(`Failed to fetch real-time price for SKU ${exactMatch.SKU}:`, error.message);
-          }
-        }
+        // Use GloriaFood price instead of mapping file price for accuracy
+        // The customer paid the GloriaFood price, so we should use that
+        logger.info(`Using GloriaFood price for SKU ${exactMatch.SKU} (not mapping file price)`);
         
         return {
           sku: exactMatch.SKU,
           loyverseName: exactMatch.Name,
           category: exactMatch.Category,
-          price: realTimePrice,
-          realTimePrice: realTimePrice,
+          price: null, // Will be set to GloriaFood price in the calling function
+          realTimePrice: null,
           matchType: 'exact'
         };
       }
@@ -240,7 +216,7 @@ class ItemMappingService {
             sku: mapping.sku,
             loyverseName: mapping.loyverseName,
             category: mapping.category,
-            price: mapping.price,
+            price: item.price, // Use GloriaFood price instead of mapping file price
             matchType: mapping.matchType,
             size: size,
             gloriaFoodItemName: gloriaFoodItemName,
@@ -481,7 +457,7 @@ class ItemMappingService {
           sku: mapping.sku,
           loyverseName: mapping.loyverseName,
           category: mapping.category,
-          price: mapping.realTimePrice || item.price, // Use real-time Loyverse price if available, fallback to GloriaFood price
+          price: item.price, // Always use GloriaFood price for accuracy
           matchType: mapping.matchType,
           size: size,
           gloriaFoodItemName: gloriaFoodItemName,

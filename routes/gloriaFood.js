@@ -119,15 +119,8 @@ router.post('/webhook', async (req, res) => {
       }
 
       // Create processed order with mapped items
-      // For pickup orders, if first name is used for payment detection, use last name for customer name
-      let customerName;
-      if (orderData.type === 'pickup' && orderData.client_first_name) {
-        // For pickup orders, use last name as customer name when first name is used for payment detection
-        customerName = orderData.client_last_name || orderData.client_first_name;
-      } else {
-        // For delivery orders or when first name is not used for payment detection
-        customerName = `${orderData.client_first_name || ''} ${orderData.client_last_name || ''}`.trim() || 'Unknown Customer';
-      }
+      // Always use full name (first_name + last_name) for customer display
+      let customerName = `${orderData.client_first_name || ''} ${orderData.client_last_name || ''}`.trim() || 'Unknown Customer';
       
       const processedOrder = {
         id: orderData.id,
@@ -512,6 +505,73 @@ router.post('/test-payment-detection', async (req, res) => {
     res.status(500).json({
       error: 'Payment detection test failed',
       message: error.message
+    });
+  }
+});
+
+// Test endpoint to see receipt creation response
+router.post('/test-receipt-creation', async (req, res) => {
+  try {
+    const orderData = req.body.orders[0];
+    
+    if (!orderData) {
+      return res.status(400).json({ error: 'Order data is required' });
+    }
+    
+    const LoyverseAPI = require('../utils/loyverseApi');
+    const loyverseAPI = new LoyverseAPI();
+    const ItemMappingService = require('../services/itemMappingService');
+    const itemMappingService = new ItemMappingService();
+    
+    // Process items using the mapping service (same as webhook)
+    const mappedItems = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI);
+    
+    // Process the order (same logic as webhook)
+    const processedOrder = {
+      id: orderData.id,
+      type: orderData.type,
+      total: orderData.total_price,
+      items: mappedItems.filter(item => item.status === 'mapped').map(item => ({
+        id: item.originalGloriaFoodItem.id,
+        name: item.loyverseName,
+        price: item.price,
+        quantity: item.originalGloriaFoodItem.quantity,
+        instructions: item.originalGloriaFoodItem.instructions || '',
+        total_price: item.price * item.originalGloriaFoodItem.quantity,
+        sku: item.sku,
+        category: item.category,
+        matchType: item.matchType
+      })),
+      customer: {
+        name: `${orderData.client_first_name || ''} ${orderData.client_last_name || ''}`.trim() || 'Unknown Customer',
+        phone: orderData.client_phone,
+        email: orderData.client_email,
+        address: orderData.client_address
+      },
+      instructions: orderData.instructions,
+      orderType: orderData.type,
+      client_first_name: orderData.client_first_name,
+      client_last_name: orderData.client_last_name,
+      client_phone: orderData.client_phone,
+      client_email: orderData.client_email,
+      client_address: orderData.client_address
+    };
+    
+    // Create receipt and return the full response
+    const receipt = await loyverseAPI.createReceipt(processedOrder);
+    
+    res.json({
+      success: true,
+      message: 'Receipt created successfully',
+      receipt: receipt,
+      processedOrder: processedOrder
+    });
+  } catch (error) {
+    console.error('Receipt creation test error:', error);
+    res.status(500).json({ 
+      error: 'Receipt creation test failed', 
+      message: error.message,
+      details: error.response?.data || error.message
     });
   }
 });

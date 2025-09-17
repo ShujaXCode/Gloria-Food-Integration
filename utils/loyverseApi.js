@@ -306,15 +306,18 @@ class LoyverseAPI {
       // First, ensure all items exist and get their variant IDs
       const lineItemsWithVariants = [];
       
+      // First, process all regular items (skip delivery fees for now)
+      const deliveryFeeItems = [];
+      
       for (const item of orderData.items) {
         console.log(`Processing item: ${item.name} (GloriaFood ID: ${item.id})`);
         console.log(`Item data:`, JSON.stringify(item, null, 2));
         
-        // Handle delivery fees as special case - skip from line items
+        // Skip delivery fees for now - we'll process them at the end
         if (item.sku === 'DELIVERY_FEE' || item.name === 'DELIVERY_FEE' || item.type === 'delivery_fee') {
-          console.log(`Found delivery fee: ${item.name} (${item.price} PKR) - skipping from line items`);
-          // Skip delivery fee from line items
-          continue;
+          console.log(`Found delivery fee: ${item.name} (${item.price} PKR) - will process at the end`);
+          deliveryFeeItems.push(item);
+          continue; // Skip the normal item processing
         }
         
         // Find or create the item
@@ -328,16 +331,19 @@ class LoyverseAPI {
           if (existingItem.variants && existingItem.variants.length > 0) {
             const variant = existingItem.variants[0];
             const variantId = variant.variant_id;
-            const realTimePrice = variant.default_price || variant.stores?.[0]?.price || item.price;
+            // Use GloriaFood price instead of Loyverse price for accuracy
+            // The customer paid the GloriaFood price, so we should use that
+            const finalPrice = item.price;
             
             console.log(`Using variant ID: ${variantId}`);
-            console.log(`Real-time price from Loyverse: ${realTimePrice} (GloriaFood price: ${item.price})`);
+            console.log(`Item data:`, JSON.stringify(item, null, 2));
+            console.log(`Using GloriaFood price: ${finalPrice} (Loyverse price: ${variant.default_price || variant.stores?.[0]?.price})`);
             
             lineItemsWithVariants.push({
               variant_id: variantId,
               quantity: item.quantity,
-              unit_price: realTimePrice,
-              total_price: realTimePrice * item.quantity,
+              unit_price: finalPrice,
+              total_price: finalPrice * item.quantity,
               line_note: item.instructions || ''
             });
           } else {
@@ -393,24 +399,19 @@ class LoyverseAPI {
       let customerId = null;
       
       // Map GloriaFood customer data to our expected format
-      // If first name is used for payment detection, use last name for customer name
+      // ALWAYS construct full name from original GloriaFood fields
+      const firstName = orderData.client_first_name || '';
+      const lastName = orderData.client_last_name || '';
       let customerName;
-      if (orderData.customer?.name) {
-        customerName = orderData.customer.name;
+      
+      if (firstName && lastName) {
+        customerName = `${firstName} ${lastName}`;
+      } else if (firstName) {
+        customerName = firstName;
+      } else if (lastName) {
+        customerName = lastName;
       } else {
-        const firstName = orderData.client_first_name || '';
-        const lastName = orderData.client_last_name || '';
-        
-        // Check if first name matches a payment method (indicating it's used for payment detection)
-        const orderType = orderData.orderType || orderData.type;
-        if (orderType === 'pickup' && firstName) {
-          // For pickup orders, if first name exists, use last name as customer name
-          // This handles cases where first name is used for payment method detection
-          customerName = lastName || firstName; // Fallback to first name if no last name
-        } else {
-          // For delivery orders or when first name is not used for payment detection
-          customerName = `${firstName} ${lastName}`.trim();
-        }
+        customerName = 'Unknown Customer';
       }
       
       const customerData = {
@@ -446,30 +447,53 @@ class LoyverseAPI {
         receiptNotes += `Delivery Address: ${customerData.address}\n`;
       }
       
-      // Add original first/last names for reference
-      if (orderData.client_first_name) {
-        receiptNotes += `First Name: ${orderData.client_first_name}\n`;
-      }
-      if (orderData.client_last_name) {
-        receiptNotes += `Last Name: ${orderData.client_last_name}\n`;
-      }
       
       // Add order-level instructions if available
       if (orderData.notes && orderData.notes.trim()) {
         receiptNotes += `Order Instructions: ${orderData.notes.trim()}\n`;
       }
       
-      // Calculate delivery fee surcharge
-      let deliveryFeeSurcharge = 0;
-      if (orderData.items && orderData.items.length > 0) {
-        const deliveryFeeItems = orderData.items.filter(item => 
-          item.sku === 'DELIVERY_FEE' || item.name === 'DELIVERY_FEE' || item.type === 'delivery_fee'
-        );
-        if (deliveryFeeItems.length > 0) {
-          deliveryFeeSurcharge = deliveryFeeItems.reduce((total, item) => total + (item.total_price || item.price || 0), 0);
-          console.log(`Calculated delivery fee surcharge: ${deliveryFeeSurcharge} PKR`);
+      // Now process delivery fees at the end
+      for (const item of deliveryFeeItems) {
+        console.log(`Processing delivery fee at the end: ${item.name} (${item.price} PKR)`);
+        
+        // Try to find an existing delivery fee item in Loyverse
+        const deliveryFeeItem = await this.findItemByName('Delivery Fee');
+        
+        if (deliveryFeeItem && deliveryFeeItem.variants && deliveryFeeItem.variants.length > 0) {
+          // Use existing delivery fee item
+          const variant = deliveryFeeItem.variants[0];
+          lineItemsWithVariants.push({
+            variant_id: variant.variant_id,
+            quantity: item.quantity,
+            unit_price: item.price, // Use GloriaFood price
+            total_price: item.price * item.quantity,
+            line_note: 'Delivery Fee'
+          });
+          console.log(`Using existing delivery fee item: ${deliveryFeeItem.item_name}`);
+        } else {
+          // Create a new delivery fee item
+          console.log(`Creating new delivery fee item in Loyverse`);
+          const newDeliveryFeeItem = await this.createItem({
+            name: 'Delivery Fee',
+            price: item.price,
+            id: 'DELIVERY_FEE'
+          });
+          
+          if (newDeliveryFeeItem && newDeliveryFeeItem.variants && newDeliveryFeeItem.variants.length > 0) {
+            const variant = newDeliveryFeeItem.variants[0];
+            lineItemsWithVariants.push({
+              variant_id: variant.variant_id,
+              quantity: item.quantity,
+              unit_price: item.price,
+              total_price: item.price * item.quantity,
+              line_note: 'Delivery Fee'
+            });
+          }
         }
       }
+      
+      // Delivery fees are now handled as line items, no surcharge needed
       
       // Now create the receipt with proper variant IDs, payment type ID, and customer
       const receiptData = {
@@ -487,13 +511,7 @@ class LoyverseAPI {
         status: 'open'
       };
       
-      // Add surcharge as number
-      if (deliveryFeeSurcharge > 0) {
-        receiptData.surcharge = deliveryFeeSurcharge;
-        console.log(`Added surcharge: ${deliveryFeeSurcharge}`);
-      }
-      
-      // Delivery fees are handled as surcharge
+      // No surcharge needed - delivery fees are now line items
       
       console.log('=== RECEIPT CREATION DEBUG ===');
       console.log('Receipt data being sent to Loyverse:', JSON.stringify(receiptData, null, 2));

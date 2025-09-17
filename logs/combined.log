@@ -5024,3 +5024,972 @@
 {"level":"info","message":"::1 - - [16/Sep/2025:22:43:28 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 237 \"-\" \"GF Accepted Orders, Order Id: 1087677614, Try Number: 1/10, Server Time: 2025-09-16T22:43:26.199Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 03:43:28"}
 {"level":"info","message":"Item not found by ID 1436969288, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 03:43:28"}
 {"level":"info","message":"Created receipt in Loyverse: 0160","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 03:43:29"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:42"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:42"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:42"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:42"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:42"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:42"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:45"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:45"}
+{"level":"info","message":"Processing order 1087671549 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:45"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:45"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:45"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:45"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:45"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:46"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:46"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:46"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:46"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671549","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:46"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:04:46 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:46"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:47"}
+{"level":"info","message":"Created receipt in Loyverse: 0161","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:04:48"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:22"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:22"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:22"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:22"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:22"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:22"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:24"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:24"}
+{"level":"info","message":"Processing order 1087671550 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:24"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:24"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:24"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:24"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:24"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:25"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:25"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:25"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:25"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671550","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:25"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:07:25 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:25"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:25"}
+{"level":"info","message":"Created receipt in Loyverse: 0162","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:26"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:40"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:40"}
+{"level":"info","message":"Processing order 1087671551 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:40"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:40"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:40"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:40"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:40"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:41"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:41"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:41"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:41"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671551","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:41"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:07:41 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:41"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:41"}
+{"level":"info","message":"Created receipt in Loyverse: 0163","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:07:42"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:10"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:10"}
+{"level":"info","message":"Processing order 1087671552 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:10"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:10"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:10"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:10"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:10"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:12"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:12"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:12"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:12"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671552","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:12"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:11:12 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:12"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:12"}
+{"level":"info","message":"Created receipt in Loyverse: 0164","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:13"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:19"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:19"}
+{"level":"info","message":"Processing order 1087671553 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:19"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:19"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:19"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:19"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:19"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:20"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:20"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:20"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:20"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671553","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:20"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:11:20 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:20"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:20"}
+{"level":"info","message":"Created receipt in Loyverse: 0165","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:21"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:27"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:27"}
+{"level":"info","message":"Processing order 1087671554 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:27"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:27"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:27"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:27"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:27"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:28"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:28"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:28"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:28"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671554","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:28"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:11:28 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:28"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:28"}
+{"level":"info","message":"Created receipt in Loyverse: 0166","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:29"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:45"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:45"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:45"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:45"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:45"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:45"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:48"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:48"}
+{"level":"info","message":"Processing order 1087671555 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:48"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:48"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:48"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:48"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:48"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:49"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:49"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:49"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:49"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671555","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:49"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:11:49 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:49"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:49"}
+{"level":"info","message":"Created receipt in Loyverse: 0167","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:50"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:59"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:59"}
+{"level":"info","message":"Processing order 1087671556 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:59"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:59"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:59"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:11:59"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:01"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:01"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:01"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:01"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671556","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:01"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:12:01 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:01"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:01"}
+{"level":"info","message":"Created receipt in Loyverse: 0168","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:02"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:08"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:08"}
+{"level":"info","message":"Processing order 1087671557 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:08"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:08"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:08"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:08"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:08"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:09"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:09"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:09"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:09"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671557","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:09"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:12:09 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:09"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:09"}
+{"level":"info","message":"Created receipt in Loyverse: 0169","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:10"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:17"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:17"}
+{"level":"info","message":"Processing order 1087671558 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:17"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:17"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:17"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:17"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:17"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:18"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:18"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:18"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:18"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671558","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:18"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:12:18 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:18"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:18"}
+{"level":"info","message":"Created receipt in Loyverse: 0170","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:19"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:25"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:25"}
+{"level":"info","message":"Processing order 1087671559 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:25"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:25"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:25"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:25"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:25"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:26"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:26"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:26"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:26"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671559","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:26"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:12:26 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:26"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:26"}
+{"level":"info","message":"Created receipt in Loyverse: 0171","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:12:27"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:21"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:21"}
+{"level":"info","message":"Processing order 1087671560 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:21"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:21"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:21"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:21"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:23"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:23"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:23"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:23"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671560","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:23"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:14:23 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:23"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:23"}
+{"level":"info","message":"Created receipt in Loyverse: 0172","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:24"}
+{"body":"{\n    \"count\": 1,\n    \"orders\": [\n        {\n            \"id\": 1087671561,\n            \"type\": \"pickup\",\n            \"client_first_name\": \"Ahmed\",\n            \"client_last_name\": \"Ali\",\n            \"client_phone\": \"+1234567890\",\n            \"client_email\": \"ahmed@example.com\",\n            \"total_price\": 200,\n            \"instructions\": \"Test pickup with regular name - should show Ahmed","expose":true,"level":"error","message":"Unhandled error: Unterminated string in JSON at position 387 (line 12 column 79)","service":"gloriafood-loyverse-integration","stack":"SyntaxError: Unterminated string in JSON at position 387 (line 12 column 79)\n    at JSON.parse (<anonymous>)\n    at parse (/Users/macos/Desktop/Upwork lead/node_modules/body-parser/lib/types/json.js:92:19)\n    at /Users/macos/Desktop/Upwork lead/node_modules/body-parser/lib/read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)\n    at invokeCallback (/Users/macos/Desktop/Upwork lead/node_modules/raw-body/index.js:238:16)\n    at done (/Users/macos/Desktop/Upwork lead/node_modules/raw-body/index.js:227:7)\n    at IncomingMessage.onEnd (/Users/macos/Desktop/Upwork lead/node_modules/raw-body/index.js:287:7)\n    at IncomingMessage.emit (node:events:524:28)\n    at endReadableNT (node:internal/streams/readable:1698:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)","status":400,"statusCode":400,"timestamp":"2025-09-17 05:14:31","type":"entity.parse.failed"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:38"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:38"}
+{"level":"info","message":"Processing order 1087671561 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:38"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:38"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:38"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:38"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:38"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:39"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:39"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:39"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:39"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671561","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:39"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:14:39 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:39"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:39"}
+{"level":"info","message":"Created receipt in Loyverse: 0173","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:40"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:47"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:47"}
+{"level":"info","message":"Processing order 1087671562 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:47"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:47"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:47"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:47"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:47"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:48"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:48"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:48"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:48"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671562","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:48"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:14:48 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:48"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:48"}
+{"level":"info","message":"Created receipt in Loyverse: 0174","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:14:49"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:26"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:26"}
+{"level":"info","message":"Processing order 1087671563 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:26"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:26"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:26"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:26"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:26"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:28"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:28"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:28"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:28"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671563","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:28"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:18:28 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:28"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:28"}
+{"level":"info","message":"Created receipt in Loyverse: 0175","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:29"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:35"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:35"}
+{"level":"info","message":"Processing order 1087671564 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:35"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:35"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:35"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:35"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:35"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:36"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:36"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:36"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:36"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671564","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:36"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:18:36 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:36"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:36"}
+{"level":"info","message":"Created receipt in Loyverse: 0176","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:37"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:42"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:42"}
+{"level":"info","message":"Processing order 1087671565 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:42"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:42"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:42"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:42"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:42"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:43"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:43"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:43"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:43"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671565","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:43"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:18:43 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:43"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:44"}
+{"level":"info","message":"Created receipt in Loyverse: 0177","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:18:44"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:51"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:51"}
+{"level":"info","message":"Processing order 1087671566 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:51"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:51"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:51"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:51"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:51"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:52"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:52"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:52"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:52"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671566","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:52"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:21:52 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:52"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:53"}
+{"level":"info","message":"Created receipt in Loyverse: 0178","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:53"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:59"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:59"}
+{"level":"info","message":"Processing order 1087671567 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:59"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:59"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:59"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:21:59"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:00"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:00"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:00"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:00"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671567","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:00"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:22:00 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:00"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:00"}
+{"level":"info","message":"Created receipt in Loyverse: 0179","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:01"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:08"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:08"}
+{"level":"info","message":"Processing order 1087671568 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:08"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:08"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:08"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:08"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:08"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:09"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:09"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:09"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:09"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671568","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:09"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:22:09 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:09"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:09"}
+{"level":"info","message":"Created receipt in Loyverse: 0180","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:10"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:16"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:16"}
+{"level":"info","message":"Processing order 1087671569 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:16"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:16"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:16"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:16"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:16"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:17"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:17"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:17"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:17"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671569","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:17"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:22:17 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:17"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:17"}
+{"level":"info","message":"Created receipt in Loyverse: 0181","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:18"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:24"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:24"}
+{"level":"info","message":"Processing order 1087671570 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:24"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:24"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:24"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:24"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:24"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:25"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:25"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:25"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:25"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671570","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:25"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:22:25 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:25"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:25"}
+{"level":"info","message":"Created receipt in Loyverse: 0182","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:22:26"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:32"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:32"}
+{"level":"info","message":"Processing order 1087671571 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:32"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:32"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:32"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:32"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:32"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:33"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:33"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:33"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:33"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671571","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:33"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:23:33 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:33"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:34"}
+{"level":"info","message":"Created receipt in Loyverse: 0183","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:23:35"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:21"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:21"}
+{"level":"info","message":"Processing order 1087671572 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:21"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:21"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:21"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:21"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:22"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:22"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:22"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:22"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671572","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:22"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:24:22 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:22"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:22"}
+{"level":"info","message":"Created receipt in Loyverse: 0184","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:24:23"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:35"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:35"}
+{"level":"info","message":"Processing order 1087671573 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:35"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:35"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:35"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:35"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:35"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:36"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:36"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:36"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:36"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671573","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:36"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:25:36 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:36"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:36"}
+{"level":"info","message":"Created receipt in Loyverse: 0185","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:25:37"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:38"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:38"}
+{"level":"info","message":"Processing order 1087671574 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:38"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:38"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:38"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:38"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:38"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:39"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:39"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:39"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:39"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671574","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:39"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:26:39 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:39"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:39"}
+{"level":"info","message":"Created receipt in Loyverse: 0186","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:26:40"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:11"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:11"}
+{"level":"info","message":"Processing order 1087671575 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:11"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:11"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:11"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:11"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:11"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:13"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:13"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:13"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:13"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671575","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:13"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:29:13 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:13"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:13"}
+{"level":"info","message":"Created receipt in Loyverse: 0187","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:14"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:21"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:21"}
+{"level":"info","message":"Processing order 1087671576 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:21"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:21"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:21"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:21"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:22"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:22"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:22"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:22"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671576","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:22"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:29:22 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:22"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:22"}
+{"level":"info","message":"Created receipt in Loyverse: 0188","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:29:23"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:36"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:36"}
+{"level":"info","message":"Processing order 1087671577 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:36"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:36"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:36"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:36"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:36"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:38"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:38"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:38"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:38"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671577","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:38"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:30:38 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:38"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:38"}
+{"level":"info","message":"Created receipt in Loyverse: 0189","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:30:39"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:12"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:12"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:12"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:12"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:12"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:12"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:16"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:16"}
+{"level":"info","message":"Processing order 1087671578 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:16"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:16"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:16"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:16"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:16"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:18"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:18"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:18"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:18"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087671578","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:18"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:31:18 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:18"}
+{"level":"info","message":"Item not found by ID 1436961065, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:18"}
+{"level":"info","message":"Created receipt in Loyverse: 0190","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:31:19"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:04"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:04"}
+{"level":"info","message":"Processing order 1087710097 with 6 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:04"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:04"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:04"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"فاكهة\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:04"}
+{"level":"info","message":"Found exact match: SKU GF_3253 for \"فاكهة\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:04"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_3253","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:04"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_3253)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU GF_3253","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"فاكهة 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Found exact match: SKU GF_8361 for \"فاكهة 1\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_8361","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_8361)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU GF_8361","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"اكل\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"اكل\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Found exact match: SKU GF_6235 for \"اكل\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_6235","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_6235)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU GF_6235","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:06"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:07"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:07"}
+{"level":"info","message":"Item mapping results: 6 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:07"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:07"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087710097","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:07"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:34:07 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 237 \"-\" \"GF Accepted Orders, Order Id: 1087710097, Try Number: 1/10, Server Time: 2025-09-17T00:34:03.695Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:07"}
+{"level":"info","message":"Item not found by ID 1437011719, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:07"}
+{"level":"info","message":"Item not found by ID 1437011744, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:07"}
+{"level":"info","message":"Item not found by ID 1437011775, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:08"}
+{"level":"info","message":"Item not found by ID 1437011804, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:08"}
+{"level":"info","message":"Item not found by ID 1437011834, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:09"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1087710097:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:34:09"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:06"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:06"}
+{"level":"info","message":"Processing order 1087710737 with 5 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:06"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:06"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:06"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:06"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:06"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:06"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:06"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:07"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:07"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"اكل\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:07"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"اكل\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:07"}
+{"level":"info","message":"Found exact match: SKU GF_1510 for \"اكل\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:07"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_1510","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:07"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_1510)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU GF_1510","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"سمك\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"سمك\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Found exact match: SKU GF_9454 for \"سمك\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_9454","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_9454)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU GF_9454","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"فاكهة\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Found exact match: SKU GF_3253 for \"فاكهة\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_3253","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_3253)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU GF_3253","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Item mapping results: 5 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087710737","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:37:08 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 237 \"-\" \"GF Accepted Orders, Order Id: 1087710737, Try Number: 1/10, Server Time: 2025-09-17T00:37:05.268Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Item not found by ID 1437012395, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:08"}
+{"level":"info","message":"Item not found by ID 1437012423, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:09"}
+{"level":"info","message":"Item not found by ID 1437012457, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:09"}
+{"level":"info","message":"Item not found by ID 1437012489, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:10"}
+{"level":"info","message":"Created receipt in Loyverse: 0191","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:37:10"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:57"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:57"}
+{"level":"info","message":"Processing order 1087710737 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:57"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:57"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:57"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:57"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:57"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:57"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:57"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:58"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:58"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:58"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:58"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087710737","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:58"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:39:58 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 237 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:58"}
+{"level":"info","message":"Item not found by ID 1437012395, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:59"}
+{"level":"info","message":"Created receipt in Loyverse: 0192","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:39:59"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:40:43"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:40:43"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:40:43"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:40:43"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:40:43"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:40:43"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:13"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:13"}
+{"level":"info","message":"Processing order 1087710738 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:13"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:13"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:13"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:13"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:13"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:13"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:13"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:14"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:14"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:14"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:14"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087710738","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:14"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:41:14 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:14"}
+{"level":"info","message":"Item not found by ID 1437012395, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:14"}
+{"level":"info","message":"Created receipt in Loyverse: 0193","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:15"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:37"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:37"}
+{"level":"info","message":"Processing order 1087710739 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:37"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:37"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:37"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:37"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:37"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:37"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:39"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:39"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:39"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:39"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087710739","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:39"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:41:39 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:39"}
+{"level":"info","message":"Item not found by ID 1437012395, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:39"}
+{"level":"info","message":"Created receipt in Loyverse: 0194","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:41:40"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:32"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:32"}
+{"level":"info","message":"Processing order 1087710740 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:32"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:32"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:32"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:32"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:32"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:32"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:34"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:34"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:34"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:34"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087710740","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:34"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:42:34 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:34"}
+{"level":"info","message":"Item not found by ID 1437012395, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:34"}
+{"level":"info","message":"Created receipt in Loyverse: 0195","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:42:35"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:27"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:27"}
+{"level":"info","message":"Processing order 1087710741 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:27"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:27"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:27"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:27"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:27"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:27"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:28"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:28"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:28"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:28"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087710741","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:28"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:45:28 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:28"}
+{"level":"info","message":"Item not found by ID 1437012395, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:29"}
+{"level":"info","message":"Created receipt in Loyverse: 0196","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:29"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:54"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:54"}
+{"level":"info","message":"Processing order 1087710742 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:54"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:54"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:54"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:54"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:54"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:54"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:54"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:55"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:55"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:55"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:55"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087710742","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:55"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:45:55 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 237 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:55"}
+{"level":"info","message":"Item not found by ID 1437012395, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:55"}
+{"level":"info","message":"Created receipt in Loyverse: 0197","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:45:56"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:07"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:07"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:07"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:07"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:07"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:07"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:35"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:35"}
+{"level":"info","message":"Processing order 1087713538 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:35"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:35"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:35"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:35"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:35"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:35"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:37"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:37"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:37"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:37"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713538","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:37"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:46:37 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"GF Accepted Orders, Order Id: 1087713538, Try Number: 1/10, Server Time: 2025-09-17T00:46:35.228Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:37"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:37"}
+{"level":"info","message":"Created receipt in Loyverse: 0198","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:46:38"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:00"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:00"}
+{"level":"info","message":"Processing order 1087713538 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:00"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:00"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:01"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:01"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:01"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:01"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:02"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:02"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:02"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:02"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713538","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:02"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:48:02 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:02"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:02"}
+{"level":"info","message":"Created receipt in Loyverse: 0199","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:03"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:23"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:23"}
+{"level":"info","message":"Processing order 1087713539 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:23"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:23"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:23"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:23"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:23"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:23"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:24"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:24"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:24"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:24"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713539","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:24"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:48:24 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:24"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:24"}
+{"level":"info","message":"Created receipt in Loyverse: 0200","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:25"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:34"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:34"}
+{"level":"info","message":"Processing order 1087713540 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:34"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:34"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:34"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:34"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:34"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:34"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:36"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:36"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:36"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:36"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713540","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:36"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:48:36 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:36"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:36"}
+{"level":"info","message":"Created receipt in Loyverse: 0201","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:37"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:47"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:47"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:48"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:48"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:48"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:48"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:59"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:59"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:59"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:59"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:59"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:48:59"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:27"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:27"}
+{"level":"info","message":"Processing order 1087713538 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:27"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:27"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:27"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:27"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:27"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:27"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:28"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:28"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:28"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:28"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713538","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:28"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:51:28 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:28"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:28"}
+{"level":"info","message":"Created receipt in Loyverse: 0202","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:51:29"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:52:33"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:52:33"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:52:33"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:52:33"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:52:33"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:52:33"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:03"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:03"}
+{"level":"info","message":"Processing order 1087713538 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:03"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:03"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:03"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:03"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:03"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:03"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:04"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:04"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:04"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:04"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713538","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:04"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:53:04 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"PostmanRuntime/7.45.0\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:04"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:04"}
+{"level":"info","message":"Created receipt in Loyverse: 0203","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:53:05"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:43"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:43"}
+{"level":"info","message":"Processing order 1087713541 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:43"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:43"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:43"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:43"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:43"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:43"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:44"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:44"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:44"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:44"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713541","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:44"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:54:44 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:44"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:45"}
+{"level":"info","message":"Created receipt in Loyverse: 0204","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:54:45"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:41"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:41"}
+{"level":"info","message":"Processing order 1087713542 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:41"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:41"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:41"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:41"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:41"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:41"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:43"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:43"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:43"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:43"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713542","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:43"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:55:43 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:43"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:43"}
+{"level":"info","message":"Created receipt in Loyverse: 0205","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:43"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:57"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:57"}
+{"level":"info","message":"Processing order 1087713543 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:57"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:57"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:57"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:57"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:57"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:57"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:58"}
+{"level":"info","message":"Fetched real-time price from Loyverse: 200 for SKU 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:58"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:58"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:58"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713543","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:58"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:55:58 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:58"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:58"}
+{"level":"info","message":"Created receipt in Loyverse: 0206","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:55:59"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:56:31 +0000] \"POST /api/gloriafood/test-receipt-creation HTTP/1.1\" 404 77 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:31"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:41"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:41"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:41"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:41"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:41"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:41"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:47"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713545","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:47"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:48"}
+{"level":"info","message":"Created receipt in Loyverse: 0207","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:49"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:56:49 +0000] \"POST /api/gloriafood/test-receipt-creation HTTP/1.1\" 200 1442 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:56:49"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:15"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:15"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:15"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:15"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:15"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:15"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:22"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:57:22 +0000] \"POST /api/gloriafood/test-receipt-creation HTTP/1.1\" 500 226 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:22"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:46"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:46"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:46"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:46"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:46"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:46"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:53"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:53"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:53"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:53"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:53"}
+{"level":"info","message":"Using mapping file price: 1000 for SKU 10028 (not fetching from Loyverse)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:53"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713547","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:53"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:53"}
+{"level":"info","message":"Created receipt in Loyverse: 0208","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:54"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:57:54 +0000] \"POST /api/gloriafood/test-receipt-creation HTTP/1.1\" 200 2208 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:57:54"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:25"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:25"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:25"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:25"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:25"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:25"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:32"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:32"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:32"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:32"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:32"}
+{"level":"info","message":"Using mapping file price: 1000 for SKU 10028 (not fetching from Loyverse)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:32"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713548","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:32"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:33"}
+{"level":"info","message":"Created receipt in Loyverse: 0209","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:34"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:58:34 +0000] \"POST /api/gloriafood/test-receipt-creation HTTP/1.1\" 200 2204 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:58:34"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:18"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:18"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:18"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:18"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:18"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:18"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:26"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:26"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:26"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:26"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:26"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:26"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713549","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:26"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:27"}
+{"level":"info","message":"Created receipt in Loyverse: 0210","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:27"}
+{"level":"info","message":"::1 - - [17/Sep/2025:00:59:27 +0000] \"POST /api/gloriafood/test-receipt-creation HTTP/1.1\" 200 2196 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:27"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:50"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:50"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:50"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:50"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:50"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:50"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:58"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:58"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:58"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:58"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:58"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:58"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713550","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:58"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 05:59:59"}
+{"level":"info","message":"Created receipt in Loyverse: 0211","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:00:00"}
+{"level":"info","message":"::1 - - [17/Sep/2025:01:00:00 +0000] \"POST /api/gloriafood/test-receipt-creation HTTP/1.1\" 200 2184 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:00:00"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:03"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:03"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:03"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:03"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:03"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:03"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:14"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:14"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:14"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:14"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:14"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:14"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713551","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:14"}
+{"level":"info","message":"Creating item in Loyverse: Delivery Fee","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:16"}
+{"level":"info","message":"Item created successfully: 0e75ffdd-1559-49f2-8f5f-ba4985848475","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:16"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:16"}
+{"level":"info","message":"Created receipt in Loyverse: 0212","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:17"}
+{"level":"info","message":"::1 - - [17/Sep/2025:01:07:17 +0000] \"POST /api/gloriafood/test-receipt-creation HTTP/1.1\" 200 2626 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:07:17"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:01"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:01"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:01"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:01"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:01"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:01"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:13"}
+{"level":"info","message":"Loaded 55 item mappings from export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:13"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:13"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:13"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:13"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:13"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087713552","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:13"}
+{"level":"info","message":"Item not found by ID 1437015254, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:14"}
+{"level":"info","message":"Created receipt in Loyverse: 0213","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:15"}
+{"level":"info","message":"::1 - - [17/Sep/2025:01:09:15 +0000] \"POST /api/gloriafood/test-receipt-creation HTTP/1.1\" 200 2622 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:09:15"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Processing order 1087718777 with 4 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"سمك\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"سمك\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Found exact match: SKU GF_5032 for \"سمك\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Using GloriaFood price for SKU GF_5032 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"فاكهة\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Found exact match: SKU GF_3253 for \"فاكهة\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Using GloriaFood price for SKU GF_3253 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"فاكهة 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Found exact match: SKU GF_8361 for \"فاكهة 1\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Using GloriaFood price for SKU GF_8361 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Item mapping results: 4 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1087718777","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"::1 - - [17/Sep/2025:01:10:23 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 236 \"-\" \"GF Accepted Orders, Order Id: 1087718777, Try Number: 1/10, Server Time: 2025-09-17T01:10:22.735Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:23"}
+{"level":"info","message":"Item not found by ID 1437021011, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:24"}
+{"level":"info","message":"Item not found by ID 1437021031, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:24"}
+{"level":"info","message":"Item not found by ID 1437021045, searching by name","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:25"}
+{"level":"info","message":"Created receipt in Loyverse: 0214","service":"gloriafood-loyverse-integration","timestamp":"2025-09-17 06:10:26"}
