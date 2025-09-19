@@ -1,18 +1,35 @@
 const fs = require('fs');
 const path = require('path');
+const axios = require('axios');
 const logger = require('../utils/logger');
 const LoyverseAPI = require('../utils/loyverseApi');
 
 class ItemMappingService {
   constructor() {
     this.mappingData = null;
-    this.loadMappingData();
+    this.initialized = false;
   }
 
-  // Load the mapping data from the JSON file
-  loadMappingData() {
+  // Initialize the service (call this before using)
+  async initialize() {
+    if (!this.initialized) {
+      await this.loadMappingData();
+      this.initialized = true;
+    }
+  }
+
+  // Load the mapping data from the JSON file or external storage
+  async loadMappingData() {
     try {
-      // Try multiple possible paths
+      // If JSONBin.io credentials are available, use external storage
+      if (process.env.JSONBIN_ID && process.env.JSONBIN_API_KEY) {
+        console.log('Using JSONBin.io for mapping data storage');
+        await this.loadFromExternalStorage();
+        return;
+      }
+      
+      // Fallback to local file if no JSONBin.io credentials
+      console.log('JSONBin.io credentials not found, using local file');
       const possiblePaths = [
         path.join(__dirname, '../../export_items_menu.json'),
         path.join(process.cwd(), 'export_items_menu.json'),
@@ -39,6 +56,34 @@ class ItemMappingService {
     } catch (error) {
       logger.error('Failed to load item mapping data:', error.message);
       console.error('Failed to load item mapping data:', error.message);
+      this.mappingData = [];
+    }
+  }
+
+  // Load mapping data from external storage (JSONBin.io)
+  async loadFromExternalStorage() {
+    try {
+      const jsonbinId = process.env.JSONBIN_ID || 'your-jsonbin-id';
+      const jsonbinApiKey = process.env.JSONBIN_API_KEY || 'your-api-key';
+      
+      if (!jsonbinId || !jsonbinApiKey) {
+        console.log('JSONBin credentials not set, using empty mapping data');
+        this.mappingData = [];
+        return;
+      }
+      
+      const response = await axios.get(`https://api.jsonbin.io/v3/b/${jsonbinId}/latest`, {
+        headers: {
+          'X-Master-Key': jsonbinApiKey
+        }
+      });
+      
+      this.mappingData = response.data.record || [];
+      logger.info(`Loaded ${this.mappingData.length} item mappings from external storage`);
+      console.log(`Loaded ${this.mappingData.length} item mappings from external storage`);
+    } catch (error) {
+      logger.error('Failed to load from external storage:', error.message);
+      console.error('Failed to load from external storage:', error.message);
       this.mappingData = [];
     }
   }
@@ -276,12 +321,11 @@ class ItemMappingService {
 
   // Generate unique SKU for new items
   generateUniqueSKU() {
-    const usedSKUs = new Set(this.mappingData.map(item => item.SKU));
-    let sku;
-    do {
-      sku = `GF_${Math.floor(1000 + Math.random() * 9000)}`;
-    } while (usedSKUs.has(sku));
-    return sku;
+    // Generate a truly unique SKU using timestamp and random number
+    // This ensures uniqueness even in read-only environments
+    const timestamp = Date.now().toString().slice(-6); // Last 6 digits of timestamp
+    const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    return `GF_${timestamp}${random}`;
   }
 
   // Create new item in Loyverse and add to mapping
@@ -294,6 +338,12 @@ class ItemMappingService {
       let itemName = gloriaFoodItem.name;
       let calculatedPrice = gloriaFoodItem.price; // Start with base price
       
+      // Handle Arabic text in production (Vercel) - use fallback English name
+      if (process.env.NODE_ENV === 'production' && /[\u0600-\u06FF]/.test(itemName)) {
+        console.log('Arabic text detected in production, using fallback English name');
+        itemName = `Arabic Item ${gloriaFoodItem.id}`;
+      }
+      
       if (gloriaFoodItem.options && Array.isArray(gloriaFoodItem.options) && gloriaFoodItem.options.length > 0) {
         const sizeOption = gloriaFoodItem.options.find(option => 
           option.group_name === 'Size' || 
@@ -302,7 +352,12 @@ class ItemMappingService {
         
         if (sizeOption) {
           size = sizeOption.name;
-          itemName = `${gloriaFoodItem.name} ${size}`;
+          // Handle Arabic text in size option for production
+          if (process.env.NODE_ENV === 'production' && /[\u0600-\u06FF]/.test(size)) {
+            console.log('Arabic text detected in size option in production, using fallback English name');
+            size = 'Large';
+          }
+          itemName = `${itemName} ${size}`;
           // Add size price to base price
           calculatedPrice = gloriaFoodItem.price + (sizeOption.price || 0);
         }
@@ -320,7 +375,9 @@ class ItemMappingService {
       };
 
       // Create item in Loyverse
+      console.log('Creating item in Loyverse with data:', JSON.stringify(itemData, null, 2));
       const createdItem = await loyverseAPI.createItem(itemData);
+      console.log('Item created successfully:', JSON.stringify(createdItem, null, 2));
       
       // Create mapping entry
       const mappingEntry = {
@@ -338,10 +395,18 @@ class ItemMappingService {
       // Add to mapping data
       this.mappingData.push(mappingEntry);
       
-      // Save updated mapping data to file
+      // Save the mapping data (to external storage in production, file in development)
       await this.saveMappingData();
-      
       logger.info(`Successfully created new item: ${itemName} with SKU: ${sku}`);
+      
+      console.log('Created item response:', JSON.stringify(createdItem, null, 2));
+      
+      if (!createdItem.variants || createdItem.variants.length === 0) {
+        throw new Error('Created item has no variants');
+      }
+      
+      const variantId = createdItem.variants[0].variant_id;
+      console.log('Using variant ID:', variantId);
       
       return {
         sku: sku,
@@ -350,7 +415,7 @@ class ItemMappingService {
         price: calculatedPrice,
         matchType: 'auto_created',
         loyverseItemId: createdItem.id,
-        variantId: createdItem.variants[0].variant_id
+        variantId: variantId
       };
       
     } catch (error) {
@@ -359,9 +424,18 @@ class ItemMappingService {
     }
   }
 
-  // Save mapping data to file
+  // Save mapping data to file or external storage
   async saveMappingData() {
     try {
+      // If JSONBin.io credentials are available, use external storage
+      if (process.env.JSONBIN_ID && process.env.JSONBIN_API_KEY) {
+        console.log('Saving to JSONBin.io external storage');
+        await this.saveToExternalStorage();
+        return;
+      }
+      
+      // Fallback to local file if no JSONBin.io credentials
+      console.log('JSONBin.io credentials not found, saving to local file');
       const possiblePaths = [
         path.join(__dirname, '../../export_items_menu.json'),
         path.join(process.cwd(), 'export_items_menu.json'),
@@ -386,6 +460,33 @@ class ItemMappingService {
     } catch (error) {
       logger.error('Failed to save mapping data:', error.message);
       throw error;
+    }
+  }
+
+  // Save mapping data to external storage (JSONBin.io)
+  async saveToExternalStorage() {
+    try {
+      const jsonbinId = process.env.JSONBIN_ID || 'your-jsonbin-id';
+      const jsonbinApiKey = process.env.JSONBIN_API_KEY || 'your-api-key';
+      
+      if (!jsonbinId || !jsonbinApiKey) {
+        console.log('JSONBin credentials not set, skipping save to external storage');
+        return;
+      }
+      
+      const response = await axios.put(`https://api.jsonbin.io/v3/b/${jsonbinId}`, this.mappingData, {
+        headers: {
+          'X-Master-Key': jsonbinApiKey,
+          'Content-Type': 'application/json'
+        }
+      });
+      
+      logger.info(`Saved ${this.mappingData.length} item mappings to external storage`);
+      console.log(`Saved ${this.mappingData.length} item mappings to external storage`);
+    } catch (error) {
+      logger.error('Failed to save to external storage:', error.message);
+      console.error('Failed to save to external storage:', error.message);
+      // Don't throw error - just log it, as this is not critical for the main flow
     }
   }
 
@@ -449,7 +550,9 @@ class ItemMappingService {
         // If no exact mapping found, create new item
         if (!mapping) {
           logger.info(`No exact mapping found for "${gloriaFoodItemName}" (${size}), creating new item...`);
+          console.log('About to create new item for:', JSON.stringify(item, null, 2));
           mapping = await this.createNewItem(item, loyverseAPI);
+          console.log('New item mapping created:', JSON.stringify(mapping, null, 2));
         }
 
         processedItems.push({

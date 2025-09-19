@@ -49,6 +49,13 @@ class LoyverseAPI {
     };
   }
 
+  // Sanitize text to remove Arabic characters
+  sanitizeText(text) {
+    if (!text) return '';
+    // Replace Arabic characters with English equivalents or remove them
+    return text.replace(/[\u0600-\u06FF]/g, '').trim() || 'Item Note';
+  }
+
   // Get payment type ID for CASH payments
   async getCashPaymentTypeId() {
     try {
@@ -320,8 +327,8 @@ class LoyverseAPI {
           continue; // Skip the normal item processing
         }
         
-        // Find or create the item
-        const existingItem = await this.findItemByName(item.name, item.id);
+        // Find or create the item using the mapped SKU
+        const existingItem = await this.findItemBySKU(item.sku);
         
         if (existingItem) {
           console.log(`Found existing item: ${existingItem.name} (Loyverse ID: ${existingItem.id})`);
@@ -341,9 +348,9 @@ class LoyverseAPI {
             
             lineItemsWithVariants.push({
               variant_id: variantId,
-              quantity: item.quantity,
+              quantity: item.quantity || 1,
               unit_price: finalPrice,
-              total_price: finalPrice * item.quantity,
+              total_price: finalPrice * (item.quantity || 1),
               line_note: item.instructions || ''
             });
           } else {
@@ -351,9 +358,9 @@ class LoyverseAPI {
             // Fallback to using item_id if no variants
             lineItemsWithVariants.push({
               variant_id: existingItem.variants[0].id,
-              quantity: item.quantity,
+              quantity: item.quantity || 1,
               unit_price: item.price,
-              total_price: item.total_price,
+              total_price: item.total_price || (item.price * (item.quantity || 1)),
               line_note: item.instructions || ''
             });
           }
@@ -548,11 +555,21 @@ class LoyverseAPI {
       
       // Log detailed error information
       console.log('=== RECEIPT CREATION ERROR ===');
+      console.log('Order Data:', JSON.stringify(orderData, null, 2));
+      console.log('Environment:', process.env.NODE_ENV);
+      console.log('Node Version:', process.version);
+      console.log('Loyverse Access Token:', process.env.LOYVERSE_ACCESS_TOKEN ? 'SET' : 'NOT SET');
+      console.log('Loyverse Location ID:', process.env.LOYVERSE_LOCATION_ID ? 'SET' : 'NOT SET');
+      console.log('Base URL:', this.baseURL);
       if (error.response) {
         console.log('Status:', error.response.status);
         console.log('Status Text:', error.response.statusText);
         console.log('Response Data:', JSON.stringify(error.response.data, null, 2));
         console.log('Response Headers:', JSON.stringify(error.response.headers, null, 2));
+        console.log('Request URL:', error.config?.url);
+        console.log('Request Method:', error.config?.method);
+        console.log('Request Data:', JSON.stringify(error.config?.data, null, 2));
+        console.log('Request Headers:', JSON.stringify(error.config?.headers, null, 2));
       } else {
         console.log('No response object in error:', error.message);
       }
