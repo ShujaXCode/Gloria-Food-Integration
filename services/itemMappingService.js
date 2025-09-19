@@ -15,9 +15,16 @@ class ItemMappingService {
   // Load the mapping data from JSONBin.io first, fallback to local file
   async loadMappingData() {
     try {
-      // First try to load from JSONBin.io
+      // First try to load from JSONBin.io with a shorter timeout
       console.log('🔄 Attempting to load mapping data from JSONBin.io...');
-      const jsonbinData = await this.loadFromJSONBin();
+      
+      // Use Promise.race to implement a shorter timeout for faster fallback
+      const jsonbinPromise = this.loadFromJSONBin();
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('JSONBin.io timeout')), 15000)
+      );
+      
+      const jsonbinData = await Promise.race([jsonbinPromise, timeoutPromise]);
       
       if (jsonbinData && jsonbinData.length > 0) {
         this.mappingData = jsonbinData;
@@ -54,7 +61,7 @@ class ItemMappingService {
           'X-Master-Key': jsonbin.apiKey,
           'X-Access-Key': jsonbin.accessKey
         },
-        timeout: 10000 // 10 second timeout
+        timeout: 30000 // 30 second timeout
       });
 
       if (response.data && response.data.record) {
@@ -515,7 +522,7 @@ class ItemMappingService {
           'X-Access-Key': jsonbin.accessKey,
           'Content-Type': 'application/json'
         },
-        timeout: 10000 // 10 second timeout
+        timeout: 30000 // 30 second timeout
       });
 
       if (response.data && response.data.success) {
