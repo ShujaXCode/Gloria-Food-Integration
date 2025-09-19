@@ -45,6 +45,7 @@ module.exports = {
   },
 
   // Integration Settings
+  //
   integration: {
     autoCreateCustomers: true,
     syncMenuItems: true,
