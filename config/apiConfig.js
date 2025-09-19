@@ -38,9 +38,9 @@ module.exports = {
   // JSONBin.io Configuration
   jsonbin: {
     baseURL: 'https://api.jsonbin.io/v3',
-    apiKey: process.env.JSONBIN_API_KEY || '$2a$10$9SK02VE3u.mo2fRZooEUOu1C9nr5DGrhii3TbVIUVSnxtYFrQ4tAO',
-    accessKey: process.env.JSONBIN_ACCESS_KEY || '$2a$10$.GUFxU51FFPksZX/6530h.z210kmyLi32ncHkGaoEsH2yr0FHwjR2',
-    binId: process.env.JSONBIN_BIN_ID || '68cd1ce7d0ea881f4082f202',
+    apiKey: '$2a$10$9SK02VE3u.mo2fRZooEUOu1C9nr5DGrhii3TbVIUVSnxtYFrQ4tAO',
+    accessKey: '$2a$10$.GUFxU51FFPksZX/6530h.z210kmyLi32ncHkGaoEsH2yr0FHwjR2',
+    binId: '68cd1ce7d0ea881f4082f202',
     collectionId: process.env.JSONBIN_COLLECTION_ID || null
   },
 
