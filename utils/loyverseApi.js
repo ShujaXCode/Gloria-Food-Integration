@@ -320,8 +320,8 @@ class LoyverseAPI {
           continue; // Skip the normal item processing
         }
         
-        // Find or create the item
-        const existingItem = await this.findItemByName(item.name, item.id);
+        // Find or create the item using SKU
+        const existingItem = await this.findItemBySKU(item.sku);
         
         if (existingItem) {
           console.log(`Found existing item: ${existingItem.name} (Loyverse ID: ${existingItem.id})`);
@@ -331,9 +331,15 @@ class LoyverseAPI {
           if (existingItem.variants && existingItem.variants.length > 0) {
             const variant = existingItem.variants[0];
             const variantId = variant.variant_id;
-            // Use GloriaFood price instead of Loyverse price for accuracy
-            // The customer paid the GloriaFood price, so we should use that
-            const finalPrice = item.price;
+            // For "كبسة ابتاون" items, use Loyverse price to ensure correct mapping
+            // For other items, use GloriaFood price for accuracy
+            let finalPrice = item.price;
+            
+            // Check if this is a "كبسة ابتاون" item that needs Loyverse pricing
+            if (item.name && item.name.includes('كبسة ابتاون') && variant.default_price) {
+              finalPrice = variant.default_price;
+              console.log(`Using Loyverse price for كبسة ابتاون item: ${finalPrice} (instead of GloriaFood price: ${item.price})`);
+            }
             
             console.log(`Using variant ID: ${variantId}`);
             console.log(`Item data:`, JSON.stringify(item, null, 2));
@@ -745,18 +751,23 @@ class LoyverseAPI {
     try {
       logger.info(`Searching for item in Loyverse by SKU: ${sku}`);
       
+      // Fetch all items since Loyverse API SKU search is broken
       const response = await axios.get(`${this.baseURL}/items`, {
-        headers: this.getHeaders(),
-        params: {
-          sku: sku
-        }
+        headers: this.getHeaders()
       });
 
       if (response.data && response.data.items && response.data.items.length > 0) {
-        // Return the first matching item
-        const item = response.data.items[0];
-        logger.info(`Found item in Loyverse by SKU: ${item.name} (SKU: ${sku})`);
-        return item;
+        // Search locally for the item with the matching SKU
+        for (const item of response.data.items) {
+          if (item.variants && item.variants.length > 0) {
+            for (const variant of item.variants) {
+              if (variant.sku === sku.toString()) {
+                logger.info(`Found item in Loyverse by SKU: ${item.name} (SKU: ${sku})`);
+                return item;
+              }
+            }
+          }
+        }
       }
 
       logger.info(`No item found in Loyverse with SKU: ${sku}`);

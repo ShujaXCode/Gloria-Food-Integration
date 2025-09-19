@@ -51,6 +51,17 @@ router.post('/webhook', async (req, res) => {
 
       logger.info(`Processing order ${orderData.id} with ${orderData.items.length} items`);
 
+      // Check order status - only process accepted orders
+      if (orderData.status && orderData.status !== 'accepted') {
+        logger.info(`Order ${orderData.id} status is '${orderData.status}', skipping receipt creation`);
+        return res.status(200).json({
+          success: true,
+          message: `Order received but status is '${orderData.status}', receipt will be created when order is accepted`,
+          orderId: orderData.id,
+          status: orderData.status
+        });
+      }
+
       // Check if this is a table reservation or order with no items
       // Initialize Loyverse API
       const LoyverseAPI = require('../utils/loyverseApi');
@@ -167,27 +178,30 @@ router.post('/webhook', async (req, res) => {
 
       logger.info('Processed order with mapping:', JSON.stringify(processedOrder, null, 2));
       
-      // Send immediate response to GloriaFood
-      console.log('Sending immediate response to GloriaFood...');
+      // Create receipt in Loyverse first
+      console.log('Creating receipt in Loyverse...');
+      let receipt = null;
+      try {
+        receipt = await loyverseAPI.createReceipt(processedOrder);
+        console.log('Receipt created successfully:', receipt.receipt_number || receipt.id);
+      } catch (receiptError) {
+        console.error('Receipt creation failed:', receiptError.message);
+        // Continue with response even if receipt creation fails
+      }
+      
+      // Send response to GloriaFood
+      console.log('Sending response to GloriaFood...');
       res.status(200).json({
         success: true,
-        message: 'Order received and processing receipt in Loyverse',
+        message: 'Order received and receipt created in Loyverse',
         orderId: processedOrder.id,
         eventType: 'new_order',
         total: processedOrder.total,
         items: processedOrder.items.length,
-        mappingResults: processedOrder.mappingResults
+        mappingResults: processedOrder.mappingResults,
+        receiptNumber: receipt?.receipt_number || receipt?.id || null
       });
       console.log('Response sent successfully');
-      
-      // Process receipt in background
-      console.log('Creating receipt in Loyverse (background)...');
-      try {
-        const receipt = await loyverseAPI.createReceipt(processedOrder);
-        console.log('Receipt created successfully in background:', receipt.id);
-      } catch (receiptError) {
-        console.error('Background receipt creation failed:', receiptError.message);
-      }
       
     } catch (error) {
       logger.error('Error processing webhook:', error.message);

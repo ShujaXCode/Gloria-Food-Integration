@@ -1,0 +1,44 @@
+[
+  {
+    "item": "كبسة ابتاون دجاج كبير",
+    "sku": "10048",
+    "success": false,
+    "error": {
+      "errors": [
+        {
+          "code": "INVALID_VALUE",
+          "details": "Duplicate variant SKU: 10048",
+          "field": "object.variants[0].sku"
+        }
+      ]
+    }
+  },
+  {
+    "item": "كبسة ابتاون دجاج وسط",
+    "sku": "10047",
+    "success": false,
+    "error": {
+      "errors": [
+        {
+          "code": "INVALID_VALUE",
+          "details": "Duplicate variant SKU: 10047",
+          "field": "object.variants[0].sku"
+        }
+      ]
+    }
+  },
+  {
+    "item": "كبسة ابتاون دجاج صغبر",
+    "sku": "10046",
+    "success": false,
+    "error": {
+      "errors": [
+        {
+          "code": "INVALID_VALUE",
+          "details": "Duplicate variant SKU: 10046",
+          "field": "object.variants[0].sku"
+        }
+      ]
+    }
+  }
+]

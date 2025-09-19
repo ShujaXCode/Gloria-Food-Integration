@@ -1,16 +1,76 @@
 const fs = require('fs');
 const path = require('path');
+const axios = require('axios');
 const logger = require('../utils/logger');
 const LoyverseAPI = require('../utils/loyverseApi');
+const apiConfig = require('../config/apiConfig');
 
 class ItemMappingService {
   constructor() {
     this.mappingData = null;
+    this.isLoading = false;
     this.loadMappingData();
   }
 
-  // Load the mapping data from the JSON file
-  loadMappingData() {
+  // Load the mapping data from JSONBin.io first, fallback to local file
+  async loadMappingData() {
+    try {
+      // First try to load from JSONBin.io
+      console.log('🔄 Attempting to load mapping data from JSONBin.io...');
+      const jsonbinData = await this.loadFromJSONBin();
+      
+      if (jsonbinData && jsonbinData.length > 0) {
+        this.mappingData = jsonbinData;
+        logger.info(`Loaded ${this.mappingData.length} item mappings from JSONBin.io`);
+        console.log(`✅ Loaded ${this.mappingData.length} item mappings from JSONBin.io`);
+        return;
+      }
+      
+      // Fallback to local file
+      console.log('⚠️  JSONBin.io failed, falling back to local file...');
+      this.loadFromLocalFile();
+      
+    } catch (error) {
+      logger.error('Failed to load item mapping data:', error.message);
+      console.error('Failed to load item mapping data:', error.message);
+      
+      // Fallback to local file
+      console.log('⚠️  Error loading from JSONBin.io, falling back to local file...');
+      this.loadFromLocalFile();
+    }
+  }
+
+  // Load mapping data from JSONBin.io
+  async loadFromJSONBin() {
+    try {
+      const { jsonbin } = apiConfig;
+      
+      if (!jsonbin.apiKey || !jsonbin.binId) {
+        throw new Error('JSONBin.io credentials not configured');
+      }
+
+      const response = await axios.get(`${jsonbin.baseURL}/b/${jsonbin.binId}/latest`, {
+        headers: {
+          'X-Master-Key': jsonbin.apiKey,
+          'X-Access-Key': jsonbin.accessKey
+        },
+        timeout: 10000 // 10 second timeout
+      });
+
+      if (response.data && response.data.record) {
+        console.log('✅ Successfully fetched data from JSONBin.io');
+        return response.data.record;
+      } else {
+        throw new Error('No data found in JSONBin.io response');
+      }
+    } catch (error) {
+      console.error('❌ Failed to load from JSONBin.io:', error.message);
+      throw error;
+    }
+  }
+
+  // Load mapping data from local file (fallback)
+  loadFromLocalFile() {
     try {
       // Try multiple possible paths
       const possiblePaths = [
@@ -35,10 +95,10 @@ class ItemMappingService {
       const rawData = fs.readFileSync(mappingFilePath, 'utf8');
       this.mappingData = JSON.parse(rawData);
       logger.info(`Loaded ${this.mappingData.length} item mappings from export_items_menu.json`);
-      console.log(`Loaded ${this.mappingData.length} item mappings`);
+      console.log(`✅ Loaded ${this.mappingData.length} item mappings from local file`);
     } catch (error) {
-      logger.error('Failed to load item mapping data:', error.message);
-      console.error('Failed to load item mapping data:', error.message);
+      logger.error('Failed to load item mapping data from local file:', error.message);
+      console.error('Failed to load item mapping data from local file:', error.message);
       this.mappingData = [];
     }
   }
@@ -359,8 +419,63 @@ class ItemMappingService {
     }
   }
 
-  // Save mapping data to file
+  // Save mapping data to JSONBin.io and local file
   async saveMappingData() {
+    try {
+      // First try to save to JSONBin.io
+      console.log('🔄 Attempting to save mapping data to JSONBin.io...');
+      const jsonbinSuccess = await this.saveToJSONBin();
+      
+      if (jsonbinSuccess) {
+        console.log('✅ Successfully saved to JSONBin.io');
+      } else {
+        console.log('⚠️  Failed to save to JSONBin.io, saving to local file only');
+      }
+      
+      // Always save to local file as backup
+      this.saveToLocalFile();
+      
+    } catch (error) {
+      logger.error('Failed to save mapping data:', error.message);
+      console.error('Failed to save mapping data:', error.message);
+      
+      // Fallback to local file only
+      this.saveToLocalFile();
+    }
+  }
+
+  // Save mapping data to JSONBin.io
+  async saveToJSONBin() {
+    try {
+      const { jsonbin } = apiConfig;
+      
+      if (!jsonbin.apiKey || !jsonbin.binId) {
+        throw new Error('JSONBin.io credentials not configured');
+      }
+
+      const response = await axios.put(`${jsonbin.baseURL}/b/${jsonbin.binId}`, this.mappingData, {
+        headers: {
+          'X-Master-Key': jsonbin.apiKey,
+          'X-Access-Key': jsonbin.accessKey,
+          'Content-Type': 'application/json'
+        },
+        timeout: 10000 // 10 second timeout
+      });
+
+      if (response.data && response.data.success) {
+        logger.info(`Updated JSONBin.io with ${this.mappingData.length} items`);
+        return true;
+      } else {
+        throw new Error('JSONBin.io save failed');
+      }
+    } catch (error) {
+      console.error('❌ Failed to save to JSONBin.io:', error.message);
+      return false;
+    }
+  }
+
+  // Save mapping data to local file (fallback)
+  saveToLocalFile() {
     try {
       const possiblePaths = [
         path.join(__dirname, '../../export_items_menu.json'),
@@ -382,9 +497,9 @@ class ItemMappingService {
       
       fs.writeFileSync(mappingFilePath, JSON.stringify(this.mappingData, null, 2), 'utf8');
       logger.info(`Updated mapping file: ${mappingFilePath}`);
-      console.log(`Updated mapping file with ${this.mappingData.length} items`);
+      console.log(`✅ Updated local mapping file with ${this.mappingData.length} items`);
     } catch (error) {
-      logger.error('Failed to save mapping data:', error.message);
+      logger.error('Failed to save mapping data to local file:', error.message);
       throw error;
     }
   }

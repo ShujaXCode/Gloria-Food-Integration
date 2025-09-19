@@ -1,0 +1,333 @@
+{
+  "total": 54,
+  "created": 54,
+  "updated": 0,
+  "skipped": 0,
+  "failed": 0,
+  "details": [
+    {
+      "name": "كبسة ابتاون دجاج كبير",
+      "sku": 10048,
+      "action": "created",
+      "loyverseId": "f7396287-4f61-4007-9ca1-2cd2c9b80f5a"
+    },
+    {
+      "name": "كبسة ابتاون دجاج وسط",
+      "sku": 10047,
+      "action": "created",
+      "loyverseId": "765ff9fd-d0af-4f0f-8868-e7b052ec630a"
+    },
+    {
+      "name": "كبسة ابتاون دجاج صغبر",
+      "sku": 10046,
+      "action": "created",
+      "loyverseId": "c8975c14-802f-49b6-a4f9-b331a36d99cd"
+    },
+    {
+      "name": "نودلز كبسة ابتاون كبير",
+      "sku": 10045,
+      "action": "created",
+      "loyverseId": "4a078b0d-73bd-4959-9b94-ff8860de3513"
+    },
+    {
+      "name": "نودلز كبسة ابتاون وسط",
+      "sku": 10044,
+      "action": "created",
+      "loyverseId": "49d42ecc-0006-40ee-9d03-4c6139ee5c53"
+    },
+    {
+      "name": "نودلز كبسة ابتاون صغير",
+      "sku": 10043,
+      "action": "created",
+      "loyverseId": "1fb0c39b-6b76-41e5-afdc-48691ac54154"
+    },
+    {
+      "name": "نودلز ابتاون مع الشبس",
+      "sku": 10026,
+      "action": "created",
+      "loyverseId": "b513c313-2168-43fd-a09c-47835f0ed53c"
+    },
+    {
+      "name": "نودلز ابتاون كبير",
+      "sku": 10033,
+      "action": "created",
+      "loyverseId": "646600e9-2858-4918-b14b-0b056f4832cf"
+    },
+    {
+      "name": "نودلز ابتاون صغير",
+      "sku": 10023,
+      "action": "created",
+      "loyverseId": "8c1bd89c-9b9c-4914-a37d-e919dd0eb883"
+    },
+    {
+      "name": "نودلز مع الشبس",
+      "sku": 10025,
+      "action": "created",
+      "loyverseId": "cca99a1a-2d47-4cc0-a3c5-1569c6de3949"
+    },
+    {
+      "name": "نودلز بالخلطة الكورية - كبير",
+      "sku": 10008,
+      "action": "created",
+      "loyverseId": "e3bd4e2e-b6ef-45d1-8ef0-5c9ef13ee94c"
+    },
+    {
+      "name": "نودلز بالخلطة الكورية صغير",
+      "sku": 10013,
+      "action": "created",
+      "loyverseId": "a0716042-36a6-49d6-a7af-5701e730ea8f"
+    },
+    {
+      "name": "نودلز خلطة خاصة - كبير",
+      "sku": 10007,
+      "action": "created",
+      "loyverseId": "0547605f-220c-4c1c-b9d5-6b41c9204b31"
+    },
+    {
+      "name": "نودلز خلطة خاصة صغير",
+      "sku": 10012,
+      "action": "created",
+      "loyverseId": "9336d21a-7729-4160-89df-8ca5812560b0"
+    },
+    {
+      "name": "نودلز دبس رمان - كبير",
+      "sku": 10006,
+      "action": "created",
+      "loyverseId": "21959511-4e10-441f-9bce-8d24bdd2bc76"
+    },
+    {
+      "name": "نودلز دبس رمان صغير",
+      "sku": 10015,
+      "action": "created",
+      "loyverseId": "1f70abeb-53a3-40b5-852e-8b450ec08f92"
+    },
+    {
+      "name": "نودلز بالجبن - كبير",
+      "sku": 10009,
+      "action": "created",
+      "loyverseId": "6ac1a97b-0076-4ee6-bc9d-39989e774287"
+    },
+    {
+      "name": "نودلز بالجبن صغير",
+      "sku": 10014,
+      "action": "created",
+      "loyverseId": "46663ded-05f9-465f-9382-253dbab3c19d"
+    },
+    {
+      "name": "نودلز - صوصات سبايسي صغير",
+      "sku": 10002,
+      "action": "created",
+      "loyverseId": "f3f6eb1a-fdad-4d31-b8d8-2f5d04c5df2e"
+    },
+    {
+      "name": "نودلز - صوصات سبايسي كبير",
+      "sku": 10016,
+      "action": "created",
+      "loyverseId": "ffd4168d-7cf8-42af-b502-02aafeb26de0"
+    },
+    {
+      "name": "نودلز ساده - بدون صوصات كبير",
+      "sku": 10005,
+      "action": "created",
+      "loyverseId": "876f5ec7-8915-44ad-873e-1f503e199d60"
+    },
+    {
+      "name": "نودلز ساده - بدون صوصات",
+      "sku": 10017,
+      "action": "created",
+      "loyverseId": "1608cba6-8036-4c5d-93df-cd7c62f19dac"
+    },
+    {
+      "name": "شبس ابتاون كبير",
+      "sku": 10034,
+      "action": "created",
+      "loyverseId": "54efb743-7ade-4942-a58e-8d816b201085"
+    },
+    {
+      "name": "شبس ابتاون صغير",
+      "sku": 10011,
+      "action": "created",
+      "loyverseId": "6a1352e8-d865-41dd-92ac-060c8023227f"
+    },
+    {
+      "name": "شبس اسبيشل جبن سائل كبير",
+      "sku": 10040,
+      "action": "created",
+      "loyverseId": "2a054291-edd1-46ab-ad4e-4438208db4eb"
+    },
+    {
+      "name": "شبس اسبيشل جبن سائل صغير",
+      "sku": 10000,
+      "action": "created",
+      "loyverseId": "c77988c5-961c-496e-9919-b2524919c64b"
+    },
+    {
+      "name": "شبس جبن مالح كبير",
+      "sku": 10041,
+      "action": "created",
+      "loyverseId": "ac83a00c-19c7-45ac-8d52-acc039a019f5"
+    },
+    {
+      "name": "شبس اسبيشل-جبن مالح صغير",
+      "sku": 10001,
+      "action": "created",
+      "loyverseId": "7cbd4925-b1ad-4977-8417-8440ee247090"
+    },
+    {
+      "name": "شبس سبايسي كبير",
+      "sku": 10042,
+      "action": "created",
+      "loyverseId": "c137399f-2bea-40fa-8d48-4234296bdf35"
+    },
+    {
+      "name": "شبس صوصات - صغير",
+      "sku": 10024,
+      "action": "created",
+      "loyverseId": "a0d080fd-cc12-40b1-829e-dcd1136de985"
+    },
+    {
+      "name": "شبس ساده بدون صوصات - كبير",
+      "sku": 10010,
+      "action": "created",
+      "loyverseId": "bbbdb16e-1f42-47eb-8fac-12f35850df8d"
+    },
+    {
+      "name": "شبس ساده بدون  صوصات",
+      "sku": 10003,
+      "action": "created",
+      "loyverseId": "eb7add07-5ebc-4277-b509-50c2f850e7b3"
+    },
+    {
+      "name": "ايس تي بالخوخ",
+      "sku": 10021,
+      "action": "created",
+      "loyverseId": "9ff69036-6130-48cd-bd8c-161a5f556ef6"
+    },
+    {
+      "name": "ايس تي بلاك بري",
+      "sku": 10022,
+      "action": "created",
+      "loyverseId": "1cd4cd5f-5004-4295-8eee-6eca592a2636"
+    },
+    {
+      "name": "موهيتو رمان",
+      "sku": 10028,
+      "action": "created",
+      "loyverseId": "b1d58209-aed4-4b05-85e1-30bb95481632"
+    },
+    {
+      "name": "موهيتو بلو بري (توت ازرق)",
+      "sku": 10020,
+      "action": "created",
+      "loyverseId": "a09ce700-0487-4621-b688-5eb44df7937c"
+    },
+    {
+      "name": "موهيتو روز بري (توت)",
+      "sku": 10018,
+      "action": "created",
+      "loyverseId": "abef71f1-ba30-407a-81bb-3112e2a1e1bf"
+    },
+    {
+      "name": "موهيتو كيوي",
+      "sku": 10019,
+      "action": "created",
+      "loyverseId": "bdf21d4e-8ef9-4122-9de9-1ef8953e94ed"
+    },
+    {
+      "name": "مشروب غازي علبه",
+      "sku": 10027,
+      "action": "created",
+      "loyverseId": "edc10314-a72a-454b-86ad-3d31635fd71e"
+    },
+    {
+      "name": "مشروب غازي مع الثلج",
+      "sku": 10035,
+      "action": "created",
+      "loyverseId": "04449cea-9e8c-4539-8275-2d55c65bacf9"
+    },
+    {
+      "name": "مشروب طاقة علبه",
+      "sku": 10030,
+      "action": "created",
+      "loyverseId": "1e7ce07d-18a7-498f-b7f9-a99c9bfd8339"
+    },
+    {
+      "name": "مشروب طاقه مع الثلج لفت اب",
+      "sku": 10036,
+      "action": "created",
+      "loyverseId": "e48c4705-c75a-4770-8b53-4eaa8e83265e"
+    },
+    {
+      "name": "مشروب كود ريد - علبه",
+      "sku": 10031,
+      "action": "created",
+      "loyverseId": "4cedf99a-edf5-45d8-b475-f712f7fb195d"
+    },
+    {
+      "name": "مشروب كود رد مع الثلج",
+      "sku": 10037,
+      "action": "created",
+      "loyverseId": "cddadbe0-6154-43f4-a76b-19ccdf249612"
+    },
+    {
+      "name": "ماء",
+      "sku": 10038,
+      "action": "created",
+      "loyverseId": "06c6e098-9730-40ee-a928-72a45cbe411e"
+    },
+    {
+      "name": "ماء مع الثلج",
+      "sku": 10039,
+      "action": "created",
+      "loyverseId": "c6cb3079-e52a-440f-bb97-16994f266e4c"
+    },
+    {
+      "name": "فاكهة",
+      "sku": "GF_3179",
+      "action": "created",
+      "loyverseId": "15a1e6c6-f09f-4f82-8bfc-7552a4569635"
+    },
+    {
+      "name": "سمك كبير",
+      "sku": "GF_8361",
+      "action": "created",
+      "loyverseId": "49eb02dc-8e3c-412f-b54d-95ca594fa748"
+    },
+    {
+      "name": "سمك صغير",
+      "sku": "GF_2862",
+      "action": "created",
+      "loyverseId": "28a506cb-9bd7-4409-8f04-e6d06df2a397"
+    },
+    {
+      "name": "فاكهة 1",
+      "sku": "GF_7736",
+      "action": "created",
+      "loyverseId": "98f8418c-271b-4db1-8de9-d7a03b095fdd"
+    },
+    {
+      "name": "سمك وسط",
+      "sku": "GF_5702",
+      "action": "created",
+      "loyverseId": "287e5a72-da71-474f-9c63-d313dac122dd"
+    },
+    {
+      "name": "اكل كبير",
+      "sku": "GF_3588",
+      "action": "created",
+      "loyverseId": "494b3979-d33b-4318-bb86-bca20dcd8966"
+    },
+    {
+      "name": "اكل صغير",
+      "sku": "GF_7380",
+      "action": "created",
+      "loyverseId": "64a36a6f-d3f7-41c8-a6dc-3a0377880263"
+    },
+    {
+      "name": "اكل وسط",
+      "sku": "GF_2000",
+      "action": "created",
+      "loyverseId": "9f665630-0a9e-4f8f-9f3a-d668c23f0b61"
+    }
+  ]
+}

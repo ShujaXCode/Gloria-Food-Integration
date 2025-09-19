@@ -494,30 +494,63 @@
     "Price": 200
   },
   {
-    "Handle": "pizza-margherita",
-    "SKU": "GF_5784",
-    "Name": "Pizza Margherita",
+    "Handle": "فاكهة",
+    "SKU": "GF_3179",
+    "Name": "فاكهة",
     "Category": "مشروبات",
-    "Default price": 350,
+    "Default price": 100,
     "Cat": "مشروبات",
-    "Gloria food item name": "Pizza Margherita",
+    "Gloria food item name": "فاكهة",
     "Size": "",
-    "Price": 350
+    "Price": 100
   },
   {
-    "Handle": "burger-deluxe-large",
-    "SKU": "GF_9361",
-    "Name": "Burger Deluxe Large",
+    "Handle": "سمك-كبير",
+    "SKU": "GF_8361",
+    "Name": "سمك كبير",
+    "Category": "مشروبات",
+    "Default price": 1200,
+    "Cat": "مشروبات",
+    "Gloria food item name": "سمك",
+    "Size": "كبير",
+    "Price": 1200
+  },
+  {
+    "Handle": "سمك-صغير",
+    "SKU": "GF_2862",
+    "Name": "سمك صغير",
     "Category": "مشروبات",
     "Default price": 400,
     "Cat": "مشروبات",
-    "Gloria food item name": "Burger Deluxe",
-    "Size": "Large",
+    "Gloria food item name": "سمك",
+    "Size": "صغير",
     "Price": 400
   },
   {
+    "Handle": "فاكهة-1",
+    "SKU": "GF_7736",
+    "Name": "فاكهة 1",
+    "Category": "مشروبات",
+    "Default price": 200,
+    "Cat": "مشروبات",
+    "Gloria food item name": "فاكهة 1",
+    "Size": "",
+    "Price": 200
+  },
+  {
+    "Handle": "سمك-وسط",
+    "SKU": "GF_5702",
+    "Name": "سمك وسط",
+    "Category": "مشروبات",
+    "Default price": 600,
+    "Cat": "مشروبات",
+    "Gloria food item name": "سمك",
+    "Size": "وسط",
+    "Price": 600
+  },
+  {
     "Handle": "اكل-كبير",
-    "SKU": "GF_4796",
+    "SKU": "GF_3588",
     "Name": "اكل كبير",
     "Category": "مشروبات",
     "Default price": 300,
@@ -528,7 +561,7 @@
   },
   {
     "Handle": "اكل-صغير",
-    "SKU": "GF_1510",
+    "SKU": "GF_7380",
     "Name": "اكل صغير",
     "Category": "مشروبات",
     "Default price": 100,
@@ -538,58 +571,14 @@
     "Price": 100
   },
   {
-    "Handle": "سمك-كبير",
-    "SKU": "GF_9454",
-    "Name": "سمك كبير",
-    "Category": "مشروبات",
-    "Default price": 1200,
-    "Cat": "مشروبات",
-    "Gloria food item name": "سمك",
-    "Size": "كبير",
-    "Price": 1200
-  },
-  {
     "Handle": "اكل-وسط",
-    "SKU": "GF_6235",
+    "SKU": "GF_2000",
     "Name": "اكل وسط",
     "Category": "مشروبات",
     "Default price": 200,
     "Cat": "مشروبات",
     "Gloria food item name": "اكل",
     "Size": "وسط",
-    "Price": 200
-  },
-  {
-    "Handle": "سمك-وسط",
-    "SKU": "GF_5032",
-    "Name": "سمك وسط",
-    "Category": "مشروبات",
-    "Default price": 600,
-    "Cat": "مشروبات",
-    "Gloria food item name": "سمك",
-    "Size": "وسط",
-    "Price": 600
-  },
-  {
-    "Handle": "فاكهة",
-    "SKU": "GF_3253",
-    "Name": "فاكهة",
-    "Category": "مشروبات",
-    "Default price": 100,
-    "Cat": "مشروبات",
-    "Gloria food item name": "فاكهة",
-    "Size": "",
-    "Price": 100
-  },
-  {
-    "Handle": "فاكهة-1",
-    "SKU": "GF_8361",
-    "Name": "فاكهة 1",
-    "Category": "مشروبات",
-    "Default price": 200,
-    "Cat": "مشروبات",
-    "Gloria food item name": "فاكهة 1",
-    "Size": "",
     "Price": 200
   }
 ]
