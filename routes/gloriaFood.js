@@ -100,12 +100,19 @@ router.post('/webhook', async (req, res) => {
         });
       }
 
+      // Initialize the item mapping service
+      await itemMappingService.initialize();
+      
       // Map GloriaFood items to Loyverse SKUs
+      console.log('=== DEBUGGING ITEM MAPPING ===');
+      console.log('Order items:', JSON.stringify(orderData.items, null, 2));
       const mappedItems = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI);
+      console.log('Mapped items result:', JSON.stringify(mappedItems, null, 2));
       
       // Log mapping results
       const mappedCount = mappedItems.filter(item => item.status === 'mapped').length;
-      const unmappedCount = mappedItems.filter(item => item.status === 'unmapped').length;
+      const unmappedCount = mappedItems.filter(item => item.status === 'unmapped' || item.status === 'error').length;
+      console.log(`Mapping results: ${mappedCount} mapped, ${unmappedCount} unmapped`);
       
       logger.info(`Item mapping results: ${mappedCount} mapped, ${unmappedCount} unmapped`);
 
@@ -120,9 +127,9 @@ router.post('/webhook', async (req, res) => {
             totalItems: mappedItems.length,
             mappedItems: 0,
             unmappedItems: unmappedCount,
-            unmappedItemsList: mappedItems.filter(item => item.status === 'unmapped').map(item => ({
+            unmappedItemsList: mappedItems.filter(item => item.status === 'unmapped' || item.status === 'error').map(item => ({
               gloriaFoodName: item.originalGloriaFoodItem.name,
-              error: item.error
+              error: item.error || 'Unknown error'
             }))
           },
           timestamp: new Date().toISOString()
@@ -169,9 +176,9 @@ router.post('/webhook', async (req, res) => {
           totalItems: mappedItems.length,
           mappedItems: mappedCount,
           unmappedItems: unmappedCount,
-          unmappedItemsList: mappedItems.filter(item => item.status === 'unmapped').map(item => ({
+          unmappedItemsList: mappedItems.filter(item => item.status === 'unmapped' || item.status === 'error').map(item => ({
             gloriaFoodName: item.originalGloriaFoodItem.name,
-            error: item.error
+            error: item.error || 'Unknown error'
           }))
         }
       };
@@ -215,6 +222,164 @@ router.post('/webhook', async (req, res) => {
     res.status(500).json({
       error: 'Internal server error',
       message: error.message
+    });
+  }
+});
+
+// Debug endpoint to test receipt creation with detailed error logging
+router.post('/debug/receipt-creation', async (req, res) => {
+  try {
+    const LoyverseAPI = require('../utils/loyverseApi');
+    const loyverseAPI = new LoyverseAPI();
+    
+    console.log('Testing receipt creation with detailed logging...');
+    
+    // Test with a simple order
+    const testOrder = {
+      id: 999999999,
+      client_first_name: "Debug",
+      client_last_name: "Test",
+      type: "pickup",
+      customer: {
+        name: "Debug Test",
+        first_name: "Debug",
+        last_name: "Test",
+        phone: "+923001234999",
+        email: "debug@test.com"
+      },
+      items: [
+        {
+          id: 999999999,
+          name: "موهيتو رمان",
+          price: 200,
+          quantity: 1,
+          instructions: "Debug test",
+          total_price: 200,
+          sku: 10028,
+          category: "مشروبات",
+          matchType: "exact"
+        }
+      ],
+      total: 200,
+      subtotal: 200,
+      tax: 0,
+      orderType: "pickup",
+      notes: "Debug test order",
+      paymentMethod: "CASH",
+      timestamp: new Date().toISOString()
+    };
+    
+    console.log('Test order data:', JSON.stringify(testOrder, null, 2));
+    
+    const receipt = await loyverseAPI.createReceipt(testOrder);
+    
+    res.json({
+      success: true,
+      message: 'Receipt creation test completed',
+      receipt: receipt
+    });
+  } catch (error) {
+    console.error('Receipt creation test failed:', error.message);
+    console.error('Full error:', error);
+    
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      fullError: error.toString(),
+      response: error.response?.data || null,
+      status: error.response?.status || null
+    });
+  }
+});
+
+// Debug endpoint to test item creation with Arabic text
+router.post('/debug/create-item', async (req, res) => {
+  try {
+    const LoyverseAPI = require('../utils/loyverseApi');
+    const ItemMappingService = require('../services/itemMappingService');
+    
+    const loyverseAPI = new LoyverseAPI();
+    const itemMappingService = new ItemMappingService();
+    
+    console.log('Testing item creation with Arabic text...');
+    
+    // Use the same SKU generation logic as the main application
+    const sku = itemMappingService.generateUniqueSKU();
+    
+    const testItemData = {
+      name: "كبسة ابتاون بالدجاج",
+      price: 2500,
+      instructions: "Test Arabic item",
+      id: sku
+    };
+    
+    console.log('Creating item with data:', JSON.stringify(testItemData, null, 2));
+    
+    const createdItem = await loyverseAPI.createItem(testItemData);
+    
+    res.json({
+      success: true,
+      message: 'Item creation test completed',
+      item: createdItem,
+      generatedSKU: sku
+    });
+  } catch (error) {
+    console.error('Item creation test failed:', error.message);
+    console.error('Full error:', error);
+    
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      fullError: error.toString(),
+      response: error.response?.data || null,
+      status: error.response?.status || null
+    });
+  }
+});
+
+// Debug endpoint to check environment variables
+router.get('/debug/env', async (req, res) => {
+  res.json({
+    nodeEnv: process.env.NODE_ENV,
+    nodeVersion: process.version,
+    loyverseToken: process.env.LOYVERSE_ACCESS_TOKEN ? 'SET' : 'NOT SET',
+    loyverseLocation: process.env.LOYVERSE_LOCATION_ID ? 'SET' : 'NOT SET',
+    tokenLength: process.env.LOYVERSE_ACCESS_TOKEN ? process.env.LOYVERSE_ACCESS_TOKEN.length : 0,
+    locationId: process.env.LOYVERSE_LOCATION_ID || 'NOT SET',
+    jsonbinId: process.env.JSONBIN_ID ? 'SET' : 'NOT SET',
+    jsonbinApiKey: process.env.JSONBIN_API_KEY ? 'SET' : 'NOT SET',
+    jsonbinIdValue: process.env.JSONBIN_ID || 'NOT SET'
+  });
+});
+
+// Debug endpoint to test Loyverse API connection
+router.get('/debug/loyverse', async (req, res) => {
+  try {
+    const LoyverseAPI = require('../utils/loyverseApi');
+    const loyverseAPI = new LoyverseAPI();
+    
+    console.log('Testing Loyverse API connection...');
+    console.log('Access Token:', process.env.LOYVERSE_ACCESS_TOKEN ? 'SET' : 'NOT SET');
+    console.log('Location ID:', process.env.LOYVERSE_LOCATION_ID ? 'SET' : 'NOT SET');
+    
+    // Test payment types endpoint
+    const paymentTypes = await loyverseAPI.getCashPaymentTypeId();
+    console.log('Payment types test result:', paymentTypes);
+    
+    res.json({
+      success: true,
+      message: 'Loyverse API test completed',
+      accessToken: process.env.LOYVERSE_ACCESS_TOKEN ? 'SET' : 'NOT SET',
+      locationId: process.env.LOYVERSE_LOCATION_ID ? 'SET' : 'NOT SET',
+      paymentTypesResult: paymentTypes
+    });
+  } catch (error) {
+    console.error('Loyverse API test failed:', error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      accessToken: process.env.LOYVERSE_ACCESS_TOKEN ? 'SET' : 'NOT SET',
+      locationId: process.env.LOYVERSE_LOCATION_ID ? 'SET' : 'NOT SET'
     });
   }
 });
