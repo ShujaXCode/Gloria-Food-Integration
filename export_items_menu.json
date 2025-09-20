@@ -580,5 +580,16 @@
     "Gloria food item name": "اكل",
     "Size": "وسط",
     "Price": 200
+  },
+  {
+    "Handle": "new-english-item-1",
+    "SKU": "GF_163640394",
+    "Name": "New english Item 1",
+    "Category": "مشروبات",
+    "Default price": 100,
+    "Cat": "مشروبات",
+    "Gloria food item name": "New english Item 1",
+    "Size": "",
+    "Price": 100
   }
 ]

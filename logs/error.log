@@ -396,3 +396,9 @@
 {"level":"error","message":"Failed to create receipt in Loyverse for order 1088687562:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-19 19:55:20"}
 {"level":"error","message":"Failed to create receipt in Loyverse for order 1088687562:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-19 20:09:36"}
 {"level":"error","message":"Failed to create receipt in Loyverse for order 1088693105:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-19 20:16:47"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089312978:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:53"}
+{"level":"error","message":"Failed to create item in Loyverse: getaddrinfo ENOTFOUND api.loyverse.com","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"error","message":"Failed to create new item for New english Item 1:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"error","message":"Error processing GloriaFood item \"New english Item 1\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"error","message":"Failed to load item mapping data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:45:34"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089324548:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:34"}

@@ -7378,3 +7378,155 @@
 {"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 20:32:23"}
 {"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 20:32:23"}
 {"level":"info","message":"Loaded 54 item mappings from JSONBin.io","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 20:32:33"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:22:45"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:22:45"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:22:45"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:22:45"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:22:45"}
+{"level":"info","message":"Loaded 56 item mappings from JSONBin.io","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:22:49"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:23"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:23"}
+{"level":"info","message":"Processing order 1089306109 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:23"}
+{"level":"info","message":"Order 1089306109 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:23"}
+{"level":"info","message":"::1 - - [20/Sep/2025:16:27:23 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089306109, Try Number: 1/10, Server Time: 2025-09-20T16:27:21.937Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:23"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Processing order 1089306109 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"New english Item 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Found exact match: SKU GF_179381247 for \"New english Item 1\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Using GloriaFood price for SKU GF_179381247 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089306109","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_179381247","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:28"}
+{"level":"info","message":"No item found in Loyverse with SKU: GF_179381247","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:30"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:30"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:30"}
+{"level":"info","message":"Created receipt in Loyverse: 0352","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:31"}
+{"level":"info","message":"::1 - - [20/Sep/2025:16:27:31 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 256 \"-\" \"GF Accepted Orders, Order Id: 1089306109, Try Number: 1/10, Server Time: 2025-09-20T16:27:27.193Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:27:31"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:21"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:21"}
+{"level":"info","message":"Processing order 1089312978 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:21"}
+{"level":"info","message":"Order 1089312978 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:21"}
+{"level":"info","message":"::1 - - [20/Sep/2025:16:34:21 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089312978, Try Number: 1/10, Server Time: 2025-09-20T16:34:25.018Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:21"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:51"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:51"}
+{"level":"info","message":"Processing order 1089312978 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:51"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:51"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"New english Item 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:51"}
+{"level":"info","message":"Found exact match: SKU GF_179381247 for \"New english Item 1\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:51"}
+{"level":"info","message":"Using GloriaFood price for SKU GF_179381247 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:51"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:51"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:51"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089312978","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:51"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_179381247","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:51"}
+{"level":"info","message":"No item found in Loyverse with SKU: GF_179381247","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:52"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089312978:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:53"}
+{"level":"info","message":"::1 - - [20/Sep/2025:16:34:53 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 254 \"-\" \"GF Accepted Orders, Order Id: 1089312978, Try Number: 1/10, Server Time: 2025-09-20T16:34:54.703Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:34:53"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:38:22"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:38:22"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:38:22"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:38:22"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:38:22"}
+{"level":"info","message":"Loaded 54 item mappings from JSONBin.io","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:38:28"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:38:47"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:38:47"}
+{"level":"info","message":"Processing order 1089317345 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:38:47"}
+{"level":"info","message":"Order 1089317345 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:38:47"}
+{"level":"info","message":"::1 - - [20/Sep/2025:16:38:47 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089317345, Try Number: 1/10, Server Time: 2025-09-20T16:38:50.649Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:38:47"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"info","message":"Processing order 1089317345 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"New english Item 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"warn","message":"No exact SKU match found for GloriaFood item: \"New english Item 1\" (size: \"null\")","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"info","message":"No exact mapping found for \"New english Item 1\" (null), creating new item...","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"info","message":"Creating new item for unmapped GloriaFood item: New english Item 1","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"info","message":"Creating item in Loyverse: New english Item 1","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"error","message":"Failed to create item in Loyverse: getaddrinfo ENOTFOUND api.loyverse.com","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"error","message":"Failed to create new item for New english Item 1:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"error","message":"Error processing GloriaFood item \"New english Item 1\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"info","message":"Item mapping results: 0 mapped, 1 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"warn","message":"No items could be mapped for order 1089317345","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"level":"info","message":"::1 - - [20/Sep/2025:16:39:01 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 310 \"-\" \"GF Accepted Orders, Order Id: 1089317345, Try Number: 1/10, Server Time: 2025-09-20T16:39:04.772Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:39:01"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:01"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:01"}
+{"level":"info","message":"Processing order 1089317345 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:01"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:01"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"New english Item 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:01"}
+{"level":"warn","message":"No exact SKU match found for GloriaFood item: \"New english Item 1\" (size: \"null\")","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:01"}
+{"level":"info","message":"No exact mapping found for \"New english Item 1\" (null), creating new item...","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:01"}
+{"level":"info","message":"Creating new item for unmapped GloriaFood item: New english Item 1","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:01"}
+{"level":"info","message":"Creating item in Loyverse: New english Item 1","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:01"}
+{"level":"info","message":"Item created successfully: c0a60594-2ce1-4c78-a4dc-3c2eab1ea471","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:02"}
+{"level":"info","message":"Updated JSONBin.io with 55 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:03"}
+{"level":"info","message":"Updated mapping file: /Users/macos/Desktop/Upwork lead/export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:03"}
+{"level":"info","message":"Successfully created new item: New english Item 1 with SKU: GF_641355986","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:03"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:03"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:03"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089317345","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:03"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_641355986","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:03"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_641355986)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:04"}
+{"level":"info","message":"Created receipt in Loyverse: 0353","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:05"}
+{"level":"info","message":"::1 - - [20/Sep/2025:16:44:05 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 256 \"-\" \"curl/8.7.1\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:44:05"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:45:19"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:45:19"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:45:19"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:45:19"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:45:19"}
+{"level":"error","message":"Failed to load item mapping data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:45:34"}
+{"level":"info","message":"Loaded 55 item mappings from external storage","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:45:36"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:11"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:11"}
+{"level":"info","message":"Processing order 1089324548 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:11"}
+{"level":"info","message":"Order 1089324548 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:11"}
+{"level":"info","message":"::1 - - [20/Sep/2025:16:47:11 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089324548, Try Number: 1/10, Server Time: 2025-09-20T16:47:14.834Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:11"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:32"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:32"}
+{"level":"info","message":"Processing order 1089324548 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:32"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:32"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"New english Item 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:32"}
+{"level":"info","message":"Found exact match: SKU GF_641355986 for \"New english Item 1\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:32"}
+{"level":"info","message":"Using GloriaFood price for SKU GF_641355986 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:32"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:32"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:32"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089324548","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:32"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_641355986","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:32"}
+{"level":"info","message":"No item found in Loyverse with SKU: GF_641355986","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:33"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089324548:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:34"}
+{"level":"info","message":"::1 - - [20/Sep/2025:16:47:34 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 254 \"-\" \"GF Accepted Orders, Order Id: 1089324548, Try Number: 1/10, Server Time: 2025-09-20T16:47:35.695Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:47:34"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:49:01"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:49:01"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:49:01"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:49:01"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:49:01"}
+{"level":"info","message":"Loaded 54 item mappings from JSONBin.io","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:49:14"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:22"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:22"}
+{"level":"info","message":"Processing order 1089329013 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:22"}
+{"level":"info","message":"Order 1089329013 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:22"}
+{"level":"info","message":"::1 - - [20/Sep/2025:16:52:22 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089329013, Try Number: 1/10, Server Time: 2025-09-20T16:52:25.875Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:22"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:43"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:43"}
+{"level":"info","message":"Processing order 1089329013 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:43"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:43"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"New english Item 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:43"}
+{"level":"warn","message":"No exact SKU match found for GloriaFood item: \"New english Item 1\" (size: \"null\")","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:43"}
+{"level":"info","message":"No exact mapping found for \"New english Item 1\" (null), creating new item...","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:43"}
+{"level":"info","message":"Creating new item for unmapped GloriaFood item: New english Item 1","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:43"}
+{"level":"info","message":"Creating item in Loyverse: New english Item 1","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:43"}
+{"level":"info","message":"Item created successfully: eb65ee35-9d5f-4663-adbd-d22b0163f039","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:44"}
+{"level":"info","message":"Updated JSONBin.io with 55 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:50"}
+{"level":"info","message":"Updated mapping file: /Users/macos/Desktop/Upwork lead/export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:50"}
+{"level":"info","message":"Successfully created new item: New english Item 1 with SKU: GF_163640394","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:50"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:50"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:50"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089329013","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:50"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_163640394","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:50"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_163640394)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:51"}
+{"level":"info","message":"Created receipt in Loyverse: 0354","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:51"}
+{"level":"info","message":"::1 - - [20/Sep/2025:16:52:51 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 256 \"-\" \"GF Accepted Orders, Order Id: 1089329013, Try Number: 1/10, Server Time: 2025-09-20T16:52:46.793Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:51"}
