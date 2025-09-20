@@ -7372,3 +7372,9 @@
 {"level":"info","message":"Searching for item in Loyverse by SKU: GF_7736","service":"gloriafood-loyverse-integration","timestamp":"2025-09-19 20:22:06"}
 {"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_7736)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-19 20:22:07"}
 {"level":"info","message":"Created receipt in Loyverse: 0342","service":"gloriafood-loyverse-integration","timestamp":"2025-09-19 20:22:08"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 20:32:23"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 20:32:23"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 20:32:23"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 20:32:23"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 20:32:23"}
+{"level":"info","message":"Loaded 54 item mappings from JSONBin.io","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 20:32:33"}
