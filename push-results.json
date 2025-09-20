@@ -1,333 +1,379 @@
 {
   "total": 54,
-  "created": 54,
+  "created": 8,
   "updated": 0,
   "skipped": 0,
-  "failed": 0,
+  "failed": 46,
   "details": [
     {
       "name": "كبسة ابتاون دجاج كبير",
       "sku": 10048,
-      "action": "created",
-      "loyverseId": "f7396287-4f61-4007-9ca1-2cd2c9b80f5a"
+      "action": "failed",
+      "loyverseId": "7f263c8a-44c8-4ee1-af4f-eb0280a0db98",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "كبسة ابتاون دجاج وسط",
       "sku": 10047,
-      "action": "created",
-      "loyverseId": "765ff9fd-d0af-4f0f-8868-e7b052ec630a"
+      "action": "failed",
+      "loyverseId": "1c518dcd-e16e-4938-ac10-136051586226",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "كبسة ابتاون دجاج صغبر",
       "sku": 10046,
-      "action": "created",
-      "loyverseId": "c8975c14-802f-49b6-a4f9-b331a36d99cd"
+      "action": "failed",
+      "loyverseId": "5d0dffd8-490b-427e-a8d9-351e64090819",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز كبسة ابتاون كبير",
       "sku": 10045,
-      "action": "created",
-      "loyverseId": "4a078b0d-73bd-4959-9b94-ff8860de3513"
+      "action": "failed",
+      "loyverseId": "389d9514-7878-4aff-af55-a9636989a838",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز كبسة ابتاون وسط",
       "sku": 10044,
-      "action": "created",
-      "loyverseId": "49d42ecc-0006-40ee-9d03-4c6139ee5c53"
+      "action": "failed",
+      "loyverseId": "079cb7e5-95e7-4fa5-8876-702b4ef5bea0",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز كبسة ابتاون صغير",
       "sku": 10043,
-      "action": "created",
-      "loyverseId": "1fb0c39b-6b76-41e5-afdc-48691ac54154"
+      "action": "failed",
+      "loyverseId": "6a85a9d5-d1e6-4eed-8a47-e7677bef10f6",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز ابتاون مع الشبس",
       "sku": 10026,
-      "action": "created",
-      "loyverseId": "b513c313-2168-43fd-a09c-47835f0ed53c"
+      "action": "failed",
+      "loyverseId": "f1d76cbb-5e35-43c8-9bcf-7d5d39fce7d1",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز ابتاون كبير",
       "sku": 10033,
-      "action": "created",
-      "loyverseId": "646600e9-2858-4918-b14b-0b056f4832cf"
+      "action": "failed",
+      "loyverseId": "c957d32b-f1af-4453-b65a-f35c19db75b4",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز ابتاون صغير",
       "sku": 10023,
-      "action": "created",
-      "loyverseId": "8c1bd89c-9b9c-4914-a37d-e919dd0eb883"
+      "action": "failed",
+      "loyverseId": "160a09f8-fa35-497e-9707-43dcfcc5add3",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز مع الشبس",
       "sku": 10025,
-      "action": "created",
-      "loyverseId": "cca99a1a-2d47-4cc0-a3c5-1569c6de3949"
+      "action": "failed",
+      "loyverseId": "aed79cf9-db2c-4694-b16c-5075e1221e42",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز بالخلطة الكورية - كبير",
       "sku": 10008,
-      "action": "created",
-      "loyverseId": "e3bd4e2e-b6ef-45d1-8ef0-5c9ef13ee94c"
+      "action": "failed",
+      "loyverseId": "30ad7cf9-34a7-433f-b1bb-26ad2f7fdf99",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز بالخلطة الكورية صغير",
       "sku": 10013,
-      "action": "created",
-      "loyverseId": "a0716042-36a6-49d6-a7af-5701e730ea8f"
+      "action": "failed",
+      "loyverseId": "23551545-d73c-4fac-b485-ff764018a0ad",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز خلطة خاصة - كبير",
       "sku": 10007,
-      "action": "created",
-      "loyverseId": "0547605f-220c-4c1c-b9d5-6b41c9204b31"
+      "action": "failed",
+      "loyverseId": "d787d83f-da07-47b2-9e38-e4a23bb147f1",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز خلطة خاصة صغير",
       "sku": 10012,
-      "action": "created",
-      "loyverseId": "9336d21a-7729-4160-89df-8ca5812560b0"
+      "action": "failed",
+      "loyverseId": "556f7e8c-89b2-469a-9dcb-4803efbff69f",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز دبس رمان - كبير",
       "sku": 10006,
-      "action": "created",
-      "loyverseId": "21959511-4e10-441f-9bce-8d24bdd2bc76"
+      "action": "failed",
+      "loyverseId": "3be0234d-dcae-459d-a75a-54f410cf7ee6",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز دبس رمان صغير",
       "sku": 10015,
-      "action": "created",
-      "loyverseId": "1f70abeb-53a3-40b5-852e-8b450ec08f92"
+      "action": "failed",
+      "loyverseId": "5974fa7a-79f4-4e63-bca3-d64c04770978",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز بالجبن - كبير",
       "sku": 10009,
-      "action": "created",
-      "loyverseId": "6ac1a97b-0076-4ee6-bc9d-39989e774287"
+      "action": "failed",
+      "loyverseId": "48c2c96b-00f0-442c-8d39-6f064b709d21",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز بالجبن صغير",
       "sku": 10014,
-      "action": "created",
-      "loyverseId": "46663ded-05f9-465f-9382-253dbab3c19d"
+      "action": "failed",
+      "loyverseId": "b11d2381-c6a8-4181-8651-942f63f91d03",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز - صوصات سبايسي صغير",
       "sku": 10002,
-      "action": "created",
-      "loyverseId": "f3f6eb1a-fdad-4d31-b8d8-2f5d04c5df2e"
+      "action": "failed",
+      "loyverseId": "cee46c6b-f8d6-4993-a76c-e8cb855396be",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز - صوصات سبايسي كبير",
       "sku": 10016,
-      "action": "created",
-      "loyverseId": "ffd4168d-7cf8-42af-b502-02aafeb26de0"
+      "action": "failed",
+      "loyverseId": "297c1f7a-017c-4b57-9f8f-1348a4bc9f4e",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز ساده - بدون صوصات كبير",
       "sku": 10005,
-      "action": "created",
-      "loyverseId": "876f5ec7-8915-44ad-873e-1f503e199d60"
+      "action": "failed",
+      "loyverseId": "57a22012-7ce1-4c86-8472-749fcce4ccd4",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "نودلز ساده - بدون صوصات",
       "sku": 10017,
-      "action": "created",
-      "loyverseId": "1608cba6-8036-4c5d-93df-cd7c62f19dac"
+      "action": "failed",
+      "loyverseId": "068a2c13-6637-4997-b6f7-bc376c2a9d48",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "شبس ابتاون كبير",
       "sku": 10034,
-      "action": "created",
-      "loyverseId": "54efb743-7ade-4942-a58e-8d816b201085"
+      "action": "failed",
+      "loyverseId": "a107477a-c512-4eb1-a95f-5956814ac67c",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "شبس ابتاون صغير",
       "sku": 10011,
-      "action": "created",
-      "loyverseId": "6a1352e8-d865-41dd-92ac-060c8023227f"
+      "action": "failed",
+      "loyverseId": "28aa8a82-c475-47f1-be8b-c9cae7d8864a",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "شبس اسبيشل جبن سائل كبير",
       "sku": 10040,
-      "action": "created",
-      "loyverseId": "2a054291-edd1-46ab-ad4e-4438208db4eb"
+      "action": "failed",
+      "loyverseId": "da304444-728f-4b78-aef3-3fbd3b610427",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "شبس اسبيشل جبن سائل صغير",
       "sku": 10000,
-      "action": "created",
-      "loyverseId": "c77988c5-961c-496e-9919-b2524919c64b"
+      "action": "failed",
+      "loyverseId": "96818e52-2ebd-48bc-9c76-5d96b6db4f7a",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "شبس جبن مالح كبير",
       "sku": 10041,
-      "action": "created",
-      "loyverseId": "ac83a00c-19c7-45ac-8d52-acc039a019f5"
+      "action": "failed",
+      "loyverseId": "6ebcd0a9-b93a-477c-81ab-3df837d88555",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "شبس اسبيشل-جبن مالح صغير",
       "sku": 10001,
-      "action": "created",
-      "loyverseId": "7cbd4925-b1ad-4977-8417-8440ee247090"
+      "action": "failed",
+      "loyverseId": "a9713ee4-2110-4116-8925-29a65e555eb2",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "شبس سبايسي كبير",
       "sku": 10042,
-      "action": "created",
-      "loyverseId": "c137399f-2bea-40fa-8d48-4234296bdf35"
+      "action": "failed",
+      "loyverseId": "0dd4e3f5-03e8-4079-b15c-918bb487b12c",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "شبس صوصات - صغير",
       "sku": 10024,
-      "action": "created",
-      "loyverseId": "a0d080fd-cc12-40b1-829e-dcd1136de985"
+      "action": "failed",
+      "loyverseId": "aa9084d1-3d9c-4a36-adcf-d24ec0547ebf",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "شبس ساده بدون صوصات - كبير",
       "sku": 10010,
-      "action": "created",
-      "loyverseId": "bbbdb16e-1f42-47eb-8fac-12f35850df8d"
+      "action": "failed",
+      "loyverseId": "87523e51-7d64-401e-9d9d-f1e23ef67f42",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "شبس ساده بدون  صوصات",
       "sku": 10003,
-      "action": "created",
-      "loyverseId": "eb7add07-5ebc-4277-b509-50c2f850e7b3"
+      "action": "failed",
+      "loyverseId": "a7f198ba-f8d0-41eb-9113-8c01564ac6fe",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "ايس تي بالخوخ",
       "sku": 10021,
-      "action": "created",
-      "loyverseId": "9ff69036-6130-48cd-bd8c-161a5f556ef6"
+      "action": "failed",
+      "loyverseId": "c65610ec-9e1e-478b-8f2c-529c5533ac27",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "ايس تي بلاك بري",
       "sku": 10022,
-      "action": "created",
-      "loyverseId": "1cd4cd5f-5004-4295-8eee-6eca592a2636"
+      "action": "failed",
+      "loyverseId": "a9e01ea6-d93b-4a1c-9f96-d882026e2cbf",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "موهيتو رمان",
       "sku": 10028,
-      "action": "created",
-      "loyverseId": "b1d58209-aed4-4b05-85e1-30bb95481632"
+      "action": "failed",
+      "loyverseId": "43fc7360-d4f5-4ecd-ae91-58e5e6d94e18",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "موهيتو بلو بري (توت ازرق)",
       "sku": 10020,
-      "action": "created",
-      "loyverseId": "a09ce700-0487-4621-b688-5eb44df7937c"
+      "action": "failed",
+      "loyverseId": "8cbd421c-4dd7-4ce2-ac0a-0e9f234a563b",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "موهيتو روز بري (توت)",
       "sku": 10018,
-      "action": "created",
-      "loyverseId": "abef71f1-ba30-407a-81bb-3112e2a1e1bf"
+      "action": "failed",
+      "loyverseId": "fdbd40f5-80f0-4fe6-9198-f8f3d52bc91b",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "موهيتو كيوي",
       "sku": 10019,
-      "action": "created",
-      "loyverseId": "bdf21d4e-8ef9-4122-9de9-1ef8953e94ed"
+      "action": "failed",
+      "loyverseId": "408e9d40-d735-49da-976a-b4cbf8eff08b",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "مشروب غازي علبه",
       "sku": 10027,
-      "action": "created",
-      "loyverseId": "edc10314-a72a-454b-86ad-3d31635fd71e"
+      "action": "failed",
+      "loyverseId": "d07765c7-feef-40f0-83e8-575015efdb80",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "مشروب غازي مع الثلج",
       "sku": 10035,
-      "action": "created",
-      "loyverseId": "04449cea-9e8c-4539-8275-2d55c65bacf9"
+      "action": "failed",
+      "loyverseId": "49be6345-202b-4286-a07c-3cf062030ac4",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "مشروب طاقة علبه",
       "sku": 10030,
-      "action": "created",
-      "loyverseId": "1e7ce07d-18a7-498f-b7f9-a99c9bfd8339"
+      "action": "failed",
+      "loyverseId": "a6354d60-0246-4034-8d42-d2c372232f46",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "مشروب طاقه مع الثلج لفت اب",
       "sku": 10036,
-      "action": "created",
-      "loyverseId": "e48c4705-c75a-4770-8b53-4eaa8e83265e"
+      "action": "failed",
+      "loyverseId": "a4fb07cc-5e66-44ea-bdd0-fc6b1d221be3",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "مشروب كود ريد - علبه",
       "sku": 10031,
-      "action": "created",
-      "loyverseId": "4cedf99a-edf5-45d8-b475-f712f7fb195d"
+      "action": "failed",
+      "loyverseId": "d1db99ac-b990-4448-ad42-9d14fcbd1678",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "مشروب كود رد مع الثلج",
       "sku": 10037,
-      "action": "created",
-      "loyverseId": "cddadbe0-6154-43f4-a76b-19ccdf249612"
+      "action": "failed",
+      "loyverseId": "5d99db96-0fd6-41ef-b041-0a67eb9e9020",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "ماء",
       "sku": 10038,
-      "action": "created",
-      "loyverseId": "06c6e098-9730-40ee-a928-72a45cbe411e"
+      "action": "failed",
+      "loyverseId": "f7a28ca3-8fca-4203-bd51-41244dbcd648",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "ماء مع الثلج",
       "sku": 10039,
-      "action": "created",
-      "loyverseId": "c6cb3079-e52a-440f-bb97-16994f266e4c"
+      "action": "failed",
+      "loyverseId": "54a7f8f0-6a51-4cee-85e1-17661fa1a2ec",
+      "error": "Request failed with status code 405"
     },
     {
       "name": "فاكهة",
       "sku": "GF_3179",
       "action": "created",
-      "loyverseId": "15a1e6c6-f09f-4f82-8bfc-7552a4569635"
+      "loyverseId": "58372f08-642d-4e33-b315-20a03622c97a"
     },
     {
       "name": "سمك كبير",
       "sku": "GF_8361",
       "action": "created",
-      "loyverseId": "49eb02dc-8e3c-412f-b54d-95ca594fa748"
+      "loyverseId": "012a1d66-3746-4892-ab70-75757ec4137f"
     },
     {
       "name": "سمك صغير",
       "sku": "GF_2862",
       "action": "created",
-      "loyverseId": "28a506cb-9bd7-4409-8f04-e6d06df2a397"
+      "loyverseId": "eea3e17b-b1df-4228-872d-c7c5ed609ca0"
     },
     {
       "name": "فاكهة 1",
       "sku": "GF_7736",
       "action": "created",
-      "loyverseId": "98f8418c-271b-4db1-8de9-d7a03b095fdd"
+      "loyverseId": "67406dc8-644f-4076-af8d-24efecd5f00f"
     },
     {
       "name": "سمك وسط",
       "sku": "GF_5702",
       "action": "created",
-      "loyverseId": "287e5a72-da71-474f-9c63-d313dac122dd"
+      "loyverseId": "f2857b9e-0a6f-47c6-b234-43cede11e471"
     },
     {
       "name": "اكل كبير",
       "sku": "GF_3588",
       "action": "created",
-      "loyverseId": "494b3979-d33b-4318-bb86-bca20dcd8966"
+      "loyverseId": "ef4bd92a-e261-4159-8a58-a904c157baa0"
     },
     {
       "name": "اكل صغير",
       "sku": "GF_7380",
       "action": "created",
-      "loyverseId": "64a36a6f-d3f7-41c8-a6dc-3a0377880263"
+      "loyverseId": "e6511515-c7de-4246-93a8-51749ea7c41e"
     },
     {
       "name": "اكل وسط",
       "sku": "GF_2000",
       "action": "created",
-      "loyverseId": "9f665630-0a9e-4f8f-9f3a-d668c23f0b61"
+      "loyverseId": "36c016d3-0684-4baf-b82e-3c2637b529a0"
     }
   ]
 }

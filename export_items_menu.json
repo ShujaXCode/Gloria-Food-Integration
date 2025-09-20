@@ -582,14 +582,25 @@
     "Price": 200
   },
   {
-    "Handle": "new-english-item-1",
-    "SKU": "GF_163640394",
-    "Name": "New english Item 1",
+    "Handle": "spaghetti-bolognese",
+    "SKU": "GF_738117601",
+    "Name": "Spaghetti Bolognese",
     "Category": "مشروبات",
-    "Default price": 100,
+    "Default price": 9,
     "Cat": "مشروبات",
-    "Gloria food item name": "New english Item 1",
+    "Gloria food item name": "Spaghetti Bolognese",
     "Size": "",
-    "Price": 100
+    "Price": 9
+  },
+  {
+    "Handle": "\"خصم-1500-ريال-لـ-متدربات-\"يلا",
+    "SKU": "GF_053276872",
+    "Name": "\"خصم 1500 ريال لـ متدربات \"يلا",
+    "Category": "مشروبات",
+    "Default price": 0,
+    "Cat": "مشروبات",
+    "Gloria food item name": "\"خصم 1500 ريال لـ متدربات \"يلا",
+    "Size": "",
+    "Price": 0
   }
 ]

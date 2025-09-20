@@ -7530,3 +7530,683 @@
 {"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_163640394)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:51"}
 {"level":"info","message":"Created receipt in Loyverse: 0354","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:51"}
 {"level":"info","message":"::1 - - [20/Sep/2025:16:52:51 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 256 \"-\" \"GF Accepted Orders, Order Id: 1089329013, Try Number: 1/10, Server Time: 2025-09-20T16:52:46.793Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-20 21:52:51"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:31:23"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:31:23"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:31:23"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:31:23"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:31:23"}
+{"level":"info","message":"Loaded 62 item mappings from JSONBin.io","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:31:25"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:07"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:07"}
+{"level":"info","message":"Processing order 1089507214 with 4 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:07"}
+{"level":"info","message":"Order 1089507214 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:07"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:35:07 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089507214, Try Number: 1/10, Server Time: 2025-09-20T21:35:08.608Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:07"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Processing order 1089507214 with 4 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Using GloriaFood price for SKU 10035 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Using GloriaFood price for SKU 10027 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Item mapping results: 4 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089507214","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:13"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:15"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10035","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:15"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10035)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:15"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:15"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:15"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:15"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:16"}
+{"level":"info","message":"Created receipt in Loyverse: 0364","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:16"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:35:16 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 257 \"-\" \"GF Accepted Orders, Order Id: 1089507214, Try Number: 1/10, Server Time: 2025-09-20T21:35:15.083Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:35:16"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:29"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:29"}
+{"level":"info","message":"Processing order 1089509317 with 5 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:29"}
+{"level":"info","message":"Order 1089509317 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:29"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:37:29 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089509317, Try Number: 1/10, Server Time: 2025-09-20T21:37:30.913Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:29"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Processing order 1089509317 with 5 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"New english Item 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Found exact match: SKU GF_598807528 for \"New english Item 1\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Using GloriaFood price for SKU GF_598807528 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"فاكهة 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Found exact match: SKU GF_7736 for \"فاكهة 1\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Using GloriaFood price for SKU GF_7736 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Using GloriaFood price for SKU 10035 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Item mapping results: 5 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089509317","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_598807528","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:42"}
+{"level":"info","message":"No item found in Loyverse with SKU: GF_598807528","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:43"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_7736","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:43"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_7736)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:43"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:43"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:44"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10035","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:44"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10035)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:44"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:44"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:44"}
+{"level":"info","message":"Created receipt in Loyverse: 0365","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:45"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:37:45 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 257 \"-\" \"GF Accepted Orders, Order Id: 1089509317, Try Number: 1/10, Server Time: 2025-09-20T21:37:43.296Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:37:45"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:13"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:13"}
+{"level":"info","message":"Processing order 1089512029 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:13"}
+{"level":"info","message":"Order 1089512029 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:13"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:41:13 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089512029, Try Number: 1/10, Server Time: 2025-09-20T21:41:15.141Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:13"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:21"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:21"}
+{"level":"info","message":"Processing order 1089512029 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:21"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"New english Item 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:21"}
+{"level":"info","message":"Found exact match: SKU GF_598807528 for \"New english Item 1\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:21"}
+{"level":"info","message":"Using GloriaFood price for SKU GF_598807528 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:21"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:21"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:21"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089512029","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:21"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_598807528","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:21"}
+{"level":"info","message":"No item found in Loyverse with SKU: GF_598807528","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:23"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1089512029:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:24"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:41:24 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 254 \"-\" \"GF Accepted Orders, Order Id: 1089512029, Try Number: 1/10, Server Time: 2025-09-20T21:41:22.815Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:41:24"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:22"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:22"}
+{"level":"info","message":"Processing order 1089513630 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:22"}
+{"level":"info","message":"Order 1089513630 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:22"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:44:22 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089513630, Try Number: 1/10, Server Time: 2025-09-20T21:44:24.189Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:22"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Processing order 1089513630 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089513630","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:32"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:34"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:34"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:34"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:34"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:34"}
+{"level":"info","message":"Created receipt in Loyverse: 0366","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:35"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:44:35 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 258 \"-\" \"GF Accepted Orders, Order Id: 1089513630, Try Number: 1/10, Server Time: 2025-09-20T21:44:34.018Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:44:35"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:47"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:47"}
+{"level":"info","message":"Processing order 1089514894 with 4 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:47"}
+{"level":"info","message":"Order 1089514894 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:47"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:46:47 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089514894, Try Number: 1/10, Server Time: 2025-09-20T21:46:48.553Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:47"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Processing order 1089514894 with 4 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"New english Item 1\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Found exact match: SKU GF_598807528 for \"New english Item 1\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Using GloriaFood price for SKU GF_598807528 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Using GloriaFood price for SKU 10047 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Item mapping results: 4 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089514894","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_598807528","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:53"}
+{"level":"info","message":"No item found in Loyverse with SKU: GF_598807528","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:55"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:55"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:55"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10047","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:55"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10047)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:55"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:55"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:56"}
+{"level":"info","message":"Created receipt in Loyverse: 0367","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:56"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:46:56 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 257 \"-\" \"GF Accepted Orders, Order Id: 1089514894, Try Number: 1/10, Server Time: 2025-09-20T21:46:55.272Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:46:56"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:44"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:44"}
+{"level":"info","message":"Processing order 1089515146 with 15 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:44"}
+{"level":"info","message":"Order 1089515146 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:44"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:52:44 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089515146, Try Number: 1/10, Server Time: 2025-09-20T21:52:45.323Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:44"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Processing order 1089515146 with 15 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10047 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10047 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10047 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10027 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10027 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10035 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10035 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Item mapping results: 15 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089515146","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:52:59"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:00"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:00"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:00"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:00"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:01"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:01"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:01"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10047","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:01"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10047)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:01"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10047","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:01"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10047)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:01"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10047","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:01"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10047)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:02"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:02"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:02"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:02"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:02"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:02"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:02"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:02"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:03"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10035","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:03"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10035)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:03"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10035","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:03"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10035)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:03"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:03"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:03"}
+{"level":"info","message":"Created receipt in Loyverse: 0368","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:04"}
+{"level":"info","message":"::1 - - [20/Sep/2025:21:53:04 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 261 \"-\" \"GF Accepted Orders, Order Id: 1089515146, Try Number: 1/10, Server Time: 2025-09-20T21:53:00.380Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 02:53:04"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:05:40"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:05:40"}
+{"level":"info","message":"Processing order 1089521436 with 13 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:05:40"}
+{"level":"info","message":"Order 1089521436 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:05:40"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:05:40 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089521436, Try Number: 1/10, Server Time: 2025-09-20T22:05:41.985Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:05:40"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Processing order 1089521436 with 13 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10027 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10027 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10035 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10035 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10047 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10047 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Item mapping results: 13 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089521436","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:44"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:45"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:45"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:46"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:46"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:46"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:46"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:46"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:46"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:46"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10035","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:46"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10035)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:46"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10035","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:46"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10035)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:47"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:47"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:47"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10047","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:47"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10047)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:47"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:47"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:47"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:47"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:48"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10047","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:48"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10047)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:48"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:48"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:48"}
+{"level":"info","message":"Created receipt in Loyverse: 0369","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:49"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:06:49 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 261 \"-\" \"GF Accepted Orders, Order Id: 1089521436, Try Number: 1/10, Server Time: 2025-09-20T22:06:45.552Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:06:49"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:10:51"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:10:51"}
+{"level":"info","message":"Processing order 1089523114 with 4 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:10:51"}
+{"level":"info","message":"Order 1089523114 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:10:51"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:10:51 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089523114, Try Number: 1/10, Server Time: 2025-09-20T22:10:53.306Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:10:51"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Processing order 1089523114 with 4 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Using GloriaFood price for SKU 10027 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Item mapping results: 4 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089523114","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:01"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:02"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:02"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:02"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:02"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:03"}
+{"level":"info","message":"Created receipt in Loyverse: 0370","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:03"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:11:03 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 257 \"-\" \"GF Accepted Orders, Order Id: 1089523114, Try Number: 1/10, Server Time: 2025-09-20T22:11:02.638Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:11:03"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:01"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:01"}
+{"level":"info","message":"Processing order 1089532926 with 4 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:01"}
+{"level":"info","message":"Order 1089532926 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:01"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:17:01 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089532926, Try Number: 1/10, Server Time: 2025-09-20T22:17:03.084Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:01"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Processing order 1089532926 with 4 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Processing delivery fee: DELIVERY_FEE (1 PKR)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Using GloriaFood price for SKU 10027 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Item mapping results: 4 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089532926","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:16"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:18"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:18"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:18"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:18"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:18"}
+{"level":"info","message":"Created receipt in Loyverse: 0371","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:19"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:17:19 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 257 \"-\" \"GF Accepted Orders, Order Id: 1089532926, Try Number: 1/10, Server Time: 2025-09-20T22:17:18.435Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:17:19"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:07"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:07"}
+{"level":"info","message":"Processing order 1089529670 with 12 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:07"}
+{"level":"info","message":"Order 1089529670 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:07"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:18:07 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089529670, Try Number: 1/10, Server Time: 2025-09-20T22:18:09.105Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:07"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Processing order 1089529670 with 12 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو رمان\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10028 for \"موهيتو رمان\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10028 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10027 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10035 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found size in options: \"علبه\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"علبه\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10027 for \"مشروب غازي\" (علبه)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10027 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10047 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10047 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Item mapping results: 12 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089529670","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:21"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:22"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10028","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:22"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10028)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:22"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:22"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:22"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10035","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:22"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10035)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:22"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10027","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:22"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10027)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:23"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:23"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:23"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10047","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:23"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10047)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:23"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:23"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:23"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:23"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:23"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10047","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:23"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10047)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:24"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:24"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:24"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:24"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:24"}
+{"level":"info","message":"Created receipt in Loyverse: 0372","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:25"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:18:25 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 261 \"-\" \"GF Accepted Orders, Order Id: 1089529670, Try Number: 1/10, Server Time: 2025-09-20T22:18:22.652Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:18:25"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:02"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:02"}
+{"level":"info","message":"Processing order 1089535723 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:02"}
+{"level":"info","message":"Order 1089535723 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:02"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:22:02 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089535723, Try Number: 1/10, Server Time: 2025-09-20T22:22:03.965Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:02"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Processing order 1089535723 with 1 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Item mapping results: 1 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089535723","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:19"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:20"}
+{"level":"info","message":"Created receipt in Loyverse: 0373","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:20"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:22:20 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 258 \"-\" \"GF Accepted Orders, Order Id: 1089535723, Try Number: 1/10, Server Time: 2025-09-20T22:22:20.950Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:22:20"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:23:58"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:23:58"}
+{"level":"info","message":"Processing order 1089536890 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:23:58"}
+{"level":"info","message":"Order 1089536890 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:23:58"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:23:58 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089536890, Try Number: 1/10, Server Time: 2025-09-20T22:23:59.530Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:23:58"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Processing order 1089536890 with 2 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Found size in options: \"مع الثلج\" for item \"مشروب غازي\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"مشروب غازي\", size=\"مع الثلج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Found exact match: SKU 10035 for \"مشروب غازي\" (مع الثلج)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Using GloriaFood price for SKU 10035 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Found size in options: \"وسط\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"وسط\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Found exact match: SKU 10047 for \"كبسة ابتاون بالدجاج\" (وسط)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Using GloriaFood price for SKU 10047 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Item mapping results: 2 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089536890","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10035","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:14"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10035)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:15"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10047","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:15"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10047)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:18"}
+{"level":"info","message":"Created receipt in Loyverse: 0374","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:20"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:24:20 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 257 \"-\" \"GF Accepted Orders, Order Id: 1089536890, Try Number: 1/10, Server Time: 2025-09-20T22:24:15.314Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:24:20"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:39:00"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:39:00"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:39:00"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:39:00"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:39:00"}
+{"level":"info","message":"Loaded 55 item mappings from JSONBin.io","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:39:01"}
+{"level":"info","message":"GloriaFood API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:46:31"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:46:31"}
+{"level":"info","message":"Server running on port 8080","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:46:31"}
+{"level":"info","message":"Environment: development","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:46:31"}
+{"level":"info","message":"Health check: http://localhost:8080/health","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:46:31"}
+{"level":"info","message":"Loaded 55 item mappings from JSONBin.io","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:46:32"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:53:10"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:53:10"}
+{"level":"info","message":"Processing order 1089104049 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:53:10"}
+{"level":"info","message":"Order 1089104049 status is 'pending', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:53:10"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:53:10 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 155 \"-\" \"GF Accepted Orders, Order Id: 1089104049, Try Number: 1/10, Server Time: 2025-09-20T22:53:11.636Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:53:10"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:10"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:10"}
+{"level":"info","message":"Processing order 1089104049 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:10"}
+{"level":"info","message":"Order 1089104049 status is 'timed_out', skipping receipt creation","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:10"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:57:10 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 159 \"-\" \"GF Accepted Orders, Order Id: 1089104049, Try Number: 1/10, Server Time: 2025-09-20T22:57:11.472Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:10"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Processing order 1089555263 with 3 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بدون دجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بدون دجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Found exact match: SKU 10044 for \"كبسة ابتاون بدون دجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Using GloriaFood price for SKU 10044 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"نودلز ابتاون\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"نودلز ابتاون\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Found exact match: SKU 10033 for \"نودلز ابتاون\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Using GloriaFood price for SKU 10033 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"\"خصم 1500 ريال لـ متدربات \"يلا\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"warn","message":"No exact SKU match found for GloriaFood item: \"\"خصم 1500 ريال لـ متدربات \"يلا\" (size: \"null\")","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"No exact mapping found for \"\"خصم 1500 ريال لـ متدربات \"يلا\" (null), creating new item...","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Creating new item for unmapped GloriaFood item: \"خصم 1500 ريال لـ متدربات \"يلا","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Creating item in Loyverse: \"خصم 1500 ريال لـ متدربات \"يلا","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:33"}
+{"level":"info","message":"Item created successfully: 647c13fb-646a-45f7-8163-bf70ac603d4b","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:34"}
+{"level":"info","message":"Updated JSONBin.io with 56 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:39"}
+{"level":"info","message":"Updated mapping file: /Users/macos/Desktop/Upwork lead/export_items_menu.json","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:39"}
+{"level":"info","message":"Successfully created new item: \"خصم 1500 ريال لـ متدربات \"يلا with SKU: GF_053276872","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:39"}
+{"level":"info","message":"Item mapping results: 3 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:39"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:39"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089555263","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:39"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10044","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:39"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10044)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:40"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10033","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:40"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10033)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:40"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: GF_053276872","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:40"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: GF_053276872)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:41"}
+{"level":"info","message":"Created receipt in Loyverse: 0001","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:41"}
+{"level":"info","message":"::1 - - [20/Sep/2025:22:57:41 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 257 \"-\" \"GF Accepted Orders, Order Id: 1089555263, Try Number: 1/10, Server Time: 2025-09-20T22:57:34.651Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 03:57:41"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Processing order 1089558000 with 5 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"نودلز ابتاون\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"نودلز ابتاون\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Found exact match: SKU 10033 for \"نودلز ابتاون\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Using GloriaFood price for SKU 10033 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"نودلز خلطة خاصة\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"نودلز خلطة خاصة\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Found exact match: SKU 10007 for \"نودلز خلطة خاصة\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Using GloriaFood price for SKU 10007 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"نودلز بدبس الرمان\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"نودلز بدبس الرمان\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Found exact match: SKU 10006 for \"نودلز بدبس الرمان\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Using GloriaFood price for SKU 10006 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"شبس اسبيشل - جبن سائل\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"شبس اسبيشل - جبن سائل\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Found exact match: SKU 10040 for \"شبس اسبيشل - جبن سائل\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Using GloriaFood price for SKU 10040 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو كيوي\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Found exact match: SKU 10019 for \"موهيتو كيوي\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Using GloriaFood price for SKU 10019 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Item mapping results: 5 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089558000","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10033","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:55"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10033)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:57"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10007","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:57"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10007)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:58"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10006","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:58"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10006)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:59"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10040","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:59"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10040)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:59"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10019","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:03:59"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10019)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:04:00"}
+{"level":"info","message":"Created receipt in Loyverse: 0002","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:04:00"}
+{"level":"info","message":"::1 - - [20/Sep/2025:23:04:00 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 257 \"-\" \"GF Accepted Orders, Order Id: 1089558000, Try Number: 1/10, Server Time: 2025-09-20T23:03:56.349Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:04:00"}
+{"eventType":"new_order","level":"info","message":"Received webhook from GloriaFood:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Full webhook data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Processing order 1089568318 with 5 items","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Loyverse API initialized with base URL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Found exact match: SKU 10046 for \"كبسة ابتاون بالدجاج\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Using GloriaFood price for SKU 10046 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"كبسة ابتاون بالدجاج\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"كبسة ابتاون بالدجاج\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Found exact match: SKU 10048 for \"كبسة ابتاون بالدجاج\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Using GloriaFood price for SKU 10048 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Found size in options: \"صغير\" for item \"نودلز ابتاون\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"نودلز ابتاون\", size=\"صغير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Found exact match: SKU 10023 for \"نودلز ابتاون\" (صغير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Using GloriaFood price for SKU 10023 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Found size in options: \"كبير\" for item \"شبس ابتاون\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"شبس ابتاون\", size=\"كبير\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Found exact match: SKU 10034 for \"شبس ابتاون\" (كبير)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Using GloriaFood price for SKU 10034 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Looking for exact SKU match: GloriaFood item=\"موهيتو روز بيري\", size=\"null\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Found exact match: SKU 10018 for \"موهيتو روز بيري\" (no size)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Using GloriaFood price for SKU 10018 (not mapping file price)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Item mapping results: 5 mapped, 0 unmapped","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Processed order with mapping:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Creating receipt in Loyverse for order 1089568318","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10046","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:46"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10046)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:47"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10048","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:47"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10048)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:48"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10023","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:48"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10023)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:48"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10034","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:48"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10034)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:48"}
+{"level":"info","message":"Searching for item in Loyverse by SKU: 10018","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:48"}
+{"level":"info","message":"Found item in Loyverse by SKU: undefined (SKU: 10018)","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:48"}
+{"level":"info","message":"Created receipt in Loyverse: 0003","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:49"}
+{"level":"info","message":"::1 - - [20/Sep/2025:23:23:49 +0000] \"POST /api/gloriafood/webhook HTTP/1.1\" 200 257 \"-\" \"GF Accepted Orders, Order Id: 1089568318, Try Number: 1/10, Server Time: 2025-09-20T23:23:47.741Z\"","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 04:23:49"}
