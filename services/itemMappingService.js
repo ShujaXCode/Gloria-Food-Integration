@@ -492,18 +492,28 @@ class ItemMappingService {
       if (jsonbinSuccess) {
         console.log('✅ Successfully saved to JSONBin.io');
       } else {
-        console.log('⚠️  Failed to save to JSONBin.io, saving to local file only');
+        console.log('⚠️  Failed to save to JSONBin.io');
       }
       
-      // Always save to local file as backup
-      this.saveToLocalFile();
+      // Try to save to local file as backup (optional, don't fail if it doesn't work)
+      try {
+        this.saveToLocalFile();
+      } catch (localError) {
+        console.log('⚠️  Local file save failed (expected in Vercel):', localError.message);
+        // Don't throw - this is expected in Vercel's read-only environment
+      }
       
     } catch (error) {
       logger.error('Failed to save mapping data:', error.message);
       console.error('Failed to save mapping data:', error.message);
       
-      // Fallback to local file only
-      this.saveToLocalFile();
+      // Try local file as last resort (optional)
+      try {
+        this.saveToLocalFile();
+      } catch (localError) {
+        console.log('⚠️  Local file save also failed:', localError.message);
+        // Don't throw - this is expected in Vercel's read-only environment
+      }
     }
   }
 
@@ -525,11 +535,12 @@ class ItemMappingService {
         timeout: 30000 // 30 second timeout
       });
 
-      if (response.data && response.data.success) {
+      if (response.data) {
         logger.info(`Updated JSONBin.io with ${this.mappingData.length} items`);
+        console.log('✅ JSONBin.io save successful');
         return true;
       } else {
-        throw new Error('JSONBin.io save failed');
+        throw new Error('JSONBin.io save failed - no response data');
       }
     } catch (error) {
       console.error('❌ Failed to save to JSONBin.io:', error.message);
