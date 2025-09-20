@@ -396,11 +396,8 @@ class ItemMappingService {
       let itemName = gloriaFoodItem.name;
       let calculatedPrice = gloriaFoodItem.price; // Start with base price
       
-      // Handle Arabic text in production (Vercel) - use fallback English name
-      if (process.env.NODE_ENV === 'production' && /[\u0600-\u06FF]/.test(itemName)) {
-        console.log('Arabic text detected in production, using fallback English name');
-        itemName = `Arabic Item ${gloriaFoodItem.id}`;
-      }
+      // Keep original item name (Arabic text is supported)
+      console.log('Using original item name:', itemName);
       
       if (gloriaFoodItem.options && Array.isArray(gloriaFoodItem.options) && gloriaFoodItem.options.length > 0) {
         const sizeOption = gloriaFoodItem.options.find(option => 
@@ -410,11 +407,8 @@ class ItemMappingService {
         
         if (sizeOption) {
           size = sizeOption.name;
-          // Handle Arabic text in size option for production
-          if (process.env.NODE_ENV === 'production' && /[\u0600-\u06FF]/.test(size)) {
-            console.log('Arabic text detected in size option in production, using fallback English name');
-            size = 'Large';
-          }
+          // Keep original size name (Arabic text is supported)
+          console.log('Using original size name:', size);
           itemName = `${itemName} ${size}`;
           // Add size price to base price
           calculatedPrice = gloriaFoodItem.price + (sizeOption.price || 0);
