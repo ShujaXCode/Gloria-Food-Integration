@@ -100,8 +100,7 @@ router.post('/webhook', async (req, res) => {
         });
       }
 
-      // Initialize the item mapping service
-      await itemMappingService.initialize();
+      // Item mapping service is already initialized in constructor
       
       // Map GloriaFood items to Loyverse SKUs
       console.log('=== DEBUGGING ITEM MAPPING ===');
