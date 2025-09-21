@@ -1,5 +1,6 @@
 const GloriaFoodService = require('./gloriaFoodService');
 const LoyverseAPI = require('../utils/loyverseApi');
+const MongoItemMappingService = require('./mongoItemMappingService');
 const config = require('../config/apiConfig');
 const logger = require('../utils/logger');
 
@@ -7,6 +8,7 @@ class EnhancedIntegrationService {
   constructor() {
     this.gloriaFoodService = new GloriaFoodService();
     this.loyverseAPI = new LoyverseAPI();
+    this.itemMappingService = new MongoItemMappingService();
     this.config = config.integration;
     
     // Order processing queue
@@ -146,36 +148,63 @@ class EnhancedIntegrationService {
     }
   }
 
-  // Map GloriaFood menu items to Loyverse products
+  // Map GloriaFood menu items to Loyverse products using MongoDB
   async mapMenuItems(gloriaFoodItems) {
     try {
       if (!this.config.syncMenuItems) {
         return gloriaFoodItems;
       }
       
-      logger.info('Mapping GloriaFood menu items to Loyverse products');
+      logger.info('Mapping GloriaFood menu items to Loyverse products using MongoDB');
       
-      // Get all products from Loyverse
-      const loyverseProducts = await this.loyverseAPI.getProducts();
+      const mappedItems = [];
       
-      const mappedItems = gloriaFoodItems.map(item => {
-        // Try to find matching product by name (case-insensitive)
-        const matchingProduct = loyverseProducts.find(product => 
-          product.name.toLowerCase().includes(item.name.toLowerCase()) ||
-          item.name.toLowerCase().includes(product.name.toLowerCase())
-        );
-        
-        return {
-          ...item,
-          loyverse_item_id: matchingProduct?.id || null,
-          mapped: !!matchingProduct,
-          original_name: item.name,
-          loyverse_product: matchingProduct || null
-        };
-      });
+      for (const item of gloriaFoodItems) {
+        try {
+          // Find product mapping in MongoDB
+          const productMapping = await this.itemMappingService.findSKUByGloriaFoodItem(item.name);
+          
+          if (productMapping) {
+            mappedItems.push({
+              ...item,
+              loyverse_item_id: productMapping.loyverseItemId,
+              sku: productMapping.sku,
+              mapped: true,
+              original_name: item.name,
+              loyverse_name: productMapping.loyverseName,
+              category: productMapping.category,
+              match_type: productMapping.matchType
+            });
+          } else {
+            mappedItems.push({
+              ...item,
+              loyverse_item_id: null,
+              sku: null,
+              mapped: false,
+              original_name: item.name,
+              loyverse_name: null,
+              category: null,
+              match_type: 'not_found'
+            });
+          }
+        } catch (error) {
+          logger.error(`Error mapping item "${item.name}":`, error.message);
+          mappedItems.push({
+            ...item,
+            loyverse_item_id: null,
+            sku: null,
+            mapped: false,
+            original_name: item.name,
+            loyverse_name: null,
+            category: null,
+            match_type: 'error',
+            error: error.message
+          });
+        }
+      }
       
       const mappedCount = mappedItems.filter(item => item.mapped).length;
-      logger.info(`Mapped ${mappedCount} out of ${mappedItems.length} items`);
+      logger.info(`Mapped ${mappedCount} out of ${mappedItems.length} items using MongoDB`);
       
       return mappedItems;
     } catch (error) {

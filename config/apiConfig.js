@@ -35,13 +35,15 @@ module.exports = {
     }
   },
 
-  // JSONBin.io Configuration
-  jsonbin: {
-    baseURL: 'https://api.jsonbin.io/v3',
-    apiKey: '$2a$10$9SK02VE3u.mo2fRZooEUOu1C9nr5DGrhii3TbVIUVSnxtYFrQ4tAO',
-    accessKey: '$2a$10$.GUFxU51FFPksZX/6530h.z210kmyLi32ncHkGaoEsH2yr0FHwjR2',
-    binId: '68cd1ce7d0ea881f4082f202',
-    collectionId: process.env.JSONBIN_COLLECTION_ID || null
+
+  // MongoDB Configuration (Primary Storage)
+  mongodb: {
+    uri: process.env.MONGODB_URI || 'mongodb+srv://writeshuja46:shuja123@cluster0.ac7ag.mongodb.net/?retryWrites=true&w=majority',
+    dbName: process.env.MONGODB_DB_NAME || 'uptown-restaurant',
+    collections: {
+      products: 'products',
+      receipts: 'receipts'
+    }
   },
 
   // Integration Settings
@@ -71,7 +73,7 @@ module.exports = {
 
   // Database Configuration (for order tracking)
   database: {
-    type: 'memory', // 'memory' for simple storage, 'sqlite' for persistent
+    type: 'mongodb', // Changed from 'memory' to 'mongodb'
     path: process.env.DB_PATH || './data/orders.db',
     backupInterval: 24 * 60 * 60 * 1000 // 24 hours
   },

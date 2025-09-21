@@ -328,29 +328,29 @@ class LoyverseAPI {
         }
         
         // Find or create the item using SKU
+        console.log(`🔍 DEBUG: Looking up item with SKU: ${item.sku} (type: ${typeof item.sku})`);
+        console.log(`🔍 DEBUG: Item details:`, JSON.stringify(item, null, 2));
         const existingItem = await this.findItemBySKU(item.sku);
+        console.log(`🔍 DEBUG: Found item result:`, existingItem ? `${existingItem.name} (ID: ${existingItem.id})` : 'null');
         
         if (existingItem) {
           console.log(`Found existing item: ${existingItem.name} (Loyverse ID: ${existingItem.id})`);
           console.log(`Existing item data:`, JSON.stringify(existingItem, null, 2));
           
-          // Get the first variant ID (Loyverse items have variants)
+          // Find the variant that matches the SKU
           if (existingItem.variants && existingItem.variants.length > 0) {
-            const variant = existingItem.variants[0];
+            const variant = existingItem.variants.find(v => v.sku === item.sku.toString());
+            if (!variant) {
+              console.log(`No variant found with SKU ${item.sku} for item ${existingItem.name}`);
+              continue;
+            }
             const variantId = variant.variant_id;
-            // For "كبسة ابتاون" items, use Loyverse price to ensure correct mapping
-            // For other items, use GloriaFood price for accuracy
+            // Always use GloriaFood price for accuracy - it already includes size modifiers
             let finalPrice = item.price;
             
-            // Check if this is a "كبسة ابتاون" item that needs Loyverse pricing
-            if (item.name && item.name.includes('كبسة ابتاون') && variant.default_price) {
-              finalPrice = variant.default_price;
-              console.log(`Using Loyverse price for كبسة ابتاون item: ${finalPrice} (instead of GloriaFood price: ${item.price})`);
-            }
-            
+            console.log(`Using GloriaFood price: ${finalPrice} (Loyverse default price: ${variant.default_price || variant.stores?.[0]?.price})`);
             console.log(`Using variant ID: ${variantId}`);
             console.log(`Item data:`, JSON.stringify(item, null, 2));
-            console.log(`Using GloriaFood price: ${finalPrice} (Loyverse price: ${variant.default_price || variant.stores?.[0]?.price})`);
             
             lineItemsWithVariants.push({
               variant_id: variantId,
@@ -783,7 +783,8 @@ class LoyverseAPI {
           if (item.variants && item.variants.length > 0) {
             for (const variant of item.variants) {
               if (variant.sku === sku.toString()) {
-                logger.info(`Found item in Loyverse by SKU: ${item.name} (SKU: ${sku})`);
+                logger.info(`Found item in Loyverse by SKU: ${item.name} (SKU: ${sku}) - Item ID: ${item.id}`);
+                console.log(`🔍 DEBUG: Found item for SKU ${sku}: ${item.name} (ID: ${item.id})`);
                 return item;
               }
             }
@@ -919,6 +920,31 @@ class LoyverseAPI {
       return response.data;
     } catch (error) {
       logger.error(`Failed to update receipt ${receiptId} status:`, error.message);
+      throw error;
+    }
+  }
+
+  // Get receipt by receipt number/ID from Loyverse
+  async getReceiptById(receiptNumber) {
+    try {
+      logger.info(`Getting receipt from Loyverse: ${receiptNumber}`);
+      
+      const response = await axios.get(`${this.baseURL}/receipts/${receiptNumber}`, {
+        headers: this.getHeaders()
+      });
+      
+      if (response.data) {
+        logger.info(`Found receipt in Loyverse: ${receiptNumber}`);
+        return response.data;
+      }
+      
+      return null;
+    } catch (error) {
+      if (error.response?.status === 404) {
+        logger.info(`Receipt not found in Loyverse: ${receiptNumber}`);
+        return null; // Receipt not found
+      }
+      logger.error(`Error getting receipt ${receiptNumber} from Loyverse:`, error.response?.data || error.message);
       throw error;
     }
   }

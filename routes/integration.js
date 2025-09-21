@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const LoyverseAPI = require('../utils/loyverseApi');
+const ReceiptService = require('../services/receiptService');
 const logger = require('../utils/logger');
 const integrationService = require('../services/enhancedIntegrationService'); // Added this import
 
 const loyverseAPI = new LoyverseAPI();
+const receiptService = new ReceiptService();
 
 // In-memory storage for order processing status (in production, use a database)
 const orderProcessingStatus = new Map();
@@ -39,20 +41,60 @@ router.post('/process-order', async (req, res) => {
         }
       }
       
-      // Create receipt in Loyverse
-      const receipt = await loyverseAPI.createReceipt(orderData);
+      // Check for existing receipt first
+      const existingReceipt = await receiptService.findReceiptByOrderId(orderData.id);
+      
+      if (existingReceipt) {
+        // Handle existing receipt
+        const result = await receiptService.handleExistingReceipt(existingReceipt, orderData, loyverseAPI);
+        
+        if (result.success) {
+          // Duplicate or already processed
+          orderProcessingStatus.set(orderData.id, 'completed');
+          return res.json({
+            success: true,
+            message: result.message,
+            data: {
+              orderId: orderData.id,
+              loyverseReceiptId: result.receiptNumber,
+              mongoReceiptId: result.mongoReceiptId,
+              customerId: customer?.id,
+              status: 'duplicate'
+            }
+          });
+        } else if (result.status === 'retry_needed') {
+          // Retry the receipt
+          const retryResult = await receiptService.createNewReceipt(orderData, loyverseAPI);
+          orderProcessingStatus.set(orderData.id, 'completed');
+          return res.json({
+            success: true,
+            message: 'Order processed successfully (retry)',
+            data: {
+              orderId: orderData.id,
+              loyverseReceiptId: retryResult.loyverseReceiptId,
+              mongoReceiptId: retryResult.mongoReceiptId,
+              customerId: customer?.id,
+              status: 'retry'
+            }
+          });
+        }
+      }
+      
+      // Create new receipt using robust flow
+      const result = await receiptService.createNewReceipt(orderData, loyverseAPI);
       
       // Mark order as completed
       orderProcessingStatus.set(orderData.id, 'completed');
       
-      logger.info(`Order ${orderData.id} processed successfully. Receipt ID: ${receipt.id}`);
+      logger.info(`Order ${orderData.id} processed successfully. Loyverse Receipt ID: ${result.loyverseReceiptId}, MongoDB Receipt ID: ${result.mongoReceiptId}`);
       
       res.json({
         success: true,
-        message: 'Order processed successfully',
+        message: 'Order processed successfully and saved to MongoDB',
         data: {
           orderId: orderData.id,
-          receiptId: receipt.id,
+          loyverseReceiptId: result.loyverseReceiptId,
+          mongoReceiptId: result.mongoReceiptId,
           customerId: customer?.id,
           status: 'completed'
         }
@@ -61,6 +103,15 @@ router.post('/process-order', async (req, res) => {
     } catch (processingError) {
       // Mark order as failed
       orderProcessingStatus.set(orderData.id, 'failed');
+      
+      // Save failed receipt to MongoDB
+      try {
+        await receiptService.processGloriaFoodOrder(orderData, null);
+        await receiptService.markReceiptAsFailed(orderData.id, processingError.message);
+        logger.info(`Failed receipt saved to MongoDB for order ${orderData.id}`);
+      } catch (dbError) {
+        logger.error(`Failed to save failed receipt to MongoDB for order ${orderData.id}:`, dbError.message);
+      }
       
       logger.error(`Failed to process order ${orderData.id}:`, processingError.message);
       
@@ -100,6 +151,73 @@ router.get('/order-status/:orderId', (req, res) => {
       timestamp: new Date().toISOString()
     }
   });
+});
+
+// Get receipt by order ID from MongoDB
+router.get('/receipt/:orderId', async (req, res) => {
+  try {
+    const orderId = req.params.orderId;
+    const receipt = await receiptService.findReceiptByOrderId(orderId);
+    
+    if (!receipt) {
+      return res.status(404).json({
+        error: 'Receipt not found',
+        orderId: orderId
+      });
+    }
+    
+    res.json({
+      success: true,
+      data: receipt
+    });
+    
+  } catch (error) {
+    logger.error('Error getting receipt:', error.message);
+    res.status(500).json({
+      error: 'Failed to get receipt',
+      message: error.message
+    });
+  }
+});
+
+// Get receipt statistics from MongoDB
+router.get('/receipt-stats', async (req, res) => {
+  try {
+    const stats = await receiptService.getReceiptStats();
+    
+    res.json({
+      success: true,
+      data: stats
+    });
+    
+  } catch (error) {
+    logger.error('Error getting receipt stats:', error.message);
+    res.status(500).json({
+      error: 'Failed to get receipt stats',
+      message: error.message
+    });
+  }
+});
+
+// Get recent receipts from MongoDB
+router.get('/recent-receipts', async (req, res) => {
+  try {
+    const limit = parseInt(req.query.limit) || 50;
+    const receipts = await receiptService.getRecentReceipts(limit);
+    
+    res.json({
+      success: true,
+      data: receipts,
+      count: receipts.length
+    });
+    
+  } catch (error) {
+    logger.error('Error getting recent receipts:', error.message);
+    res.status(500).json({
+      error: 'Failed to get recent receipts',
+      message: error.message
+    });
+  }
 });
 
 // Test endpoint for debugging GloriaFood to Loyverse integration

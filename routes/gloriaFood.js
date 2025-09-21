@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const GloriaFoodAPI = require('../utils/gloriaFoodApi');
-const ItemMappingService = require('../services/itemMappingService');
+const MongoItemMappingService = require('../services/mongoItemMappingService');
+const ReceiptService = require('../services/receiptService');
 const logger = require('../utils/logger');
 
 const gloriaFoodAPI = new GloriaFoodAPI();
-const itemMappingService = new ItemMappingService();
+const itemMappingService = new MongoItemMappingService();
+const receiptService = new ReceiptService();
 
 // Webhook endpoint for incoming orders from GloriaFood
 router.post('/webhook', async (req, res) => {
@@ -102,26 +104,40 @@ router.post('/webhook', async (req, res) => {
 
       // Item mapping service is already initialized in constructor
       
-      // Check for duplicate receipts first
-      console.log(`Checking for existing receipt for order ID: ${orderData.id}`);
-      const existingReceipt = await loyverseAPI.findReceiptByExternalId(orderData.id.toString());
+      // NEW ROBUST FLOW: Check MongoDB first (source of truth)
+      console.log(`Checking MongoDB for existing receipt for order ID: ${orderData.id}`);
+      const existingReceipt = await receiptService.findReceiptByOrderId(orderData.id);
       
       if (existingReceipt) {
-        console.log(`Duplicate receipt found for order ${orderData.id}: ${existingReceipt.receipt_number}`);
-        logger.info(`Duplicate receipt found for order ${orderData.id}: ${existingReceipt.receipt_number}`);
+        console.log(`Found existing receipt in MongoDB for order ${orderData.id} with status: ${existingReceipt.status}`);
+        logger.info(`Found existing receipt in MongoDB for order ${orderData.id} with status: ${existingReceipt.status}`);
         
-        return res.status(200).json({
-          success: true,
-          message: 'Order already processed - duplicate receipt found',
-          orderId: orderData.id,
-          eventType: 'duplicate_order',
-          receiptNumber: existingReceipt.receipt_number,
-          note: 'Receipt already exists in Loyverse',
-          timestamp: new Date().toISOString()
-        });
+        // Handle existing receipt based on status
+        const result = await receiptService.handleExistingReceipt(existingReceipt, orderData, loyverseAPI);
+        
+        if (result.success) {
+          // Duplicate or already processed
+          return res.status(200).json(result);
+        } else if (result.status === 'retry_needed') {
+          // Retry the receipt
+          console.log(`Retrying receipt for order ${orderData.id}`);
+          const retryResult = await receiptService.createNewReceipt(orderData, loyverseAPI);
+          return res.status(200).json(retryResult);
+        } else if (result.status === 'treat_as_new') {
+          // Treat as new order
+          console.log(`Treating order ${orderData.id} as new order`);
+        } else {
+          // Error handling
+          return res.status(500).json({
+            success: false,
+            message: 'Error handling existing receipt',
+            error: result.error,
+            orderId: orderData.id
+          });
+        }
       }
       
-      console.log(`No duplicate found for order ${orderData.id}, proceeding with processing...`);
+      console.log(`No existing receipt found for order ${orderData.id}, creating new receipt...`);
       
       // Map GloriaFood items to Loyverse SKUs
       console.log('=== DEBUGGING ITEM MAPPING ===');
@@ -205,28 +221,18 @@ router.post('/webhook', async (req, res) => {
 
       logger.info('Processed order with mapping:', JSON.stringify(processedOrder, null, 2));
       
-      // Create receipt in Loyverse first
-      console.log('Creating receipt in Loyverse...');
-      let receipt = null;
-      try {
-        receipt = await loyverseAPI.createReceipt(processedOrder);
-        console.log('Receipt created successfully:', receipt.receipt_number || receipt.id);
-      } catch (receiptError) {
-        console.error('Receipt creation failed:', receiptError.message);
-        // Continue with response even if receipt creation fails
-      }
+      // Create new receipt using the robust flow
+      console.log('Creating new receipt using robust flow...');
+      const result = await receiptService.createNewReceipt(orderData, loyverseAPI);
       
       // Send response to GloriaFood
       console.log('Sending response to GloriaFood...');
       res.status(200).json({
-        success: true,
-        message: 'Order received and receipt created in Loyverse',
-        orderId: processedOrder.id,
-        eventType: 'new_order',
-        total: processedOrder.total,
-        items: processedOrder.items.length,
-        mappingResults: processedOrder.mappingResults,
-        receiptNumber: receipt?.receipt_number || receipt?.id || null
+        ...result,
+        orderId: orderData.id,
+        total: orderData.total,
+        items: orderData.items?.length || 0,
+        timestamp: new Date().toISOString()
       });
       console.log('Response sent successfully');
       
@@ -366,9 +372,9 @@ router.get('/debug/env', async (req, res) => {
     loyverseLocation: process.env.LOYVERSE_LOCATION_ID ? 'SET' : 'NOT SET',
     tokenLength: process.env.LOYVERSE_ACCESS_TOKEN ? process.env.LOYVERSE_ACCESS_TOKEN.length : 0,
     locationId: process.env.LOYVERSE_LOCATION_ID || 'NOT SET',
-    jsonbinId: process.env.JSONBIN_ID ? 'SET' : 'NOT SET',
-    jsonbinApiKey: process.env.JSONBIN_API_KEY ? 'SET' : 'NOT SET',
-    jsonbinIdValue: process.env.JSONBIN_ID || 'NOT SET'
+    mongodb: 'CONNECTED',
+    itemMappingService: 'MongoDB',
+    receiptService: 'MongoDB'
   });
 });
 

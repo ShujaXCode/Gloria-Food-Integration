@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const logger = require('./utils/logger');
+const database = require('./config/database');
 const gloriaFoodRoutes = require('./routes/gloriaFood');
 const integrationRoutes = require('./routes/integration');
 
@@ -85,11 +86,36 @@ app.use((error, req, res, next) => {
   });
 });
 
-// Start server
-app.listen(PORT, () => {
-  logger.info(`Server running on port ${PORT}`);
-  logger.info(`Environment: ${process.env.NODE_ENV}`);
-  logger.info(`Health check: http://localhost:${PORT}/health`);
-});
+// Initialize database connection and start server
+async function startServer() {
+  try {
+    // Connect to database first
+    console.log('🔄 Initializing database connection...');
+    const connected = await database.connect();
+    
+    if (!connected) {
+      throw new Error('Failed to connect to database');
+    }
+    
+    console.log('✅ Database connected successfully');
+    
+    // Start the server
+    app.listen(PORT, () => {
+      console.log(`🚀 Server running on port ${PORT}`);
+      logger.info(`Server running on port ${PORT}`);
+      logger.info(`Environment: ${process.env.NODE_ENV}`);
+      logger.info(`Health check: http://localhost:${PORT}/health`);
+      logger.info('Database connection established');
+    });
+    
+  } catch (error) {
+    console.error('❌ Failed to start server:', error.message);
+    logger.error('Failed to start server:', error);
+    process.exit(1);
+  }
+}
+
+// Start the server
+startServer();
 
 module.exports = app;
