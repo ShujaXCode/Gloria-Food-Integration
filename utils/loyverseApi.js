@@ -918,6 +918,37 @@ class LoyverseAPI {
       throw error;
     }
   }
+
+  // Find receipt by external reference (order ID)
+  async findReceiptByExternalId(externalId) {
+    try {
+      logger.info(`Searching for receipt with external reference: ${externalId}`);
+      
+      // Search for receipts with the order ID in notes
+      const response = await axios.get(`${this.baseURL}/receipts`, {
+        headers: this.getHeaders(),
+        params: {
+          limit: 100 // Get recent receipts
+        }
+      });
+
+      if (response.data && response.data.receipts && response.data.receipts.length > 0) {
+        // Search for receipt with Order ID in notes
+        for (const receipt of response.data.receipts) {
+          if (receipt.notes && receipt.notes.includes(`Order ID: ${externalId}`)) {
+            logger.info(`Found existing receipt: ${receipt.receipt_number} for order: ${externalId}`);
+            return receipt;
+          }
+        }
+      }
+
+      logger.info(`No existing receipt found for order: ${externalId}`);
+      return null;
+    } catch (error) {
+      logger.error(`Error searching for receipt by external ID ${externalId}:`, error.response?.data || error.message);
+      return null;
+    }
+  }
 }
 
 module.exports = LoyverseAPI;

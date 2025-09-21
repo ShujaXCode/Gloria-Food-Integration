@@ -102,6 +102,27 @@ router.post('/webhook', async (req, res) => {
 
       // Item mapping service is already initialized in constructor
       
+      // Check for duplicate receipts first
+      console.log(`Checking for existing receipt for order ID: ${orderData.id}`);
+      const existingReceipt = await loyverseAPI.findReceiptByExternalId(orderData.id.toString());
+      
+      if (existingReceipt) {
+        console.log(`Duplicate receipt found for order ${orderData.id}: ${existingReceipt.receipt_number}`);
+        logger.info(`Duplicate receipt found for order ${orderData.id}: ${existingReceipt.receipt_number}`);
+        
+        return res.status(200).json({
+          success: true,
+          message: 'Order already processed - duplicate receipt found',
+          orderId: orderData.id,
+          eventType: 'duplicate_order',
+          receiptNumber: existingReceipt.receipt_number,
+          note: 'Receipt already exists in Loyverse',
+          timestamp: new Date().toISOString()
+        });
+      }
+      
+      console.log(`No duplicate found for order ${orderData.id}, proceeding with processing...`);
+      
       // Map GloriaFood items to Loyverse SKUs
       console.log('=== DEBUGGING ITEM MAPPING ===');
       console.log('Order items:', JSON.stringify(orderData.items, null, 2));
