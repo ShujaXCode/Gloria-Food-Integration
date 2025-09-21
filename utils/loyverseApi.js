@@ -604,7 +604,7 @@ class LoyverseAPI {
           amount: orderData.total
         }],
         customer_id: null, // Will be set after customer creation
-        notes: orderData.notes || '',
+        notes: receiptNotes.trim(),
         status: 'open'
       };
 
