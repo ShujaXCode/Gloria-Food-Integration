@@ -530,6 +530,7 @@ class LoyverseAPI {
       // No surcharge needed - delivery fees are now line items
       
       console.log('=== RECEIPT CREATION DEBUG ===');
+      console.log('Receipt notes being sent:', receiptNotes);
       console.log('Receipt data being sent to Loyverse:', JSON.stringify(receiptData, null, 2));
       console.log('Loyverse API URL:', `${this.baseURL}/receipts`);
       console.log('Headers being sent:', JSON.stringify(this.getHeaders(), null, 2));
