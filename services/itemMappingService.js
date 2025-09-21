@@ -444,7 +444,10 @@ class ItemMappingService {
         Price: calculatedPrice
       };
 
-      // Add to mapping data
+      // Add to mapping data (ensure mappingData is initialized)
+      if (!this.mappingData) {
+        this.mappingData = [];
+      }
       this.mappingData.push(mappingEntry);
       
       // Save the mapping data (to external storage in production, file in development)
