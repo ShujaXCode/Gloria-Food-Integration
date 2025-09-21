@@ -466,6 +466,9 @@ class LoyverseAPI {
         receiptNotes += `Order Instructions: ${orderData.notes.trim()}\n`;
       }
       
+      // Add order ID for duplicate detection
+      receiptNotes += `Order ID: ${orderData.id}\n`;
+      
       // Now process delivery fees at the end
       for (const item of deliveryFeeItems) {
         console.log(`Processing delivery fee at the end: ${item.name} (${item.price} PKR)`);
