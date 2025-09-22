@@ -61,7 +61,7 @@ class ReceiptService {
   }
 
   // Update receipt with Loyverse information after successful creation
-  async updateReceiptWithLoyverseInfo(orderId, loyverseReceiptId, loyverseReceiptNumber) {
+  async updateReceiptWithLoyverseInfo(orderId, loyverseReceiptNumber, loyverseReceiptId) {
     try {
       await this.initialize();
 
@@ -70,9 +70,9 @@ class ReceiptService {
         throw new Error(`Receipt for order ${orderId} not found`);
       }
 
-      await receipt.markAsProcessed(loyverseReceiptId, loyverseReceiptNumber);
+      await receipt.markAsProcessed(loyverseReceiptNumber, loyverseReceiptId);
 
-      logger.info(`Updated receipt for order ${orderId} with Loyverse info: ReceiptID=${loyverseReceiptId}, ReceiptNumber=${loyverseReceiptNumber}`);
+      logger.info(`Updated receipt for order ${orderId} with Loyverse info: ReceiptNumber=${loyverseReceiptNumber}, ReceiptID=${loyverseReceiptId}`);
 
       return receipt;
 
@@ -289,8 +289,8 @@ class ReceiptService {
           // Receipt exists in Loyverse - update MongoDB status
           await this.updateReceiptWithLoyverseInfo(
             existingReceipt.gloriaFoodOrderId,
-            verification.receipt.id,
-            verification.receipt.receipt_number
+            verification.receipt.receipt_number,
+            verification.receipt.id
           );
           
           logger.info(`Updated pending receipt status for order ${existingReceipt.gloriaFoodOrderId}`);
@@ -392,7 +392,7 @@ class ReceiptService {
         customerName: orderData.customer?.name || null,
         customerPhone: orderData.customer?.phone || null,
         customerEmail: orderData.customer?.email || null,
-        totalAmount: orderData.total || 0,
+        totalAmount: orderData.total  || 0,
         subtotalAmount: orderData.subtotal || orderData.total || 0,
         taxAmount: orderData.tax || 0,
         deliveryFee: orderData.delivery_fee || 0,
@@ -419,8 +419,8 @@ class ReceiptService {
       // Step 3: Update MongoDB with Loyverse info
       await this.updateReceiptWithLoyverseInfo(
         orderData.id,
-        loyverseResult.loyverseReceiptId,
-        loyverseResult.loyverseReceiptNumber
+        loyverseResult.loyverseReceiptNumber,
+        loyverseResult.loyverseReceiptId
       );
 
       logger.info(`Successfully created new receipt for order: ${orderData.id}`);
@@ -431,7 +431,7 @@ class ReceiptService {
         eventType: 'order_processed',
         receiptNumber: loyverseResult.loyverseReceiptNumber,
         mongoReceiptId: receiptRecord._id,
-        loyverseReceiptId: loyverseResult.loyverseReceiptId
+        loyverseReceiptId: loyverseResult.loyverseReceiptNumber
       };
 
     } catch (error) {
@@ -476,12 +476,14 @@ class ReceiptService {
         mappingResults: mappedItems
       };
 
+      console.log(processedOrder ,'processedOrder fucking processedOrder')
+
       const loyverseReceipt = await loyverseAPI.createReceipt(processedOrder);
 
-      return {
-        loyverseReceiptId: loyverseReceipt.id || loyverseReceipt.receipt_number,
-        loyverseReceiptNumber: loyverseReceipt.receipt_number || loyverseReceipt.id
-      };
+        return {
+          loyverseReceiptNumber: loyverseReceipt.receipt_number,
+          loyverseReceiptId: loyverseReceipt.id
+        };
 
     } catch (error) {
       logger.error(`Error processing order to Loyverse for order ${orderData.id}:`, error.message);

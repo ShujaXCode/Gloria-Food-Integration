@@ -445,6 +445,7 @@ router.post('/test-gloriafood-to-loyverse', async (req, res) => {
     logger.info(`Processing test order ${orderData.id} to Loyverse`);
     
     // Transform GloriaFood data to Loyverse format
+    console.log(orderData ,'orderData fucking orderData++=')
     const transformedOrder = {
       id: orderData.id,
       customer: {

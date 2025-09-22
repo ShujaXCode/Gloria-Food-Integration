@@ -8,7 +8,7 @@ const productSchema = new mongoose.Schema({
     trim: true
   },
   sku: {
-    type: Number,
+    type: mongoose.Schema.Types.Mixed, // Allow both numbers and strings
     required: true,
     unique: true
   },
@@ -43,6 +43,11 @@ const productSchema = new mongoose.Schema({
   price: {
     type: Number,
     required: true
+  },
+  isActive: {
+    type: Boolean,
+    required: false,
+    default: true
   }
 }, {
   timestamps: true,

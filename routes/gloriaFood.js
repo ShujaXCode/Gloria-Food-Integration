@@ -12,21 +12,12 @@ const receiptService = new ReceiptService();
 // Webhook endpoint for incoming orders from GloriaFood
 router.post('/webhook', async (req, res) => {
   try {
-    console.log('=== WEBHOOK RECEIVED ===');
-    console.log('Headers:', req.headers);
-    console.log('Body received:', JSON.stringify(req.body, null, 2));
+   
     
     const webhookData = req.body;
     const signature = req.headers['x-gloriafood-signature'] || req.headers['authorization'];
     
-    logger.info('Received webhook from GloriaFood:', {
-      orderId: webhookData.order_id || webhookData.id,
-      eventType: webhookData.event_type || 'new_order',
-      timestamp: new Date().toISOString()
-    });
-    
-    // Log the full webhook data for debugging
-    logger.info('Full webhook data:', JSON.stringify(webhookData, null, 2));
+ 
 
     // Verify webhook signature if configured
     // Temporarily disabled for testing - re-enable in production
@@ -51,11 +42,9 @@ router.post('/webhook', async (req, res) => {
         throw new Error('Invalid order data: missing items');
       }
 
-      logger.info(`Processing order ${orderData.id} with ${orderData.items.length} items`);
 
       // Check order status - only process accepted orders
       if (orderData.status && orderData.status !== 'accepted') {
-        logger.info(`Order ${orderData.id} status is '${orderData.status}', skipping receipt creation`);
         return res.status(200).json({
           success: true,
           message: `Order received but status is '${orderData.status}', receipt will be created when order is accepted`,
@@ -72,7 +61,6 @@ router.post('/webhook', async (req, res) => {
       const isTableReservation = orderData.type === 'table_reservation' || !orderData.items || orderData.items.length === 0;
       
       if (isTableReservation) {
-        logger.info(`Processing table reservation or empty order: ${orderData.id}`);
 
       // For table reservations, we'll just log the customer info and skip receipt creation
       const customer = {
@@ -85,7 +73,6 @@ router.post('/webhook', async (req, res) => {
         
         try {
           customerResult = await loyverseAPI.findOrCreateCustomer(customer);
-          logger.info(`Customer processed for table reservation: ${customerResult ? customerResult.id : 'failed'}`);
         } catch (customerError) {
           logger.warn(`Customer processing failed for table reservation: ${customerError.message}`);
         }
@@ -105,12 +92,9 @@ router.post('/webhook', async (req, res) => {
       // Item mapping service is already initialized in constructor
       
       // NEW ROBUST FLOW: Check MongoDB first (source of truth)
-      console.log(`Checking MongoDB for existing receipt for order ID: ${orderData.id}`);
       const existingReceipt = await receiptService.findReceiptByOrderId(orderData.id);
       
       if (existingReceipt) {
-        console.log(`Found existing receipt in MongoDB for order ${orderData.id} with status: ${existingReceipt.status}`);
-        logger.info(`Found existing receipt in MongoDB for order ${orderData.id} with status: ${existingReceipt.status}`);
         
         // Handle existing receipt based on status
         const result = await receiptService.handleExistingReceipt(existingReceipt, orderData, loyverseAPI);
@@ -137,20 +121,14 @@ router.post('/webhook', async (req, res) => {
         }
       }
       
-      console.log(`No existing receipt found for order ${orderData.id}, creating new receipt...`);
       
       // Map GloriaFood items to Loyverse SKUs
-      console.log('=== DEBUGGING ITEM MAPPING ===');
-      console.log('Order items:', JSON.stringify(orderData.items, null, 2));
       const mappedItems = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI);
-      console.log('Mapped items result:', JSON.stringify(mappedItems, null, 2));
       
       // Log mapping results
       const mappedCount = mappedItems.filter(item => item.status === 'mapped').length;
       const unmappedCount = mappedItems.filter(item => item.status === 'unmapped' || item.status === 'error').length;
-      console.log(`Mapping results: ${mappedCount} mapped, ${unmappedCount} unmapped`);
       
-      logger.info(`Item mapping results: ${mappedCount} mapped, ${unmappedCount} unmapped`);
 
       // Check if we have any mapped items to process
       if (mappedCount === 0) {
@@ -736,7 +714,7 @@ router.post('/test-receipt-creation', async (req, res) => {
       id: orderData.id,
       type: orderData.type,
       total: orderData.total_price,
-      items: mappedItems.filter(item => item.status === 'mapped').map(item => ({
+      items: mappedItems.filter(item => item.status === 'mapped' || item.status === 'promo_cart').map(item => ({
         id: item.originalGloriaFoodItem.id,
         name: item.loyverseName,
         price: item.price,

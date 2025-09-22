@@ -6,15 +6,15 @@ class LoyverseAPI {
     this.baseURL = 'https://api.loyverse.com/v1.0'; // Fixed base URL
     this.accessToken = process.env.LOYVERSE_ACCESS_TOKEN;
     this.locationId = process.env.LOYVERSE_LOCATION_ID;
-    
+
     if (!this.accessToken) {
       logger.warn('Loyverse access token not configured');
     }
-    
+
     if (!this.locationId) {
       logger.warn('Loyverse location ID not configured');
     }
-    
+
     logger.info('Loyverse API initialized with base URL:', this.baseURL);
   }
 
@@ -22,7 +22,7 @@ class LoyverseAPI {
   convertToUUID(numericId) {
     // Create a deterministic UUID from numeric ID
     const hash = this.hashCode(numericId.toString());
-    const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
       const r = (hash + Math.random() * 16) % 16 | 0;
       const v = c === 'x' ? r : (r & 0x3 | 0x8);
       return v.toString(16);
@@ -49,6 +49,80 @@ class LoyverseAPI {
     };
   }
 
+  // Find or create promo cart item in Loyverse
+  async findOrCreatePromoCartItem(promoData) {
+    try {
+      const sku = 'promo_cart';
+      console.log(`🔍 Looking for promo cart item with SKU: ${sku}`);
+
+      // First, try to find existing promo cart item
+      const existingItem = await this.findItemBySKU(sku);
+
+      if (existingItem) {
+        console.log(`Found existing promo cart item: ${existingItem.name} (ID: ${existingItem.id})`);
+
+        // Update the item with new promo data using POST with id field
+        const updateData = {
+          id: existingItem.id, // Include id to trigger update instead of create
+          item_name: promoData.name,
+          variants: [{
+            sku: sku,
+            default_pricing_type: "FIXED",
+            default_price: 0, // Always store 0 in Loyverse (negative prices not allowed)
+            stores: [{
+              store_id: this.locationId,
+              pricing_type: "FIXED",
+              price: 0 // Always store 0 in Loyverse (negative prices not allowed)
+            }]
+          }]
+        };
+
+        console.log(`Updating promo cart item with data:`, JSON.stringify(updateData, null, 2));
+
+        const response = await axios.post(
+          `${this.baseURL}/items`,
+          updateData,
+          { headers: this.getHeaders() }
+        );
+
+        console.log(`✅ Updated promo cart item:`, response.data);
+        return response.data;
+      } else {
+        console.log(`Creating new promo cart item: ${promoData.name}`);
+
+        // Create new promo cart item
+        const createData = {
+          item_name: promoData.name,
+          category_id: null, // We'll use a default category or null
+          variants: [{
+            sku: sku,
+            default_pricing_type: "FIXED",
+            default_price: 0, // Always store 0 in Loyverse (negative prices not allowed)
+            stores: [{
+              store_id: this.locationId,
+              pricing_type: "FIXED",
+              price: 0 // Always store 0 in Loyverse (negative prices not allowed)
+            }]
+          }]
+        };
+
+        console.log(`Creating promo cart item with data:`, JSON.stringify(createData, null, 2));
+
+        const response = await axios.post(
+          `${this.baseURL}/items`,
+          createData,
+          { headers: this.getHeaders() }
+        );
+
+        console.log(`✅ Created new promo cart item:`, response.data);
+        return response.data;
+      }
+    } catch (error) {
+      console.error(`❌ Error managing promo cart item:`, error.response?.data || error.message);
+      throw error;
+    }
+  }
+
   // Sanitize text to remove Arabic characters
   sanitizeText(text) {
     if (!text) return '';
@@ -64,12 +138,11 @@ class LoyverseAPI {
         headers: this.getHeaders(),
         timeout: 10000 // 10 second timeout
       });
-      
-      console.log('Payment types response:', JSON.stringify(response.data, null, 2));
-      
+
+
       // Find the CASH payment type
       const cashPaymentType = response.data.payment_types?.find(pt => pt.type === 'CASH');
-      
+
       if (cashPaymentType) {
         console.log(`Found CASH payment type ID: ${cashPaymentType.id}`);
         return cashPaymentType.id;
@@ -79,7 +152,7 @@ class LoyverseAPI {
       }
     } catch (error) {
       console.error('Error fetching payment types:', error.response?.data || error.message);
-      
+
       // Fallback to hardcoded payment type ID if network fails
       console.log('Using fallback payment type ID due to network error');
       return '80dd8827-fe24-4864-adeb-391a790211cf'; // This is the CASH payment type ID from previous successful calls
@@ -89,48 +162,40 @@ class LoyverseAPI {
   // Smart payment method detection based on customer name and order type
   async getSmartPaymentTypeId(orderData) {
     try {
-      console.log('=== SMART PAYMENT DETECTION CALLED ===');
-      console.log('Determining smart payment method for order:', orderData.id);
-      console.log('Order type:', orderData.orderType || orderData.type);
-      console.log('Customer first name:', orderData.customer?.name || orderData.client_first_name);
-      
+
       // Only apply smart detection for pickup orders
       const orderType = orderData.orderType || orderData.type;
       if (orderType !== 'pickup') {
-        console.log('Order is not pickup, using default CASH payment method');
         return await this.getCashPaymentTypeId();
       }
-      
+
       // Extract first name from original GloriaFood payload (not processed customer name)
       const firstName = orderData.client_first_name || '';
-      console.log('Fetching payment types from Loyverse for pickup order...');
-      
+
       // Get all payment types from Loyverse
       const response = await axios.get(`${this.baseURL}/payment_types`, {
         headers: this.getHeaders(),
         timeout: 10000
       });
-      
-      console.log('Payment types response:', JSON.stringify(response.data, null, 2));
-      
+
+
       if (response.data.payment_types && response.data.payment_types.length > 0) {
         // Look for payment method with exact name match
-        const matchingPaymentType = response.data.payment_types.find(pt => 
+        const matchingPaymentType = response.data.payment_types.find(pt =>
           pt.name === firstName
         );
-        
+
         if (matchingPaymentType) {
-          console.log(`Found matching payment method "${firstName}" in Loyverse with ID: ${matchingPaymentType.id}`);
           return matchingPaymentType.id;
         } else {
-          console.log(`Payment method "${firstName}" not found in Loyverse - defaulting to CASH`);
+
           return await this.getCashPaymentTypeId();
         }
       } else {
-        console.log('No payment types found in Loyverse - defaulting to CASH');
+
         return await this.getCashPaymentTypeId();
       }
-      
+
     } catch (error) {
       console.error('Error in smart payment detection:', error);
       console.log('Falling back to default CASH payment method');
@@ -141,19 +206,19 @@ class LoyverseAPI {
   // Find or create customer in Loyverse
   async findOrCreateCustomer(customerData) {
     try {
-      console.log('Finding/creating customer:', JSON.stringify(customerData, null, 2));
-      
+
+
       // First, search for existing customer by phone or email
       if (customerData.phone || customerData.email) {
-        console.log(`Searching for customer with phone: ${customerData.phone} and email: ${customerData.email}`);
-        
+
+
         // Get all customers from Loyverse
         const searchResponse = await axios.get(`${this.baseURL}/customers`, {
           headers: this.getHeaders()
         });
-        
-        console.log('All customers response:', JSON.stringify(searchResponse.data, null, 2));
-        
+
+
+
         if (searchResponse.data.customers && searchResponse.data.customers.length > 0) {
           // Search for exact match by phone or email
           const exactMatch = searchResponse.data.customers.find(customer => {
@@ -161,7 +226,7 @@ class LoyverseAPI {
             const emailMatch = customerData.email && customer.email && customer.email.toLowerCase() === customerData.email.toLowerCase();
             return phoneMatch || emailMatch;
           });
-          
+
           if (exactMatch) {
             console.log(`Found exact match: ${exactMatch.name} (ID: ${exactMatch.id})`);
             return exactMatch;
@@ -170,15 +235,12 @@ class LoyverseAPI {
           }
         }
       }
-      
+
       // If not found, create new customer
-      console.log('Creating new customer...');
       const newCustomer = await this.createCustomer(customerData);
-      console.log(`Created new customer: ${newCustomer.name} (ID: ${newCustomer.id})`);
       return newCustomer;
-      
+
     } catch (error) {
-      console.error('Error finding/creating customer:', error.response?.data || error.message);
       return null;
     }
   }
@@ -251,8 +313,8 @@ class LoyverseAPI {
   async createItem(itemData) {
     try {
       logger.info(`Creating item in Loyverse: ${itemData.name}`);
-      
-            const itemPayload = {
+
+      const itemPayload = {
         // Let Loyverse generate its own ID
         item_name: itemData.name,
         description: itemData.instructions || itemData.name,
@@ -290,7 +352,7 @@ class LoyverseAPI {
       return response.data;
     } catch (error) {
       logger.error(`Failed to create item in Loyverse: ${error.message}`);
-      
+
       console.log('=== ITEM CREATION ERROR ===');
       if (error.response) {
         console.log('Status:', error.response.status);
@@ -300,7 +362,7 @@ class LoyverseAPI {
         console.log('No response object in error:', error.message);
       }
       console.log('===============================');
-      
+
       throw error;
     }
   }
@@ -309,34 +371,39 @@ class LoyverseAPI {
   async createReceipt(orderData) {
     try {
       logger.info(`Creating receipt in Loyverse for order ${orderData.id}`);
-      
+
       // First, ensure all items exist and get their variant IDs
       const lineItemsWithVariants = [];
-      
+
       // First, process all regular items (skip delivery fees for now)
       const deliveryFeeItems = [];
-      
+      const cartDiscountItems = [];
+
       for (const item of orderData.items) {
         console.log(`Processing item: ${item.name} (GloriaFood ID: ${item.id})`);
         console.log(`Item data:`, JSON.stringify(item, null, 2));
-        
-        // Skip delivery fees for now - we'll process them at the end
+
+
+
+
         if (item.sku === 'DELIVERY_FEE' || item.name === 'DELIVERY_FEE' || item.type === 'delivery_fee') {
           console.log(`Found delivery fee: ${item.name} (${item.price} PKR) - will process at the end`);
           deliveryFeeItems.push(item);
           continue; // Skip the normal item processing
         }
-        
+        console.log(item, 'item fucking item')
+        if (item.sku === 'promo_cart') {
+          console.log(`Found promo cart: ${item.name} (${item.price} PKR) - will process at the end`);
+          cartDiscountItems.push(item);
+          continue; // Skip the normal item processing
+        }
+
         // Find or create the item using SKU
-        console.log(`🔍 DEBUG: Looking up item with SKU: ${item.sku} (type: ${typeof item.sku})`);
-        console.log(`🔍 DEBUG: Item details:`, JSON.stringify(item, null, 2));
+
         const existingItem = await this.findItemBySKU(item.sku);
-        console.log(`🔍 DEBUG: Found item result:`, existingItem ? `${existingItem.name} (ID: ${existingItem.id})` : 'null');
-        
+
         if (existingItem) {
-          console.log(`Found existing item: ${existingItem.name} (Loyverse ID: ${existingItem.id})`);
-          console.log(`Existing item data:`, JSON.stringify(existingItem, null, 2));
-          
+
           // Find the variant that matches the SKU
           if (existingItem.variants && existingItem.variants.length > 0) {
             const variant = existingItem.variants.find(v => v.sku === item.sku.toString());
@@ -347,41 +414,47 @@ class LoyverseAPI {
             const variantId = variant.variant_id;
             // Always use GloriaFood price for accuracy - it already includes size modifiers
             let finalPrice = item.price;
-            
-            console.log(`Using GloriaFood price: ${finalPrice} (Loyverse default price: ${variant.default_price || variant.stores?.[0]?.price})`);
-            console.log(`Using variant ID: ${variantId}`);
-            console.log(`Item data:`, JSON.stringify(item, null, 2));
-            
+
+
+            // Calculate discount information
+
+            // Use total_item_price as the final price (already includes all discounts)
+            const finalTotalPrice = item.total_item_price || (finalPrice * (item.quantity || 1));
+
+            // Build line discounts array
+
+
             lineItemsWithVariants.push({
               variant_id: variantId,
               quantity: item.quantity || 1,
-              unit_price: finalPrice,
-              total_price: finalPrice * (item.quantity || 1),
-              line_note: item.instructions || ''
+              unit_price: finalPrice, // Original price before discounts
+              total_price: finalTotalPrice, // Final price after discounts
+              line_note: item.instructions || '',
             });
           } else {
-            console.log(`No variants found for item: ${existingItem.name}`);
             // Fallback to using item_id if no variants
+            const finalTotalPrice = item.total_item_price || (item.price * (item.quantity || 1));
+
+
+
             lineItemsWithVariants.push({
               variant_id: existingItem.variants[0].id,
               quantity: item.quantity || 1,
               unit_price: item.price,
-              total_price: item.total_price || (item.price * (item.quantity || 1)),
-              line_note: item.instructions || ''
+              total_price: finalTotalPrice,
+              line_note: item.instructions || '',
             });
           }
         } else {
-          console.log(`Item "${item.name}" not found in Loyverse. Skipping item creation.`);
-          // Skip this item - don't create new items
-          console.log(`Skipping item: ${item.name} (GloriaFood ID: ${item.id})`);
+
           // You can choose to:
           // 1. Skip the item entirely
           // 2. Use a default/generic item
           // 3. Log an error and continue
-          
+
           // Option 1: Skip the item (recommended)
           continue;
-          
+
           // Option 2: Use a default item (uncomment if needed)
           // const defaultItem = await this.findItemByName("Default Item");
           // if (defaultItem && defaultItem.variants && defaultItem.variants.length > 0) {
@@ -395,28 +468,25 @@ class LoyverseAPI {
           // }
         }
       }
-      
-      // Get the smart payment type ID based on customer name and order type
-      console.log('=== ABOUT TO CALL SMART PAYMENT DETECTION ===');
-      console.log('Order data being passed:', JSON.stringify(orderData, null, 2));
+
       let paymentTypeId = await this.getSmartPaymentTypeId(orderData);
-      
+
       if (!paymentTypeId) {
         console.log('No payment type ID available, using fallback');
         // Use the hardcoded fallback payment type ID
         paymentTypeId = '80dd8827-fe24-4864-adeb-391a790211cf';
         console.log(`Using fallback payment type ID: ${paymentTypeId}`);
       }
-      
+
       // Create or find customer in Loyverse
       let customerId = null;
-      
+
       // Map GloriaFood customer data to our expected format
       // ALWAYS construct full name from original GloriaFood fields
       const firstName = orderData.client_first_name || '';
       const lastName = orderData.client_last_name || '';
       let customerName;
-      
+
       if (firstName && lastName) {
         customerName = `${firstName} ${lastName}`;
       } else if (firstName) {
@@ -426,17 +496,17 @@ class LoyverseAPI {
       } else {
         customerName = 'Unknown Customer';
       }
-      
+
       const customerData = {
         name: customerName,
         phone: orderData.customer?.phone || orderData.client_phone,
         email: orderData.customer?.email || orderData.client_email,
         address: orderData.customer?.address || orderData.client_address
       };
-      
+
       // Skip customer creation - include customer info in receipt notes instead
       console.log('Skipping customer creation - will include customer info in receipt notes');
-      
+
       // Build receipt notes with order details and customer info
       let receiptNotes = '';
       if (orderData.instructions) {
@@ -445,7 +515,7 @@ class LoyverseAPI {
       if (orderData.orderType || orderData.type) {
         receiptNotes += `Order Type: ${(orderData.orderType || orderData.type).toUpperCase()}\n`;
       }
-      
+
       // Add customer information to receipt notes
       if (customerData.name) {
         receiptNotes += `Customer Name: ${customerData.name}\n`;
@@ -459,23 +529,22 @@ class LoyverseAPI {
       if (customerData.address) {
         receiptNotes += `Delivery Address: ${customerData.address}\n`;
       }
-      
-      
+
+
       // Add order-level instructions if available
       if (orderData.notes && orderData.notes.trim()) {
         receiptNotes += `Order Instructions: ${orderData.notes.trim()}\n`;
       }
-      
+
       // Add order ID for duplicate detection
       receiptNotes += `Order ID: ${orderData.id}\n`;
-      
+
       // Now process delivery fees at the end
       for (const item of deliveryFeeItems) {
-        console.log(`Processing delivery fee at the end: ${item.name} (${item.price} PKR)`);
-        
+
         // Try to find an existing delivery fee item in Loyverse
         const deliveryFeeItem = await this.findItemByName('Delivery Fee');
-        
+
         if (deliveryFeeItem && deliveryFeeItem.variants && deliveryFeeItem.variants.length > 0) {
           // Use existing delivery fee item
           const variant = deliveryFeeItem.variants[0];
@@ -489,13 +558,12 @@ class LoyverseAPI {
           console.log(`Using existing delivery fee item: ${deliveryFeeItem.item_name}`);
         } else {
           // Create a new delivery fee item
-          console.log(`Creating new delivery fee item in Loyverse`);
           const newDeliveryFeeItem = await this.createItem({
             name: 'Delivery Fee',
             price: item.price,
             id: 'DELIVERY_FEE'
           });
-          
+
           if (newDeliveryFeeItem && newDeliveryFeeItem.variants && newDeliveryFeeItem.variants.length > 0) {
             const variant = newDeliveryFeeItem.variants[0];
             lineItemsWithVariants.push({
@@ -508,9 +576,45 @@ class LoyverseAPI {
           }
         }
       }
-      
+
+      // Cart discounts are now handled using total_discounts array (see below)
+
       // Delivery fees are now handled as line items, no surcharge needed
+
+
+
+
+
+      // Process cart discounts using total_discounts array
+      const totalDiscounts = [];
+      let totalCartDiscount = 0;
       
+      for (const cartDiscountItem of cartDiscountItems) {
+        console.log(`Processing cart discount: ${cartDiscountItem.name}`);
+        
+        // Get the discount amount from the item
+        const discountAmount = cartDiscountItem.price || cartDiscountItem.cart_discount || cartDiscountItem.item_discount || 0;
+        totalCartDiscount += Math.abs(discountAmount);
+        
+        // Find the promo in MongoDB to get the Loyverse discount ID
+        const PromoService = require('../services/promoService');
+        const promoService = new PromoService();
+        const promo = await promoService.findPromoByGloriaFoodId(cartDiscountItem.id);
+        
+        if (promo && promo.loyverseDiscountId) {
+          console.log(`Adding discount to total_discounts: ${promo.name} (ID: ${promo.loyverseDiscountId})`);
+          
+          totalDiscounts.push({
+            id: promo.loyverseDiscountId,
+            scope: 'RECEIPT'
+            
+            // Don't include percentage when using existing discount ID
+          });
+        } else {
+          console.log(`No Loyverse discount ID found for cart discount: ${cartDiscountItem.name}`);
+        }
+      }
+
       // Now create the receipt with proper variant IDs, payment type ID, and customer
       const receiptData = {
         store_id: this.locationId,
@@ -520,36 +624,31 @@ class LoyverseAPI {
         line_items: lineItemsWithVariants,
         payments: [{
           payment_type_id: paymentTypeId,
-          money: orderData.total
+          money: (orderData.total_price || orderData.total || 0) - totalCartDiscount // Subtract discount from total
         }],
         // customer_id: customerId, // Removed - no customer creation
         note: receiptNotes.trim(),
-        status: 'open'
+        status: 'open',
       };
-      
-      // No surcharge needed - delivery fees are now line items
-      
-      console.log('=== RECEIPT CREATION DEBUG ===');
-      console.log('Receipt notes being sent:', receiptNotes);
-      console.log('Receipt data being sent to Loyverse:', JSON.stringify(receiptData, null, 2));
-      console.log('Loyverse API URL:', `${this.baseURL}/receipts`);
-      console.log('Headers being sent:', JSON.stringify(this.getHeaders(), null, 2));
-      console.log('================================');
-      
+
+      // Add total_discounts if we have any cart discounts
+      if (totalDiscounts.length > 0) {
+        receiptData.total_discounts = totalDiscounts;
+        console.log(`Added ${totalDiscounts.length} discounts to receipt:`, JSON.stringify(totalDiscounts, null, 2));
+      }
+
       const response = await axios.post(`${this.baseURL}/receipts`, receiptData, {
         headers: this.getHeaders()
       });
-      
+
       // Log the full response to see the structure
-      console.log('=== LOYVERSE RECEIPT RESPONSE ===');
-      console.log('Full response:', JSON.stringify(response.data, null, 2));
-      console.log('================================');
-      
+
+
       // Loyverse returns receipt_number, not id
       const receiptId = response.data.receipt_number || response.data.id || response.data.receipt_id || response.data.number;
-      
+
       logger.info(`Created receipt in Loyverse: ${receiptId}`);
-      
+
       // Automatically print the receipt - COMMENTED OUT FOR NOW
       // try {
       //   await this.printReceipt(receiptId);
@@ -558,11 +657,11 @@ class LoyverseAPI {
       //   logger.warn(`Failed to print receipt ${receiptId}:`, printError.message);
       //   // Don't fail the whole process if printing fails
       // }
-      
+
       return response.data;
     } catch (error) {
-      logger.error(`Failed to create receipt in Loyverse for order ${orderData.id}:`, error.message);
-      
+      logger.error(`Failed to create receipt in Loyverse for order ${orderData.id}:`, error);
+
       // Log detailed error information
       console.log('=== RECEIPT CREATION ERROR ===');
       console.log('Order Data:', JSON.stringify(orderData, null, 2));
@@ -584,7 +683,7 @@ class LoyverseAPI {
         console.log('No response object in error:', error.message);
       }
       console.log('===============================');
-      
+
       throw error;
     }
   }
@@ -593,7 +692,7 @@ class LoyverseAPI {
   formatOrderForLoyverse(orderData) {
     try {
       logger.info(`Formatting order ${orderData.id} for Loyverse`);
-      
+
       const receipt = {
         store_id: this.locationId, // Changed from location_id to store_id
         order: orderData.id.toString(), // Added order field
@@ -633,14 +732,14 @@ class LoyverseAPI {
   async processOrderItems(orderData) {
     try {
       logger.info(`Processing items for order ${orderData.id} in Loyverse`);
-      
+
       const processedItems = [];
-      
+
       for (const item of orderData.items) {
         try {
           // Check if item already exists
           const existingItem = await this.findItemByName(item.name, item.id);
-          
+
           if (existingItem) {
             // Item exists - use existing ID
             logger.info(`Item already exists: ${existingItem.id}`);
@@ -669,7 +768,7 @@ class LoyverseAPI {
           });
         }
       }
-      
+
       return processedItems;
     } catch (error) {
       logger.error('Failed to process order items:', error.message);
@@ -682,7 +781,7 @@ class LoyverseAPI {
     // Check if price, description, or other fields have changed
     const priceChanged = existingItem.variants[0]?.default_price !== newItem.price;
     const descriptionChanged = existingItem.description !== (newItem.instructions || newItem.name);
-    
+
     return priceChanged || descriptionChanged;
   }
 
@@ -690,7 +789,7 @@ class LoyverseAPI {
   async updateItem(itemId, itemData) {
     try {
       logger.info(`Updating item ${itemId} in Loyverse`);
-      
+
       const updatePayload = {
         item_name: itemData.name,
         description: itemData.instructions || itemData.name
@@ -710,7 +809,7 @@ class LoyverseAPI {
       return response.data;
     } catch (error) {
       logger.error(`Failed to update item in Loyverse: ${error.message}`);
-      
+
       console.log('=== ITEM UPDATE ERROR ===');
       if (error.response) {
         console.log('Status:', error.response.status);
@@ -720,7 +819,7 @@ class LoyverseAPI {
         console.log('No response object in error:', error.message);
       }
       console.log('===============================');
-      
+
       throw error;
     }
   }
@@ -751,15 +850,15 @@ class LoyverseAPI {
           search: itemName
         }
       });
-      
+
       if (response.data.items && response.data.items.length > 0) {
         // Find exact match
-        const exactMatch = response.data.items.find(item => 
+        const exactMatch = response.data.items.find(item =>
           item.item_name.toLowerCase() === itemName.toLowerCase()
         );
         return exactMatch || null;
       }
-      
+
       return null;
     } catch (error) {
       logger.error(`Failed to search for item ${itemName}:`, error.message);
@@ -771,7 +870,7 @@ class LoyverseAPI {
   async findItemBySKU(sku) {
     try {
       logger.info(`Searching for item in Loyverse by SKU: ${sku}`);
-      
+
       // Fetch all items since Loyverse API SKU search is broken
       const response = await axios.get(`${this.baseURL}/items`, {
         headers: this.getHeaders()
@@ -804,22 +903,22 @@ class LoyverseAPI {
   async findCustomerByPhone(phone) {
     try {
       logger.info(`Searching for customer with phone: ${phone}`);
-      
+
       const response = await axios.get(`${this.baseURL}/customers`, {
         headers: this.getHeaders(),
         params: {
           phone: phone
         }
       });
-      
+
       logger.info('Customer search response received');
       const customers = response.data.customers || [];
-      
+
       if (customers.length > 0) {
         logger.info(`Found existing customer: ${customers[0].id}`);
         return customers[0];
       }
-      
+
       logger.info('No existing customer found');
       return null;
     } catch (error) {
@@ -847,16 +946,16 @@ class LoyverseAPI {
       console.log('Loyverse API URL:', `${this.baseURL}/customers`);
       console.log('Headers being sent:', JSON.stringify(this.getHeaders(), null, 2));
       console.log('================================');
-      
+
       const response = await axios.post(`${this.baseURL}/customers`, customerPayload, {
         headers: this.getHeaders()
       });
-      
+
       logger.info(`Created new customer: ${response.data.id}`);
       return response.data;
     } catch (error) {
       logger.error('Failed to create customer:', error.message);
-      
+
       // Log detailed error information
       console.log('=== CUSTOMER CREATION ERROR ===');
       if (error.response) {
@@ -868,7 +967,7 @@ class LoyverseAPI {
         console.log('No response object in error:', error.message);
       }
       console.log('===============================');
-      
+
       throw error;
     }
   }
@@ -877,11 +976,11 @@ class LoyverseAPI {
   async getProducts() {
     try {
       logger.info('Retrieving products from Loyverse');
-      
+
       const response = await axios.get(`${this.baseURL}/items`, {
         headers: this.getHeaders()
       });
-      
+
       logger.info('Retrieved products from Loyverse');
       return response.data.items || [];
     } catch (error) {
@@ -894,11 +993,11 @@ class LoyverseAPI {
   async getLocations() {
     try {
       logger.info('Retrieving locations from Loyverse');
-      
+
       const response = await axios.get(`${this.baseURL}/stores`, {
         headers: this.getHeaders()
       });
-      
+
       logger.info('Retrieved locations from Loyverse');
       return response.data.stores || [];
     } catch (error) {
@@ -915,7 +1014,7 @@ class LoyverseAPI {
       }, {
         headers: this.getHeaders()
       });
-      
+
       logger.info(`Updated receipt ${receiptId} status to ${status}`);
       return response.data;
     } catch (error) {
@@ -928,16 +1027,16 @@ class LoyverseAPI {
   async getReceiptById(receiptNumber) {
     try {
       logger.info(`Getting receipt from Loyverse: ${receiptNumber}`);
-      
+
       const response = await axios.get(`${this.baseURL}/receipts/${receiptNumber}`, {
         headers: this.getHeaders()
       });
-      
+
       if (response.data) {
         logger.info(`Found receipt in Loyverse: ${receiptNumber}`);
         return response.data;
       }
-      
+
       return null;
     } catch (error) {
       if (error.response?.status === 404) {
@@ -953,7 +1052,7 @@ class LoyverseAPI {
   async findReceiptByExternalId(externalId) {
     try {
       logger.info(`Searching for receipt with external reference: ${externalId}`);
-      
+
       // Search for receipts with the order ID in notes
       const response = await axios.get(`${this.baseURL}/receipts`, {
         headers: this.getHeaders(),

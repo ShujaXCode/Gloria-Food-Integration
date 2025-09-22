@@ -440,3 +440,408 @@
 {"errors":[{"code":"UNAUTHORIZED","details":"Access token is not valid."}],"level":"error","message":"Error searching for item by SKU in Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 19:41:11"}
 {"errors":[{"code":"UNAUTHORIZED","details":"Access token is not valid."}],"level":"error","message":"Error searching for item by SKU in Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 19:41:11"}
 {"errors":[{"code":"UNAUTHORIZED","details":"Access token is not valid."}],"level":"error","message":"Error searching for item by SKU in Loyverse:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-21 19:41:11"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"Failed to connect to MongoDB: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:39"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:39"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:39"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:39"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"Failed to connect to MongoDB: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:39"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:39"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:39"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:39"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:39"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"Failed to connect to MongoDB: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"Failed to connect to MongoDB: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.cluster0.ac7ag.mongodb.net","level":"error","message":"MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net","service":"gloriafood-loyverse-integration","stack":"Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.ac7ag.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-09-22 00:58:44"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:15:04"}
+{"level":"error","message":"Failed to create new item for 10 off total:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:15:04"}
+{"level":"error","message":"Error processing GloriaFood item \"10 off total\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:15:04"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:15:06"}
+{"level":"error","message":"Failed to create new item for 10 off total:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:15:06"}
+{"level":"error","message":"Error processing GloriaFood item \"10 off total\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:15:06"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:22:54"}
+{"level":"error","message":"Failed to create new item for 10 off total:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:22:54"}
+{"level":"error","message":"Error processing GloriaFood item \"10 off total\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:22:54"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:22:55"}
+{"level":"error","message":"Failed to create new item for 10 off total:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:22:55"}
+{"level":"error","message":"Error processing GloriaFood item \"10 off total\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:22:55"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:25:53"}
+{"level":"error","message":"Failed to create new item for 10 off total:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:25:53"}
+{"level":"error","message":"Error processing GloriaFood item \"10 off total\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:25:53"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:25:53"}
+{"level":"error","message":"Failed to create new item for 10 off total:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:25:53"}
+{"level":"error","message":"Error processing GloriaFood item \"10 off total\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:25:53"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:37:32"}
+{"level":"error","message":"Failed to create new item for 10 off total:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:37:32"}
+{"level":"error","message":"Error processing GloriaFood item \"10 off total\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:37:32"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:37:36"}
+{"level":"error","message":"Failed to create new item for 10 off total:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:37:36"}
+{"level":"error","message":"Error processing GloriaFood item \"10 off total\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 01:37:36"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:26"}
+{"level":"error","message":"Failed to create new item for CHECK 5 OFF:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:26"}
+{"level":"error","message":"Error processing GloriaFood item \"CHECK 5 OFF\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:26"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:27"}
+{"level":"error","message":"Failed to create new item for CHECK 5 OFF:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:27"}
+{"level":"error","message":"Error processing GloriaFood item \"CHECK 5 OFF\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:27"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:28"}
+{"level":"error","message":"Failed to create new item for CHECK 5 OFF:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:28"}
+{"level":"error","message":"Error processing GloriaFood item \"CHECK 5 OFF\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:28"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:28"}
+{"level":"error","message":"Failed to create new item for CHECK 5 OFF:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:28"}
+{"level":"error","message":"Error processing GloriaFood item \"CHECK 5 OFF\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:08:28"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:09:31"}
+{"level":"error","message":"Failed to create new item for 10 OFF TOTAL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:09:31"}
+{"level":"error","message":"Error processing GloriaFood item \"10 OFF TOTAL\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:09:31"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:09:32"}
+{"level":"error","message":"Failed to create new item for 10 OFF TOTAL:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:09:32"}
+{"level":"error","message":"Error processing GloriaFood item \"10 OFF TOTAL\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:09:32"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:09:59"}
+{"level":"error","message":"Failed to create new item for 20% off:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:09:59"}
+{"level":"error","message":"Error processing GloriaFood item \"20% off\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:09:59"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:10:00"}
+{"level":"error","message":"Failed to create new item for 20% off:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:10:00"}
+{"level":"error","message":"Error processing GloriaFood item \"20% off\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:10:00"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:16:44"}
+{"level":"error","message":"Failed to create new item for CHECK 5 OFF:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:16:44"}
+{"level":"error","message":"Error processing GloriaFood item \"CHECK 5 OFF\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:16:44"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:16:45"}
+{"level":"error","message":"Failed to create new item for CHECK 5 OFF:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:16:45"}
+{"level":"error","message":"Error processing GloriaFood item \"CHECK 5 OFF\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:16:45"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:55:56"}
+{"level":"error","message":"Failed to create new item for 5% off total cart 900:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:55:56"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:55:56"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:55:58"}
+{"level":"error","message":"Failed to create new item for 5% off total cart 900:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:55:58"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:55:58"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:56:53"}
+{"level":"error","message":"Failed to create new item for 5% off total cart 900:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:56:53"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:56:53"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:56:54"}
+{"level":"error","message":"Failed to create new item for 5% off total cart 900:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:56:54"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 02:56:54"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:14:44"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:14:44"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:14:45"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:14:45"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:16:03"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:16:03"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:16:04"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:16:04"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:41"}
+{"level":"error","message":"Failed to create new item for موهيتو رمان:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:41"}
+{"level":"error","message":"Error processing GloriaFood item \"موهيتو رمان\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:41"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:41"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:41"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:41"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:41"}
+{"level":"error","message":"Error processing GloriaFood item \"خصم على السلة\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:41"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:42"}
+{"level":"error","message":"Failed to create new item for موهيتو رمان:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:42"}
+{"level":"error","message":"Error processing GloriaFood item \"موهيتو رمان\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:42"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:42"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:42"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:42"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:42"}
+{"level":"error","message":"Error processing GloriaFood item \"خصم على السلة\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:27:42"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:31"}
+{"level":"error","message":"Failed to create new item for موهيتو رمان:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:31"}
+{"level":"error","message":"Error processing GloriaFood item \"موهيتو رمان\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:31"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:32"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:32"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:32"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:32"}
+{"level":"error","message":"Error processing GloriaFood item \"خصم على السلة\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:32"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:32"}
+{"level":"error","message":"Failed to create new item for موهيتو رمان:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:32"}
+{"level":"error","message":"Error processing GloriaFood item \"موهيتو رمان\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:32"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:33"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:33"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:33"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:33"}
+{"level":"error","message":"Error processing GloriaFood item \"خصم على السلة\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:28:33"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:32:06"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:32:06"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:32:07"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:32:07"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:42:31"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:42:31"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:42:33"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:42:33"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:46:36"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:46:36"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:46:37"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:46:37"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:58"}
+{"level":"error","message":"Failed to create new item for مشروب غازي مع الثلج:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:58"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي مع الثلج\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:58"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:58"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:58"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:58"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:58"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:58"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج كبير\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:58"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:59"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج وسط:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:59"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج وسط\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:59"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:59"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج صغبر:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:59"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج صغبر\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:59"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:59"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:49:59"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:00"}
+{"level":"error","message":"Failed to create new item for مشروب غازي مع الثلج:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:00"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي مع الثلج\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:00"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:01"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:01"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:01"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:01"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:01"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج كبير\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:01"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:01"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج وسط:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:01"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج وسط\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:01"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:02"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج صغبر:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:02"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج صغبر\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:02"}
+{"level":"error","message":"Error managing promo cart item in MongoDB:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:02"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:50:02"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:40"}
+{"level":"error","message":"Failed to create new item for مشروب غازي مع الثلج:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:40"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي مع الثلج\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:40"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:41"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:41"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:41"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:41"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:41"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج كبير\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:41"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:42"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج وسط:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:42"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج وسط\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:42"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:42"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج صغبر:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:42"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج صغبر\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:42"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:43"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:44"}
+{"level":"error","message":"Failed to create new item for مشروب غازي مع الثلج:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:44"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي مع الثلج\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:44"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:44"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:44"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:44"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:44"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:44"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج كبير\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:44"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:45"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج وسط:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:45"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج وسط\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:45"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:45"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج صغبر:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:45"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج صغبر\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:45"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:51:46"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:03"}
+{"level":"error","message":"Failed to create new item for مشروب غازي مع الثلج:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:03"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي مع الثلج\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:03"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:03"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:03"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:03"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:04"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:04"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج كبير\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:04"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:04"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج وسط:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:04"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج وسط\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:04"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:05"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج صغبر:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:05"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج صغبر\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:05"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:05"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:06"}
+{"level":"error","message":"Failed to create new item for مشروب غازي مع الثلج:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:06"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي مع الثلج\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:06"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:07"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:07"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:07"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:07"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:07"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج كبير\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:07"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:07"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج وسط:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:07"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج وسط\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:07"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:08"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج صغبر:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:08"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج صغبر\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:08"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:54:09"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:43"}
+{"level":"error","message":"Failed to create new item for مشروب غازي مع الثلج:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:43"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي مع الثلج\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:43"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:43"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:43"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:43"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:44"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:44"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج كبير\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:44"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:44"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج وسط:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:44"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج وسط\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:44"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:45"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج صغبر:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:45"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج صغبر\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:45"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:46"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:47"}
+{"level":"error","message":"Failed to create new item for مشروب غازي مع الثلج:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:47"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي مع الثلج\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:47"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:48"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:48"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:48"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:48"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:48"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج كبير\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:48"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:48"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج وسط:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:48"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج وسط\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:48"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:49"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج صغبر:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:49"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج صغبر\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:49"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:55:50"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:24"}
+{"level":"error","message":"Failed to create new item for مشروب غازي مع الثلج:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:24"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي مع الثلج\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:24"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:24"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:24"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:24"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:24"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:24"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج كبير\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:24"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:25"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج وسط:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:25"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج وسط\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:25"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:25"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج صغبر:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:25"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج صغبر\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:25"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:26"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:27"}
+{"level":"error","message":"Failed to create new item for مشروب غازي مع الثلج:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:27"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي مع الثلج\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:27"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:28"}
+{"level":"error","message":"Failed to create new item for مشروب غازي علبه:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:28"}
+{"level":"error","message":"Error processing GloriaFood item \"مشروب غازي علبه\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:28"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:28"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج كبير:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:28"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج كبير\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:28"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:28"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج وسط:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:28"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج وسط\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:28"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:29"}
+{"level":"error","message":"Failed to create new item for كبسة ابتاون دجاج صغبر:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:29"}
+{"level":"error","message":"Error processing GloriaFood item \"كبسة ابتاون دجاج صغبر\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:29"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 03:58:30"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 04:00:49"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 04:00:51"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 04:04:26"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 04:04:28"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 04:05:32"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 04:05:33"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 04:08:53"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 04:08:55"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1420332330:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:15:04"}
+{"level":"error","message":"Error processing order to Loyverse for order 1420332330:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:15:04"}
+{"level":"error","message":"Error creating new receipt for order 1420332330:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:15:04"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:15:04"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 12203123990:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:24:44"}
+{"level":"error","message":"Error processing order to Loyverse for order 12203123990:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:24:44"}
+{"level":"error","message":"Error creating new receipt for order 12203123990:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:24:45"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:24:45"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1090045397:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:54:48"}
+{"level":"error","message":"Error processing order to Loyverse for order 1090045397:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:54:48"}
+{"level":"error","message":"Error creating new receipt for order 1090045397:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:54:48"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:54:48"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1090045398:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:55:23"}
+{"level":"error","message":"Error processing order to Loyverse for order 1090045398:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:55:23"}
+{"level":"error","message":"Error creating new receipt for order 1090045398:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:55:23"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:55:23"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1090045399:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:55:53"}
+{"level":"error","message":"Error processing order to Loyverse for order 1090045399:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:55:53"}
+{"level":"error","message":"Error creating new receipt for order 1090045399:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:55:54"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 05:55:54"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 124488204239223460000:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:01:53"}
+{"level":"error","message":"Error processing order to Loyverse for order 124488204239223460000:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:01:53"}
+{"level":"error","message":"Error creating new receipt for order 124488204239223460000:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:01:53"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:01:53"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1090045400:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:11:13"}
+{"level":"error","message":"Error processing order to Loyverse for order 1090045400:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:11:13"}
+{"level":"error","message":"Error creating new receipt for order 1090045400:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:11:13"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:11:13"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 1090045402:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:13:44"}
+{"level":"error","message":"Error processing order to Loyverse for order 1090045402:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:13:44"}
+{"level":"error","message":"Error creating new receipt for order 1090045402:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:13:44"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:13:44"}
+{"level":"error","message":"Failed to create receipt in Loyverse for order 124488204239223460000:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:15:30"}
+{"level":"error","message":"Error processing order to Loyverse for order 124488204239223460000:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:15:30"}
+{"level":"error","message":"Error creating new receipt for order 124488204239223460000:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:15:30"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:15:30"}
+{"level":"error","message":"Error retrying receipt for order 124488204239223460000:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:17:38"}
+{"level":"error","message":"Error handling existing receipt for order 124488204239223460000:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:17:38"}
+{"level":"error","message":"Error processing webhook:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:17:38"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:55"}
+{"level":"error","message":"Failed to create new item for DELIVERY_FEE:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:55"}
+{"level":"error","message":"Error processing GloriaFood item \"DELIVERY_FEE\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:55"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:55"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:55"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:55"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:55"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:57"}
+{"level":"error","message":"Failed to create new item for DELIVERY_FEE:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:57"}
+{"level":"error","message":"Error processing GloriaFood item \"DELIVERY_FEE\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:57"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:57"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:57"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:57"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:26:57"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:29:05"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:29:05"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:29:05"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:29:05"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:29:07"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:29:07"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:29:07"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:29:07"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:30:31"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:30:31"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:30:31"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:30:31"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:30:33"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:30:33"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:30:33"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:30:33"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:23"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:23"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:23"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:23"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:24"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:24"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:24"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:24"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:51"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:51"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:51"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:51"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:52"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:52"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:52"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:33:52"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:36:00"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:36:00"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:36:00"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:36:00"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:36:01"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:36:01"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:36:01"}
+{"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:36:01"}

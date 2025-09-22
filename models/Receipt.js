@@ -135,10 +135,10 @@ receiptSchema.index({ createdAt: -1 });
 receiptSchema.index({ customerPhone: 1 });
 
 // Instance methods
-receiptSchema.methods.markAsProcessed = function(loyverseReceiptId, loyverseReceiptNumber) {
+receiptSchema.methods.markAsProcessed = function(loyverseReceiptNumber, loyverseReceiptId) {
   this.status = 'processed';
-  this.loyverseReceiptId = loyverseReceiptId;
   this.loyverseReceiptNumber = loyverseReceiptNumber;
+  this.loyverseReceiptId = loyverseReceiptId;
   this.processedAt = new Date();
   return this.save();
 };

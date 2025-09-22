@@ -259,6 +259,32 @@ class MongoItemMappingService {
 
       for (const item of gloriaFoodItems) {
         try {
+          // Handle cart discount items separately
+          if (item.type === 'promo_cart') {
+            logger.info(`Processing cart discount item: ${item.name} (type: ${item.type})`);
+            
+            // Use the new promo service to create/update the discount
+            const PromoService = require('./promoService');
+            const promoService = new PromoService();
+            
+            const promoResult = await promoService.createOrUpdatePromoCart(item);
+            logger.info(`Promo cart result:`, promoResult);
+            
+            // Add cart discount item to processed items so it gets passed to receipt creation
+            processedItems.push({
+              originalGloriaFoodItem: item,
+              sku: 'promo_cart',
+              loyverseName: item.name,
+              category: 'خصومات',
+              price: item.cart_discount || item.item_discount || 0, // Keep negative value
+              matchType: 'promo_cart',
+              status: 'mapped',
+              loyverseDiscountId: promoResult.loyverseDiscountId // Include the Loyverse discount ID
+            });
+            
+            continue; // Skip normal item processing for promo items
+          }
+          
           const gloriaFoodItemName = item.name;
           const size = this.extractSizeFromItem(item);
 
@@ -341,6 +367,68 @@ class MongoItemMappingService {
     if (name.includes('صغير') || name.includes('small')) return 'صغير';
     
     return null;
+  }
+
+  // Find or create promo cart item in MongoDB
+  async findOrCreatePromoCartItem(promoData) {
+    try {
+      await this.initialize();
+      
+      const sku = 'promo_cart';
+      logger.info(`Looking for promo cart item with SKU: ${sku}`);
+      
+      // First, try to find existing promo cart item
+      let product = await Product.findOne({ sku: sku });
+      
+      if (product) {
+        logger.info(`Found existing promo cart item: ${product.name} (SKU: ${product.sku})`);
+        
+        // Update the product with new promo data
+        product.name = promoData.name;
+        product.price = promoData.price;
+        
+        await product.save();
+        logger.info(`✅ Updated promo cart item in MongoDB: ${product.name}`);
+        
+        return {
+          sku: product.sku,
+          loyverseName: product.name,
+          category: product.category,
+          price: product.price,
+          matchType: 'exact',
+          status: 'updated'
+        };
+      } else {
+        logger.info(`Creating new promo cart item: ${promoData.name}`);
+        
+        // Create new promo cart product
+        const newProduct = new Product({
+          sku: sku,
+          name: promoData.name,
+          gloriaFoodItemName: promoData.name,
+          category: 'خصومات', // Discounts category
+          defaultPrice: 0, // Use absolute value for defaultPrice
+          price: promoData.price,
+          size: null,
+          isActive: true
+        });
+        
+        await newProduct.save();
+        logger.info(`✅ Created new promo cart item in MongoDB: ${newProduct.name}`);
+        
+        return {
+          sku: newProduct.sku,
+          loyverseName: newProduct.name,
+          category: newProduct.category,
+          price: newProduct.price,
+          matchType: 'exact',
+          status: 'created'
+        };
+      }
+    } catch (error) {
+      logger.error('Error managing promo cart item in MongoDB:', error.message);
+      throw error;
+    }
   }
 
   // Helper method to clean item name
