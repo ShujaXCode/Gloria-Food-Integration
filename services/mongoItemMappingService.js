@@ -198,14 +198,9 @@ class MongoItemMappingService {
 
       // Create item in Loyverse
       const loyverseItemData = {
-        item_name: itemName,
-        category_id: null, // You might want to set this based on your categories
-        variants: [{
-          sku: sku.toString(),
-          price: calculatedPrice,
-          cost: 0,
-          track_inventory: false
-        }]
+        name: itemName,  // This will become item_name in createItem method
+        price: calculatedPrice,
+        id: sku.toString()  // This will become the SKU
       };
 
       const createdItem = await loyverseAPI.createItem(loyverseItemData);

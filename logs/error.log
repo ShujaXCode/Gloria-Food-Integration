@@ -845,3 +845,37 @@
 {"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:36:01"}
 {"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:36:01"}
 {"level":"error","message":"Error processing GloriaFood item \"5% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 06:36:01"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 17:57:10"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 17:57:10"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 17:57:10"}
+{"level":"error","message":"Error processing GloriaFood item \"10$ off total if cart > 200\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 17:57:10"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 17:57:11"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 17:57:11"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 17:57:11"}
+{"level":"error","message":"Error processing GloriaFood item \"10$ off total if cart > 200\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 17:57:11"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:07:17"}
+{"level":"error","message":"Failed to create new item for DELIVERY_FEE:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:07:17"}
+{"level":"error","message":"Error processing GloriaFood item \"DELIVERY_FEE\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:07:17"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:07:19"}
+{"level":"error","message":"Failed to create new item for DELIVERY_FEE:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:07:19"}
+{"level":"error","message":"Error processing GloriaFood item \"DELIVERY_FEE\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:07:19"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:31"}
+{"level":"error","message":"Failed to create new item for DELIVERY_FEE:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:31"}
+{"level":"error","message":"Error processing GloriaFood item \"DELIVERY_FEE\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:31"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:33"}
+{"level":"error","message":"Failed to create new item for DELIVERY_FEE:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:33"}
+{"level":"error","message":"Error processing GloriaFood item \"DELIVERY_FEE\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:33"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:56"}
+{"level":"error","message":"Failed to create new item for DELIVERY_FEE:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:56"}
+{"level":"error","message":"Error processing GloriaFood item \"DELIVERY_FEE\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:56"}
+{"level":"error","message":"Failed to create item in Loyverse: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:57"}
+{"level":"error","message":"Failed to create new item for DELIVERY_FEE:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:57"}
+{"level":"error","message":"Error processing GloriaFood item \"DELIVERY_FEE\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 18:20:57"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 21:17:58"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 21:17:58"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 21:17:58"}
+{"level":"error","message":"Error processing GloriaFood item \"10% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 21:17:58"}
+{"level":"error","message":"Error creating Loyverse discount: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 21:18:00"}
+{"level":"error","message":"Error response data:","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 21:18:00"}
+{"level":"error","message":"Error processing promo cart: Request failed with status code 400","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 21:18:00"}
+{"level":"error","message":"Error processing GloriaFood item \"10% off total cart 900\":","service":"gloriafood-loyverse-integration","timestamp":"2025-09-22 21:18:00"}

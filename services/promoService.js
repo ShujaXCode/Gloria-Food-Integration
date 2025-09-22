@@ -25,18 +25,19 @@ class PromoService {
     try {
       logger.info(`Processing promo cart item: ${gloriaFoodItem.name} (ID: ${gloriaFoodItem.id})`);
       
-      // Check if promo already exists by GloriaFood item ID
-      console.log(gloriaFoodItem.id ,'gloriaFoodItem.id fucking gloriaFoodItem.id')
+      // Use type_id as the stable identifier instead of id
+      const gloriaFoodItemId = gloriaFoodItem.type_id || gloriaFoodItem.id;
+      console.log(gloriaFoodItemId ,'gloriaFoodItemId fucking gloriaFoodItemId (using type_id)')
       let existingPromo = await Promo.findOne({ 
-        gloriaFoodItemId: gloriaFoodItem.id 
+        gloriaFoodItemId: gloriaFoodItemId 
       });
       console.log(existingPromo ,'existingPromo fucking existingPromo')
 
       const promoData = {
         name: gloriaFoodItem.name,
         type: 'FIXED_PERCENT',
-        discountPercent: gloriaFoodItem.cart_discount_rate * 100, 
-        gloriaFoodItemId: gloriaFoodItem.id,
+        discountPercent: gloriaFoodItem.cart_discount_rate * 100, // Convert 0.05 to 5 (percentage)
+        gloriaFoodItemId: gloriaFoodItemId, // Use type_id as stable identifier
         gloriaFoodPromoName: gloriaFoodItem.name,
         stores: [this.locationId]
       };
@@ -44,8 +45,12 @@ class PromoService {
       if (existingPromo) {
         logger.info(`Updating existing promo: ${existingPromo.name}`);
         
-        // Update existing promo in MongoDB
+        // Store the existing Loyverse ID before updating
+        const existingLoyverseId = existingPromo.loyverseDiscountId;
+        
+        // Update existing promo in MongoDB (but preserve the Loyverse ID)
         Object.assign(existingPromo, promoData);
+        existingPromo.loyverseDiscountId = existingLoyverseId; // Restore the Loyverse ID
         await existingPromo.save();
 
         // Update in Loyverse if it has a Loyverse ID
@@ -92,7 +97,7 @@ class PromoService {
       const discountData = {
         type: promo.type,
         name: promo.name,
-        discount_percent: promo.discountPercent * 100,
+        discount_percent: promo.discountPercent, // Already in percentage format (5, not 0.05)
         stores: promo.stores,
         restricted_access: promo.restrictedAccess || false
       };

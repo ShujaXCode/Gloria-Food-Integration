@@ -558,6 +558,7 @@ class LoyverseAPI {
           console.log(`Using existing delivery fee item: ${deliveryFeeItem.item_name}`);
         } else {
           // Create a new delivery fee item
+          console.log(`Creating new delivery fee item with price: ${item.price}`);
           const newDeliveryFeeItem = await this.createItem({
             name: 'Delivery Fee',
             price: item.price,
@@ -573,6 +574,9 @@ class LoyverseAPI {
               total_price: item.price * item.quantity,
               line_note: 'Delivery Fee'
             });
+            console.log(`Added delivery fee to line items: ${item.price} PKR`);
+          } else {
+            console.log(`Failed to create delivery fee item or no variants found`);
           }
         }
       }
@@ -589,6 +593,12 @@ class LoyverseAPI {
       const totalDiscounts = [];
       let totalCartDiscount = 0;
       
+      // Calculate the subtotal excluding delivery fees for discount calculation
+      const subtotalExcludingDelivery = lineItemsWithVariants.reduce((sum, item) => {
+        // Only include non-delivery fee items in discount calculation
+        return sum + (item.total_price || 0);
+      }, 0);
+      
       for (const cartDiscountItem of cartDiscountItems) {
         console.log(`Processing cart discount: ${cartDiscountItem.name}`);
         
@@ -596,16 +606,17 @@ class LoyverseAPI {
         const discountAmount = cartDiscountItem.price || cartDiscountItem.cart_discount || cartDiscountItem.item_discount || 0;
         totalCartDiscount += Math.abs(discountAmount);
         
-        // Find the promo in MongoDB to get the Loyverse discount ID
-        const PromoService = require('../services/promoService');
-        const promoService = new PromoService();
-        const promo = await promoService.findPromoByGloriaFoodId(cartDiscountItem.id);
+        // Get the loyverseDiscountId directly from mappingResults
+        const promoMapping = orderData.mappingResults?.find(mapping => 
+          mapping.originalGloriaFoodItem?.id === cartDiscountItem.id && 
+          mapping.matchType === 'promo_cart'
+        );
         
-        if (promo && promo.loyverseDiscountId) {
-          console.log(`Adding discount to total_discounts: ${promo.name} (ID: ${promo.loyverseDiscountId})`);
+        if (promoMapping && promoMapping.loyverseDiscountId) {
+          console.log(`Adding discount to total_discounts: ${cartDiscountItem.name} (ID: ${promoMapping.loyverseDiscountId})`);
           
           totalDiscounts.push({
-            id: promo.loyverseDiscountId,
+            id: promoMapping.loyverseDiscountId,
             scope: 'RECEIPT'
             
             // Don't include percentage when using existing discount ID
@@ -622,10 +633,10 @@ class LoyverseAPI {
         source: `GloriaFood - ${orderData.orderType || orderData.type || 'pickup'}`,
         receipt_date: orderData.timestamp || new Date().toISOString(),
         line_items: lineItemsWithVariants,
-        payments: [{
-          payment_type_id: paymentTypeId,
-          money: (orderData.total_price || orderData.total || 0) - totalCartDiscount // Subtract discount from total
-        }],
+      payments: [{
+        payment_type_id: paymentTypeId,
+        money: (orderData.total_price || orderData.total || 0) - totalCartDiscount // Subtract discount from total (discount already excludes delivery fees)
+      }],
         // customer_id: customerId, // Removed - no customer creation
         note: receiptNotes.trim(),
         status: 'open',
