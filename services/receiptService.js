@@ -449,10 +449,12 @@ class ReceiptService {
       const MongoItemMappingService = require('./mongoItemMappingService');
       const itemMappingService = new MongoItemMappingService();
       
-      const mappedItems = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(
+      const mappingResult = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(
         orderData.items, 
         loyverseAPI
       );
+      const mappedItems = mappingResult.processedItems;
+      const promoItemGroups = mappingResult.promoItemGroups;
 
       // Transform mapped items to the format expected by Loyverse API
       const transformedItems = mappedItems
@@ -473,7 +475,8 @@ class ReceiptService {
       const processedOrder = {
         ...orderData,
         items: transformedItems, // ✅ Use transformed items with proper quantities
-        mappingResults: mappedItems
+        mappingResults: mappedItems,
+        promoItemGroups: promoItemGroups
       };
 
       console.log(processedOrder ,'processedOrder fucking processedOrder')

@@ -123,7 +123,10 @@ router.post('/webhook', async (req, res) => {
       
       
       // Map GloriaFood items to Loyverse SKUs
-      const mappedItems = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI);
+      const mappingResult = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI);
+      console.log('Mapping result:', JSON.stringify(mappingResult, null, 2));
+      const mappedItems = mappingResult.processedItems;
+      const promoItemGroups = mappingResult.promoItemGroups;
       
       // Log mapping results
       const mappedCount = mappedItems.filter(item => item.status === 'mapped').length;
@@ -131,7 +134,8 @@ router.post('/webhook', async (req, res) => {
       
 
       // Check if we have any mapped items to process
-      if (mappedCount === 0) {
+      // Allow 0 mapped items if we have promo_item groups (they will be handled as bundles)
+      if (mappedCount === 0 && (!promoItemGroups || promoItemGroups.length === 0)) {
         logger.warn(`No items could be mapped for order ${orderData.id}`);
         return res.status(200).json({
           success: false,
@@ -194,7 +198,8 @@ router.post('/webhook', async (req, res) => {
             gloriaFoodName: item.originalGloriaFoodItem.name,
             error: item.error || 'Unknown error'
           }))
-        }
+        },
+        promoItemGroups: promoItemGroups
       };
 
       logger.info('Processed order with mapping:', JSON.stringify(processedOrder, null, 2));
@@ -707,7 +712,9 @@ router.post('/test-receipt-creation', async (req, res) => {
     const itemMappingService = new ItemMappingService();
     
     // Process items using the mapping service (same as webhook)
-    const mappedItems = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI);
+    const mappingResult = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI);
+    const mappedItems = mappingResult.processedItems;
+    const promoItemGroups = mappingResult.promoItemGroups;
     
     // Process the order (same logic as webhook)
     const processedOrder = {

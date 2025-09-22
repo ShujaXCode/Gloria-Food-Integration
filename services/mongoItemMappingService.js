@@ -252,8 +252,41 @@ class MongoItemMappingService {
 
       const processedItems = [];
 
+      // PRE-PROCESSING: Identify promo_item groups and exclude them from processing
+      const promoItemGroups = new Map();
+      const excludedItemIds = new Set();
+      
+      // First pass: Identify promo_item groups
+      for (const item of gloriaFoodItems) {
+        if (item.type === 'promo_item') {
+          logger.info(`Found promo item: ${item.name} (ID: ${item.id}) - will be handled in receipt creation`);
+          promoItemGroups.set(item.id, {
+            promoItem: item,
+            children: []
+          });
+          excludedItemIds.add(item.id);
+        }
+      }
+      
+      // Second pass: Find children of promo items
+      for (const item of gloriaFoodItems) {
+        if (item.parent_id && promoItemGroups.has(item.parent_id)) {
+          logger.info(`Found child item: ${item.name} (ID: ${item.id}) for promo ${item.parent_id} - will be excluded`);
+          promoItemGroups.get(item.parent_id).children.push(item);
+          excludedItemIds.add(item.id);
+        }
+      }
+      
+      logger.info(`Excluding ${excludedItemIds.size} items from mapping processing`);
+
       for (const item of gloriaFoodItems) {
         try {
+          // Skip items that are part of promo_item groups
+          if (excludedItemIds.has(item.id)) {
+            logger.info(`Skipping excluded item: ${item.name} (ID: ${item.id})`);
+            continue;
+          }
+          
           // Handle cart discount items separately
           if (item.type === 'promo_cart') {
             logger.info(`Processing cart discount item: ${item.name} (type: ${item.type})`);
@@ -321,7 +354,13 @@ class MongoItemMappingService {
         }
       }
 
-      return processedItems;
+      const result = {
+        processedItems,
+        promoItemGroups: Array.from(promoItemGroups.values())
+      };
+      
+      logger.info(`Returning mapping result: ${processedItems.length} processed items, ${result.promoItemGroups.length} promo groups`);
+      return result;
 
     } catch (error) {
       logger.error('Error processing GloriaFood order items:', error.message);
