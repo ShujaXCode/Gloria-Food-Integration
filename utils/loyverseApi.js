@@ -186,6 +186,9 @@ class LoyverseAPI {
         );
 
         if (matchingPaymentType) {
+          // Mark that payment detection was based on first_name
+          orderData.paymentDetectionBasedOnFirstName = true;
+          console.log(`Payment detection based on first_name: ${firstName} -> ${matchingPaymentType.name}`);
           return matchingPaymentType.id;
         } else {
 
@@ -743,36 +746,49 @@ class LoyverseAPI {
       const totalDiscounts = [];
       let totalCartDiscount = 0;
       
-      // Calculate the subtotal excluding delivery fees for discount calculation
-      const subtotalExcludingDelivery = lineItemsWithVariants.reduce((sum, item) => {
-        // Only include non-delivery fee items in discount calculation
-        return sum + (item.total_price || 0);
-      }, 0);
-      
-      for (const cartDiscountItem of cartDiscountItems) {
-        console.log(`Processing cart discount: ${cartDiscountItem.name}`);
+      // Skip discount processing if payment detection is based on first_name
+      if (orderData.paymentDetectionBasedOnFirstName) {
+        console.log('Skipping discount processing - payment detection based on first_name');
+      } else {
+        // Calculate the subtotal excluding delivery fees for discount calculation
+        const subtotalExcludingDelivery = lineItemsWithVariants.reduce((sum, item) => {
+          // Only include non-delivery fee items in discount calculation
+          return sum + (item.total_price || 0);
+        }, 0);
         
-        // Get the discount amount from the item
-        const discountAmount = cartDiscountItem.price || cartDiscountItem.cart_discount || cartDiscountItem.item_discount || 0;
-        totalCartDiscount += Math.abs(discountAmount);
-        
-        // Get the loyverseDiscountId directly from mappingResults
-        const promoMapping = orderData.mappingResults?.find(mapping => 
-          mapping.originalGloriaFoodItem?.id === cartDiscountItem.id && 
-          mapping.matchType === 'promo_cart'
-        );
-        
-        if (promoMapping && promoMapping.loyverseDiscountId) {
-          console.log(`Adding discount to total_discounts: ${cartDiscountItem.name} (ID: ${promoMapping.loyverseDiscountId})`);
+        for (const cartDiscountItem of cartDiscountItems) {
+          console.log(`Processing cart discount: ${cartDiscountItem.name}`);
           
-          totalDiscounts.push({
-            id: promoMapping.loyverseDiscountId,
-            scope: 'RECEIPT'
-            
-            // Don't include percentage when using existing discount ID
+          // Get the discount amount from the item
+          const discountAmount = cartDiscountItem.price || cartDiscountItem.cart_discount || cartDiscountItem.item_discount || 0;
+          totalCartDiscount += Math.abs(discountAmount);
+          
+          console.log(`Discount details for ${cartDiscountItem.name}:`, {
+            price: cartDiscountItem.price,
+            cart_discount: cartDiscountItem.cart_discount,
+            item_discount: cartDiscountItem.item_discount,
+            calculatedDiscountAmount: discountAmount,
+            totalCartDiscount: totalCartDiscount
           });
-        } else {
-          console.log(`No Loyverse discount ID found for cart discount: ${cartDiscountItem.name}`);
+          
+          // Get the loyverseDiscountId directly from mappingResults
+          const promoMapping = orderData.mappingResults?.find(mapping => 
+            mapping.originalGloriaFoodItem?.id === cartDiscountItem.id && 
+            mapping.matchType === 'promo_cart'
+          );
+          
+          if (promoMapping && promoMapping.loyverseDiscountId) {
+            console.log(`Adding discount to total_discounts: ${cartDiscountItem.name} (ID: ${promoMapping.loyverseDiscountId})`);
+            
+            totalDiscounts.push({
+              id: promoMapping.loyverseDiscountId,
+              scope: 'RECEIPT'
+              
+              // Don't include percentage when using existing discount ID
+            });
+          } else {
+            console.log(`No Loyverse discount ID found for cart discount: ${cartDiscountItem.name}`);
+          }
         }
       }
 

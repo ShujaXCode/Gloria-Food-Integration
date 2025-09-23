@@ -123,7 +123,7 @@ router.post('/webhook', async (req, res) => {
       
       
       // Map GloriaFood items to Loyverse SKUs
-      const mappingResult = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI);
+      const mappingResult = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI, orderData);
       console.log('Mapping result:', JSON.stringify(mappingResult, null, 2));
       const mappedItems = mappingResult.processedItems;
       const promoItemGroups = mappingResult.promoItemGroups;
@@ -712,7 +712,7 @@ router.post('/test-receipt-creation', async (req, res) => {
     const itemMappingService = new ItemMappingService();
     
     // Process items using the mapping service (same as webhook)
-    const mappingResult = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI);
+    const mappingResult = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(orderData.items, loyverseAPI, orderData);
     const mappedItems = mappingResult.processedItems;
     const promoItemGroups = mappingResult.promoItemGroups;
     

@@ -451,7 +451,8 @@ class ReceiptService {
       
       const mappingResult = await itemMappingService.processGloriaFoodOrderItemsWithAutoCreation(
         orderData.items, 
-        loyverseAPI
+        loyverseAPI,
+        orderData
       );
       const mappedItems = mappingResult.processedItems;
       const promoItemGroups = mappingResult.promoItemGroups;

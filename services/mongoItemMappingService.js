@@ -246,7 +246,7 @@ class MongoItemMappingService {
   }
 
   // Process GloriaFood order items with automatic item creation
-  async processGloriaFoodOrderItemsWithAutoCreation(gloriaFoodItems, loyverseAPI) {
+  async processGloriaFoodOrderItemsWithAutoCreation(gloriaFoodItems, loyverseAPI, orderData = null) {
     try {
       await this.initialize();
 
@@ -289,6 +289,12 @@ class MongoItemMappingService {
           
           // Handle cart discount items separately
           if (item.type === 'promo_cart') {
+            // Check if payment detection was based on first_name - if so, skip promo processing
+            if (orderData && orderData.paymentDetectionBasedOnFirstName) {
+              logger.info(`Skipping promo processing for ${item.name} - payment detection based on first_name`);
+              continue; // Skip this promo item entirely
+            }
+            
             logger.info(`Processing cart discount item: ${item.name} (type: ${item.type})`);
             
             // Use the new promo service to create/update the discount
@@ -319,10 +325,27 @@ class MongoItemMappingService {
           // Find the SKU mapping (exact match only for auto-creation)
           let mapping = await this.findExactSKUByGloriaFoodItem(gloriaFoodItemName, size);
 
-          // If no exact mapping found, create new item
+          // If no exact mapping found, create new item (unless payment detection is based on first_name)
           if (!mapping) {
-            logger.info(`No exact mapping found for "${gloriaFoodItemName}" (${size}), creating new item...`);
-            mapping = await this.createNewItem(item, loyverseAPI);
+            if (orderData && orderData.paymentDetectionBasedOnFirstName) {
+              logger.info(`No exact mapping found for "${gloriaFoodItemName}" (${size}), but skipping item creation due to payment detection based on first_name`);
+              processedItems.push({
+                originalGloriaFoodItem: item,
+                sku: null,
+                loyverseName: gloriaFoodItemName,
+                category: 'غير محدد',
+                price: item.price,
+                matchType: 'unmapped',
+                size: size,
+                gloriaFoodItemName: gloriaFoodItemName,
+                status: 'unmapped',
+                error: 'No existing mapping found and item creation skipped due to payment detection based on first_name'
+              });
+              continue;
+            } else {
+              logger.info(`No exact mapping found for "${gloriaFoodItemName}" (${size}), creating new item...`);
+              mapping = await this.createNewItem(item, loyverseAPI);
+            }
           }
 
           processedItems.push({

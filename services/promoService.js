@@ -33,14 +33,33 @@ class PromoService {
       });
       console.log(existingPromo ,'existingPromo fucking existingPromo')
 
-      const promoData = {
-        name: gloriaFoodItem.name,
-        type: 'FIXED_PERCENT',
-        discountPercent: gloriaFoodItem.cart_discount_rate * 100, // Convert 0.05 to 5 (percentage)
-        gloriaFoodItemId: gloriaFoodItemId, // Use type_id as stable identifier
-        gloriaFoodPromoName: gloriaFoodItem.name,
-        stores: [this.locationId]
-      };
+      // Determine discount type and amount based on GloriaFood data
+      let promoData;
+      
+      // If cart_discount_rate is very small (< 0.01), treat as fixed amount discount
+      if (gloriaFoodItem.cart_discount_rate < 0.01) {
+        const fixedAmount = Math.abs(gloriaFoodItem.cart_discount || gloriaFoodItem.item_discount || 0);
+        promoData = {
+          name: gloriaFoodItem.name,
+          type: 'FIXED_AMOUNT',
+          discountAmount: fixedAmount,
+          gloriaFoodItemId: gloriaFoodItemId,
+          gloriaFoodPromoName: gloriaFoodItem.name,
+          stores: [this.locationId]
+        };
+        logger.info(`Creating fixed amount discount: ${fixedAmount} PKR`);
+      } else {
+        // Use percentage discount
+        promoData = {
+          name: gloriaFoodItem.name,
+          type: 'FIXED_PERCENT',
+          discountPercent: gloriaFoodItem.cart_discount_rate * 100,
+          gloriaFoodItemId: gloriaFoodItemId,
+          gloriaFoodPromoName: gloriaFoodItem.name,
+          stores: [this.locationId]
+        };
+        logger.info(`Creating percentage discount: ${gloriaFoodItem.cart_discount_rate * 100}%`);
+      }
 
       if (existingPromo) {
         logger.info(`Updating existing promo: ${existingPromo.name}`);
@@ -97,10 +116,16 @@ class PromoService {
       const discountData = {
         type: promo.type,
         name: promo.name,
-        discount_percent: promo.discountPercent, // Already in percentage format (5, not 0.05)
         stores: promo.stores,
         restricted_access: promo.restrictedAccess || false
       };
+
+      // Add appropriate discount field based on type
+      if (promo.type === 'FIXED_AMOUNT') {
+        discountData.discount_amount = promo.discountAmount;
+      } else if (promo.type === 'FIXED_PERCENT') {
+        discountData.discount_percent = promo.discountPercent;
+      }
 
       logger.info(`Creating Loyverse discount:`, JSON.stringify(discountData, null, 2));
 
@@ -132,10 +157,16 @@ class PromoService {
         id: promo.loyverseDiscountId,
         type: promo.type,
         name: promo.name,
-        discount_percent: promo.discountPercent,
         stores: promo.stores,
         restricted_access: promo.restrictedAccess || false
       };
+
+      // Add appropriate discount field based on type
+      if (promo.type === 'FIXED_AMOUNT') {
+        discountData.discount_amount = promo.discountAmount;
+      } else if (promo.type === 'FIXED_PERCENT') {
+        discountData.discount_percent = promo.discountPercent;
+      }
 
       logger.info(`Updating Loyverse discount:`, JSON.stringify(discountData, null, 2));
 

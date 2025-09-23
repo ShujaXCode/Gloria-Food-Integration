@@ -603,7 +603,7 @@ class ItemMappingService {
   }
 
   // Process GloriaFood order items with automatic item creation
-  async processGloriaFoodOrderItemsWithAutoCreation(gloriaFoodItems, loyverseAPI) {
+  async processGloriaFoodOrderItemsWithAutoCreation(gloriaFoodItems, loyverseAPI, orderData = null) {
     const processedItems = [];
 
     for (const item of gloriaFoodItems) {
