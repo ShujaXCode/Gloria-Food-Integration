@@ -422,7 +422,7 @@ class LoyverseAPI {
       } else {
         // Fallback: Identify promo_item groups from original items
         console.log('=== FALLBACK: Identifying promo_item groups from original items ===');
-        
+
         // First pass: Identify promo_item groups
         for (const item of orderData.items) {
           if (item.type === 'promo_item') {
@@ -460,8 +460,8 @@ class LoyverseAPI {
         console.log(`Item data:`, JSON.stringify(item, null, 2));
 
         if (item.sku === 'DELIVERY_FEE' || item.name === 'DELIVERY_FEE' || item.type === 'delivery_fee') {
-          console.log(`Found delivery fee: ${item.name} (${item.price} PKR) - will process at the end`);
-          deliveryFeeItems.push(item);
+          // Skip delivery fees based on environment variable or order conditions
+          console.log(`Found delivery fee: ${item.name} (${item.price} PKR) - SKIPPING delivery fee`);
           continue; // Skip the normal item processing
         }
         console.log(item, 'item fucking item')
@@ -615,16 +615,16 @@ class LoyverseAPI {
       // Process promo_item groups - create bundle items
       for (const [promoId, group] of promoItemGroups) {
         const { promoItem, children } = group;
-        
+
         console.log(`Creating bundle for promo item: ${promoItem.name} (ID: ${promoId})`);
         console.log(`Children:`, children.map(c => `${c.name} (${c.id})`));
-        
+
         // Calculate bundle details
         const bundleName = this.generateBundleName(promoItem, children);
-        
+
         // Calculate pricing according to business rules
         const finalPrice = Math.max(0, promoItem.total_item_price - promoItem.item_discount);
-        
+
         // Collect size information from child items
         const sizeInfo = children
           .map(child => {
@@ -637,13 +637,13 @@ class LoyverseAPI {
           })
           .filter(info => info)
           .join(' | ');
-        
+
         // Calculate unit price
         const unitPrice = promoItem.quantity > 0 ? (promoItem.total_item_price / promoItem.quantity) : promoItem.total_item_price;
-        
+
         // Build description with size info, quantity, and unit price
         const description = `Size: ${sizeInfo || 'N/A'} | Qty: ${promoItem.quantity} | Unit: ${unitPrice} PKR`;
-        
+
         // Collect instructions from children
         const instructions = children
           .map(child => child.instructions)
@@ -652,7 +652,7 @@ class LoyverseAPI {
 
         // Get the actual product name from children (first child's name)
         const actualProductName = children.length > 0 ? children[0].name : 'Unknown Product';
-        
+
         // Create a combined name: "Actual Product Name - Promo Name"
         const combinedName = `${actualProductName} - ${promoItem.name}`;
 
@@ -662,7 +662,7 @@ class LoyverseAPI {
         console.log(`  Final price: ${finalPrice} PKR`);
         console.log(`  Description: ${description}`);
         console.log(`  Instructions: ${instructions || 'None'}`);
-        
+
         // Create temporary bundle item in Loyverse
         const bundleItem = await this.createItem({
           name: combinedName, // Use combined name for better understanding
@@ -670,10 +670,10 @@ class LoyverseAPI {
           instructions: `${description}${instructions ? ` | Instructions: ${instructions}` : ''}`,
           id: `BUNDLE_${promoId}_${Date.now()}` // Unique temporary ID
         });
-        
+
         if (bundleItem && bundleItem.variants && bundleItem.variants.length > 0) {
           const variant = bundleItem.variants[0];
-          
+
           // Add bundle to line items (final discounted price)
           lineItemsWithVariants.push({
             variant_id: variant.variant_id,
@@ -682,10 +682,10 @@ class LoyverseAPI {
             total_price: finalPrice, // Total will be calculated correctly
             line_note: `${description}${instructions ? ` | Instructions: ${instructions}` : ''}`
           });
-          
+
           // Track for cleanup
           temporaryItems.push(bundleItem.id);
-          
+
           console.log(`Created bundle item: ${combinedName} (Loyverse ID: ${bundleItem.id})`);
         } else {
           console.log(`Failed to create bundle item: ${combinedName}`);
@@ -745,7 +745,7 @@ class LoyverseAPI {
       // Process cart discounts using total_discounts array
       const totalDiscounts = [];
       let totalCartDiscount = 0;
-      
+
       // Skip discount processing if payment detection is based on first_name
       if (orderData.paymentDetectionBasedOnFirstName) {
         console.log('Skipping discount processing - payment detection based on first_name');
@@ -755,14 +755,14 @@ class LoyverseAPI {
           // Only include non-delivery fee items in discount calculation
           return sum + (item.total_price || 0);
         }, 0);
-        
+
         for (const cartDiscountItem of cartDiscountItems) {
           console.log(`Processing cart discount: ${cartDiscountItem.name}`);
-          
+
           // Get the discount amount from the item
           const discountAmount = cartDiscountItem.price || cartDiscountItem.cart_discount || cartDiscountItem.item_discount || 0;
           totalCartDiscount += Math.abs(discountAmount);
-          
+
           console.log(`Discount details for ${cartDiscountItem.name}:`, {
             price: cartDiscountItem.price,
             cart_discount: cartDiscountItem.cart_discount,
@@ -770,20 +770,20 @@ class LoyverseAPI {
             calculatedDiscountAmount: discountAmount,
             totalCartDiscount: totalCartDiscount
           });
-          
+
           // Get the loyverseDiscountId directly from mappingResults
-          const promoMapping = orderData.mappingResults?.find(mapping => 
-            mapping.originalGloriaFoodItem?.id === cartDiscountItem.id && 
+          const promoMapping = orderData.mappingResults?.find(mapping =>
+            mapping.originalGloriaFoodItem?.id === cartDiscountItem.id &&
             mapping.matchType === 'promo_cart'
           );
-          
+
           if (promoMapping && promoMapping.loyverseDiscountId) {
             console.log(`Adding discount to total_discounts: ${cartDiscountItem.name} (ID: ${promoMapping.loyverseDiscountId})`);
-            
+
             totalDiscounts.push({
               id: promoMapping.loyverseDiscountId,
               scope: 'RECEIPT'
-              
+
               // Don't include percentage when using existing discount ID
             });
           } else {
@@ -799,10 +799,10 @@ class LoyverseAPI {
         source: `GloriaFood - ${orderData.orderType || orderData.type || 'pickup'}`,
         receipt_date: orderData.timestamp || new Date().toISOString(),
         line_items: lineItemsWithVariants,
-      payments: [{
-        payment_type_id: paymentTypeId,
-        money: (orderData.total_price || orderData.total || 0) - totalCartDiscount // Subtract discount from total (discount already excludes delivery fees)
-      }],
+        payments: [{
+          payment_type_id: paymentTypeId,
+          money: (orderData.total_price || orderData.total || 0) - totalCartDiscount // Subtract discount from total (discount already excludes delivery fees)
+        }],
         // customer_id: customerId, // Removed - no customer creation
         note: receiptNotes.trim(),
         status: 'open',
@@ -1024,13 +1024,13 @@ class LoyverseAPI {
   generateBundleName(promoItem, children) {
     // Extract quantity from promo item name or use promo item quantity
     const promoQuantity = promoItem.quantity || 1;
-    
+
     // Get the base item name from the first child (they should all be the same base item)
     const baseItemName = children.length > 0 ? children[0].name : 'Unknown Item';
-    
+
     // Create bundle name
     const bundleName = `${promoQuantity}x ${promoItem.name}`;
-    
+
     return bundleName;
   }
 
